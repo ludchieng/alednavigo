@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
+    <AppNav />
     <AppTab>
       <NewTab />
     </AppTab>
@@ -13,6 +14,7 @@ import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
+import AppNav from '@/components/AppNav.vue'
 import AppTab from '@/components/AppTab.vue'
 import NewTab from './pages/NewTabPage/index.vue'
 
@@ -20,6 +22,7 @@ export default Vue.extend({
   name: 'App',
   components: {
     AppHeader,
+    AppNav,
     AppTab,
     NewTab,
   },
