@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/icon-dark.png">
-    <NewTab msg="Welcome to Alednavigo"/>
+    <NewTab />
   </div>
 </template>
 
