@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/icon-dark.png">
-    <NewTab />
+    <AppHeader />
+    <AppTab>
+      <NewTab />
+    </AppTab>
   </div>
 </template>
 
@@ -10,11 +12,15 @@ import Vue from 'vue'
 import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
+import AppHeader from '@/components/AppHeader.vue'
+import AppTab from '@/components/AppTab.vue'
 import NewTab from './pages/NewTabPage/index.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
+    AppHeader,
+    AppTab,
     NewTab,
   },
 })
