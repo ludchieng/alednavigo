@@ -1,0 +1,939 @@
+.icon-line-metro-1 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 0) calc(-21px * 0);
+}
+
+.icon-line-metro-2 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 1) calc(-21px * 0);
+}
+
+.icon-line-metro-3bis {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 2) calc(-21px * 0);
+}
+
+.icon-line-metro-3 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 3) calc(-21px * 0);
+}
+
+.icon-line-metro-4 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 4) calc(-21px * 0);
+}
+
+.icon-line-metro-5 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 5) calc(-21px * 0);
+}
+
+.icon-line-metro-6 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 6) calc(-21px * 0);
+}
+
+.icon-line-metro-7bis {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 7) calc(-21px * 0);
+}
+
+.icon-line-metro-7 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 8) calc(-21px * 0);
+}
+
+.icon-line-metro-8 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 9) calc(-21px * 0);
+}
+
+.icon-line-metro-9 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 0) calc(-21px * 1);
+}
+
+.icon-line-metro-10 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 1) calc(-21px * 1);
+}
+
+.icon-line-metro-11 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 2) calc(-21px * 1);
+}
+
+.icon-line-metro-12 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 3) calc(-21px * 1);
+}
+
+.icon-line-metro-13 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 4) calc(-21px * 1);
+}
+
+.icon-line-metro-14 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 5) calc(-21px * 1);
+}
+
+.icon-line-metro-15 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 6) calc(-21px * 1);
+}
+
+.icon-line-metro-16 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 7) calc(-21px * 1);
+}
+
+.icon-line-metro-17 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 8) calc(-21px * 1);
+}
+
+.icon-line-metro-18 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 9) calc(-21px * 1);
+}
+
+.icon-line-rer-a {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 1) calc(-21px * 2);
+}
+
+.icon-line-rer-b {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 2) calc(-21px * 2);
+}
+
+.icon-line-rer-c {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 3) calc(-21px * 2);
+}
+
+.icon-line-rer-d {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 4) calc(-21px * 2);
+}
+
+.icon-line-rer-e {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 5) calc(-21px * 2);
+}
+
+.icon-line-transilien-h {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 7) calc(-21px * 2);
+}
+
+.icon-line-transilien-j {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 8) calc(-21px * 2);
+}
+
+.icon-line-transilien-k {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 9) calc(-21px * 2);
+}
+
+.icon-line-transilien-l {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 0) calc(-21px * 3);
+}
+
+.icon-line-transilien-n {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 1) calc(-21px * 3);
+}
+
+.icon-line-transilien-p {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 2) calc(-21px * 3);
+}
+
+.icon-line-transilien-r {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 3) calc(-21px * 3);
+}
+
+.icon-line-transilien-u {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 4) calc(-21px * 3);
+}
+
+.icon-line-tramway-1 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 6) calc(-21px * 3);
+}
+
+.icon-line-tramway-2 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 7) calc(-21px * 3);
+}
+
+.icon-line-tramway-3a {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 8) calc(-21px * 3);
+}
+
+.icon-line-tramway-3b {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 9) calc(-21px * 3);
+}
+
+.icon-line-tramway-4 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 0) calc(-21px * 4);
+}
+
+.icon-line-tramway-5 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 1) calc(-21px * 4);
+}
+
+.icon-line-tramway-6 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 2) calc(-21px * 4);
+}
+
+.icon-line-tramway-7 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 3) calc(-21px * 4);
+}
+
+.icon-line-tramway-8 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 4) calc(-21px * 4);
+}
+
+.icon-line-tramway-9 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 5) calc(-21px * 4);
+}
+
+.icon-line-tramway-10 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 6) calc(-21px * 4);
+}
+
+.icon-line-tramway-11 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 7) calc(-21px * 4);
+}
+
+.icon-line-tramway-12 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 8) calc(-21px * 4);
+}
+
+.icon-line-tramway-13 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/lines-dark.png");
+  background-size: calc(10 * 21px);
+  background-position: calc(-21px * 9) calc(-21px * 4);
+}
+
+.icon-60px-line-metro-1 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 0) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-2 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 1) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-3bis {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 2) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-3 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 3) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-4 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 4) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-5 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 5) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-6 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 6) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-7bis {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 7) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-7 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 8) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-8 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 9) calc(-60px * 0);
+}
+
+.icon-60px-line-metro-9 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 0) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-10 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 1) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-11 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 2) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-12 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 3) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-13 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 4) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-14 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 5) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-15 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 6) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-16 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 7) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-17 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 8) calc(-60px * 1);
+}
+
+.icon-60px-line-metro-18 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 9) calc(-60px * 1);
+}
+
+.icon-60px-line-rer-a {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 1) calc(-60px * 2);
+}
+
+.icon-60px-line-rer-b {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 2) calc(-60px * 2);
+}
+
+.icon-60px-line-rer-c {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 3) calc(-60px * 2);
+}
+
+.icon-60px-line-rer-d {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 4) calc(-60px * 2);
+}
+
+.icon-60px-line-rer-e {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 5) calc(-60px * 2);
+}
+
+.icon-60px-line-transilien-h {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 7) calc(-60px * 2);
+}
+
+.icon-60px-line-transilien-j {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 8) calc(-60px * 2);
+}
+
+.icon-60px-line-transilien-k {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 9) calc(-60px * 2);
+}
+
+.icon-60px-line-transilien-l {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 0) calc(-60px * 3);
+}
+
+.icon-60px-line-transilien-n {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 1) calc(-60px * 3);
+}
+
+.icon-60px-line-transilien-p {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 2) calc(-60px * 3);
+}
+
+.icon-60px-line-transilien-r {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 3) calc(-60px * 3);
+}
+
+.icon-60px-line-transilien-u {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 4) calc(-60px * 3);
+}
+
+.icon-60px-line-tramway-1 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 6) calc(-60px * 3);
+}
+
+.icon-60px-line-tramway-2 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 7) calc(-60px * 3);
+}
+
+.icon-60px-line-tramway-3a {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 8) calc(-60px * 3);
+}
+
+.icon-60px-line-tramway-3b {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 9) calc(-60px * 3);
+}
+
+.icon-60px-line-tramway-4 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 0) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-5 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 1) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-6 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 2) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-7 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 3) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-8 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 4) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-9 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 5) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-10 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 6) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-11 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 7) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-12 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 8) calc(-60px * 4);
+}
+
+.icon-60px-line-tramway-13 {
+  display: inline-block;
+  vertical-align: -5px;
+  width: 60px;
+  height: 60px;
+  background: url("/img/lines-dark-200px.png");
+  background-size: calc(10 * 60px);
+  background-position: calc(-60px * 9) calc(-60px * 4);
+}
