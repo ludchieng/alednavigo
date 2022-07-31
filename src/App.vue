@@ -15,6 +15,8 @@ export default Vue.extend({
     NewTab,
   },
 })
+
+// TEST
 </script>
 
 <style>
