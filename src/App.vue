@@ -1,25 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/icon-dark.png">
-    <NewTab msg="Welcome to Alednavigo"/>
+    <AppHeader />
+    <AppNav />
+    <AppTab>
+      <NewTab />
+    </AppTab>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import NewTab from './components/NewTab.vue'
+import '@fontsource/inter/latin-500.css'
+import '@fontsource/inter/latin-600.css'
+import '@fontsource/inter/latin-700.css'
+import AppHeader from '@/components/AppHeader.vue'
+import AppNav from '@/components/AppNav.vue'
+import AppTab from '@/components/AppTab.vue'
+import NewTab from './pages/NewTabPage/index.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
+    AppHeader,
+    AppNav,
+    AppTab,
     NewTab,
   },
 })
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: Helvetica, sans-serif;
-  text-align: center;
+  font-family: Inter, Helvetica, sans-serif;
+  font-weight: 500;
 }
 </style>
