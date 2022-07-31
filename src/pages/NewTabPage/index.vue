@@ -30,6 +30,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.new-tab-page {
+  padding: 0.5rem;
+}
+
 h2 {
   font-size: 1rem;
   margin: 2rem 0 0 0;

@@ -21,6 +21,11 @@ export default Vue.extend({
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Inter, Helvetica, sans-serif;
   font-weight: 500;
