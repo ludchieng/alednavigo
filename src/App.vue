@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import NewTab from './components/NewTab.vue'
+import NewTab from './pages/NewTabPage/index.vue'
 
 export default Vue.extend({
   name: 'App',

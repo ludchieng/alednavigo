@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import NewTab from '@/components/NewTab.vue'
+import NewTab from '@/pages/NewTabPage/index.vue'
 
 describe('NewTab.vue', () => {
   it('renders props.msg when passed', () => {
