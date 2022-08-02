@@ -3,7 +3,9 @@
     <AppHeader />
     <AppNav />
     <AppTab>
-      <NewTab />
+      <router-view>
+        <NewTab />
+      </router-view>
     </AppTab>
   </div>
 </template>

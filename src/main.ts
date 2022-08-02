@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import './registerServiceWorker'
+import NewTabPage from './pages/NewTabPage/index.vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: App },
+  { path: '/', redirect: '/1' },
+  { path: '/:tab', component: NewTabPage },
 ]
 
 const router = new VueRouter({
@@ -17,5 +19,6 @@ const router = new VueRouter({
 
 new Vue({
   router,
-  template: '<router-view class="view"></router-view>',
+  template: '<App />',
+  components: { App },
 }).$mount('#app')
