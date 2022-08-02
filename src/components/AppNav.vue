@@ -19,6 +19,9 @@
           <li class="tab">
             Four
           </li>
+          <div class="add-tab">
+            +
+          </div>
         </ul>
         <div class="btn-tabs-list">
           <img class="icon-tabs-list" src="/img/mui/reorder.svg" />
@@ -96,6 +99,13 @@ hr {
 .tab-active {
   background-color: #ffffff;
   color: #2f2f2f;
+}
+
+.add-tab {
+  margin: 0.6rem 0.4rem 0.6rem 0.4rem;
+  padding: 0 0.35rem 0.1rem 0.35rem;
+  background-color: #282828;
+  border-radius: 50%;
 }
 
 .btn-tabs-list {
