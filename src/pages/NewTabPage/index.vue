@@ -5,11 +5,9 @@
     <div v-for="category in lines" :key="category.name">
       <h2>{{ category.name }}</h2>
       <hr />
-        <a
-          v-for="line in category.lines"
-          :key="line.slug"
-          :class="`icon-line icon-60px-line-${line.slug}`"
-        ></a>
+      <a v-for="line in category.lines" :key="line.slug" class="icon-line">
+        <LineIcon type="dark" :line="line.slug" />
+      </a>
     </div>
   </div>
 </template>
@@ -17,12 +15,15 @@
 <script lang="ts">
 import Vue from 'vue'
 import lines, { LineCategory } from './lines'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
-  name: 'NewTab',
-
+  name: 'NewTabPage',
+  components: {
+    LineIcon,
+  },
   data: (): {
-    lines: LineCategory[],
+    lines: LineCategory[];
   } => ({
     lines,
   }),
@@ -46,7 +47,14 @@ hr {
   background-color: #2f2f2f;
   border: 0;
 }
+
 .icon-line {
+  display: inline-block;
   margin: 0.5rem 0.5rem 0 0;
+}
+
+.icon-line img {
+  width: 60px;
+  height: 60px;
 }
 </style>
