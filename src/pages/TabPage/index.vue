@@ -18,9 +18,12 @@ import lines, { LineCategory } from './lines'
 import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
-  name: 'NewTabPage',
+  name: 'TabPage',
   components: {
     LineIcon,
+  },
+  props: {
+    resource: String,
   },
   data: (): {
     lines: LineCategory[];

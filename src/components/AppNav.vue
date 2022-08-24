@@ -5,21 +5,12 @@
       <a class="to-settings" href="">
         <img class="icon-settings" src="/img/mui/more-vert.svg" />
       </a>
-      <div>
+      <div class="tabs-manager">
         <ul class="tabs">
-          <li class="tab tab-active">
-            One
+          <li v-for="(tab, i) in tabs" :key="i" :class="`tab ${tabNumber === i+1 ? 'tab-active' : ''}`">
+            <router-link :to="tab">{{ tab }}</router-link>
           </li>
-          <li class="tab">
-            Two
-          </li>
-          <li class="tab">
-            Three
-          </li>
-          <li class="tab">
-            Four
-          </li>
-          <div class="add-tab">
+          <div class="add-tab" @click="$emit('addTab')">
             +
           </div>
         </ul>
@@ -36,6 +27,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'AppNav',
+  props: {
+    tabs: Array,
+    tabNumber: Number,
+  },
 })
 </script>
 
@@ -58,13 +53,18 @@ hr {
   border: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .nav-content {
   display: flex;
   align-items: center;
   height: 3.2rem;
 }
 
-.nav-content > div {
+.nav-content>div {
   display: flex;
   height: inherit;
   width: 100%;
@@ -80,11 +80,16 @@ hr {
   vertical-align: -5px;
 }
 
+.tabs-manager {
+  overflow-x: scroll;
+}
+
 .tabs {
   padding: 0;
   margin: 0;
   display: flex;
   align-items: flex-start;
+  overflow-x: scroll;
 }
 
 .tab {
@@ -110,6 +115,7 @@ hr {
 
 .btn-tabs-list {
   display: inline-block;
+  padding-left: 0.5rem;
 }
 
 .icon-tabs-list {
