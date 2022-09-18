@@ -141,7 +141,8 @@
   <img v-else-if="type == 'colors' && line == 'tramway-10'" src="@/assets/lines/colors/tramway-10.svg" />
   <img v-else-if="type == 'colors' && line == 'tramway-11'" src="@/assets/lines/colors/tramway-11.svg" />
   <img v-else-if="type == 'colors' && line == 'tramway-12'" src="@/assets/lines/colors/tramway-12.svg" />
-  <img v-else src="@/assets/lines/colors/tramway-13.svg" />
+  <img v-else-if="type == 'colors' && line == 'tramway-13'" src="@/assets/lines/colors/tramway-13.svg" />
+  <img v-else />
 </template>
 
 <script lang="ts">

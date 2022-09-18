@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TabPageLine v-if="line()" :tabNumber="tabNumber" />
-    <TabPageNew v-else :tabNumber="tabNumber" />
+    <TabPageLine v-if="line()" />
+    <TabPageNew v-else />
   </div>
 </template>
 
@@ -19,11 +19,6 @@ export default Vue.extend({
   methods: {
     line () {
       return this.$route.params.line
-    },
-  },
-  computed: {
-    tabNumber () {
-      return Number(this.$route.params.tab)
     },
   },
 })

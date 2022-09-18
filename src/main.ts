@@ -12,6 +12,7 @@ const routes = [
   { path: '/', redirect: '/1' },
   { path: '/:tab', component: App },
   { path: '/:tab/:line', component: App },
+  { path: '/about', component: App },
 ]
 
 const router = new VueRouter({
@@ -22,10 +23,17 @@ const router = new VueRouter({
 const store = new Vuex.Store({
   state: {
     tabs: [''],
+    tabNumber: 1,
+    idx: 0,
   },
   mutations: {
     addTab (state) {
       state.tabs.push('')
+    },
+    setTab (state, { idx, value }) {
+      const newTabs = [...state.tabs]
+      newTabs[idx] = value
+      state.tabs = newTabs
     },
   },
 })

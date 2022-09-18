@@ -7,8 +7,10 @@
       </router-link>
       <div class="tabs-manager">
         <ul class="tabs">
-          <li v-for="(tab, i) in $store.state.tabs" :key="i" :class="`tab ${tabNumber === i+1 ? 'tab-active' : ''}`">
-            <router-link class="tab-link" :to="`/${i + 1}${tab}`">{{ tab }}</router-link>
+          <li v-for="(line, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}/${line}`">
+              <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'white')" :line="line" />
+            </router-link>
           </li>
           <div class="add-tab" @click="$store.commit('addTab')">
             +
@@ -24,14 +26,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import LineIcon from './LineIcon.vue'
 
 export default Vue.extend({
   name: 'AppNav',
-  computed: {
-    tabNumber () {
-      return Number(this.$route.params.tab)
-    },
-  },
+  components: { LineIcon },
 })
 </script>
 
