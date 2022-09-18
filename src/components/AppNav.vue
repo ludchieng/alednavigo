@@ -2,23 +2,17 @@
   <nav>
     <hr>
     <div class="nav-content">
-      <a class="to-settings" href="">
+      <router-link class="to-settings" to="#">
         <img class="icon-settings" src="/img/mui/more-vert.svg" />
-      </a>
-      <div>
+      </router-link>
+      <div class="tabs-manager">
         <ul class="tabs">
-          <li class="tab tab-active">
-            One
+          <li v-for="(tab, i) in $store.state.tabs" :key="i" :class="`tab ${tabNumber === i+1 ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}${tab}`">{{ tab }}</router-link>
           </li>
-          <li class="tab">
-            Two
-          </li>
-          <li class="tab">
-            Three
-          </li>
-          <li class="tab">
-            Four
-          </li>
+          <div class="add-tab" @click="$store.commit('addTab')">
+            +
+          </div>
         </ul>
         <div class="btn-tabs-list">
           <img class="icon-tabs-list" src="/img/mui/reorder.svg" />
@@ -33,6 +27,11 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'AppNav',
+  computed: {
+    tabNumber () {
+      return Number(this.$route.params.tab)
+    },
+  },
 })
 </script>
 
@@ -55,13 +54,18 @@ hr {
   border: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .nav-content {
   display: flex;
   align-items: center;
   height: 3.2rem;
 }
 
-.nav-content > div {
+.nav-content>div {
   display: flex;
   height: inherit;
   width: 100%;
@@ -77,16 +81,24 @@ hr {
   vertical-align: -5px;
 }
 
+.tabs-manager {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+
 .tabs {
   padding: 0;
   margin: 0;
   display: flex;
   align-items: flex-start;
+  overflow: scroll hidden;
+  scrollbar-width: thin;
 }
 
 .tab {
   display: block;
   padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+  height: 1.25rem;
   margin-right: 2px;
   background-color: #202020;
   color: #ffffff;
@@ -98,8 +110,25 @@ hr {
   color: #2f2f2f;
 }
 
+.tab-link {
+  display: block;
+  min-width: 2rem;
+}
+
+.tab-link:after {
+  content: "\00a0";
+}
+
+.add-tab {
+  margin: 0.6rem 0.4rem 0.6rem 0.4rem;
+  padding: 0 0.35rem 0.1rem 0.35rem;
+  background-color: #282828;
+  border-radius: 50%;
+}
+
 .btn-tabs-list {
   display: inline-block;
+  padding-left: 0.5rem;
 }
 
 .icon-tabs-list {

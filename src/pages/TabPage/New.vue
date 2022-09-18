@@ -1,15 +1,14 @@
 <template>
-  <div class="new-tab-page">
+  <div class="tab-page-new">
     <h2>Favoris et personnalisés</h2>
     <hr />
     <div v-for="category in lines" :key="category.name">
       <h2>{{ category.name }}</h2>
       <hr />
-        <a
-          v-for="line in category.lines"
-          :key="line.slug"
-          :class="`icon-line icon-60px-line-${line.slug}`"
-        ></a>
+      <router-link v-for="line in category.lines" :key="line.slug" class="icon-line"
+        :to="`${tabNumber}${line.href}`">
+        <LineIcon type="dark" :line="line.slug" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -17,20 +16,31 @@
 <script lang="ts">
 import Vue from 'vue'
 import lines, { LineCategory } from './lines'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
-  name: 'NewTab',
-
+  name: 'TabPageNew',
+  components: {
+    LineIcon,
+  },
+  props: {
+    tabNumber: Number,
+  },
   data: (): {
-    lines: LineCategory[],
+    lines: LineCategory[];
   } => ({
     lines,
   }),
+  methods: {
+    redirectToHome () {
+      this.$router.push('/1')
+    },
+  },
 })
 </script>
 
 <style scoped>
-.new-tab-page {
+.tab-page-new {
   padding: 0.5rem;
 }
 
@@ -46,7 +56,14 @@ hr {
   background-color: #2f2f2f;
   border: 0;
 }
+
 .icon-line {
+  display: inline-block;
   margin: 0.5rem 0.5rem 0 0;
+}
+
+.icon-line img {
+  width: 60px;
+  height: 60px;
 }
 </style>

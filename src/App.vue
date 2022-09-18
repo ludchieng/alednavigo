@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
-    <AppNav />
-    <AppTab>
-      <NewTab />
-    </AppTab>
+    <AppPageView />
   </div>
 </template>
 
@@ -14,17 +11,31 @@ import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
-import AppNav from '@/components/AppNav.vue'
-import AppTab from '@/components/AppTab.vue'
-import NewTab from './pages/NewTabPage/index.vue'
+import AppPageView from '@/components/AppPageView.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
     AppHeader,
-    AppNav,
-    AppTab,
-    NewTab,
+    AppPageView,
+  },
+  watch: {
+    '$route.params.tab': {
+      handler () {
+        const tabNumber = Number(this.$route.params.tab)
+        const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
+        if (!isValidTabNumber) this.$router.push('/1')
+      },
+      deep: true,
+      immediate: true,
+    },
+    '$route.path': {
+      handler () {
+        console.log(this.$route.path, this.$route.fullPath)
+      },
+      deep: true,
+      immediate: true,
+    },
   },
 })
 </script>
