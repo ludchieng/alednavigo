@@ -1,7 +1,9 @@
 <template>
   <header>
     <div class="logo">
-      <img alt="Logo Alednavigo" src="@/assets/icon-dark.png" />
+      <router-link :to="`/${ $route.params.tab }`">
+        <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
+      </router-link>
     </div>
   </header>
 </template>
@@ -23,12 +25,13 @@ header {
 }
 
 .logo {
-  width: 100%;
+  display: block;
+  width: 32px;
+  margin: 0 auto;
 }
 
-.logo > img {
+.logo img {
   display: block;
-  width: 52px;
-  margin: 0 auto;
+  width: 32px;
 }
 </style>
