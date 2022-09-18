@@ -9,7 +9,10 @@
         <ul class="tabs">
           <li v-for="(line, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
             <router-link class="tab-link" :to="`/${i + 1}/${line}`">
-              <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
+              <span class="tab-label">
+                <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
+                <span class="tab-label-text" hidden></span>
+              </span>
             </router-link>
           </li>
           <div class="add-tab" @click="$store.commit('addTab')">
@@ -116,6 +119,22 @@ a {
 
 .tab-link:after {
   content: "\00a0";
+}
+
+.tab-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-label-text {
+  max-width: 5.5rem;
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .add-tab {
