@@ -2,15 +2,15 @@
   <nav>
     <hr>
     <div class="nav-content">
-      <a class="to-settings" href="">
+      <router-link class="to-settings" to="#">
         <img class="icon-settings" src="/img/mui/more-vert.svg" />
-      </a>
+      </router-link>
       <div class="tabs-manager">
         <ul class="tabs">
-          <li v-for="(tab, i) in tabs" :key="i" :class="`tab ${tabNumber === i+1 ? 'tab-active' : ''}`">
-            <router-link :to="tab">{{ tab }}</router-link>
+          <li v-for="(tab, i) in $store.state.tabs" :key="i" :class="`tab ${tabNumber === i+1 ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}${tab}`">{{ tab }}</router-link>
           </li>
-          <div class="add-tab" @click="$emit('addTab')">
+          <div class="add-tab" @click="$store.commit('addTab')">
             +
           </div>
         </ul>
@@ -27,9 +27,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'AppNav',
-  props: {
-    tabs: Array,
-    tabNumber: Number,
+  computed: {
+    tabNumber () {
+      return Number(this.$route.params.tab)
+    },
   },
 })
 </script>
@@ -82,6 +83,7 @@ a {
 
 .tabs-manager {
   overflow-x: scroll;
+  scrollbar-width: thin;
 }
 
 .tabs {
@@ -89,12 +91,14 @@ a {
   margin: 0;
   display: flex;
   align-items: flex-start;
-  overflow-x: scroll;
+  overflow: scroll hidden;
+  scrollbar-width: thin;
 }
 
 .tab {
   display: block;
   padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+  height: 1.25rem;
   margin-right: 2px;
   background-color: #202020;
   color: #ffffff;
@@ -104,6 +108,15 @@ a {
 .tab-active {
   background-color: #ffffff;
   color: #2f2f2f;
+}
+
+.tab-link {
+  display: block;
+  min-width: 2rem;
+}
+
+.tab-link:after {
+  content: "\00a0";
 }
 
 .add-tab {

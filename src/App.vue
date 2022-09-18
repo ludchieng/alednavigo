@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
-    <AppPageView :tabNumber="tabNumber" />
+    <AppPageView />
   </div>
 </template>
 
@@ -13,24 +13,25 @@ import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
 import AppPageView from '@/components/AppPageView.vue'
 
-const isValidTabNumber = (tabNumber: number | string) => !isNaN(Number(tabNumber)) && Number(tabNumber) >= 1
-
 export default Vue.extend({
   name: 'App',
   components: {
     AppHeader,
     AppPageView,
   },
-  data: () => ({
-    tabNumber: 1,
-  }),
   watch: {
     '$route.params.tab': {
       handler () {
-        if (!isValidTabNumber(this.$route.params.tab)) {
-          this.$router.push('/1')
-        }
-        this.tabNumber = Number(this.$route.params.tab)
+        const tabNumber = Number(this.$route.params.tab)
+        const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
+        if (!isValidTabNumber) this.$router.push('/1')
+      },
+      deep: true,
+      immediate: true,
+    },
+    '$route.path': {
+      handler () {
+        console.log(this.$route.path, this.$route.fullPath)
       },
       deep: true,
       immediate: true,

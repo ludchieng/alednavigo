@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="tab">
-      <TabPage :tab="getTab()" />
+      <TabPage />
     </div>
-    <AppNav :tabs="tabs" :tabNumber="tabNumber" @addTab="addTab" />
+    <AppNav />
   </div>
 </template>
 
@@ -17,41 +17,6 @@ export default Vue.extend({
   components: {
     AppNav,
     TabPage,
-  },
-  props: {
-    tabNumber: Number,
-  },
-  data: () => ({
-    tabs: ['string'],
-  }),
-  created () {
-    this.tabs = [
-      '/1',
-    ]
-  },
-  methods: {
-    getTab () {
-      return this.tabs[this.tabNumber - 1]
-    },
-    addTab () {
-      this.tabs.push(`/${this.tabs.length + 1}`)
-    },
-    isInvalidTabNumber () {
-      return this.tabNumber > this.tabs.length
-    },
-    redirectToHome () {
-      this.$router.push('/1')
-    },
-  },
-  watch: {
-    tabNumber: {
-      handler () {
-        if (this.isInvalidTabNumber()) {
-          this.redirectToHome()
-        }
-      },
-      immediate: true,
-    },
   },
 })
 </script>
