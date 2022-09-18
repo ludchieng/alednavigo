@@ -9,7 +9,7 @@
         <ul class="tabs">
           <li v-for="(line, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
             <router-link class="tab-link" :to="`/${i + 1}/${line}`">
-              <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'white')" :line="line" />
+              <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
             </router-link>
           </li>
           <div class="add-tab" @click="$store.commit('addTab')">
