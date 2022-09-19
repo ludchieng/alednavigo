@@ -7,11 +7,13 @@
       </router-link>
       <div class="tabs-manager">
         <ul class="tabs">
-          <li v-for="(line, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
-            <router-link class="tab-link" :to="`/${i + 1}/${line}`">
+          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}/${path}`">
               <span class="tab-label">
                 <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
-                <span class="tab-label-text" hidden></span>
+                <span v-if="stop" class="tab-label-text">
+                  {{ stop }}
+                </span>
               </span>
             </router-link>
           </li>

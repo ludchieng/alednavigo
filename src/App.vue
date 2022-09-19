@@ -35,9 +35,11 @@ export default Vue.extend({
     },
     '$route.path': {
       handler () {
+        const line = this.$route.params.line
+        const stop = this.$route.params.stop
         this.$store.commit('setTab', {
           idx: this.$store.state.tabIndex,
-          value: this.$route.params.line || '',
+          tab: { line, stop },
         })
       },
       deep: true,

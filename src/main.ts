@@ -12,6 +12,7 @@ const routes = [
   { path: '/', redirect: '/1' },
   { path: '/:tab', component: App },
   { path: '/:tab/:line', component: App },
+  { path: '/:tab/:line/:stop', component: App },
   { path: '/about', component: App },
 ]
 
@@ -22,17 +23,25 @@ const router = new VueRouter({
 
 const store = new Vuex.Store({
   state: {
-    tabs: [''],
+    tabs: [{
+      line: '',
+      stop: '',
+      path: '',
+    }],
     tabNumber: 1,
     idx: 0,
   },
   mutations: {
     addTab (state) {
-      state.tabs.push('')
+      state.tabs.push({ line: '', stop: '', path: '' })
     },
-    setTab (state, { idx, value }) {
+    setTab (state, { idx, tab }) {
       const newTabs = [...state.tabs]
-      newTabs[idx] = value
+      newTabs[idx] = {
+        line: tab.line,
+        stop: tab.stop,
+        path: `${tab.line || ''}${tab.line && tab.stop ? '/' + tab.stop : ''}`,
+      }
       state.tabs = newTabs
     },
   },
