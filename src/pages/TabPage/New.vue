@@ -6,7 +6,7 @@
       <h2>{{ category.name }}</h2>
       <hr />
       <router-link v-for="line in category.lines" :key="line.slug" class="icon-line"
-        :to="`${tabNumber}${line.href}`">
+        :to="`/${$store.state.tabNumber}/${line.slug}`">
         <LineIcon type="dark" :line="line.slug" />
       </router-link>
     </div>
@@ -22,9 +22,6 @@ export default Vue.extend({
   name: 'TabPageNew',
   components: {
     LineIcon,
-  },
-  props: {
-    tabNumber: Number,
   },
   data: (): {
     lines: LineCategory[];

@@ -24,14 +24,21 @@ export default Vue.extend({
       handler () {
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
-        if (!isValidTabNumber) this.$router.push('/1')
+        if (!isValidTabNumber) {
+          return this.$router.push('/1')
+        }
+        this.$store.state.tabNumber = tabNumber
+        this.$store.state.tabIndex = tabNumber - 1
       },
       deep: true,
       immediate: true,
     },
     '$route.path': {
       handler () {
-        console.log(this.$route.path, this.$route.fullPath)
+        this.$store.commit('setTab', {
+          idx: this.$store.state.tabIndex,
+          value: this.$route.params.line || '',
+        })
       },
       deep: true,
       immediate: true,
