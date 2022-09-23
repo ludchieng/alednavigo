@@ -1,13 +1,13 @@
 <template>
   <div class="tab-page-line">
     <table>
-      <tr v-for="(row, i) in draw" :key="i">
-        <td v-for="(cell, j) in row" :key="j" :class="`${['*', '|'].includes(cell) && 'filled'}`">
+      <tr v-for="(row, i) in routeMap" :key="i">
+        <td v-for="(cell, j) in row.drawing" :key="j" :class="`${['*', '|'].includes(cell) && 'filled'}`">
           {{ cell === '*' ? '●' : '' }}
         </td>
-        <td v-if="data[i][2]" class="label">
-          <router-link :to="`/${$route.params.tab}/${$route.params.line}/${data[i][1]}`">
-            {{ data[i][2] }}
+        <td v-if="row.slugName" class="label">
+          <router-link :to="`/${$route.params.tab}/${$route.params.line}/${row.slugName}`">
+            {{ row.displayName }}
           </router-link>
         </td>
       </tr>
@@ -17,13 +17,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { parseLine, RouteMapTypes } from '@/utils/parser'
 
 export default Vue.extend({
   name: 'TabPageLine',
   data: () => ({
     schema: ['string'],
-    draw: [['string']],
-    data: [['string', ['string']]],
+    routeMap: RouteMapTypes,
   }),
   created () {
     this.update()
@@ -34,24 +34,9 @@ export default Vue.extend({
         .then((res) => {
           return res.text()
         })
-        .then((d) => {
-          const rows = d.split('\n')
-          const splited = rows.map(r => r.split('@'))
-          const transposed = (splited[0].map((_, colIndex) => splited.map(row => row[colIndex])))
-
-          this.draw = transposed[0]
-            .map(row => row.split('\t')
-              .slice(0, -1)
-              .map(cell => cell.trim()))
-
-          this.data = transposed[1]
-            .map(row => row.split('\t')
-              .slice(1, row.length)
-              .map(cell => cell.trim()))
-            .map((row) => [
-              row[0].split(';'),
-              ...row.slice(1, row.length),
-            ])
+        .then((tsv) => {
+          const { routeMap } = parseLine(tsv)
+          this.routeMap = routeMap
         })
     },
   },

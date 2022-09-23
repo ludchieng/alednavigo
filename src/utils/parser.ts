@@ -1,3 +1,12 @@
+export const RouteMapTypes = [{
+  drawing: [''],
+  slugName: '',
+  displayName: '',
+  lineConnections: [''],
+}, {
+  drawing: [''],
+}]
+
 export const parseLine = (tsv: string) => {
   const rows = tsv.split('\n')
     // Remove empty lines
