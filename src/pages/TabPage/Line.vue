@@ -2,7 +2,7 @@
   <div class="tab-page-line">
     <table>
       <tr v-for="(row, i) in routeMap" :key="i">
-        <td v-for="(cell, j) in row.drawing" :key="j" :class="`${['*', '|'].includes(cell) && 'filled'}`">
+        <td v-for="(cell, j) in row.drawing" :key="j" :class="`${['*', '|'].includes(cell) && 'filled' || ''}`">
           {{ cell === '*' ? '●' : '' }}
         </td>
         <td v-if="row.slugName" class="label">
@@ -59,7 +59,7 @@ export default Vue.extend({
 
 <style scoped>
 .tab-page-line {
-  padding: 0.5rem;
+  padding: 10rem 1rem 4rem 1rem;
 }
 
 td,
