@@ -10,6 +10,21 @@ export const RouteMapTypes = [{
   drawing: [''],
 }]
 
+export type StopType = {
+  monitoringRefs: string[],
+  displayName: '',
+  prevStops: string[],
+  nextStops: string[],
+  lineConnections: [{
+    line: '',
+    slugName: '',
+  }],
+}
+
+export type StopsType = {
+  [x: string]: StopType
+}
+
 export const parseLine = (tsv: string) => {
   const rows = tsv.split('\n')
     // Remove empty lines
