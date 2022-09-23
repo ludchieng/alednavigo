@@ -11,7 +11,7 @@
 
     <div class="prev-next-stops">
       <ul>
-        <li v-for="(prevStop, i) in stop.prevStops" :key="i" class="prev-stops">
+        <li v-for="(prevStop, i) in stop.prevStops.slice().reverse()" :key="i" class="prev-stops">
           <router-link :to="`/${$route.params.tab}/${$route.params.line}/${prevStop}`">
             <span>
               {{ getStop($route.params.line, prevStop).displayName }}
@@ -20,7 +20,7 @@
         </li>
       </ul>
       <ul>
-        <li v-for="(nextStop, i) in stop.nextStops" :key="i" class="next-stops">
+        <li v-for="(nextStop, i) in stop.nextStops.slice().reverse()" :key="i" class="next-stops">
           <router-link :to="`/${$route.params.tab}/${$route.params.line}/${nextStop}`">
             <span>
               {{ getStop($route.params.line, nextStop).displayName }}
@@ -30,7 +30,7 @@
       </ul>
     </div>
 
-    <div v-for="([direction, trains], i) in Object.entries(visits)" :key="i">
+    <div v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i">
       <h2>{{ direction }}</h2>
       <div class="sync">
         <span class="sync-time">
@@ -39,7 +39,7 @@
         <button class="sync-btn" @click="update">
           <img class="icon-settings" src="/img/mui/update.svg" />
           Synchroniser
-        </button>
+         </button>
       </div>
       <div v-for="(train, j) in trains" :key="j" class="train">
         <div class="train-code">
