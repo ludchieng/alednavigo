@@ -8,12 +8,12 @@
         <td v-if="row.slugName" class="label">
           <router-link :to="`/${$route.params.tab}/${$route.params.line}/${row.slugName}`">
             {{ row.displayName }}
-            <span class="line-connections">
+            <div class="line-connections">
               <LineIcon
                 v-for="(conn, i) in row.lineConnections" :key="i"
-                type="dark" :line="conn.line"
+                type="colors" :line="conn.line"
               />
-            </span>
+            </div>
           </router-link>
         </td>
       </tr>
@@ -105,13 +105,8 @@ td.label a {
   margin-right: 0.75rem;
 }
 
-.line-connections {
-  display: inline-block;
-}
-
 .line-connections > img {
   margin-top: 0.2rem;
   margin-right: 0.2rem;
-  vertical-align: top;
 }
 </style>
