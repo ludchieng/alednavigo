@@ -2,23 +2,24 @@
   <nav>
     <hr>
     <div class="nav-content">
-      <a class="to-settings" href="">
+      <router-link class="to-settings" to="#">
         <img class="icon-settings" src="/img/mui/more-vert.svg" />
-      </a>
-      <div>
+      </router-link>
+      <div class="tabs-manager">
         <ul class="tabs">
-          <li class="tab tab-active">
-            One
+          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}/${path}`">
+              <span class="tab-label">
+                <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
+                <span v-if="stop" class="tab-label-text">
+                  {{ getStop(line, stop).displayName }}
+                </span>
+              </span>
+            </router-link>
           </li>
-          <li class="tab">
-            Two
-          </li>
-          <li class="tab">
-            Three
-          </li>
-          <li class="tab">
-            Four
-          </li>
+          <div class="add-tab" @click="$store.commit('addTab')">
+            +
+          </div>
         </ul>
         <div class="btn-tabs-list">
           <img class="icon-tabs-list" src="/img/mui/reorder.svg" />
@@ -30,9 +31,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import LineIcon from './LineIcon.vue'
 
 export default Vue.extend({
   name: 'AppNav',
+  components: { LineIcon },
+  methods: {
+    getStop (line: string, slugName: string) {
+      return JSON.parse(
+        localStorage.getItem(`lines.${line}.stops`) as string,
+      )[slugName]
+    },
+  },
 })
 </script>
 
@@ -61,7 +71,7 @@ hr {
   height: 3.2rem;
 }
 
-.nav-content > div {
+.nav-content>div {
   display: flex;
   height: inherit;
   width: 100%;
@@ -77,16 +87,24 @@ hr {
   vertical-align: -5px;
 }
 
+.tabs-manager {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+
 .tabs {
   padding: 0;
   margin: 0;
   display: flex;
   align-items: flex-start;
+  overflow: scroll hidden;
+  scrollbar-width: thin;
 }
 
 .tab {
   display: block;
   padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+  height: 1.25rem;
   margin-right: 2px;
   background-color: #202020;
   color: #ffffff;
@@ -98,8 +116,41 @@ hr {
   color: #2f2f2f;
 }
 
+.tab-link {
+  display: block;
+  min-width: 2rem;
+}
+
+.tab-link:after {
+  content: "\00a0";
+}
+
+.tab-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-label-text {
+  max-width: 5.5rem;
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add-tab {
+  margin: 0.6rem 0.4rem 0.6rem 0.4rem;
+  padding: 0 0.35rem 0.1rem 0.35rem;
+  background-color: #282828;
+  border-radius: 50%;
+}
+
 .btn-tabs-list {
   display: inline-block;
+  padding-left: 0.5rem;
 }
 
 .icon-tabs-list {
