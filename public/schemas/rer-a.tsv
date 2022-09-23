@@ -1,3 +1,4 @@
+  	  	  	@ 	monitoringRefs	slugName                     	displayName                    	prevStops	nextStops	lineConnections
   	  	* 	@ 	40918         	cergy-le-haut                	Cergy-le-Haut                  
   	  	* 	@ 	411368        	cergy-saint-christophe       	Cergy-Saint-Christophe         
   	  	* 	@ 	411352        	cergy-prefecture             	Cergy-Préfecture               
@@ -6,26 +7,26 @@
   	  	* 	@ 	41528         	acheres-ville                	Achères-Ville                  
   	  	| 	@ 	              	                             	                               
 * 	  	| 	@ 	411359        	poissy                       	Poissy                         
-* 	  	| 	@ 	411358        	acheres-grand-cormier        	Achères - Grand-Cormier        
+* 	  	| 	@ 	411358        	acheres-grand-cormier        	Achères – Grand-Cormier        
 | 	| 	| 	@ 	              	                             	                               
   	  	| 	@ 	              	                             	                               
   	  	* 	@ 	41527         	maisons-laffite              	Maisons-Laffitte               
   	  	* 	@ 	411360        	sartrouville                 	Sartrouville                   
-  	  	* 	@ 	411357        	houilles-carrieres-sur-seine 	Houilles - Carrières-sur-Seine 
+  	  	* 	@ 	411357        	houilles-carrieres-sur-seine 	Houilles – Carrières-sur-Seine 
   	  	| 	@ 	              	                             	                               
 * 	  	| 	@ 	474017;474016 	saint-germain-en-laye        	Saint-Germain-en-Laye          
-* 	  	| 	@ 	473912;473909 	le-vesinet-le-pecq           	Le Vésinet - Le Pecq           
+* 	  	| 	@ 	473912;473909 	le-vesinet-le-pecq           	Le Vésinet – Le Pecq           
 * 	  	| 	@ 	473914;473911 	le-vesinet-centre            	Le Vésinet-Centre              
-* 	  	| 	@ 	473964;473965 	chatou-croissy               	Chatou - Croissy               
+* 	  	| 	@ 	473964;473965 	chatou-croissy               	Chatou – Croissy               
 * 	  	| 	@ 	474020;474022 	rueil-malmaison              	Rueil-Malmaison                
 * 	  	| 	@ 	474048;474049 	nanterre-ville               	Nanterre-Ville                 
 * 	  	| 	@ 	474053;474047 	nanterre-universite          	Nanterre-Université            
 | 	| 	| 	@ 	              	                             	                               
   	* 	  	@ 	474051;474052 	nanterre-prefecture          	Nanterre-Préfecture            
   	* 	  	@ 	473935;473936 	la-defense                   	La Défense                     
-  	* 	  	@ 	473922;473923 	charles-de-gaulle-etoile     	Charles-de-Gaulle - Étoile     
+  	* 	  	@ 	473922;473923 	charles-de-gaulle-etoile     	Charles-de-Gaulle – Étoile     
   	* 	  	@ 	473925;473924 	auber                        	Auber                          
-  	* 	  	@ 	473993;473921 	chatelet-les-halles          	Châtelet - Les Halles          	auber	gare-de-lyon	rer-b;rer-d;metro-1/chatelet;metro-4/chatelet;metro-4/les-halles;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet
+  	* 	  	@ 	473993;473921 	chatelet-les-halles          	Châtelet – Les Halles          	auber	gare-de-lyon	rer-b;rer-d;metro-1/chatelet;metro-4/chatelet;metro-4/les-halles;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet
   	* 	  	@ 	474062;474065 	gare-de-lyon                 	Gare-de-Lyon                   
   	* 	  	@ 	473920;473919 	nation                       	Nation                         
   	* 	  	@ 	474000;473998 	vincennes                    	Vincennes                      
@@ -33,21 +34,21 @@
 * 	  	| 	@ 	473959;473958 	fontenay-sous-bois           	Fontenay-sous-Bois             
 * 	  	| 	@ 	474043;474045 	nogent-sur-marne             	Nogent-sur-Marne               
 * 	  	| 	@ 	473950;473951 	joinville-le-pont            	Joinville-le-Pont              
-* 	  	| 	@ 	474013;474014 	saint-maur-creteil           	Saint-Maur - Créteil           
+* 	  	| 	@ 	474013;474014 	saint-maur-creteil           	Saint-Maur – Créteil           
 * 	  	| 	@ 	473913;473900 	le-parc-de-saint-maur        	Le Parc de Saint-Maur          
 * 	  	| 	@ 	473963;473962 	champigny                    	Champigny                      
-* 	  	| 	@ 	473938;473929 	la-varenne-chennevieres      	La Varenne - Chennevières      
-* 	  	| 	@ 	474010;474007 	sucy-bonneuil                	Sucy - Bonneuil                
+* 	  	| 	@ 	473938;473929 	la-varenne-chennevieres      	La Varenne – Chennevières      
+* 	  	| 	@ 	474010;474007 	sucy-bonneuil                	Sucy – Bonneuil                
 * 	  	| 	@ 	473988;473987 	boissy-saint-leger           	Boissy-Saint-Léger             
   	  	| 	@ 	              	                             	                               
   	  	* 	@ 	474001;474002 	val-de-fontenay              	Val de Fontenay                
   	  	* 	@ 	474042;474050 	neuilly-plaisance            	Neuilly-Plaisance              
   	  	* 	@ 	473974;473973 	bry-sur-marne                	Bry-sur-Marne                  
   	  	* 	@ 	474041;474032 	noisy-le-grand-mont-d-est    	Noisy-le-Grand-Mont d'Est      
-  	  	* 	@ 	474040;474039 	noisy-champs                 	Noisy - Champs                 
+  	  	* 	@ 	474040;474039 	noisy-champs                 	Noisy – Champs                 
   	  	* 	@ 	474046;474038 	noisiel                      	Noisiel                        
   	  	* 	@ 	473930;473933 	lognes                       	Lognes                         
   	  	* 	@ 	474005;474008 	torcy                        	Torcy                          
   	  	* 	@ 	473961;473960 	bussy-saint-georges          	Bussy-Saint-Georges            
   	  	* 	@ 	474003;474004 	val-d-europe                 	Val d'Europe                   
-  	  	* 	@ 	474064;474059 	marne-la-vallee-chessy       	Marne-la-Vallée - Chessy       
+  	  	* 	@ 	474064;474059 	marne-la-vallee-chessy       	Marne-la-Vallée – Chessy       
