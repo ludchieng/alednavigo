@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Métros",
+    "lines": [
+      { "name": "Métro 1", "slugName": "metro-1" },
+      { "name": "Métro 2", "slugName": "metro-2" },
+      { "name": "Métro 3", "slugName": "metro-3" },
+      { "name": "Métro 3 bis", "slugName": "metro-3bis" },
+      { "name": "Métro 4", "slugName": "metro-4" },
+      { "name": "Métro 5", "slugName": "metro-5" },
+      { "name": "Métro 6", "slugName": "metro-6" },
+      { "name": "Métro 7", "slugName": "metro-7" },
+      { "name": "Métro 7 bis", "slugName": "metro-7bis" },
+      { "name": "Métro 8", "slugName": "metro-8" },
+      { "name": "Métro 9", "slugName": "metro-9" },
+      { "name": "Métro 10", "slugName": "metro-10" },
+      { "name": "Métro 11", "slugName": "metro-11" },
+      { "name": "Métro 12", "slugName": "metro-12" },
+      { "name": "Métro 13", "slugName": "metro-13" },
+      { "name": "Métro 14", "slugName": "metro-14" },
+      { "name": "Métro 15", "slugName": "metro-15" },
+      { "name": "Métro 16", "slugName": "metro-16" },
+      { "name": "Métro 17", "slugName": "metro-17" },
+      { "name": "Métro 18", "slugName": "metro-18" }
+    ]
+  },
+  {
+    "name": "RER",
+    "lines": [
+      { "name": "RER A", "slugName": "rer-a" },
+      { "name": "RER B", "slugName": "rer-b" },
+      { "name": "RER C", "slugName": "rer-c" },
+      { "name": "RER D", "slugName": "rer-d" },
+      { "name": "RER E", "slugName": "rer-e" }
+    ]
+  },
+  {
+    "name": "Transiliens",
+    "lines": [
+      { "name": "Train H", "slugName": "transilien-h" },
+      { "name": "Train J", "slugName": "transilien-j" },
+      { "name": "Train K", "slugName": "transilien-k" },
+      { "name": "Train L", "slugName": "transilien-l" },
+      { "name": "Train N", "slugName": "transilien-n" },
+      { "name": "Train P", "slugName": "transilien-p" },
+      { "name": "Train R", "slugName": "transilien-r" },
+      { "name": "Train U", "slugName": "transilien-u" }
+    ]
+  },
+  {
+    "name": "Tramways",
+    "lines": [
+      { "name": "Tramway 1", "slugName": "tramway-1" },
+      { "name": "Tramway 2", "slugName": "tramway-2" },
+      { "name": "Tramway 3a", "slugName": "tramway-3a" },
+      { "name": "Tramway 3b", "slugName": "tramway-3b" },
+      { "name": "Tramway 4", "slugName": "tramway-4" },
+      { "name": "Tramway 5", "slugName": "tramway-5" },
+      { "name": "Tramway 6", "slugName": "tramway-6" },
+      { "name": "Tramway 7", "slugName": "tramway-7" },
+      { "name": "Tramway 8", "slugName": "tramway-8" },
+      { "name": "Tramway 9", "slugName": "tramway-9" },
+      { "name": "Tramway 10", "slugName": "tramway-10" },
+      { "name": "Tramway 11", "slugName": "tramway-11" },
+      { "name": "Tramway 12", "slugName": "tramway-12" },
+      { "name": "Tramway 13", "slugName": "tramway-13" }
+    ]
+  }
+]

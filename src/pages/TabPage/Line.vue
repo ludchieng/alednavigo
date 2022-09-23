@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { parseLine, RouteMapTypes } from '@/utils/parser'
+import { RouteMapTypes } from '@/utils/parser'
 
 export default Vue.extend({
   name: 'TabPageLine',
@@ -30,14 +30,10 @@ export default Vue.extend({
   },
   methods: {
     update () {
-      fetch(`/schemas/${this.$route.params.line}.tsv`)
-        .then((res) => {
-          return res.text()
-        })
-        .then((tsv) => {
-          const { routeMap } = parseLine(tsv)
-          this.routeMap = routeMap
-        })
+      this.routeMap = JSON.parse(
+        localStorage.getItem(
+          `lines.${this.$route.params.line}.routeMap`,
+        ) as string)
     },
   },
   watch: {
