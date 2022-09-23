@@ -7,11 +7,13 @@
       </router-link>
       <div class="tabs-manager">
         <ul class="tabs">
-          <li v-for="(line, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
-            <router-link class="tab-link" :to="`/${i + 1}/${line}`">
+          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
+            <router-link class="tab-link" :to="`/${i + 1}/${path}`">
               <span class="tab-label">
                 <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
-                <span class="tab-label-text" hidden></span>
+                <span v-if="stop" class="tab-label-text">
+                  {{ getStop(line, stop).displayName }}
+                </span>
               </span>
             </router-link>
           </li>
@@ -34,6 +36,13 @@ import LineIcon from './LineIcon.vue'
 export default Vue.extend({
   name: 'AppNav',
   components: { LineIcon },
+  methods: {
+    getStop (line: string, slugName: string) {
+      return JSON.parse(
+        localStorage.getItem(`lines.${line}.stops`) as string,
+      )[slugName]
+    },
+  },
 })
 </script>
 
@@ -54,11 +63,6 @@ hr {
   height: 0.3rem;
   background-color: #ffffff;
   border: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 .nav-content {

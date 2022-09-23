@@ -12,12 +12,18 @@ import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
 import AppPageView from '@/components/AppPageView.vue'
+import { synchronize } from './utils/synchronizer'
 
 export default Vue.extend({
   name: 'App',
   components: {
     AppHeader,
     AppPageView,
+  },
+  created () {
+    if (!localStorage.getItem('lines.updatedAt')) {
+      synchronize()
+    }
   },
   watch: {
     '$route.params.tab': {
@@ -35,9 +41,11 @@ export default Vue.extend({
     },
     '$route.path': {
       handler () {
+        const line = this.$route.params.line
+        const stop = this.$route.params.stop
         this.$store.commit('setTab', {
           idx: this.$store.state.tabIndex,
-          value: this.$route.params.line || '',
+          tab: { line, stop },
         })
       },
       deep: true,
@@ -51,10 +59,22 @@ export default Vue.extend({
 body {
   margin: 0;
   padding: 0;
+  color: #2F2F2F;
 }
 
 #app {
   font-family: Inter, Helvetica, sans-serif;
   font-weight: 500;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 </style>

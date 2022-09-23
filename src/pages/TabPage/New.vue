@@ -38,7 +38,7 @@ export default Vue.extend({
 
 <style scoped>
 .tab-page-new {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 h2 {
@@ -56,11 +56,11 @@ hr {
 
 .icon-line {
   display: inline-block;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 1rem 1rem 0 0;
 }
 
 .icon-line img {
-  width: 60px;
-  height: 60px;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 </style>
