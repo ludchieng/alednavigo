@@ -12,7 +12,7 @@
               <span class="tab-label">
                 <LineIcon :type="($store.state.tabIndex === i ? 'dark' : 'light')" :line="line" />
                 <span v-if="stop" class="tab-label-text">
-                  {{ getStop(line, stop) }}
+                  {{ getStop(line, stop).displayName }}
                 </span>
               </span>
             </router-link>
@@ -40,7 +40,7 @@ export default Vue.extend({
     getStop (line: string, slugName: string) {
       return JSON.parse(
         localStorage.getItem(`lines.${line}.stops`) as string,
-      )[slugName].displayName
+      )[slugName]
     },
   },
 })

@@ -12,12 +12,18 @@ import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
 import AppPageView from '@/components/AppPageView.vue'
+import { synchronize } from './utils/synchronizer'
 
 export default Vue.extend({
   name: 'App',
   components: {
     AppHeader,
     AppPageView,
+  },
+  created () {
+    if (!localStorage.getItem('lines.updatedAt')) {
+      synchronize()
+    }
   },
   watch: {
     '$route.params.tab': {
