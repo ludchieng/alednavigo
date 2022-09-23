@@ -1,7 +1,5 @@
 <template>
   <div class="tab-page-new">
-    <h2>Favoris et personnalisés</h2>
-    <hr />
     <div v-for="category in lines" :key="category.name">
       <h2>{{ category.name }}</h2>
       <hr />
