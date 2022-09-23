@@ -13,7 +13,10 @@ export default {
       drawing: ['*'],
       slugName: 'gournay-sur-chevre',
       displayName: 'Gournay-sur-Chèvre',
-      lineConnections: ['line-2/gournay-le-vesoul'],
+      lineConnections: [{
+        line: 'line-2',
+        slugName: 'gournay-le-vesoul',
+      }],
     },
     {
       drawing: ['|'],
@@ -28,7 +31,10 @@ export default {
       drawing: ['*'],
       slugName: 'castel-aux-lopez',
       displayName: 'Castel-aux-Lopez',
-      lineConnections: ['line-2/castel-aux-lopez'],
+      lineConnections: [{
+        line: 'line-2',
+        slugName: 'castel-aux-lopez',
+      }],
     },
   ],
   stops: {
@@ -37,7 +43,10 @@ export default {
       displayName: 'Gournay-sur-Chèvre',
       prevStops: [],
       nextStops: ['claquos-les-troux'],
-      lineConnections: ['line-2/gournay-le-vesoul'],
+      lineConnections: [{
+        line: 'line-2',
+        slugName: 'gournay-le-vesoul',
+      }],
     },
     'claquos-les-troux': {
       monitoringRefs: ['469'],
@@ -51,7 +60,10 @@ export default {
       displayName: 'Castel-aux-Lopez',
       prevStops: ['claquos-les-troux'],
       nextStops: [],
-      lineConnections: ['line-2/castel-aux-lopez'],
+      lineConnections: [{
+        line: 'line-2',
+        slugName: 'castel-aux-lopez',
+      }],
     },
   },
 }

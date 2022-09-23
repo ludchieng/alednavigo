@@ -2,7 +2,10 @@ export const RouteMapTypes = [{
   drawing: [''],
   slugName: '',
   displayName: '',
-  lineConnections: [''],
+  lineConnections: [{
+    line: '',
+    slugName: '',
+  }],
 }, {
   drawing: [''],
 }]
@@ -49,9 +52,14 @@ export const parseLine = (tsv: string) => {
         stop[prop] = stop[prop] ? stop[prop].split(';') : []
       })
       // Add stop name on each 'lineConnections' when it is implicit
-      stop.lineConnections = stop.lineConnections.map((connection: string) => (
-        connection.replace(/^([^/]*)$/, `$1/${stop.slugName}`)
-      ))
+      stop.lineConnections = stop.lineConnections
+        .map((conn: string) => (
+          conn.replace(/^([^/]*)$/, `$1/${stop.slugName}`)
+        ))
+        .map((conn: string) => {
+          const m = conn.match(/(.*)\/(.*)/)
+          return { line: m?.[1] || '', slugName: m?.[2] || '' }
+        })
     })
 
   const stops = dataAsObjects

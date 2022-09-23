@@ -8,6 +8,12 @@
         <td v-if="row.slugName" class="label">
           <router-link :to="`/${$route.params.tab}/${$route.params.line}/${row.slugName}`">
             {{ row.displayName }}
+            <span class="line-connections">
+              <LineIcon
+                v-for="(conn, i) in row.lineConnections" :key="i"
+                type="dark" :line="conn.line"
+              />
+            </span>
           </router-link>
         </td>
       </tr>
@@ -18,9 +24,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import { RouteMapTypes } from '@/utils/parser'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
   name: 'TabPageLine',
+  components: {
+    LineIcon,
+  },
   data: () => ({
     schema: ['string'],
     routeMap: RouteMapTypes,
@@ -80,11 +90,28 @@ td.filled {
   text-align: center;
   color: #ffffff;
   line-height: 2.7rem;
+  vertical-align: top;
 }
 
 td.label {
   padding: 0.8rem 0 0.8rem 1rem;
   flex-shrink: 1;
   flex-grow: 1;
+}
+
+td.label a {
+  display: inline-block;
+  color: #2F2F2F;
+  text-decoration: none;
+  margin-right: 0.75rem;
+}
+
+.line-connections {
+  display: inline-block;
+}
+
+.line-connections > img {
+  margin-right: 0.2rem;
+  vertical-align: top;
 }
 </style>

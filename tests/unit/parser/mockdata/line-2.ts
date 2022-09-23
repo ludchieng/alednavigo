@@ -17,7 +17,10 @@ export default {
       drawing: ['', '', '*'],
       slugName: 'gournay-le-vesoul',
       displayName: 'Gournay-le-Vesoul',
-      lineConnections: ['line-1/gournay-sur-chevre'],
+      lineConnections: [{
+        line: 'line-1',
+        slugName: 'gournay-sur-chevre',
+      }],
     },
     {
       drawing: ['', '', '*'],
@@ -50,7 +53,10 @@ export default {
       drawing: ['', '*', ''],
       slugName: 'castel-aux-lopez',
       displayName: 'Castel-aux-Lopez',
-      lineConnections: ['line-1/castel-aux-lopez'],
+      lineConnections: [{
+        line: 'line-1',
+        slugName: 'castel-aux-lopez',
+      }],
     },
   ],
   stops: {
@@ -59,7 +65,10 @@ export default {
       displayName: 'Gournay-le-Vesoul',
       prevStops: [],
       nextStops: ['gartempes'],
-      lineConnections: ['line-1/gournay-sur-chevre'],
+      lineConnections: [{
+        line: 'line-1',
+        slugName: 'gournay-sur-chevre',
+      }],
     },
     'gartempes': {
       monitoringRefs: ['41528'],
@@ -87,7 +96,10 @@ export default {
       displayName: 'Castel-aux-Lopez',
       prevStops: ['acheres-grand-cormier', 'gartempes'],
       nextStops: [],
-      lineConnections: ['line-1/castel-aux-lopez'],
+      lineConnections: [{
+        line: 'line-1',
+        slugName: 'castel-aux-lopez',
+      }],
     },
   },
 }
