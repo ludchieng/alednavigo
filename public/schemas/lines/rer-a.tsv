@@ -1,54 +1,54 @@
-  	  	  	@ 	monitoringRefs	slugName                     	displayName                    	prevStops	nextStops	lineConnections
-  	  	* 	@ 	40918         	cergy-le-haut                	Cergy-le-Haut                  
-  	  	* 	@ 	411368        	cergy-saint-christophe       	Cergy-Saint-Christophe         
-  	  	* 	@ 	411352        	cergy-prefecture             	Cergy-Préfecture               
-  	  	* 	@ 	411321        	neuville-universite          	Neuville-Université            
-  	  	* 	@ 	411350        	conflans-fin-d-oise          	Conflans-Fin-d'Oise            
-  	  	* 	@ 	41528         	acheres-ville                	Achères-Ville                  
-  	  	| 	@ 	              	                             	                               
-* 	  	| 	@ 	411359        	poissy                       	Poissy                         
-* 	  	| 	@ 	411358        	acheres-grand-cormier        	Achères – Grand-Cormier        
-| 	| 	| 	@ 	              	                             	                               
-  	  	| 	@ 	              	                             	                               
-  	  	* 	@ 	41527         	maisons-laffite              	Maisons-Laffitte               
-  	  	* 	@ 	411360        	sartrouville                 	Sartrouville                   
-  	  	* 	@ 	411357        	houilles-carrieres-sur-seine 	Houilles – Carrières-sur-Seine 
-  	  	| 	@ 	              	                             	                               
-* 	  	| 	@ 	474017;474016 	saint-germain-en-laye        	Saint-Germain-en-Laye          
-* 	  	| 	@ 	473912;473909 	le-vesinet-le-pecq           	Le Vésinet – Le Pecq           
-* 	  	| 	@ 	473914;473911 	le-vesinet-centre            	Le Vésinet-Centre              
-* 	  	| 	@ 	473964;473965 	chatou-croissy               	Chatou – Croissy               
-* 	  	| 	@ 	474020;474022 	rueil-malmaison              	Rueil-Malmaison                
-* 	  	| 	@ 	474048;474049 	nanterre-ville               	Nanterre-Ville                 
-* 	  	| 	@ 	474053;474047 	nanterre-universite          	Nanterre-Université            
-| 	| 	| 	@ 	              	                             	                               
-  	* 	  	@ 	474051;474052 	nanterre-prefecture          	Nanterre-Préfecture            
-  	* 	  	@ 	473935;473936 	la-defense                   	La Défense                     
-  	* 	  	@ 	473922;473923 	charles-de-gaulle-etoile     	Charles-de-Gaulle – Étoile     
-  	* 	  	@ 	473925;473924 	auber                        	Auber                          
-  	* 	  	@ 	473993;473921 	chatelet-les-halles          	Châtelet – Les Halles          	auber	gare-de-lyon	rer-b;rer-d;metro-1/chatelet;metro-4/chatelet;metro-4/les-halles;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet
-  	* 	  	@ 	474062;474065 	gare-de-lyon                 	Gare-de-Lyon                   
-  	* 	  	@ 	473920;473919 	nation                       	Nation                         
-  	* 	  	@ 	474000;473998 	vincennes                    	Vincennes                      
-| 	| 	| 	@ 	              	                             	                               
-* 	  	| 	@ 	473959;473958 	fontenay-sous-bois           	Fontenay-sous-Bois             
-* 	  	| 	@ 	474043;474045 	nogent-sur-marne             	Nogent-sur-Marne               
-* 	  	| 	@ 	473950;473951 	joinville-le-pont            	Joinville-le-Pont              
-* 	  	| 	@ 	474013;474014 	saint-maur-creteil           	Saint-Maur – Créteil           
-* 	  	| 	@ 	473913;473900 	le-parc-de-saint-maur        	Le Parc de Saint-Maur          
-* 	  	| 	@ 	473963;473962 	champigny                    	Champigny                      
-* 	  	| 	@ 	473938;473929 	la-varenne-chennevieres      	La Varenne – Chennevières      
-* 	  	| 	@ 	474010;474007 	sucy-bonneuil                	Sucy – Bonneuil                
-* 	  	| 	@ 	473988;473987 	boissy-saint-leger           	Boissy-Saint-Léger             
-  	  	| 	@ 	              	                             	                               
-  	  	* 	@ 	474001;474002 	val-de-fontenay              	Val de Fontenay                
-  	  	* 	@ 	474042;474050 	neuilly-plaisance            	Neuilly-Plaisance              
-  	  	* 	@ 	473974;473973 	bry-sur-marne                	Bry-sur-Marne                  
-  	  	* 	@ 	474041;474032 	noisy-le-grand-mont-d-est    	Noisy-le-Grand-Mont d'Est      
-  	  	* 	@ 	474040;474039 	noisy-champs                 	Noisy – Champs                 
-  	  	* 	@ 	474046;474038 	noisiel                      	Noisiel                        
-  	  	* 	@ 	473930;473933 	lognes                       	Lognes                         
-  	  	* 	@ 	474005;474008 	torcy                        	Torcy                          
-  	  	* 	@ 	473961;473960 	bussy-saint-georges          	Bussy-Saint-Georges            
-  	  	* 	@ 	474003;474004 	val-d-europe                 	Val d'Europe                   
-  	  	* 	@ 	474064;474059 	marne-la-vallee-chessy       	Marne-la-Vallée – Chessy       
+  	  	  	@ 	monitoringRefs 	slugName                     	displayName                    	prevStops                                        	nextStops                          	lineConnections
+  	  	* 	@ 	40918          	cergy-le-haut                	Cergy–Le Haut                  	                                                 	cergy-saint-christophe             	transilien-l
+  	  	* 	@ 	411368         	cergy-saint-christophe       	Cergy–Saint-Christophe         	cergy-le-haut                                    	cergy-prefecture                   	transilien-l
+  	  	* 	@ 	411352         	cergy-prefecture             	Cergy–Préfecture               	cergy-saint-christophe                           	neuville-universite                	transilien-l
+  	  	* 	@ 	411321         	neuville-universite          	Neuville–Université            	cergy-prefecture                                 	conflans-fin-d-oise                	transilien-l
+  	  	* 	@ 	411350         	conflans-fin-d-oise          	Conflans–Fin d'Oise            	neuville-universite                              	acheres-ville                      	transilien-j;transilien-l
+  	  	* 	@ 	41528          	acheres-ville                	Achères–Ville                  	conflans-fin-d-oise                              	maisons-laffite                    	transilien-l
+  	  	| 	@ 	               	                             	                               	                                                 
+* 	  	| 	@ 	411359         	poissy                       	Poissy                         	                                                 	acheres-grand-cormier              	transilien-j
+* 	  	| 	@ 	411358         	acheres-grand-cormier        	Achères – Grand-Cormier        	poissy                                           	maisons-laffite                    	
+| 	| 	| 	@ 	               	                             	                               	                                                 
+  	  	| 	@ 	               	                             	                               	                                                 
+  	  	* 	@ 	41527          	maisons-laffite              	Maisons-Laffitte               	acheres-grand-cormier;acheres-ville              	sartrouville                       	transilien-l
+  	  	* 	@ 	411360         	sartrouville                 	Sartrouville                   	maisons-laffite                                  	houilles-carrieres-sur-seine       	transilien-l
+  	  	* 	@ 	411357         	houilles-carrieres-sur-seine 	Houilles – Carrières-sur-Seine 	sartrouville                                     	nanterre-prefecture                	transilien-j;transilien-l
+  	  	| 	@ 	               	                             	                               	                                                 	                                   	
+* 	  	| 	@ 	474017;474016  	saint-germain-en-laye        	Saint-Germain-en-Laye          	                                                 	le-vesinet-le-pecq                 	tramway-13
+* 	  	| 	@ 	473912;473909  	le-vesinet-le-pecq           	Le Vésinet – Le Pecq           	saint-germain-en-laye                            	le-vesinet-centre                  	
+* 	  	| 	@ 	473914;473911  	le-vesinet-centre            	Le Vésinet–Centre              	le-vesinet-le-pecq                               	chatou-croissy                     	
+* 	  	| 	@ 	473964;473965  	chatou-croissy               	Chatou – Croissy               	le-vesinet-centre                                	rueil-malmaison                    	
+* 	  	| 	@ 	474020;474022  	rueil-malmaison              	Rueil-Malmaison                	chatou-croissy                                   	nanterre-ville                     	
+* 	  	| 	@ 	474048;474049  	nanterre-ville               	Nanterre–Ville                 	rueil-malmaison                                  	nanterre-universite                	
+* 	  	| 	@ 	474053;474047  	nanterre-universite          	Nanterre–Université            	nanterre-ville                                   	nanterre-prefecture                	transilien-l
+| 	| 	| 	@ 	               	                             	                               	                                                 
+  	* 	  	@ 	474051;474052  	nanterre-prefecture          	Nanterre–Préfecture            	nanterre-universite;houilles-carrieres-sur-seine 	la-defense                         	
+  	* 	  	@ 	473935;473936  	la-defense                   	La Défense                     	nanterre-prefecture                              	charles-de-gaulle-etoile           	metro-1;transilien-l;transilien-u;tramway-2
+  	* 	  	@ 	473922;473923  	charles-de-gaulle-etoile     	Charles de Gaulle – Étoile     	la-defense                                       	auber                              	metro-1;metro-2;metro-6
+  	* 	  	@ 	473925;473924  	auber                        	Auber                          	charles-de-gaulle-etoile                         	chatelet-les-halles                	rer-e/haussmann-saint-lazare;transilien-j/paris-saint-lazare;transilien-l/paris-saint-lazare;metro-3/opera;metro-3/havre-caumartin;metro-7/opera;metro-8/opera;metro-9/havre-caumartin
+  	* 	  	@ 	473993;473921  	chatelet-les-halles          	Châtelet – Les Halles          	auber                                            	gare-de-lyon                       	rer-b;rer-d;metro-1/chatelet;metro-4/chatelet;metro-4/les-halles;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet
+  	* 	  	@ 	474062;474065  	gare-de-lyon                 	Gare de Lyon                   	chatelet-les-halles                              	nation                             	rer-d/paris-gare-de-lyon;transilien-r/paris-gare-de-lyon;metro-1;metro-14
+  	* 	  	@ 	473920;473919  	nation                       	Nation                         	gare-de-lyon                                     	vincennes                          	metro-1;metro-2;metro-6;metro-9
+  	* 	  	@ 	474000;473998  	vincennes                    	Vincennes                      	nation                                           	fontenay-sous-bois;val-de-fontenay 	metro-1
+| 	| 	| 	@ 	               	                             	                               	                                                 	                                   	
+* 	  	| 	@ 	473959;473958  	fontenay-sous-bois           	Fontenay-sous-Bois             	vincennes                                        	nogent-sur-marne                   	
+* 	  	| 	@ 	474043;474045  	nogent-sur-marne             	Nogent-sur-Marne               	fontenay-sous-bois                               	joinville-le-pont                  	
+* 	  	| 	@ 	473950;473951  	joinville-le-pont            	Joinville-le-Pont              	nogent-sur-marne                                 	saint-maur-creteil                 	
+* 	  	| 	@ 	474013;474014  	saint-maur-creteil           	Saint-Maur – Créteil           	joinville-le-pont                                	le-parc-de-saint-maur              	
+* 	  	| 	@ 	473913;473900  	le-parc-de-saint-maur        	Le Parc de Saint-Maur          	saint-maur-creteil                               	champigny                          	
+* 	  	| 	@ 	473963;473962  	champigny                    	Champigny                      	le-parc-de-saint-maur                            	la-varenne-chennevieres            	
+* 	  	| 	@ 	473938;473929  	la-varenne-chennevieres      	La Varenne – Chennevières      	champigny                                        	sucy-bonneuil                      	
+* 	  	| 	@ 	474010;474007  	sucy-bonneuil                	Sucy – Bonneuil                	la-varenne-chennevieres                          	boissy-saint-leger                 	
+* 	  	| 	@ 	473988;473987  	boissy-saint-leger           	Boissy-Saint-Léger             	sucy-bonneuil                                    	                                   	
+  	  	| 	@ 	               	                             	                               	                                                 	                                   	
+  	  	* 	@ 	474001;474002  	val-de-fontenay              	Val de Fontenay                	vincennes                                        	neuilly-plaisance                  	rer-e
+  	  	* 	@ 	474042;474050  	neuilly-plaisance            	Neuilly-Plaisance              	val-de-fontenay                                  	bry-sur-marne                      	
+  	  	* 	@ 	473974;473973  	bry-sur-marne                	Bry-sur-Marne                  	neuilly-plaisance                                	noisy-le-grand-mont-d-est          	
+  	  	* 	@ 	474041;474032  	noisy-le-grand-mont-d-est    	Noisy-le-Grand Mont d'Est      	bry-sur-marne                                    	noisy-champs                       	
+  	  	* 	@ 	474040;474039  	noisy-champs                 	Noisy – Champs                 	noisy-le-grand-mont-d-est                        	noisiel                            	
+  	  	* 	@ 	474046;474038  	noisiel                      	Noisiel                        	noisy-champs                                     	lognes                             	
+  	  	* 	@ 	473930;473933  	lognes                       	Lognes                         	noisiel                                          	torcy                              	
+  	  	* 	@ 	474005;474008  	torcy                        	Torcy                          	lognes                                           	bussy-saint-georges                	
+  	  	* 	@ 	473961;473960  	bussy-saint-georges          	Bussy Saint-Georges            	torcy                                            	val-d-europe                       	
+  	  	* 	@ 	474003;474004  	val-d-europe                 	Val d'Europe                   	bussy-saint-georges                              	marne-la-vallee-chessy             	
+  	  	* 	@ 	474064;474059  	marne-la-vallee-chessy       	Marne-la-Vallée – Chessy       	val-d-europe                                     	                                   	

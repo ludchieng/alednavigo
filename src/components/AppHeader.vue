@@ -13,8 +13,8 @@
         <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
       </router-link>
     </div>
-    <div class="btn-synchronize" hidden>
-      <button @click="synchronize">Synchronize</button>
+    <div class="btn-synchronize">
+      <button @click="synchronize">Force Update</button>
     </div>
   </header>
 </template>
@@ -32,7 +32,9 @@ export default Vue.extend({
   methods: {
     synchronize () {
       // TODO Remove
-      synchronize()
+      synchronize().then(
+        () => this.$router.push('/'),
+      )
     },
   },
 })
