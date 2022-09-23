@@ -94,13 +94,14 @@ td.filled {
 }
 
 td.label {
-  padding: 0.8rem 0 0.8rem 1rem;
+  padding: 0.4rem 0;
   flex-shrink: 1;
   flex-grow: 1;
 }
 
 td.label a {
   display: inline-block;
+  padding: 0.4rem 0 0.4rem 1rem;
   color: #2F2F2F;
   text-decoration: none;
   margin-right: 0.75rem;
