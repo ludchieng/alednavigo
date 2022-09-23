@@ -102,8 +102,6 @@ td.label {
 td.label a {
   display: inline-block;
   padding: 0.4rem 0 0.4rem 1rem;
-  color: #2F2F2F;
-  text-decoration: none;
   margin-right: 0.75rem;
 }
 

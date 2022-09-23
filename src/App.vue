@@ -53,10 +53,22 @@ export default Vue.extend({
 body {
   margin: 0;
   padding: 0;
+  color: #2F2F2F;
 }
 
 #app {
   font-family: Inter, Helvetica, sans-serif;
   font-weight: 500;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 </style>

@@ -8,6 +8,24 @@
           type="dark" :line="conn.line" />
       </span>
     </h2>
+
+    <div class="prev-next-stops">
+      <ul>
+        <li v-for="(prevStop, i) in stop.prevStops" :key="i">
+          <router-link :to="`/${$route.params.tab}/${$route.params.line}/${prevStop}`">
+            {{ getStop($route.params.line, prevStop) }}
+          </router-link>
+        </li>
+      </ul>
+      <ul>
+        <li v-for="(nextStop, i) in stop.nextStops" :key="i">
+          <router-link :to="`/${$route.params.tab}/${$route.params.line}/${nextStop}`">
+            {{ getStop($route.params.line, nextStop) }}
+          </router-link>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -34,6 +52,11 @@ export default Vue.extend({
           `lines.${this.$route.params.line}.stops`,
         ) as string)[this.$route.params.stop]
     },
+    getStop (line: string, slugName: string) {
+      return JSON.parse(
+        localStorage.getItem(`lines.${line}.stops`) as string,
+      )[slugName].displayName
+    },
   },
   watch: {
     '$route.params.line': {
@@ -54,7 +77,7 @@ export default Vue.extend({
 
 <style scoped>
 .tab-page-stop {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .line-connections {
@@ -67,6 +90,23 @@ export default Vue.extend({
   margin-bottom: 0.4rem;
   margin-right: 0.4rem;
   vertical-align: -0.4rem;
+}
+
+.prev-next-stops {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev-next-stops ul {
+  width: 49%;
+}
+
+.prev-next-stops li {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #dfdfdf;
+  border-radius: 0.4rem;
 }
 
 </style>

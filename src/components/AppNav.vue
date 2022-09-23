@@ -65,11 +65,6 @@ hr {
   border: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
 .nav-content {
   display: flex;
   align-items: center;
