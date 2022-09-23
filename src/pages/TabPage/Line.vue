@@ -112,6 +112,7 @@ td.label a {
 }
 
 .line-connections > img {
+  margin-top: 0.2rem;
   margin-right: 0.2rem;
   vertical-align: top;
 }
