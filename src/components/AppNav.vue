@@ -10,7 +10,7 @@
           <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
             <router-link class="tab-link" :to="`/${i + 1}/${path}`">
               <span class="tab-label">
-                <img :src="`/img/lines-icons/${($store.state.tabIndex === i ? 'dark' : 'light')}/${line}.svg`">
+                <img v-if="line" :src="`/img/lines-icons/${($store.state.tabIndex === i ? 'dark' : 'light')}/${line}.svg`">
                 <span v-if="stop" class="tab-label-text">
                   {{ getStop(line, stop).displayName }}
                 </span>
