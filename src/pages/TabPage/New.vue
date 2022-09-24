@@ -3,9 +3,10 @@
     <div v-for="category in lines" :key="category.name">
       <h2>{{ category.name }}</h2>
       <hr />
-      <router-link v-for="line in category.lines" :key="line.slug" class="icon-line"
-        :to="`/${$store.state.tabNumber}/${line.slug}`">
-        <LineIcon type="dark" :line="line.slug" />
+      <router-link v-for="line in category.lines" :key="line.slug"
+        class="icon-line" :to="`/${$store.state.tabNumber}/${line.slug}`"
+      >
+        <img :src="`/img/lines-icons/dark/${line.slug}.svg`">
       </router-link>
     </div>
   </div>
@@ -14,13 +15,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import lines, { LineCategory } from './lines'
-import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
   name: 'TabPageNew',
-  components: {
-    LineIcon,
-  },
   data: (): {
     lines: LineCategory[];
   } => ({

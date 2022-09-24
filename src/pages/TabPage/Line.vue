@@ -9,10 +9,10 @@
           <router-link :to="`/${$route.params.tab}/${$route.params.line}/${row.slugName}`">
             {{ row.displayName }}
             <div class="line-connections">
-              <LineIcon
+              <img
                 v-for="(conn, i) in row.lineConnections" :key="i"
-                type="colors" :line="conn.line"
-              />
+                :src="`/img/lines-icons/colors/${conn.line}.svg`"
+              >
             </div>
           </router-link>
         </td>
@@ -24,13 +24,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import { RouteMapTypes } from '@/utils/parser'
-import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
   name: 'TabPageLine',
-  components: {
-    LineIcon,
-  },
   data: () => ({
     schema: ['string'],
     routeMap: RouteMapTypes,

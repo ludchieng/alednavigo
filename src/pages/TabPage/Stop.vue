@@ -4,9 +4,10 @@
       {{ stop.displayName }}
     </h1>
     <span class="line-connections">
-      <LineIcon
+      <img
         v-for="(conn, i) in stop.lineConnections" :key="i"
-        type="dark" :line="conn.line" />
+        :src="`/img/lines-icons/dark/${conn.line}.svg`"
+      />
     </span>
 
     <div class="prev-next-stops">
@@ -60,14 +61,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import { StopType } from '@/utils/parser'
-import LineIcon from '@/components/LineIcon.vue'
 import { VisitType } from '@/utils/fetcher'
 
 export default Vue.extend({
   name: 'TabPageStop',
-  components: {
-    LineIcon,
-  },
   data: () => ({
     stop: {} as StopType,
     visits: {} as { [x: string]: VisitType[] },
