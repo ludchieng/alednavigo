@@ -5,7 +5,7 @@
         class="icon-line"
         :to="`/${ $route.params.tab }/${ $route.params.line }`"
       >
-        <LineIcon type="colors" :line="$route.params.line" />
+      <img :src="`/img/lines-icons/colors/${$route.params.line}.svg`">
       </router-link>
     </div>
     <div>
@@ -22,13 +22,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import { synchronize } from '@/utils/synchronizer'
-import LineIcon from './LineIcon.vue'
 
 export default Vue.extend({
   name: 'AppHeader',
-  components: {
-    LineIcon,
-  },
   methods: {
     synchronize () {
       // TODO Remove
