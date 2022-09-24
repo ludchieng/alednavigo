@@ -91,7 +91,6 @@ module.exports = defineConfig({
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: './public/sw.js',
-      swDest: 'sw.js',
     },
   },
 })
