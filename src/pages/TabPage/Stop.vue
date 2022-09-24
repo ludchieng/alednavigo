@@ -1,14 +1,16 @@
 <template>
   <div class="tab-page-stop">
-    <h1>
-      {{ stop.displayName }}
-    </h1>
-    <span class="line-connections">
-      <img
-        v-for="(conn, i) in stop.lineConnections" :key="i"
-        :src="`/img/lines-icons/dark/${conn.line}.svg`"
-      />
-    </span>
+    <div class="title">
+      <h1>
+        {{ stop.displayName }}
+      </h1>
+      <span class="line-connections">
+        <img
+          v-for="(conn, i) in stop.lineConnections" :key="i"
+          :src="`/img/lines-icons/dark/${conn.line}.svg`"
+        />
+      </span>
+    </div>
 
     <div class="prev-next-stops">
       <ul>
@@ -31,26 +33,31 @@
       </ul>
     </div>
 
-    <div v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i">
-      <h2>{{ direction }}</h2>
-      <div class="sync">
-        <span class="sync-time">
-          {{ syncTimer }}s
-        </span>
-        <button class="sync-btn" @click="update">
-          <img class="icon-settings" src="/img/mui/update.svg" />
-          Synchroniser
-         </button>
-      </div>
-      <div v-for="(train, j) in trains" :key="j" class="train">
-        <div class="train-code">
-          {{ train.code }}
+    <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
+      <div
+        v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i"
+        class="timetables"
+      >
+        <h2>{{ direction }}</h2>
+        <div class="sync">
+          <span class="sync-time">
+            {{ syncTimer }}s
+          </span>
+          <button class="sync-btn" @click="update">
+            <img class="icon-settings" src="/img/mui/update.svg" />
+            Synchroniser
+          </button>
         </div>
-        <div class="train-time">
-          {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
-        </div>
-        <div class="train-destination">
-          {{ train.destination }}
+        <div v-for="(train, j) in trains" :key="j" class="train">
+          <div class="train-code">
+            {{ train.code }}
+          </div>
+          <div class="train-time">
+            {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
+          </div>
+          <div class="train-destination">
+            {{ train.destination }}
+          </div>
         </div>
       </div>
     </div>
@@ -153,10 +160,14 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.title {
+  min-height: 2.8rem;
+}
+
 h1 {
   font-size: 1.5rem;
   display: inline-block;
-  margin: 0.5rem 1rem 0 0;
+  margin: 0.5rem 1rem 0rem 0;
 }
 
 .tab-page-stop {
@@ -186,8 +197,9 @@ h1 {
 
 .prev-next-stops li a {
   display: flex;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   margin-bottom: 0.5rem;
+  font-size: 0.95rem;
   background-color: #dfdfdf;
   border-radius: 0.4rem;
   text-align: center;
@@ -195,7 +207,7 @@ h1 {
 .prev-next-stops a span {
   display: inline-block;
   width: 100%;
-  padding: 0 0.3rem;
+  padding: 0.1rem 0.3rem 0 0.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -206,6 +218,18 @@ h1 {
 }
 .next-stops a::after {
   content: '〉';
+}
+
+.timetables {
+  margin-top: 1.5rem;
+}
+
+.timetables:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin: 0;
 }
 
 .train {
@@ -265,11 +289,20 @@ h1 {
   padding: 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .sync-btn img {
   vertical-align: -0.35rem;
   margin: 0 0.5rem;
+}
+
+.hide {
+  opacity: 0;
+}
+.fade-show {
+  opacity: 1;
+  transition: .2s;
 }
 
 </style>
