@@ -50,6 +50,10 @@ export const parseLine = (tsv: string) => {
       .slice(1)
       .map(cell => cell.trim())).shift() as string[]
 
+  if (!header.includes('monitoringRefs')) {
+    throw Error('Invalid TSV data: line does not have "monitoringRefs" property')
+  }
+
   header.unshift('drawing')
   const dataAsArray = rawLineData.map((row, i) => [rawLineDrawing[i], ...row])
 
