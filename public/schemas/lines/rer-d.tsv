@@ -1,70 +1,76 @@
-  	  	  	  	  	@ 	monitoringRefs 	slugName                           	displayName                            	prevStops           	nextStops           	lineConnections
-  	  	  	  	* 	@ 	        411439 	creil                              	Creil                                  
-  	  	  	  	* 	@ 	        411427 	chantilly-gouvieux                 	Chantilly – Gouvieux                   
-  	  	  	  	* 	@ 	        411420 	orry-la-ville-coye                 	Orry-la-Ville – Coye                   
-  	  	  	  	* 	@ 	        411417 	la-borne-blanche                   	La Borne Blanche                       
-  	  	  	  	* 	@ 	         41101 	survilliers-fosses                 	Survilliers – Fosses                   
-  	  	  	  	* 	@ 	         41100 	louvres                            	Louvres                                
-  	  	  	  	* 	@ 	         41098 	les-noues                          	Les Noues                              
-  	  	  	  	* 	@ 	         41099 	goussainville                      	Goussainville                          
-  	  	  	  	* 	@ 	         41097 	villiers-le-bel-gonesse-arnouville 	Villiers-le-Bel – Gonesse – Arnouville 
-  	  	  	  	* 	@ 	        411426 	garges-sarcelles                   	Garges – Sarcelles                     
-  	  	  	  	* 	@ 	        411416 	pierrefitte-stains                 	Pierrefitte – Stains                   
-  	  	  	  	* 	@ 	        411414 	saint-denis-l-ile-saint-denis      	Saint-Denis L'Île-Saint-Denis          
-  	  	  	  	* 	@ 	        411370 	stade-de-france-saint-denis        	Stade de France – Saint-Denis          
-  	  	  	  	* 	@ 	         41071 	paris-gare-du-nord                 	Paris-Gare du Nord                     
-  	  	  	  	* 	@ 	        412815 	chatelet-les-halles                	Châtelet – Les Halles                  	paris-gare-du-nord 	paris-gare-de-lyon 	rer-a;rer-b;metro-1/chatelet;metro-4/chatelet;metro-4/les-halles;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet
-  	  	  	  	* 	@ 	         41396 	paris-gare-de-lyon                 	Paris-Gare-de-Lyon                     
-  	  	  	  	* 	@ 	         41337 	maisons-alfort-alfortville         	Maisons-Alfort – Alfortville           
-  	  	  	  	* 	@ 	         41338 	le-vert-de-maisons                 	Le Vert de Maisons                     
-  	  	  	  	* 	@ 	         41530 	creteil-pompadour                  	Créteil-Pompadour                      
-  	  	  	  	* 	@ 	         41359 	villeneuve-triage                  	Villeneuve-Triage                      
-  	  	  	  	* 	@ 	         41360 	villeneuve-saint-georges           	Villeneuve-Saint-Georges               
-| 	| 	| 	| 	| 	@ 	               	                                   
-* 	  	  	  	| 	@ 	         41339 	vigneux-sur-seine                  	Vigneux-sur-Seine                      
-* 	  	* 	  	| 	@ 	         41309 	juvisy                             	Juvisy                                 
-* 	  	* 	  	| 	@ 	         41340 	viry-chatillon                     	Viry-Châtillon                         
-| 	  	* 	  	| 	@ 	         41341 	ris-orangis                        	Ris-Orangis                            
-| 	  	* 	  	| 	@ 	         41343 	grand-bourg                        	Grand Bourg                            
-| 	  	* 	  	| 	@ 	         41344 	evry-val-de-seine                  	Évry-Val-de-Seine                      
-| 	  	| 	  	| 	@ 	               	                                   
-* 	  	| 	  	| 	@ 	         41345 	grigny-centre                      	Grigny-Centre                          
-* 	  	| 	  	| 	@ 	         41342 	orangis-bois-de-l-epine            	Orangis – Bois de l'Épine              
-* 	  	| 	  	| 	@ 	         41346 	evry-courcouronnes                 	Évry-Courcouronnes                     
-* 	  	| 	  	| 	@ 	         41347 	le-bras-de-fer-evry-genopole       	Le Bras de Fer – Évry – Génopole       
-* 	  	* 	  	| 	@ 	         41336 	corbeil-essonnes                   	Corbeil-Essonnes                       
-  	  	| 	  	| 	@ 	               	                                   
-  	  	| 	  	| 	@ 	               	                                   
-| 	| 	| 	  	| 	@ 	               	                                   
-| 	  	| 	  	| 	@ 	               	                                   
-| 	  	| 	  	| 	@ 	               	                                   
-| 	  	* 	  	| 	@ 	         41355 	essonnes-robinson                  	Essonnes – Robinson                    
-| 	  	* 	  	| 	@ 	         41356 	villabe                            	Villabé                                
-| 	  	* 	  	| 	@ 	         41357 	le-plessis-chenet                  	Le Plessis-Chenet                      
-| 	  	* 	  	| 	@ 	         41358 	le-coudray-montceaux               	Le Coudray-Montceaux                   
-| 	  	* 	  	| 	@ 	         41388 	saint-fargeau                      	Saint-Fargeau                          
-| 	  	* 	  	| 	@ 	         41387 	ponthierry-pringy                  	Ponthierry – Pringy                    
-| 	  	* 	  	| 	@ 	         41386 	boissise-le-roi                    	Boissise-le-Roi                        
-| 	  	* 	  	| 	@ 	         41385 	vosves                             	Vosves                                 
-| 	  	| 	  	| 	@ 	               
-| 	  	| 	  	* 	@ 	         41362 	montgeron-crosne                   	Montgeron – Crosne                     
-| 	  	| 	  	* 	@ 	         41363 	yerres                             	Yerres                                 
-| 	  	| 	  	* 	@ 	         41364 	brunoy                             	Brunoy                                 
-| 	  	| 	  	* 	@ 	         41365 	boussy-saint-antoine               	Boussy-Saint-Antoine                   
-| 	  	| 	  	* 	@ 	         41366 	combs-la-ville-quincy              	Combs-la-Ville – Quincy                
-| 	  	| 	  	* 	@ 	         41367 	lieusaint-moissy                   	Lieusaint – Moissy                     
-| 	  	| 	  	* 	@ 	         41370 	savigny-le-temple-nandy            	Savigny-le-Temple – Nandy              
-| 	  	| 	  	* 	@ 	         41368 	cesson                             	Cesson                                 
-| 	  	| 	  	* 	@ 	        473989 	le-mee                             	Le Mée                                 
-| 	  	| 	  	| 	@ 	               
-| 	  	* 	  	* 	@ 	         41361 	melun                              	Melun                                  
-| 	  	  	  	  	@ 	               	                                   
-* 	  	  	  	  	@ 	         41348 	moulin-galant                      	Moulin-Galant                          
-* 	  	  	  	  	@ 	         41349 	mennecy                            	Mennecy                                
-* 	  	  	  	  	@ 	         41350 	ballancourt                        	Ballancourt                            
-* 	  	  	  	  	@ 	         41351 	la-ferte-alais                     	La Ferté-Alais                         
-* 	  	  	  	  	@ 	         41352 	boutigny                           	Boutigny                               
-* 	  	  	  	  	@ 	         41353 	maisse                             	Maisse                                 
-* 	  	  	  	  	@ 	         41354 	buno-gironville                    	Buno – Gironville                      
-* 	  	  	  	  	@ 	         41395 	boigneville                        	Boigneville                            
-* 	  	  	  	  	@ 	        411484 	malesherbes                        	Malesherbes                            
+   	   	  	   	  	@ 	#  	monitoringRefs 	isTerminus 	slugName                           	displayName                            	prevStops                                      	nextStops                          	lineConnections
+   	   	  	   	^ 	@ 	 1 	               	           	                                   	                                       	                                               	                                   	
+   	   	  	   	* 	@ 	 2 	        411439 	         1 	creil                              	Creil                                  	                                               	chantilly-gouvieux                 	transilien-h
+   	   	  	   	* 	@ 	 3 	        411427 	         0 	chantilly-gouvieux                 	Chantilly – Gouvieux                   	creil                                          	orry-la-ville-coye                 	
+   	   	  	   	* 	@ 	 4 	        411420 	         1 	orry-la-ville-coye                 	Orry-la-Ville – Coye                   	chantilly-gouvieux                             	la-borne-blanche                   	
+   	   	  	   	* 	@ 	 5 	        411417 	         0 	la-borne-blanche                   	La Borne Blanche                       	orry-la-ville-coye                             	survilliers-fosses                 	
+   	   	  	   	* 	@ 	 6 	         41101 	         0 	survilliers-fosses                 	Survilliers – Fosses                   	la-borne-blanche                               	louvres                            	
+   	   	  	   	* 	@ 	 7 	         41100 	         0 	louvres                            	Louvres                                	survilliers-fosses                             	les-noues                          	
+   	   	  	   	* 	@ 	 8 	         41098 	         0 	les-noues                          	Les Noues                              	louvres                                        	goussainville                      	
+   	   	  	   	* 	@ 	 9 	         41099 	         1 	goussainville                      	Goussainville                          	les-noues                                      	villiers-le-bel-gonesse-arnouville 	
+   	   	  	   	* 	@ 	10 	         41097 	         1 	villiers-le-bel-gonesse-arnouville 	Villiers-le-Bel – Gonesse – Arnouville 	goussainville                                  	garges-sarcelles                   	
+   	   	  	   	* 	@ 	11 	        411426 	         0 	garges-sarcelles                   	Garges – Sarcelles                     	villiers-le-bel-gonesse-arnouville             	pierrefitte-stains                 	tramway-5
+   	   	  	   	* 	@ 	12 	        411416 	         0 	pierrefitte-stains                 	Pierrefitte – Stains                   	garges-sarcelles                               	saint-denis-l-ile-saint-denis      	tramway-11
+   	   	  	   	* 	@ 	13 	        411414 	         0 	saint-denis-l-ile-saint-denis      	Saint-Denis L'Île-Saint-Denis          	pierrefitte-stains                             	stade-de-france-saint-denis        	transilien-h;tramway-1;tramway-8
+   	   	  	   	* 	@ 	14 	        411370 	         1 	stade-de-france-saint-denis        	Stade de France – Saint-Denis          	saint-denis-l-ile-saint-denis                  	paris-gare-du-nord                 	
+   	   	  	   	* 	@ 	15 	         41071 	         1 	paris-gare-du-nord                 	Paris-Gare du Nord                     	stade-de-france-saint-denis                    	chatelet-les-halles                	metro-4;metro-5;metro-2/la-chapelle;rer-b;rer-e/magenta;transilien-h;transilien-k
+   	   	  	   	* 	@ 	16 	        412815 	         1 	chatelet-les-halles                	Châtelet – Les Halles                  	paris-gare-du-nord                             	paris-gare-de-lyon                 	metro-1/chatelet;metro-4/chatelet;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet;;metro-4/les-halles;rer-a;rer-b
+   	   	  	   	* 	@ 	17 	         41396 	         1 	paris-gare-de-lyon                 	Paris-Gare-de-Lyon                     	chatelet-les-halles                            	maisons-alfort-alfortville         	metro-1;metro-14;rer-a;transilien-r
+   	   	  	   	* 	@ 	18 	         41337 	         0 	maisons-alfort-alfortville         	Maisons-Alfort – Alfortville           	paris-gare-de-lyon                             	le-vert-de-maisons                 	
+   	   	  	   	* 	@ 	19 	         41338 	         0 	le-vert-de-maisons                 	Le Vert de Maisons                     	maisons-alfort-alfortville                     	creteil-pompadour                  	
+   	   	  	   	* 	@ 	20 	         41530 	         0 	creteil-pompadour                  	Créteil-Pompadour                      	le-vert-de-maisons                             	villeneuve-triage                  	
+   	   	  	   	* 	@ 	21 	         41359 	         0 	villeneuve-triage                  	Villeneuve-Triage                      	creteil-pompadour                              	villeneuve-saint-georges           	
+   	   	  	   	* 	@ 	22 	         41360 	         0 	villeneuve-saint-georges           	Villeneuve-Saint-Georges               	villeneuve-triage                              	vigneux-sur-seine;montgeron-crosne 	
+   	   	  	/. 	| 	@ 	23 	               	           	                                   	                                       	                                               	                                   	
+/o 	|  	| 	|  	| 	@ 	24 	               	           	                                   	                                       	                                               	                                   	
+*  	   	  	   	| 	@ 	25 	         41339 	         0 	vigneux-sur-seine                  	Vigneux-sur-Seine                      	villeneuve-saint-georges                       	juvisy                             	
+|  	   	^ 	   	| 	@ 	26 	               	           	                                   	                                       	                                               	                                   	
+*  	   	* 	   	| 	@ 	27 	         41309 	         1 	juvisy                             	Juvisy                                 	vigneux-sur-seine                              	viry-chatillon                     	rer-c
+*  	   	* 	   	| 	@ 	28 	         41340 	         0 	viry-chatillon                     	Viry-Châtillon                         	juvisy                                         	ris-orangis;grigny-centre          	
+|  	   	* 	   	| 	@ 	29 	         41341 	         0 	ris-orangis                        	Ris-Orangis                            	viry-chatillon                                 	grand-bourg                        	
+|  	   	* 	   	| 	@ 	30 	         41343 	         0 	grand-bourg                        	Grand Bourg                            	ris-orangis                                    	evry-val-de-seine                  	
+|  	   	* 	   	| 	@ 	31 	         41344 	         0 	evry-val-de-seine                  	Évry-Val-de-Seine                      	grand-bourg                                    	corbeil-essonnes                   	
+|  	   	| 	   	| 	@ 	32 	               	           	                                   	                                       	                                               	                                   	
+*  	   	| 	   	| 	@ 	33 	         41345 	         0 	grigny-centre                      	Grigny-Centre                          	viry-chatillon                                 	orangis-bois-de-l-epine            	
+*  	   	| 	   	| 	@ 	34 	         41342 	         0 	orangis-bois-de-l-epine            	Orangis – Bois de l'Épine              	grigny-centre                                  	evry-courcouronnes                 	
+*  	   	| 	   	| 	@ 	35 	         41346 	         0 	evry-courcouronnes                 	Évry-Courcouronnes                     	orangis-bois-de-l-epine                        	le-bras-de-fer-evry-genopole       	
+*  	   	| 	   	| 	@ 	36 	         41347 	         0 	le-bras-de-fer-evry-genopole       	Le Bras de Fer – Évry – Génopole       	evry-courcouronnes                             	corbeil-essonnes                   	
+*  	   	* 	   	| 	@ 	37 	         41336 	         1 	corbeil-essonnes                   	Corbeil-Essonnes                       	le-bras-de-fer-evry-genopole;evry-val-de-seine 	moulin-galant;essonnes-robinson    	
+v  	   	| 	   	| 	@ 	38 	               	           	                                   	                                       	                                               	                                   	
+   	   	| 	   	| 	@ 	39 	               	           	                                   	                                       	                                               	                                   	
+   	   	| 	   	| 	@ 	40 	               	           	                                   	                                       	                                               	                                   	
+   	/. 	| 	   	| 	@ 	41 	               	           	                                   	                                       	                                               	                                   	
+/o 	|  	| 	   	| 	@ 	42 	               	           	                                   	                                       	                                               	                                   	
+|  	   	| 	   	| 	@ 	43 	               	           	                                   	                                       	                                               	                                   	
+|  	   	| 	   	| 	@ 	44 	               	           	                                   	                                       	                                               	                                   	
+|  	   	* 	   	| 	@ 	45 	         41355 	         0 	essonnes-robinson                  	Essonnes – Robinson                    	corbeil-essonnes                               	villabe                            	
+|  	   	* 	   	| 	@ 	46 	         41356 	         0 	villabe                            	Villabé                                	essonnes-robinson                              	le-plessis-chenet                  	
+|  	   	* 	   	| 	@ 	47 	         41357 	         0 	le-plessis-chenet                  	Le Plessis-Chenet                      	villabe                                        	le-coudray-montceaux               	
+|  	   	* 	   	| 	@ 	48 	         41358 	         0 	le-coudray-montceaux               	Le Coudray-Montceaux                   	le-plessis-chenet                              	saint-fargeau                      	
+|  	   	* 	   	| 	@ 	49 	         41388 	         0 	saint-fargeau                      	Saint-Fargeau                          	le-coudray-montceaux                           	ponthierry-pringy                  	
+|  	   	* 	   	| 	@ 	50 	         41387 	         0 	ponthierry-pringy                  	Ponthierry – Pringy                    	saint-fargeau                                  	boissise-le-roi                    	
+|  	   	* 	   	| 	@ 	51 	         41386 	         0 	boissise-le-roi                    	Boissise-le-Roi                        	ponthierry-pringy                              	vosves                             	
+|  	   	* 	   	| 	@ 	52 	         41385 	         0 	vosves                             	Vosves                                 	boissise-le-roi                                	melun                              	
+|  	   	| 	   	| 	@ 	53 	               	           	                                   	                                       	                                               	                                   	
+|  	   	| 	   	* 	@ 	54 	         41362 	         0 	montgeron-crosne                   	Montgeron – Crosne                     	villeneuve-saint-georges                       	yerres                             	
+|  	   	| 	   	* 	@ 	55 	         41363 	         0 	yerres                             	Yerres                                 	montgeron-crosne                               	brunoy                             	
+|  	   	| 	   	* 	@ 	56 	         41364 	         0 	brunoy                             	Brunoy                                 	yerres                                         	boussy-saint-antoine               	
+|  	   	| 	   	* 	@ 	57 	         41365 	         0 	boussy-saint-antoine               	Boussy-Saint-Antoine                   	brunoy                                         	combs-la-ville-quincy              	
+|  	   	| 	   	* 	@ 	58 	         41366 	         1 	combs-la-ville-quincy              	Combs-la-Ville – Quincy                	boussy-saint-antoine                           	lieusaint-moissy                   	
+|  	   	| 	   	* 	@ 	59 	         41367 	         0 	lieusaint-moissy                   	Lieusaint – Moissy                     	combs-la-ville-quincy                          	savigny-le-temple-nandy            	
+|  	   	| 	   	* 	@ 	60 	         41370 	         0 	savigny-le-temple-nandy            	Savigny-le-Temple – Nandy              	lieusaint-moissy                               	cesson                             	
+|  	   	| 	   	* 	@ 	61 	         41368 	         0 	cesson                             	Cesson                                 	savigny-le-temple-nandy                        	le-mee                             	
+|  	   	| 	   	* 	@ 	62 	        473989 	         0 	le-mee                             	Le Mée                                 	cesson                                         	melun                              	
+|  	   	| 	   	| 	@ 	63 	               	           	                                   	                                       	                                               	                                   	
+|  	   	* 	   	* 	@ 	64 	         41361 	         1 	melun                              	Melun                                  	vosves;le-mee                                  	                                   	transilien-r
+|  	   	v 	   	v 	@ 	65 	               	           	                                   	                                       	                                               	                                   	
+*  	   	  	   	  	@ 	66 	         41348 	         0 	moulin-galant                      	Moulin-Galant                          	corbeil-essonnes                               	mennecy                            	
+*  	   	  	   	  	@ 	67 	         41349 	         0 	mennecy                            	Mennecy                                	moulin-galant                                  	ballancourt                        	
+*  	   	  	   	  	@ 	68 	         41350 	         0 	ballancourt                        	Ballancourt                            	mennecy                                        	la-ferte-alais                     	
+*  	   	  	   	  	@ 	69 	         41351 	         1 	la-ferte-alais                     	La Ferté-Alais                         	ballancourt                                    	boutigny                           	
+*  	   	  	   	  	@ 	70 	         41352 	         0 	boutigny                           	Boutigny                               	la-ferte-alais                                 	maisse                             	
+*  	   	  	   	  	@ 	71 	         41353 	         0 	maisse                             	Maisse                                 	boutigny                                       	buno-gironville                    	
+*  	   	  	   	  	@ 	72 	         41354 	         0 	buno-gironville                    	Buno – Gironville                      	maisse                                         	boigneville                        	
+*  	   	  	   	  	@ 	73 	         41395 	         0 	boigneville                        	Boigneville                            	buno-gironville                                	malesherbes                        	
+*  	   	  	   	  	@ 	74 	        411484 	         1 	malesherbes                        	Malesherbes                            	boigneville                                    	                                   	
+v  	   	  	   	  	@ 	75 	               	           	                                   	                                       	                                               	                                   	

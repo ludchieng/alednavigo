@@ -1,0 +1,53 @@
+   	   	   	   	   	 	  	@ 	#  	monitoringRefs 	slugName                     	displayName                      	prevStops                    	nextStops                                      	lineConnections
+   	   	^  	   	   	 	  	@ 	 1 	               	                             	                                 	                             	                                               	
+   	   	*  	   	   	 	  	@ 	 2 	         41010 	paris-est                    	Paris-Est                        	                             	verneuil-l-etang;tournan;meaux;chelles-gournay 	metro-4;metro-5;metro-7;metro-7/chateau-landon;rer-e/magenta
+   	/. 	|  	.\ 	   	 	  	@ 	 3 	               	                             	                                 	                             	                                               	
+/o 	|  	|  	|  	o\ 	 	  	@ 	 4 	               	                             	                                 	                             	                                               	
+|  	   	|  	   	|  	 	  	@ 	 5 	               	                             	                                 	                             	                                               	
+|  	   	*  	   	|  	 	  	@ 	 6 	         41039 	chelles-gournay              	Chelles – Gournay                	paris-est                    	vaires-torcy                                   	rer-e
+|  	   	*  	   	|  	 	  	@ 	 7 	         41049 	vaires-torcy                 	Vaires – Torcy                   	chelles-gournay              	lagny-thorigny                                 	
+|  	   	*  	   	|  	 	  	@ 	 8 	         41051 	lagny-thorigny               	Lagny – Thorigny                 	vaires-torcy                 	esbly                                          	
+|  	   	|  	   	|  	 	^ 	@ 	 9 	               	                             	                                 	                             	                                               	
+|  	   	*  	   	|  	 	* 	@ 	10 	         41052 	esbly                        	Esbly                            	lagny-thorigny               	montry-conde;meaux                             	
+|  	   	|  	   	|  	 	* 	@ 	11 	         41059 	montry-conde                 	Montry – Condé                   	esbly                        	couilly-saint-germain-quincy                   	
+|  	   	|  	   	|  	 	* 	@ 	12 	         41067 	couilly-saint-germain-quincy 	Couilly – Saint-Germain – Quincy 	montry-conde                 	villiers-montbarbin                            	
+|  	   	|  	   	|  	 	* 	@ 	13 	         41068 	villiers-montbarbin          	Villiers – Montbarbin            	couilly-saint-germain-quincy 	crecy-la-chapelle                              	
+|  	   	|  	   	|  	 	* 	@ 	14 	         41069 	crecy-la-chapelle            	Crécy-la-Chapelle                	villiers-montbarbin          	                                               	
+|  	   	|  	   	|  	 	v 	@ 	15 	               	                             	                                 	                             	                                               	
+|  	   	|  	   	|  	 	  	@ 	16 	               	                             	                                 	                             	                                               	
+|  	   	|  	   	|  	 	  	@ 	17 	               	                             	                                 	                             	                                               	
+|  	   	|  	   	|  	 	^ 	@ 	18 	               	                             	                                 	                             	                                               	
+|  	   	*  	   	*  	 	* 	@ 	19 	         41038 	meaux                        	Meaux                            	esbly;paris-est              	trilport                                       	
+|  	   	v  	   	|  	 	| 	@ 	20 	               	                             	                                 	                             	                                               	
+|  	   	   	   	*  	 	* 	@ 	21 	         41060 	trilport                     	Trilport                         	meaux                        	isles-armentieres-congis;changis-saint-jean    	
+|  	   	   	   	|  	 	| 	@ 	22 	               	                             	                                 	                             	                                               	
+|  	   	   	   	*  	 	| 	@ 	23 	         41061 	changis-saint-jean           	Changis – Saint-Jean             	trilport                     	la-ferte-sous-jouarre                          	
+|  	   	   	   	*  	 	| 	@ 	24 	         41062 	la-ferte-sous-jouarre        	La Ferté-sous-Jouarre            	changis-saint-jean           	nanteuil-saacy                                 	
+|  	   	   	   	*  	 	| 	@ 	25 	         41063 	nanteuil-saacy               	Nanteuil – Saâcy                 	la-ferte-sous-jouarre        	nogent-l-artaud-charly                         	
+|  	   	   	   	*  	 	| 	@ 	26 	        411383 	nogent-l-artaud-charly       	Nogent-l'Artaud – Charly         	nanteuil-saacy               	chezy-sur-marne                                	
+|  	   	   	   	*  	 	| 	@ 	27 	        411380 	chezy-sur-marne              	Chézy-sur-Marne                  	nogent-l-artaud-charly       	chateau-thierry                                	
+|  	   	   	   	*  	 	| 	@ 	28 	        411377 	chateau-thierry              	Château-Thierry                  	chezy-sur-marne              	                                               	
+|  	   	   	   	v  	 	| 	@ 	29 	               	                             	                                 	                             	                                               	
+|  	   	   	   	   	 	* 	@ 	30 	         41064 	isles-armentieres-congis     	Isles – Armentières – Congis     	trilport                     	lizy-sur-ourcq                                 	
+|  	   	   	   	   	 	* 	@ 	31 	         41065 	lizy-sur-ourcq               	Lizy-sur-Ourcq                   	isles-armentieres-congis     	crouy-sur-ourcq                                	
+|  	   	   	   	   	 	* 	@ 	32 	         41066 	crouy-sur-ourcq              	Crouy-sur-Ourcq                  	lizy-sur-ourcq               	mareuil-sur-ourcq                              	
+|  	   	   	   	   	 	* 	@ 	33 	        411374 	mareuil-sur-ourcq            	Mareuil-sur-Ourcq                	crouy-sur-ourcq              	la-ferte-milon                                 	
+|  	   	   	   	   	 	* 	@ 	34 	        411371 	la-ferte-milon               	La Ferté-Milon                   	mareuil-sur-ourcq            	                                               	
+|  	.\ 	   	   	   	 	v 	@ 	35 	               	                             	                                 	                             	                                               	
+|  	|  	o\ 	   	   	 	  	@ 	36 	               	                             	                                 	                             	                                               	
+|  	   	*  	   	   	 	  	@ 	37 	         41043 	tournan                      	Tournan                          	paris-est                    	marles-en-brie                                 	rer-e
+|  	   	*  	   	   	 	  	@ 	38 	         41044 	marles-en-brie               	Marles-en-Brie                   	tournan                      	mortcerf                                       	
+|  	   	*  	   	   	 	  	@ 	39 	         41045 	mortcerf                     	Mortcerf                         	marles-en-brie               	guerard-la-celle-sur-morin                     	
+|  	   	*  	   	   	 	  	@ 	40 	         41046 	guerard-la-celle-sur-morin   	Guérard – La Celle-sur-Morin     	mortcerf                     	faremoutiers-pommeuse                          	
+|  	   	*  	   	   	 	  	@ 	41 	         41047 	faremoutiers-pommeuse        	Faremoutiers – Pommeuse          	guerard-la-celle-sur-morin   	mouroux                                        	
+|  	   	*  	   	   	 	  	@ 	42 	         41048 	mouroux                      	Mouroux                          	faremoutiers-pommeuse        	coulommiers                                    	
+|  	   	*  	   	   	 	  	@ 	43 	         41050 	coulommiers                  	Coulommiers                      	mouroux                      	                                               	
+|  	   	v  	   	   	 	  	@ 	44 	               	                             	                                 	                             	                                               	
+*  	   	   	   	   	 	  	@ 	45 	         41035 	verneuil-l-etang             	Verneuil-l'Étang                 	paris-est                    	mormant                                        	
+*  	   	   	   	   	 	  	@ 	46 	         41036 	mormant                      	Mormant                          	verneuil-l-etang             	nangis                                         	
+*  	   	   	   	   	 	  	@ 	47 	         41037 	nangis                       	Nangis                           	mormant                      	longueville                                    	
+*  	   	   	   	   	 	  	@ 	48 	         41040 	longueville                  	Longueville                      	nangis                       	sainte-colombe-septveilles                     	
+*  	   	   	   	   	 	  	@ 	49 	         41042 	sainte-colombe-septveilles   	Sainte-Colombe-Septveilles       	longueville                  	champbenoist-poigny                            	
+*  	   	   	   	   	 	  	@ 	50 	         41030 	champbenoist-poigny          	Champbenoist – Poigny            	sainte-colombe-septveilles   	provins                                        	
+*  	   	   	   	   	 	  	@ 	51 	         41041 	provins                      	Provins                          	champbenoist-poigny          	                                               	
+v  	   	   	   	   	 	  	@ 	52 	               	                             	                                 	                             	                                               	

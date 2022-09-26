@@ -1,0 +1,16 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName         	displayName      	prevStops       	nextStops        	lineConnections
+^ 	@ 	 1 	               	           	                 	                 	                	                 	
+* 	@ 	 2 	21966;463079   	         1 	chatelet         	Châtelet         	                	hotel-de-ville   	metro-1;metro-4;metro-7;metro-14;rer-a/chatelet-les-halles;rer-b/chatelet-les-halles;rer-d/chatelet-les-halles
+* 	@ 	 3 	463061;21990   	         0 	hotel-de-ville   	Hôtel de Ville   	chatelet        	rambuteau        	metro-1
+* 	@ 	 4 	21992;462945   	         0 	rambuteau        	Rambuteau        	hotel-de-ville  	arts-et-metiers  	
+* 	@ 	 5 	463108;21997   	         0 	arts-et-metiers  	Arts et Métiers  	rambuteau       	republique       	metro-3
+* 	@ 	 6 	21937;462960   	         0 	republique       	République       	arts-et-metiers 	goncourt         	metro-3;metro-5;metro-8;metro-9
+* 	@ 	 7 	21996;463187   	         0 	goncourt         	Goncourt         	republique      	belleville       	
+* 	@ 	 8 	463110;21998   	         0 	belleville       	Belleville       	goncourt        	pyrenees         	metro-2
+* 	@ 	 9 	463287;21991   	         0 	pyrenees         	Pyrénées         	belleville      	jourdain         	
+* 	@ 	10 	21995;463192   	         0 	jourdain         	Jourdain         	pyrenees        	place-des-fetes  	
+* 	@ 	11 	21951;463254   	         1 	place-des-fetes  	Place des Fêtes  	jourdain        	telegraphe       	metro-7bis
+* 	@ 	12 	21993;463319   	         0 	telegraphe       	Télégraphe       	place-des-fetes 	porte-des-lilas  	
+* 	@ 	13 	463263;21949   	         1 	porte-des-lilas  	Porte des Lilas  	telegraphe      	mairie-des-lilas 	metro-3bis;tramway-3b
+* 	@ 	14 	21999;463223   	         1 	mairie-des-lilas 	Mairie des Lilas 	porte-des-lilas 	                 	
+v 	@ 	15 	               	           	                 	                 	                	                 	

@@ -1,0 +1,34 @@
+   	  	   	@ 	#  	monitoringRefs 	isTerminus 	slugName                     	displayName                    	prevStops                    	nextStops                           	lineConnections
+   	^ 	   	@ 	 1 	               	           	                             	                               	                             	                                    	
+   	* 	   	@ 	 2 	21989;463136   	         1 	boulogne-pont-de-saint-cloud 	Boulogne – Pont de Saint-Cloud 	                             	boulogne-jean-jaures                	tramway-2/parc-de-saint-cloud
+   	* 	   	@ 	 3 	21988;463137   	         0 	boulogne-jean-jaures         	Boulogne – Jean Jaurès         	boulogne-pont-de-saint-cloud 	michel-ange-molitor;porte-d-auteuil 	
+   	| 	   	@ 	 4 	               	           	                             	                               	                             	                                    	
+/. 	| 	.\ 	@ 	 5 	               	           	                             	                               	                             	                                    	
+/o 	| 	o\ 	@ 	 6 	               	           	                             	                               	                             	                                    	
+↓  	  	↑  	@ 	 7 	               	           	                             	                               	                             	                                    	
+|  	  	*  	@ 	 8 	21974          	         1 	porte-d-auteuil              	Porte d'Auteuil                	boulogne-jean-jaures         	michel-ange-auteuil                 	
+*  	  	|  	@ 	 9 	21904          	         0 	michel-ange-molitor          	Michel-Ange – Molitor          	boulogne-jean-jaures         	chardon-lagache                     	metro-9
+|  	  	*  	@ 	10 	21907          	         0 	michel-ange-auteuil          	Michel-Ange – Auteuil          	porte-d-auteuil              	eglise-d-auteuil                    	metro-9
+*  	  	|  	@ 	11 	21985          	         0 	chardon-lagache              	Chardon-Lagache                	michel-ange-molitor          	mirabeau                            	
+|  	  	*  	@ 	12 	21971          	         0 	eglise-d-auteuil             	Église d'Auteuil               	michel-ange-auteuil          	javel-andre-citroen                 	
+*  	  	|  	@ 	13 	21982          	         0 	mirabeau                     	Mirabeau                       	chardon-lagache              	javel-andre-citroen                 	
+↓  	  	↑  	@ 	14 	               	           	                             	                               	                             	                                    	
+\o 	| 	o/ 	@ 	15 	               	           	                             	                               	                             	                                    	
+\. 	| 	./ 	@ 	16 	               	           	                             	                               	                             	                                    	
+   	| 	   	@ 	17 	               	           	                             	                               	                             	                                    	
+   	* 	   	@ 	18 	21972;462958   	         0 	javel-andre-citroen          	Javel – André Citroën          	mirabeau;eglise-d-auteuil    	charles-michels                     	rer-c/javel
+   	* 	   	@ 	19 	463076;21986   	         0 	charles-michels              	Charles Michels                	javel-andre-citroen          	avenue-emile-zola                   	
+   	* 	   	@ 	20 	463124;21987   	         0 	avenue-emile-zola            	Avenue Émile-Zola              	charles-michels              	la-motte-picquet-grenelle           	
+   	* 	   	@ 	21 	21969;463202   	         0 	la-motte-picquet-grenelle    	La Motte-Picquet – Grenelle    	avenue-emile-zola            	segur                               	metro-6;metro-8
+   	* 	   	@ 	22 	21979;463315   	         0 	segur                        	Ségur                          	la-motte-picquet-grenelle    	duroc                               	
+   	* 	   	@ 	23 	21970;463084   	         0 	duroc                        	Duroc                          	segur                        	vaneau                              	metro-13
+   	* 	   	@ 	24 	462959;21977   	         0 	vaneau                       	Vaneau                         	duroc                        	sevres-babylone                     	
+   	* 	   	@ 	25 	462967;21976   	         0 	sevres-babylone              	Sèvres – Babylone              	vaneau                       	mabillon                            	metro-12
+   	* 	   	@ 	26 	462994;21973   	         0 	mabillon                     	Mabillon                       	sevres-babylone              	odeon                               	
+   	* 	   	@ 	27 	462998;21978   	         0 	odeon                        	Odéon                          	mabillon                     	cluny-la-sorbonne                   	metro-4
+   	* 	   	@ 	28 	21983;462944   	         0 	cluny-la-sorbonne            	Cluny – La Sorbonne            	odeon                        	maubert-mutualite                   	rer-b/saint-michel-notre-dame;rer-c/saint-michel-notre-dame
+   	* 	   	@ 	29 	463237;21975   	         0 	maubert-mutualite            	Maubert – Mutualité            	cluny-la-sorbonne            	cardinal-lemoine                    	
+   	* 	   	@ 	30 	463141;21984   	         0 	cardinal-lemoine             	Cardinal Lemoine               	maubert-mutualite            	jussieu                             	
+   	* 	   	@ 	31 	463077;21968   	         0 	jussieu                      	Jussieu                        	cardinal-lemoine             	gare-d-austerlitz                   	metro-7
+   	* 	   	@ 	32 	21967;463024   	         1 	gare-d-austerlitz            	Gare d'Austerlitz              	jussieu                      	                                    	metro-5;rer-c
+   	v 	   	@ 	33 	               	           	                             	                               	                             	                                    	

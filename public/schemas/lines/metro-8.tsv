@@ -1,0 +1,41 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                            	displayName                         	prevStops                           	nextStops                           	lineConnections
+^ 	@ 	 1 	               	           	                                    	                                    	                                    	                                    	
+* 	@ 	 2 	463051;22186   	         1 	balard                              	Balard                              	                                    	lourmel                             	tramway-2/suzanne-lenglen;tramway-3a
+* 	@ 	 3 	463211;22187   	         0 	lourmel                             	Lourmel                             	balard                              	boucicaut                           	
+* 	@ 	 4 	463135;22188   	         0 	boucicaut                           	Boucicaut                           	lourmel                             	felix-faure                         	
+* 	@ 	 5 	463163;22189   	         0 	felix-faure                         	Félix Faure                         	boucicaut                           	commerce                            	
+* 	@ 	 6 	22190;463162   	         0 	commerce                            	Commerce                            	felix-faure                         	la-motte-picquet-grenelle           	
+* 	@ 	 7 	463201;22183   	         0 	la-motte-picquet-grenelle           	La Motte-Picquet – Grenelle         	commerce                            	ecole-militaire                     	metro-6;metro-10
+* 	@ 	 8 	22191;463177   	         0 	ecole-militaire                     	École Militaire                     	la-motte-picquet-grenelle           	la-tour-maubourg                    	
+* 	@ 	 9 	463204;22192   	         0 	la-tour-maubourg                    	La Tour-Maubourg                    	ecole-militaire                     	invalides                           	
+* 	@ 	10 	22193;463199   	         0 	invalides                           	Invalides                           	la-tour-maubourg                    	concorde                            	metro-13;rer-c
+* 	@ 	11 	463151;22096   	         0 	concorde                            	Concorde                            	invalides                           	madeleine                           	metro-1;metro-12
+* 	@ 	12 	463063;22194   	         0 	madeleine                           	Madeleine                           	concorde                            	opera                               	metro-12;metro-14
+* 	@ 	13 	463244;22195   	         0 	opera                               	Opéra                               	madeleine                           	richelieu-drouot                    	metro-3;metro-7;rer-a/auber
+* 	@ 	14 	22196;463037   	         0 	richelieu-drouot                    	Richelieu – Drouot                  	opera                               	grands-boulevards                   	metro-9
+* 	@ 	15 	463058;22197   	         0 	grands-boulevards                   	Grands Boulevards                   	richelieu-drouot                    	bonne-nouvelle                      	
+* 	@ 	16 	22198;463115   	         0 	bonne-nouvelle                      	Bonne-Nouvelle                      	grands-boulevards                   	strasbourg-saint-denis              	
+* 	@ 	17 	463312;22159   	         0 	strasbourg-saint-denis              	Strasbourg – Saint-Denis            	bonne-nouvelle                      	republique                          	metro-4;metro-9
+* 	@ 	18 	22199;462962   	         1 	republique                          	République                          	strasbourg-saint-denis              	filles-du-calvaire                  	metro-3;metro-5;metro-9;metro-11
+* 	@ 	19 	22200;463048   	         0 	filles-du-calvaire                  	Filles du Calvaire                  	republique                          	saint-sebastien-froissart           	
+* 	@ 	20 	22201;463309   	         0 	saint-sebastien-froissart           	Saint-Sébastien – Froissart         	filles-du-calvaire                  	chemin-vert                         	
+* 	@ 	21 	22202;463146   	         0 	chemin-vert                         	Chemin Vert                         	saint-sebastien-froissart           	bastille                            	
+* 	@ 	22 	463000;22097   	         0 	bastille                            	Bastille                            	chemin-vert                         	ledru-rollin                        	metro-1;metro-5
+* 	@ 	23 	22203;463195   	         0 	ledru-rollin                        	Ledru-Rollin                        	bastille                            	faidherbe-chaligny                  	
+* 	@ 	24 	22204;463172   	         0 	faidherbe-chaligny                  	Faidherbe – Chaligny                	ledru-rollin                        	reuilly-diderot                     	
+* 	@ 	25 	22098;463293   	         0 	reuilly-diderot                     	Reuilly – Diderot                   	faidherbe-chaligny                  	montgallet                          	metro-1
+* 	@ 	26 	22205;463241   	         0 	montgallet                          	Montgallet                          	reuilly-diderot                     	daumesnil                           	
+* 	@ 	27 	22184;463168   	         0 	daumesnil                           	Daumesnil                           	montgallet                          	michel-bizot                        	metro-6
+* 	@ 	28 	463226;22206   	         0 	michel-bizot                        	Michel Bizot                        	daumesnil                           	porte-doree                         	
+* 	@ 	29 	463050;22207   	         0 	porte-doree                         	Porte Dorée                         	michel-bizot                        	porte-de-charenton                  	tramway-3a
+* 	@ 	30 	22208;463277   	         0 	porte-de-charenton                  	Porte de Charenton                  	porte-doree                         	liberte                             	tramway-3a
+* 	@ 	31 	22209;463209   	         0 	liberte                             	Liberté                             	porte-de-charenton                  	charenton-ecoles                    	
+* 	@ 	32 	463142;22210   	         0 	charenton-ecoles                    	Charenton – Écoles                  	liberte                             	ecole-veterinaire-de-maisons-alfort 	
+* 	@ 	33 	463047;22214   	         0 	ecole-veterinaire-de-maisons-alfort 	École vétérinaire de Maisons-Alfort 	charenton-ecoles                    	maisons-alfort-stade                	
+* 	@ 	34 	463225;22215   	         0 	maisons-alfort-stade                	Maisons-Alfort – Stade              	ecole-veterinaire-de-maisons-alfort 	maisons-alfort-les-juilliottes      	
+* 	@ 	35 	463015;22216   	         1 	maisons-alfort-les-juilliottes      	Maisons-Alfort – Les Juilliottes    	maisons-alfort-stade                	creteil-l-echat                     	
+* 	@ 	36 	463166;22211   	         0 	creteil-l-echat                     	Créteil – L'Échat                   	maisons-alfort-les-juilliottes      	creteil-universite                  	
+* 	@ 	37 	463167;22212   	         0 	creteil-universite                  	Créteil – Université                	creteil-l-echat                     	creteil-prefecture                  	
+* 	@ 	38 	22213;463056   	         0 	creteil-prefecture                  	Créteil – Préfecture                	creteil-universite                  	creteil-pointe-du-lac               	
+* 	@ 	39 	463057;21784   	         1 	creteil-pointe-du-lac               	Créteil – Pointe du Lac             	creteil-prefecture                  	                                    	
+v 	@ 	40 	               	           	                                    	                                    	                                    	                                    	

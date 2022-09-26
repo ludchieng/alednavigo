@@ -1,0 +1,34 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                   	displayName                  	prevStops                  	nextStops                  	lineConnections
+^ 	@ 	 1 	               	           	                           	                             	                           	                           	
+* 	@ 	 2 	483898;483904  	         1 	mairie-d-aubervilliers     	Mairie d'Aubervilliers       	                           	aime-cesaire               	
+* 	@ 	 3 	483900;483903  	         0 	aime-cesaire               	Aimé Césaire                 	mairie-d-aubervilliers     	front-populaire            	
+* 	@ 	 4 	463082;24679   	         0 	front-populaire            	Front populaire              	aime-cesaire               	porte-de-la-chapelle       	
+* 	@ 	 5 	22041;463281   	         0 	porte-de-la-chapelle       	Porte de la Chapelle         	front-populaire            	marx-dormoy                	tramway-3b
+* 	@ 	 6 	22053;463236   	         0 	marx-dormoy                	Marx Dormoy                  	porte-de-la-chapelle       	marcadet-poissonniers      	
+* 	@ 	 7 	22052;462973   	         0 	marcadet-poissonniers      	Marcadet – Poissonniers      	marx-dormoy                	jules-joffrin              	metro-4
+* 	@ 	 8 	463065;22054   	         0 	jules-joffrin              	Jules Joffrin                	marcadet-poissonniers      	lamarck-caulaincourt       	
+* 	@ 	 9 	463205;22055   	         0 	lamarck-caulaincourt       	Lamarck – Caulaincourt       	jules-joffrin              	abbesses                   	
+* 	@ 	10 	22059;463116   	         0 	abbesses                   	Abbesses                     	lamarck-caulaincourt       	pigalle                    	
+* 	@ 	11 	22040;463089   	         0 	pigalle                    	Pigalle                      	abbesses                   	saint-georges              	metro-2
+* 	@ 	12 	22044;463304   	         0 	saint-georges              	Saint-Georges                	pigalle                    	notre-dame-de-lorette      	
+* 	@ 	13 	463062;22050   	         0 	notre-dame-de-lorette      	Notre-Dame-de-Lorette        	saint-georges              	trinite-d-estienne-d-orves 	
+* 	@ 	14 	22046;463317   	         0 	trinite-d-estienne-d-orves 	Trinité – d'Estienne d'Orves 	notre-dame-de-lorette      	saint-lazare               	
+* 	@ 	15 	462969;21964   	         0 	saint-lazare               	Saint-Lazare                 	trinite-d-estienne-d-orves 	madeleine                  	metro-3;metro-13;metro-14;rer-e/haussmann-saint-lazare;transilien-j/paris-saint-lazare;transilien-l/paris-saint-lazare
+* 	@ 	16 	463081;21965   	         0 	madeleine                  	Madeleine                    	saint-lazare               	concorde                   	metro-8;metro-14
+* 	@ 	17 	22057;463164   	         0 	concorde                   	Concorde                     	madeleine                  	assemblee-nationale        	metro-1;metro-8
+* 	@ 	18 	463123;22060   	         0 	assemblee-nationale        	Assemblée nationale          	concorde                   	solferino                  	
+* 	@ 	19 	22045;463311   	         0 	solferino                  	Solférino                    	assemblee-nationale        	rue-du-bac                 	rer-c/musee-d-orsay
+* 	@ 	20 	22043;462950   	         0 	rue-du-bac                 	Rue du Bac                   	solferino                  	sevres-babylone            	
+* 	@ 	21 	462966;21980   	         0 	sevres-babylone            	Sèvres – Babylone            	rue-du-bac                 	rennes                     	metro-10
+* 	@ 	22 	462968;22049   	         0 	rennes                     	Rennes                       	sevres-babylone            	notre-dame-des-champs      	
+* 	@ 	23 	462965;22051   	         0 	notre-dame-des-champs      	Notre-Dame-des-Champs        	rennes                     	montparnasse-bienvenue     	
+* 	@ 	24 	462980;22038   	         0 	montparnasse-bienvenue     	Montparnasse – Bienvenüe     	notre-dame-des-champs      	falguiere                  	metro-4;metro-6;metro-13;transilien-n/paris-montparnasse
+* 	@ 	25 	22056;463173   	         0 	falguiere                  	Falguière                    	montparnasse-bienvenue     	pasteur                    	
+* 	@ 	26 	462947;22039   	         0 	pasteur                    	Pasteur                      	falguiere                  	volontaires                	metro-6
+* 	@ 	27 	22048;462964   	         0 	volontaires                	Volontaires                  	pasteur                    	vaugirard                  	
+* 	@ 	28 	22047;463321   	         0 	vaugirard                  	Vaugirard                    	volontaires                	convention                 	
+* 	@ 	29 	22058;462949   	         0 	convention                 	Convention                   	vaugirard                  	porte-de-versailles        	
+* 	@ 	30 	22042;463261   	         1 	porte-de-versailles        	Porte de Versailles          	convention                 	corentin-celton            	tramway-2;tramway-3a
+* 	@ 	31 	22061;463153   	         0 	corentin-celton            	Corentin Celton              	porte-de-versailles        	mairie-d-issy              	
+* 	@ 	32 	22062;463219   	         1 	mairie-d-issy              	Mairie d'Issy                	corentin-celton            	                           	
+v 	@ 	33 	               	           	                           	                             	                           	                           	

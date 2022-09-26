@@ -1,0 +1,28 @@
+	@	#	monitoringRefs	isTerminus	slugName	displayName	prevStops	nextStops	lineConnections
+^	@	1							
+*	@	2	22035;462985	1	pont-de-levallois-becon	Pont de Levallois – Bécon		anatole-france	
+*	@	3	463119;22036	0	anatole-france	Anatole France	pont-de-levallois-becon	louise-michel	
+*	@	4	463210;22034	0	louise-michel	Louise Michel	anatole-france	porte-de-champerret	
+*	@	5	463258;22023	0	porte-de-champerret	Porte de Champerret	louise-michel	pereire	
+*	@	6	22021;463228	0	pereire	Pereire	porte-de-champerret	wagram	rer-c/pereire-levallois
+*	@	7	22028;463070	0	wagram	Wagram	pereire	malesherbes	
+*	@	8	22031;463068	0	malesherbes	Malesherbes	wagram	villiers	
+*	@	9	22027;462987	0	villiers	Villiers	malesherbes	europe	metro-2
+*	@	10	463069;22032	0	europe	Europe	villiers	saint-lazare	
+*	@	11	462971;21963	0	saint-lazare	Saint-Lazare	europe	havre-caumartin	metro-12;metro-13;metro-14;rer-e/haussmann-saint-lazare;transilien-j/paris-saint-lazare;transilien-l/paris-saint-lazare
+*	@	12	21906;463189	0	havre-caumartin	Havre – Caumartin	saint-lazare	opera	metro-9;rer-a/auber
+*	@	13	22030;463246	0	opera	Opéra	havre-caumartin	quatre-septembre	metro-7;metro-8;rer-a/auber
+*	@	14	22024;462989	0	quatre-septembre	Quatre-Septembre	opera	bourse	
+*	@	15	463090;22033	0	bourse	Bourse	quatre-septembre	sentier	
+*	@	16	462986;22029	0	sentier	Sentier	bourse	reaumur-sebastopol	
+*	@	17	463091;22018	0	reaumur-sebastopol	Réaumur – Sébastopol	sentier	arts-et-metiers	metro-4
+*	@	18	21994;463122	0	arts-et-metiers	Arts et Métiers	reaumur-sebastopol	temple	metro-11
+*	@	19	463316;22026	0	temple	Temple	arts-et-metiers	republique	
+*	@	20	21902;462946	0	republique	République	temple	parmentier	metro-5;metro-8;metro-9;metro-11
+*	@	21	463250;22019	0	parmentier	Parmentier	republique	rue-saint-maur	
+*	@	22	463297;22025	0	rue-saint-maur	Rue Saint-Maur	parmentier	pere-lachaise	
+*	@	23	22020;463286	0	pere-lachaise	Père Lachaise	rue-saint-maur	gambetta	metro-2
+*	@	24	21950;462991	1	gambetta	Gambetta	pere-lachaise	porte-de-bagnolet	metro-3bis
+*	@	25	22022;463276	0	porte-de-bagnolet	Porte de Bagnolet	gambetta	gallieni	tramway-3b
+*	@	26	22037;463174	1	gallieni	Gallieni	porte-de-bagnolet		
+v	@	27							

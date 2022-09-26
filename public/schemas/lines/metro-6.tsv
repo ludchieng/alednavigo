@@ -1,0 +1,31 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                             	displayName                          	prevStops                            	nextStops                            	lineConnections
+^ 	@ 	 1 	               	           	                                     	                                     	                                     	                                     	
+* 	@ 	 2 	463042;22095   	         1 	charles-de-gaulle-etoile             	Charles de Gaulle – Étoile           	                                     	kleber                               	metro-1;metro-2;rer-a
+* 	@ 	 3 	463102;22170   	         0 	kleber                               	Kléber                               	charles-de-gaulle-etoile             	boissiere                            	
+* 	@ 	 4 	463114;22180   	         0 	boissiere                            	Boissière                            	kleber                               	trocadero                            	
+* 	@ 	 5 	22164;463268   	         0 	trocadero                            	Trocadéro                            	boissiere                            	passy                                	metro-9
+* 	@ 	 6 	22165;463101   	         0 	passy                                	Passy                                	trocadero                            	bir-hakeim                           	
+* 	@ 	 7 	463005;22179   	         0 	bir-hakeim                           	Bir-Hakeim                           	passy                                	dupleix                              	rer-c/champ-de-mars-tour-eiffel
+* 	@ 	 8 	22171;463099   	         0 	dupleix                              	Dupleix                              	bir-hakeim                           	la-motte-picquet-grenelle            	
+* 	@ 	 9 	463194;22162   	         0 	la-motte-picquet-grenelle            	La Motte-Picquet – Grenelle          	dupleix                              	cambronne                            	metro-8;metro-10
+* 	@ 	10 	22176;463140   	         0 	cambronne                            	Cambronne                            	la-motte-picquet-grenelle            	sevres-lecourbe                      	
+* 	@ 	11 	463314;22163   	         0 	sevres-lecourbe                      	Sèvres – Lecourbe                    	cambronne                            	pasteur                              	
+* 	@ 	12 	462948;22166   	         0 	pasteur                              	Pasteur                              	sevres-lecourbe                      	montparnasse-bienvenue               	metro-12
+* 	@ 	13 	462955;22156   	         0 	montparnasse-bienvenue               	Montparnasse – Bienvenüe             	pasteur                              	edgar-quinet                         	metro-4;metro-12;metro-13;transilien-n/paris-montparnasse
+* 	@ 	14 	22172;463100   	         0 	edgar-quinet                         	Edgar Quinet                         	montparnasse-bienvenue               	raspail                              	
+* 	@ 	15 	22155;463292   	         0 	raspail                              	Raspail                              	edgar-quinet                         	denfert-rochereau-colonel-rol-tanguy 	metro-4
+* 	@ 	16 	22158;463103   	         0 	denfert-rochereau-colonel-rol-tanguy 	Denfert-Rochereau Colonel Rol-Tanguy 	raspail                              	saint-jacques                        	metro-4;rer-b
+* 	@ 	17 	22160;463305   	         0 	saint-jacques                        	Saint-Jacques                        	denfert-rochereau-colonel-rol-tanguy 	glaciere                             	
+* 	@ 	18 	22173;463186   	         0 	glaciere                             	Glacière                             	saint-jacques                        	corvisart                            	
+* 	@ 	19 	22175;463105   	         0 	corvisart                            	Corvisart                            	glaciere                             	place-d-italie                       	
+* 	@ 	20 	463003;22168   	         1 	place-d-italie                       	Place d'Italie                       	corvisart                            	nationale                            	metro-5;metro-7
+* 	@ 	21 	463004;22169   	         0 	nationale                            	Nationale                            	place-d-italie                       	chevaleret                           	
+* 	@ 	22 	22174;463147   	         0 	chevaleret                           	Chevaleret                           	nationale                            	quai-de-la-gare                      	
+* 	@ 	23 	463288;22161   	         0 	quai-de-la-gare                      	Quai de la Gare                      	chevaleret                           	bercy                                	
+* 	@ 	24 	463128;22178   	         1 	bercy                                	Bercy                                	quai-de-la-gare                      	dugommier                            	metro-14
+* 	@ 	25 	463075;22182   	         0 	dugommier                            	Dugommier                            	bercy                                	daumesnil                            	
+* 	@ 	26 	463169;22181   	         0 	daumesnil                            	Daumesnil                            	dugommier                            	bel-air                              	metro-8
+* 	@ 	27 	22177;463127   	         0 	bel-air                              	Bel-Air                              	daumesnil                            	picpus                               	
+* 	@ 	28 	22167;463098   	         0 	picpus                               	Picpus                               	bel-air                              	nation                               	
+* 	@ 	29 	22073;463028   	         1 	nation                               	Nation                               	picpus                               	                                     	metro-1;metro-2;metro-9;rer-a
+v 	@ 	30 	               	           	                                     	                                     	                                     	                                     	

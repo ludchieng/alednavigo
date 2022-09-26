@@ -1,0 +1,40 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                    	displayName                   	prevStops                   	nextStops                   	lineConnections
+^ 	@ 	 1 	               	           	                            	                              	                            	                            	
+* 	@ 	 2 	21938;463233   	         1 	pont-de-sevres              	Pont de Sèvres                	                            	billancourt                 	tramway-2/musee-de-sevres
+* 	@ 	 3 	21939;463035   	         0 	billancourt                 	Billancourt                   	pont-de-sevres              	marcel-sembat               	
+* 	@ 	 4 	462914;21940   	         0 	marcel-sembat               	Marcel Sembat                 	billancourt                 	porte-de-saint-cloud        	
+* 	@ 	 5 	21914;463259   	         1 	porte-de-saint-cloud        	Porte de Saint-Cloud          	marcel-sembat               	exelmans                    	
+* 	@ 	 6 	21930;462956   	         0 	exelmans                    	Exelmans                      	porte-de-saint-cloud        	michel-ange-molitor         	
+* 	@ 	 7 	463239;21923   	         0 	michel-ange-molitor         	Michel-Ange – Molitor         	exelmans                    	michel-ange-auteuil         	metro-10
+* 	@ 	 8 	21922;463238   	         0 	michel-ange-auteuil         	Michel-Ange – Auteuil         	michel-ange-molitor         	jasmin                      	metro-10
+* 	@ 	 9 	21928;463038   	         0 	jasmin                      	Jasmin                        	michel-ange-auteuil         	ranelagh                    	
+* 	@ 	10 	21915;463290   	         0 	ranelagh                    	Ranelagh                      	jasmin                      	la-muette                   	
+* 	@ 	11 	463203;21929   	         0 	la-muette                   	La Muette                     	ranelagh                    	rue-de-la-pompe             	rer-c/boulainvilliers
+* 	@ 	12 	21908;463055   	         0 	rue-de-la-pompe             	Rue de la Pompe               	la-muette                   	trocadero                   	
+* 	@ 	13 	21917;463318   	         0 	trocadero                   	Trocadéro                     	rue-de-la-pompe             	iena                        	metro-6
+* 	@ 	14 	21927;463190   	         0 	iena                        	Iéna                          	trocadero                   	alma-marceau                	
+* 	@ 	15 	463052;21935   	         0 	alma-marceau                	Alma – Marceau                	iena                        	franklin-d-roosevelt        	rer-c/pont-de-l-alma
+* 	@ 	16 	463180;21931   	         0 	franklin-d-roosevelt        	Franklin D. Roosevelt         	alma-marceau                	saint-philippe-du-roule     	metro-1
+* 	@ 	17 	462915;21912   	         0 	saint-philippe-du-roule     	Saint-Philippe du Roule       	franklin-d-roosevelt        	miromesnil                  	
+* 	@ 	18 	462957;21924   	         0 	miromesnil                  	Miromesnil                    	saint-philippe-du-roule     	saint-augustin              	metro-13
+* 	@ 	19 	21911;463300   	         0 	saint-augustin              	Saint-Augustin                	miromesnil                  	havre-caumartin             	metro-14/saint-lazare
+* 	@ 	20 	21926;463188   	         0 	havre-caumartin             	Havre – Caumartin             	saint-augustin              	chaussee-d-antin-la-fayette 	metro-3;rer-a/auber;rer-e/haussmann-saint-lazare
+* 	@ 	21 	463144;21932   	         0 	chaussee-d-antin-la-fayette 	Chaussée d'Antin – La Fayette 	havre-caumartin             	richelieu-drouot            	metro-7
+* 	@ 	22 	21921;463036   	         0 	richelieu-drouot            	Richelieu – Drouot            	chaussee-d-antin-la-fayette 	grands-boulevards           	metro-8
+* 	@ 	23 	21909;463049   	         0 	grands-boulevards           	Grands Boulevards             	richelieu-drouot            	bonne-nouvelle              	
+* 	@ 	24 	463133;21933   	         0 	bonne-nouvelle              	Bonne-Nouvelle                	grands-boulevards           	strasbourg-saint-denis      	
+* 	@ 	25 	21920;463264   	         0 	strasbourg-saint-denis      	Strasbourg – Saint-Denis      	bonne-nouvelle              	republique                  	metro-4;metro-8
+* 	@ 	26 	21918;462963   	         1 	republique                  	République                    	strasbourg-saint-denis      	oberkampf                   	metro-3;metro-5;metro-8;metro-11
+* 	@ 	27 	21925;463054   	         0 	oberkampf                   	Oberkampf                     	republique                  	saint-ambroise              	metro-5
+* 	@ 	28 	21910;463299   	         0 	saint-ambroise              	Saint-Ambroise                	oberkampf                   	voltaire                    	
+* 	@ 	29 	463325;21916   	         0 	voltaire                    	Voltaire                      	saint-ambroise              	charonne                    	
+* 	@ 	30 	463143;21934   	         0 	charonne                    	Charonne                      	voltaire                    	rue-des-boulets             	
+* 	@ 	31 	22442;463298   	         0 	rue-des-boulets             	Rue des Boulets               	charonne                    	nation                      	
+* 	@ 	32 	21919;462942   	         0 	nation                      	Nation                        	rue-des-boulets             	buzenval                    	metro-1;metro-2;metro-6;rer-a
+* 	@ 	33 	463039;25084   	         0 	buzenval                    	Buzenval                      	nation                      	maraichers                  	
+* 	@ 	34 	463215;21936   	         0 	maraichers                  	Maraîchers                    	buzenval                    	porte-de-montreuil          	
+* 	@ 	35 	463279;21913   	         1 	porte-de-montreuil          	Porte de Montreuil            	maraichers                  	robespierre                 	tramway-3b
+* 	@ 	36 	21942;463053   	         0 	robespierre                 	Robespierre                   	porte-de-montreuil          	croix-de-chavaux            	
+* 	@ 	37 	21943;463176   	         0 	croix-de-chavaux            	Croix de Chavaux              	robespierre                 	mairie-de-montreuil         	
+* 	@ 	38 	21941;463221   	         1 	mairie-de-montreuil         	Mairie de Montreuil           	croix-de-chavaux            	                            	
+v 	@ 	39 	               	           	                            	                              	                            	                            	
