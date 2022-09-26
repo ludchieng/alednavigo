@@ -1,0 +1,42 @@
+  	  	  	@ 	#  	monitoringRefs 	slugName                            	displayName                             	prevStops                           	nextStops                           	lineConnections
+  	* 	  	@ 	 1 	22395;463200   	la-courneuve-8-mai-1945             	La Courneuve – 8 Mai 1945               	                                    	fort-d-aubervilliers                	tramway-1
+  	* 	  	@ 	 2 	463179;22393   	fort-d-aubervilliers                	Fort d'Aubervilliers                    	la-courneuve-8-mai-1945             	aubervilliers-pantin-quatre-chemins 	
+  	* 	  	@ 	 3 	463031;22394   	aubervilliers-pantin-quatre-chemins 	Aubervilliers – Pantin – Quatre Chemins 	fort-d-aubervilliers                	porte-de-la-villette                	
+  	* 	  	@ 	 4 	22374;463007   	porte-de-la-villette                	Porte de la Villette                    	aubervilliers-pantin-quatre-chemins 	corentin-cariou                     	tramway-3b
+  	* 	  	@ 	 5 	22389;463152   	corentin-cariou                     	Corentin Cariou                         	porte-de-la-villette                	crimee                              	
+  	* 	  	@ 	 6 	463155;22392   	crimee                              	Crimée                                  	corentin-cariou                     	riquet                              	
+  	* 	  	@ 	 7 	22371;463295   	riquet                              	Riquet                                  	crimee                              	stalingrad                          	
+  	* 	  	@ 	 8 	22368;463008   	stalingrad                          	Stalingrad                              	riquet                              	louis-blanc                         	metro-2;metro-5
+  	* 	  	@ 	 9 	463033;22384   	louis-blanc                         	Louis Blanc                             	stalingrad                          	chateau-landon                      	metro-7bis
+  	* 	  	@ 	10 	22367;463006   	chateau-landon                      	Château-Landon                          	louis-blanc                         	gare-de-l-est                       	transilien-p/paris-est
+  	* 	  	@ 	11 	463001;22387   	gare-de-l-est                       	Gare de l'Est                           	chateau-landon                      	poissonniere                        	metro-4;metro-5;rer-e/magenta;transilien-p/paris-est
+  	* 	  	@ 	12 	463255;22377   	poissonniere                        	Poissonnière                            	gare-de-l-est                       	cadet                               	
+  	* 	  	@ 	13 	22390;463139   	cadet                               	Cadet                                   	poissonniere                        	le-peletier                         	
+  	* 	  	@ 	14 	463206;22382   	le-peletier                         	Le Peletier                             	cadet                               	chaussee-d-antin-la-fayette         	
+  	* 	  	@ 	15 	22388;463145   	chaussee-d-antin-la-fayette         	Chaussée d'Antin – La Fayette           	le-peletier                         	opera                               	metro-9
+  	* 	  	@ 	16 	463245;22381   	opera                               	Opéra                                   	chaussee-d-antin-la-fayette         	pyramides                           	metro-3;metro-8;rer-a/auber
+  	* 	  	@ 	17 	22375;463283   	pyramides                           	Pyramides                               	opera                               	palais-royal-musee-du-louvre        	metro-14
+  	* 	  	@ 	18 	463249;22376   	palais-royal-musee-du-louvre        	Palais-Royal – Musée du Louvre          	pyramides                           	pont-neuf                           	metro-1
+  	* 	  	@ 	19 	463232;22379   	pont-neuf                           	Pont-Neuf                               	palais-royal-musee-du-louvre        	chatelet                            	
+  	* 	  	@ 	20 	22364;463060   	chatelet                            	Châtelet                                	pont-neuf                           	pont-marie                          	metro-1;metro-4;metro-11;metro-14;rer-a/chatelet-les-halles;rer-b/ch
+  	* 	  	@ 	21 	463231;22378   	pont-marie                          	Pont Marie                              	chatelet                            	sully-morland                       	
+  	* 	  	@ 	22 	463265;22369   	sully-morland                       	Sully – Morland                         	pont-marie                          	jussieu                             	
+  	* 	  	@ 	23 	22386;463078   	jussieu                             	Jussieu                                 	sully-morland                       	place-monge                         	metro-10
+  	* 	  	@ 	24 	22366;463106   	place-monge                         	Place Monge                             	jussieu                             	censier-daubenton                   	
+  	* 	  	@ 	25 	22391;463157   	censier-daubenton                   	Censier – Daubenton                     	place-monge                         	les-gobelins                        	
+  	* 	  	@ 	26 	463216;22383   	les-gobelins                        	Les Gobelins                            	censier-daubenton                   	place-d-italie                      	
+  	* 	  	@ 	27 	463026;22365   	place-d-italie                      	Place d'Italie                          	les-gobelins                        	tolbiac                             	metro-5;metro-6
+  	* 	  	@ 	28 	22370;463267   	tolbiac                             	Tolbiac                                 	place-d-italie                      	maison-blanche                      	
+  	* 	  	@ 	29 	22385;463224   	maison-blanche                      	Maison Blanche                          	tolbiac                             	le-kremlin-bicetre;porte-d-italie   	
+| 	| 	| 	@ 	30 	               	                                    	                                        	                                    	                                    	
+| 	  	| 	@ 	31 	               	                                    	                                        	                                    	                                    	
+* 	  	| 	@ 	32 	463107;22398   	le-kremlin-bicetre                  	Le Kremlin-Bicêtre                      	maison-blanche                      	villejuif-leo-lagrange              	
+* 	  	| 	@ 	33 	463323;22399   	villejuif-leo-lagrange              	Villejuif – Léo Lagrange                	le-kremlin-bicetre                  	villejuif-paul-vaillant-couturier   	
+* 	  	| 	@ 	34 	22401;463324   	villejuif-paul-vaillant-couturier   	Villejuif – Paul Vaillant-Couturier     	villejuif-leo-lagrange              	villejuif-louis-aragon              	
+* 	  	| 	@ 	35 	22400;463269   	villejuif-louis-aragon              	Villejuif – Louis Aragon                	villejuif-paul-vaillant-couturier   	porte-d-italie                      	tramway-7
+  	  	| 	@ 	36 	               	                                    	                                        	                                    	                                    	
+  	  	* 	@ 	37 	463235;22380   	porte-d-italie                      	Porte d'Italie                          	maison-blanche                      	porte-de-choisy                     	tramway-3a
+  	  	* 	@ 	38 	22373;463030   	porte-de-choisy                     	Porte de Choisy                         	porte-d-italie                      	porte-d-ivry                        	tramway-3a;tramway-9
+  	  	* 	@ 	39 	22372;463029   	porte-d-ivry                        	Porte d'Ivry                            	porte-de-choisy                     	pierre-et-marie-curie               	tramway-3a
+  	  	* 	@ 	40 	463251;22397   	pierre-et-marie-curie               	Pierre et Marie Curie                   	porte-d-ivry                        	mairie-d-ivry                       	
+  	  	* 	@ 	41 	22396;463220   	mairie-d-ivry                       	Mairie d'Ivry                           	pierre-et-marie-curie               	                                    	

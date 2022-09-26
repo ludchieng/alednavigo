@@ -1,0 +1,29 @@
+  	@ 	#  	monitoringRefs 	slugName                             	displayName                          	prevStops                            	nextStops                            	lineConnections
+* 	@ 	 1 	463042;22095   	charles-de-gaulle-etoile             	Charles de Gaulle – Étoile           	                                     	kleber                               	metro-1;metro-2;rer-a
+* 	@ 	 2 	463102;22170   	kleber                               	Kléber                               	charles-de-gaulle-etoile             	boissiere                            	
+* 	@ 	 3 	463114;22180   	boissiere                            	Boissière                            	kleber                               	trocadero                            	
+* 	@ 	 4 	22164;463268   	trocadero                            	Trocadéro                            	boissiere                            	passy                                	metro-9
+* 	@ 	 5 	22165;463101   	passy                                	Passy                                	trocadero                            	bir-hakeim                           	
+* 	@ 	 6 	463005;22179   	bir-hakeim                           	Bir-Hakeim                           	passy                                	dupleix                              	rer-c/champ-de-mars-tour-eiffel
+* 	@ 	 7 	22171;463099   	dupleix                              	Dupleix                              	bir-hakeim                           	la-motte-picquet-grenelle            	
+* 	@ 	 8 	463194;22162   	la-motte-picquet-grenelle            	La Motte-Picquet – Grenelle          	dupleix                              	cambronne                            	metro-8;metro-10
+* 	@ 	 9 	22176;463140   	cambronne                            	Cambronne                            	la-motte-picquet-grenelle            	sevres-lecourbe                      	
+* 	@ 	10 	463314;22163   	sevres-lecourbe                      	Sèvres – Lecourbe                    	cambronne                            	pasteur                              	
+* 	@ 	11 	462948;22166   	pasteur                              	Pasteur                              	sevres-lecourbe                      	montparnasse-bienvenue               	metro-12
+* 	@ 	12 	462955;22156   	montparnasse-bienvenue               	Montparnasse – Bienvenüe             	pasteur                              	edgar-quinet                         	metro-4;metro-12;metro-13;transilien-n/paris-montparnasse
+* 	@ 	13 	22172;463100   	edgar-quinet                         	Edgar Quinet                         	montparnasse-bienvenue               	raspail                              	
+* 	@ 	14 	22155;463292   	raspail                              	Raspail                              	edgar-quinet                         	denfert-rochereau-colonel-rol-tanguy 	metro-4
+* 	@ 	15 	22158;463103   	denfert-rochereau-colonel-rol-tanguy 	Denfert-Rochereau Colonel Rol-Tanguy 	raspail                              	saint-jacques                        	metro-4;rer-b
+* 	@ 	16 	22160;463305   	saint-jacques                        	Saint-Jacques                        	denfert-rochereau-colonel-rol-tanguy 	glaciere                             	
+* 	@ 	17 	22173;463186   	glaciere                             	Glacière                             	saint-jacques                        	corvisart                            	
+* 	@ 	18 	22175;463105   	corvisart                            	Corvisart                            	glaciere                             	place-d-italie                       	
+* 	@ 	19 	463003;22168   	place-d-italie                       	Place d'Italie                       	corvisart                            	nationale                            	metro-5;metro-7
+* 	@ 	20 	463004;22169   	nationale                            	Nationale                            	place-d-italie                       	chevaleret                           	
+* 	@ 	21 	22174;463147   	chevaleret                           	Chevaleret                           	nationale                            	quai-de-la-gare                      	
+* 	@ 	22 	463288;22161   	quai-de-la-gare                      	Quai de la Gare                      	chevaleret                           	bercy                                	
+* 	@ 	23 	463128;22178   	bercy                                	Bercy                                	quai-de-la-gare                      	dugommier                            	metro-14
+* 	@ 	24 	463075;22182   	dugommier                            	Dugommier                            	bercy                                	daumesnil                            	
+* 	@ 	25 	463169;22181   	daumesnil                            	Daumesnil                            	dugommier                            	bel-air                              	metro-8
+* 	@ 	26 	22177;463127   	bel-air                              	Bel-Air                              	daumesnil                            	picpus                               	
+* 	@ 	27 	22167;463098   	picpus                               	Picpus                               	bel-air                              	nation                               	
+* 	@ 	28 	22073;463028   	nation                               	Nation                               	picpus                               	                                     	metro-1;metro-2;metro-9;rer-a

@@ -1,0 +1,26 @@
+  	@ 	#  	monitoringRefs 	slugName                	displayName               	prevStops               	nextStops           	lineConnections
+* 	@ 	 1 	22035;462985   	pont-de-levallois-becon 	Pont de Levallois – Bécon 	                        	anatole-france      	
+* 	@ 	 2 	463119;22036   	anatole-france          	Anatole France            	pont-de-levallois-becon 	louise-michel       	
+* 	@ 	 3 	463210;22034   	louise-michel           	Louise Michel             	anatole-france          	porte-de-champerret 	
+* 	@ 	 4 	463258;22023   	porte-de-champerret     	Porte de Champerret       	louise-michel           	pereire             	
+* 	@ 	 5 	22021;463228   	pereire                 	Pereire                   	porte-de-champerret     	wagram              	rer-c/pereire-levallois
+* 	@ 	 6 	22028;463070   	wagram                  	Wagram                    	pereire                 	malesherbes         	
+* 	@ 	 7 	22031;463068   	malesherbes             	Malesherbes               	wagram                  	villiers            	
+* 	@ 	 8 	22027;462987   	villiers                	Villiers                  	malesherbes             	europe              	metro-2
+* 	@ 	 9 	463069;22032   	europe                  	Europe                    	villiers                	saint-lazare        	
+* 	@ 	10 	462971;21963   	saint-lazare            	Saint-Lazare              	europe                  	havre-caumartin     	metro-12;metro-13;metro-14;rer-e/haussmann-saint-lazare;transilien-j/paris-saint-lazare;transilien-l/paris-saint-lazare
+* 	@ 	11 	21906;463189   	havre-caumartin         	Havre – Caumartin         	saint-lazare            	opera               	metro-9;rer-a/auber
+* 	@ 	12 	22030;463246   	opera                   	Opéra                     	havre-caumartin         	quatre-septembre    	metro-7;metro-8;rer-a/auber
+* 	@ 	13 	22024;462989   	quatre-septembre        	Quatre-Septembre          	opera                   	bourse              	
+* 	@ 	14 	463090;22033   	bourse                  	Bourse                    	quatre-septembre        	sentier             	
+* 	@ 	15 	462986;22029   	sentier                 	Sentier                   	bourse                  	reaumur-sebastopol  	
+* 	@ 	16 	463091;22018   	reaumur-sebastopol      	Réaumur – Sébastopol      	sentier                 	arts-et-metiers     	metro-4
+* 	@ 	17 	21994;463122   	arts-et-metiers         	Arts et Métiers           	reaumur-sebastopol      	temple              	metro-11
+* 	@ 	18 	463316;22026   	temple                  	Temple                    	arts-et-metiers         	republique          	
+* 	@ 	19 	21902;462946   	republique              	République                	temple                  	parmentier          	metro-5;metro-8;metro-9;metro-11
+* 	@ 	20 	463250;22019   	parmentier              	Parmentier                	republique              	rue-saint-maur      	
+* 	@ 	21 	463297;22025   	rue-saint-maur          	Rue Saint-Maur            	parmentier              	pere-lachaise       	
+* 	@ 	22 	22020;463286   	pere-lachaise           	Père Lachaise             	rue-saint-maur          	gambetta            	metro-2
+* 	@ 	23 	21950;462991   	gambetta                	Gambetta                  	pere-lachaise           	porte-de-bagnolet   	metro-3bis
+* 	@ 	24 	22022;463276   	porte-de-bagnolet       	Porte de Bagnolet         	gambetta                	gallieni            	tramway-3b
+* 	@ 	25 	22037;463174   	gallieni                	Gallieni                  	porte-de-bagnolet       	                    	

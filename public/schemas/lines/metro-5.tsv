@@ -1,0 +1,23 @@
+  	@ 	#  	monitoringRefs 	slugName                       	displayName                        	prevStops                      	nextStops                      	lineConnections
+* 	@ 	 1 	463131;22015   	bobigny-pablo-picasso          	Bobigny – Pablo Picasso            	                               	bobigny-pantin-raymond-queneau 	tramway-1
+* 	@ 	 2 	22014;463002   	bobigny-pantin-raymond-queneau 	Bobigny – Pantin – Raymond Queneau 	bobigny-pablo-picasso          	eglise-de-pantin               	
+* 	@ 	 3 	22016;463178   	eglise-de-pantin               	Église de Pantin                   	bobigny-pantin-raymond-queneau 	hoche                          	
+* 	@ 	 4 	22017;463017   	hoche                          	Hoche                              	eglise-de-pantin               	porte-de-pantin                	
+* 	@ 	 5 	463280;22003   	porte-de-pantin                	Porte de Pantin                    	hoche                          	ourcq                          	tramway-3b
+* 	@ 	 6 	463027;22005   	ourcq                          	Ourcq                              	porte-de-pantin                	laumiere                       	
+* 	@ 	 7 	22012;462999   	laumiere                       	Laumière                           	ourcq                          	jaures                         	
+* 	@ 	 8 	21952;463095   	jaures                         	Jaurès                             	laumiere                       	stalingrad                     	metro-2;metro-7bis
+* 	@ 	 9 	22001;463032   	stalingrad                     	Stalingrad                         	jaures                         	gare-du-nord                   	metro-2;metro-7
+* 	@ 	10 	463182;22007   	gare-du-nord                   	Gare du Nord                       	stalingrad                     	gare-de-l-est                  	metro-4;rer-b/paris-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
+* 	@ 	11 	22013;463021   	gare-de-l-est                  	Gare de l'Est                      	gare-du-nord                   	jacques-bonsergent             	metro-4;metro-7;transilien-p/paris-est
+* 	@ 	12 	22011;463191   	jacques-bonsergent             	Jacques Bonsergent                 	gare-de-l-est                  	republique                     	
+* 	@ 	13 	462961;21903   	republique                     	République                         	jacques-bonsergent             	oberkampf                      	metro-3;metro-8;metro-9;metro-11
+* 	@ 	14 	463059;21905   	oberkampf                      	Oberkampf                          	republique                     	richard-lenoir                 	metro-9
+* 	@ 	15 	463096;22002   	richard-lenoir                 	Richard-Lenoir                     	oberkampf                      	breguet-sabin                  	
+* 	@ 	16 	463138;22008   	breguet-sabin                  	Bréguet – Sabin                    	richard-lenoir                 	bastille                       	
+* 	@ 	17 	22010;463018   	bastille                       	Bastille                           	breguet-sabin                  	quai-de-la-rapee               	metro-1;metro-8
+* 	@ 	18 	22004;463289   	quai-de-la-rapee               	Quai de la Rapée                   	bastille                       	gare-d-austerlitz              	
+* 	@ 	19 	21981;463023   	gare-d-austerlitz              	Gare d'Austerlitz                  	quai-de-la-rapee               	saint-marcel                   	metro-10;rer-c
+* 	@ 	20 	463097;22000   	saint-marcel                   	Saint-Marcel                       	gare-d-austerlitz              	campo-formio                   	
+* 	@ 	21 	463020;22009   	campo-formio                   	Campo-Formio                       	saint-marcel                   	place-d-italie                 	
+* 	@ 	22 	22006;463025   	place-d-italie                 	Place d'Italie                     	campo-formio                   	                               	metro-6;metro-7

@@ -1,0 +1,14 @@
+  	@ 	#  	monitoringRefs 	slugName                         	displayName                      	prevStops                        	nextStops                        	lineConnections
+* 	@ 	 1 	480330;480290  	mairie-de-saint-ouen             	Mairie de Saint-Ouen             	                                 	saint-ouen                       	metro-13
+* 	@ 	 2 	480341;480288  	saint-ouen                       	Saint-Ouen                       	mairie-de-saint-ouen             	porte-de-clichy                  	rer-c
+* 	@ 	 3 	480531;480541  	porte-de-clichy                  	Porte de Clichy                  	saint-ouen                       	pont-cardinet                    	metro-13;tramway-3b;rer-c
+* 	@ 	 4 	480340;480286  	pont-cardinet                    	Pont Cardinet                    	porte-de-clichy                  	saint-lazare                     	transilien-l
+* 	@ 	 5 	21962;462972   	saint-lazare                     	Saint-Lazare                     	pont-cardinet                    	madeleine                        	metro-3;metro-12;metro-13;metro-9/saint-augustin;rer-e/haussmann-saint-lazare;transilien-j/paris-saint-lazare;transilien-l/paris-saint-lazare
+* 	@ 	 6 	463064;21961   	madeleine                        	Madeleine                        	saint-lazare                     	pyramides                        	metro-8;metro-12
+* 	@ 	 7 	463284;21960   	pyramides                        	Pyramides                        	madeleine                        	chatelet                         	metro-7
+* 	@ 	 8 	463159;21959   	chatelet                         	Châtelet                         	pyramides                        	gare-de-lyon                     	metro-1;metro-4;metro-7;metro-11;rer-a/chatelet-les-halles;rer-b/chatelet-les-halles;rer-d/chatelet-les-halles
+* 	@ 	 9 	21958;463046   	gare-de-lyon                     	Gare de Lyon                     	chatelet                         	bercy                            	metro-1;rer-a;rer-d;transilien-r/paris-gare-de-lyon
+* 	@ 	10 	21957;463129   	bercy                            	Bercy                            	gare-de-lyon                     	cour-saint-emilion               	metro-6
+* 	@ 	11 	463165;21956   	cour-saint-emilion               	Cour Saint-Émilion               	bercy                            	bibliotheque-francois-mitterrand 	
+* 	@ 	12 	463112;21955   	bibliotheque-francois-mitterrand 	Bibliothèque François-Mitterrand 	cour-saint-emilion               	olympiades                       	tramway-3a/avenue-de-france;rer-c
+* 	@ 	13 	463045;21954   	olympiades                       	Olympiades                       	bibliotheque-francois-mitterrand 	                                 	

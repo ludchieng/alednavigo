@@ -1,0 +1,5 @@
+  	@ 	# 	monitoringRefs 	slugName        	displayName     	prevStops     	nextStops       	lineConnections
+* 	@ 	1 	21945          	gambetta        	Gambetta        	              	pelleport       	metro-3
+* 	@ 	2 	462990;21948   	pelleport       	Pelleport       	gambetta      	saint-fargeau   	
+* 	@ 	3 	463071;21946   	saint-fargeau   	Saint-Fargeau   	pelleport     	porte-des-lilas 	
+* 	@ 	4 	463262;21947   	porte-des-lilas 	Porte des Lilas 	saint-fargeau 	                	metro-11;tramway-3b

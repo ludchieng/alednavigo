@@ -1,0 +1,26 @@
+  	@ 	#  	monitoringRefs 	slugName                 	displayName                	prevStops                	nextStops                	lineConnections
+* 	@ 	 1 	22111;463256   	porte-dauphine           	Porte Dauphine             	                         	victor-hugo              	rer-c/avenue-foch
+* 	@ 	 2 	22109;463322   	victor-hugo              	Victor Hugo                	porte-dauphine           	charles-de-gaulle-etoile 	
+* 	@ 	 3 	463043;22094   	charles-de-gaulle-etoile 	Charles de Gaulle - Étoile 	victor-hugo              	ternes                   	metro-1;metro-6;rer-a
+* 	@ 	 4 	22108;463266   	ternes                   	Ternes                     	charles-de-gaulle-etoile 	courcelles               	
+* 	@ 	 5 	22121;463154   	courcelles               	Courcelles                 	ternes                   	monceau                  	
+* 	@ 	 6 	463240;22117   	monceau                  	Monceau                    	courcelles               	villiers                 	
+* 	@ 	 7 	462988;22106   	villiers                 	Villiers                   	monceau                  	rome                     	metro-3
+* 	@ 	 8 	22110;463296   	rome                     	Rome                       	villiers                 	place-de-clichy          	
+* 	@ 	 9 	22115;463252   	place-de-clichy          	Place de Clichy            	rome                     	blanche                  	metro-13
+* 	@ 	10 	22125;463113   	blanche                  	Blanche                    	place-de-clichy          	pigalle                  	
+* 	@ 	11 	463088;22114   	pigalle                  	Pigalle                    	blanche                  	anvers                   	metro-12
+* 	@ 	12 	463120;22123   	anvers                   	Anvers                     	pigalle                  	barbes-rochechouart      	
+* 	@ 	13 	22127;463094   	barbes-rochechouart      	Barbès - Rochechouart      	anvers                   	la-chapelle              	metro-4
+* 	@ 	14 	22119;462982   	la-chapelle              	La Chapelle                	barbes-rochechouart      	stalingrad               	rer-b/paris-nord;rer-d/paris-nord;transilien-h/paris-nord;transilien-k/paris-nord;rer-e/magenta
+* 	@ 	15 	22107;463009   	stalingrad               	Stalingrad                 	la-chapelle              	jaures                   	metro-5;metro-7
+* 	@ 	16 	462981;22118   	jaures                   	Jaurès                     	stalingrad               	colonel-fabien           	metro-5;metro-7bis
+* 	@ 	17 	462984;22120   	colonel-fabien           	Colonel Fabien             	jaures                   	belleville               	
+* 	@ 	18 	463111;22128   	belleville               	Belleville                 	colonel-fabien           	couronnes                	metro-11
+* 	@ 	19 	462983;22126   	couronnes                	Couronnes                  	belleville               	menilmontant             	
+* 	@ 	20 	463243;22116   	menilmontant             	Ménilmontant               	couronnes                	pere-lachaise            	
+* 	@ 	21 	463285;22112   	pere-lachaise            	Père Lachaise              	menilmontant             	philippe-auguste         	metro-3
+* 	@ 	22 	463230;22113   	philippe-auguste         	Philippe Auguste           	pere-lachaise            	alexandre-dumas          	
+* 	@ 	23 	22122;463117   	alexandre-dumas          	Alexandre Dumas            	philippe-auguste         	avron                    	
+* 	@ 	24 	463125;22124   	avron                    	Avron                      	alexandre-dumas          	nation                   	
+* 	@ 	25 	463067;22072   	nation                   	Nation                     	avron                    	                         	metro-1;metro-6;metro-9;rer-a

@@ -1,0 +1,30 @@
+  	@ 	#  	monitoringRefs 	slugName               	displayName              	prevStops              	nextStops              	lineConnections
+* 	@ 	 1 	463073;22141   	porte-de-clignancourt  	Porte de Clignancourt    	                       	simplon                	tramway-3b
+* 	@ 	 2 	22133;463310   	simplon                	Simplon                  	porte-de-clignancourt  	marcadet-poissonniers  	
+* 	@ 	 3 	462974;22132   	marcadet-poissonniers  	Marcadet – Poissonniers  	simplon                	chateau-rouge          	metro-12
+* 	@ 	 4 	463148;22152   	chateau-rouge          	Château Rouge            	marcadet-poissonniers  	barbes-rochechouart    	
+* 	@ 	 5 	22130;463093   	barbes-rochechouart    	Barbès – Rochechouart    	chateau-rouge          	gare-du-nord           	metro-2
+* 	@ 	 6 	22149;463183   	gare-du-nord           	Gare du Nord             	barbes-rochechouart    	gare-de-l-est          	metro-5;rer-b/paris-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
+* 	@ 	 7 	22148;463022   	gare-de-l-est          	Gare de l'Est            	gare-du-nord           	chateau-d-eau          	metro-5;metro-7;transilien-p/paris-est
+* 	@ 	 8 	462979;22153   	chateau-d-eau          	Château d'Eau            	gare-de-l-est          	strasbourg-saint-denis 	
+* 	@ 	 9 	463313;22134   	strasbourg-saint-denis 	Strasbourg – Saint-Denis 	chateau-d-eau          	reaumur-sebastopol     	metro-8;metro-9
+* 	@ 	10 	463072;22142   	reaumur-sebastopol     	Réaumur – Sébastopol     	strasbourg-saint-denis 	etienne-marcel         	metro-3
+* 	@ 	11 	463171;22147   	etienne-marcel         	Étienne Marcel           	reaumur-sebastopol     	les-halles             	
+* 	@ 	12 	22146;463208   	les-halles             	Les Halles               	etienne-marcel         	chatelet               	rer-a/chatelet-les-halles;rer-b/chatelet-les-halles;rer-d/chatelet-les-halles
+* 	@ 	13 	22092;463158   	chatelet               	Châtelet                 	les-halles             	cite                   	metro-1;metro-7;metro-11;metro-14
+* 	@ 	14 	22150;463161   	cite                   	Cité                     	chatelet               	saint-michel           	
+* 	@ 	15 	22137;463306   	saint-michel           	Saint-Michel             	cite                   	odeon                  	rer-b/saint-michel-notre-dame;rer-c/saint-michel-notre-dame
+* 	@ 	16 	462995;22145   	odeon                  	Odéon                    	saint-michel           	saint-germain-des-pres 	metro-10
+* 	@ 	17 	462993;22136   	saint-germain-des-pres 	Saint-Germain-des-Prés   	odeon                  	saint-sulpice          	
+* 	@ 	18 	22139;462992   	saint-sulpice          	Saint-Sulpice            	saint-germain-des-pres 	saint-placide          	
+* 	@ 	19 	22138;463308   	saint-placide          	Saint-Placide            	saint-sulpice          	montparnasse-bienvenue 	
+* 	@ 	20 	22143;462996   	montparnasse-bienvenue 	Montparnasse – Bienvenüe 	saint-placide          	vavin                  	metro-6;metro-12;metro-13;transilien-n/paris-montparnasse
+* 	@ 	21 	463016;22135   	vavin                  	Vavin                    	montparnasse-bienvenue 	raspail                	
+* 	@ 	22 	22131;463291   	raspail                	Raspail                  	vavin                  	denfert-rochereau      	metro-6
+* 	@ 	23 	463104;22151   	denfert-rochereau      	Denfert-Rochereau        	raspail                	mouton-duvernet        	metro-6;rer-b
+* 	@ 	24 	22144;463242   	mouton-duvernet        	Mouton-Duvernet          	denfert-rochereau      	alesia                 	
+* 	@ 	25 	22154;463118   	alesia                 	Alésia                   	mouton-duvernet        	porte-d-orleans        	
+* 	@ 	26 	22140;463092   	porte-d-orleans        	Porte d'Orléans          	alesia                 	mairie-de-montrouge    	tramway-3a
+* 	@ 	27 	26602;463222   	mairie-de-montrouge    	Mairie de Montrouge      	porte-d-orleans        	barbara                	
+* 	@ 	28 	483313;483277  	barbara                	Barbara                  	mairie-de-montrouge    	bagneux-lucie-aubrac   	
+* 	@ 	29 	483314;483279  	bagneux-lucie-aubrac   	Bagneux – Lucie Aubrac   	barbara                	                       	
