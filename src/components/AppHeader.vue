@@ -38,6 +38,7 @@ export default Vue.extend({
 
 <style scoped>
 header {
+  z-index: 100;
   display: grid;
   grid-template-columns: 40% 20% 40%;
   position: fixed;

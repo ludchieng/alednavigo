@@ -1,5 +1,6 @@
 export const RouteMapTypes = [{
   drawing: [''],
+  isTerminus: false,
   slugName: '',
   displayName: '',
   lineConnections: [{
@@ -12,6 +13,7 @@ export const RouteMapTypes = [{
 
 export type StopType = {
   monitoringRefs: string[],
+  isTerminus: boolean,
   displayName: '',
   prevStops: string[],
   nextStops: string[],
@@ -79,6 +81,7 @@ export const parseLine = (tsv: string) => {
           const m = conn.match(/(.*)\/(.*)/)
           return { line: m?.[1] || '', slugName: m?.[2] || '' }
         })
+      stop.isTerminus = stop.isTerminus === '1'
     })
 
   const stops = dataAsObjects
@@ -92,7 +95,7 @@ export const parseLine = (tsv: string) => {
   const routeMap = [...dataAsObjects]
   routeMap.forEach(stop => {
     Object.keys(stop)
-      .filter(key => !['drawing', 'slugName', 'displayName', 'lineConnections'].includes(key))
+      .filter(key => !['drawing', 'isTerminus', 'slugName', 'displayName', 'lineConnections'].includes(key))
       .forEach(key => delete stop[key])
   })
   return { routeMap, stops }
