@@ -1,25 +1,27 @@
-  	@ 	monitoringRefs 	slugName                    	displayName                   	prevStops                   	nextStops                   	lineConnections
-* 	@ 	         50622 	pont-de-bezons              	Pont de Bezons                	                            	parc-pierre-lagravere       	
-* 	@ 	         44678 	parc-pierre-lagravere       	Parc Pierre Lagravère         	pont-de-bezons              	victor-basch                	
-* 	@ 	         58494 	victor-basch                	Victor Basch                  	parc-pierre-lagravere       	jacqueline-auriol           	
-* 	@ 	         47413 	jacqueline-auriol           	Jacqueline Auriol             	victor-basch                	charlebourg                 	
-* 	@ 	         47411 	charlebourg                 	Charlebourg                   	jacqueline-auriol           	les-fauvelles               	transilien-l/la-garenne-colombes
-* 	@ 	         43729 	les-fauvelles               	Les Fauvelles                 	charlebourg                 	faubourg-de-l-arche         	
-* 	@ 	        479058 	faubourg-de-l-arche         	Faubourg de l'Arche           	les-fauvelles               	la-defense                  	
-* 	@ 	        462395 	la-defense                  	La Défense                    	faubourg-de-l-arche         	puteaux                     	rer-a;transilien-l;transilien-u;metro-1
-* 	@ 	        462353 	puteaux                     	Puteaux                       	la-defense                  	belvedere                   	transilien-l;transilien-u
-* 	@ 	         42315 	belvedere                   	Belvédère                     	puteaux                     	suresnes-longchamp          	
-* 	@ 	         44914 	suresnes-longchamp          	Suresnes - Longchamp          	belvedere                   	les-coteaux                 	transilien-l;transilien-u/suresnes-mont-valerien
-* 	@ 	         47370 	les-coteaux                 	Les Coteaux                   	suresnes-longchamp          	les-milons                  	transilien-l/val-d-or
-* 	@ 	         51611 	les-milons                  	Les Milons                    	les-coteaux                 	parc-de-saint-cloud         	
-* 	@ 	         44249 	parc-de-saint-cloud         	Parc de Saint-Cloud           	les-milons                  	musee-de-sevres             	transilien-l;transilien-u/saint-cloud;metro-10/boulogne-pont-de-saint-cloud
-* 	@ 	         44189 	musee-de-sevres             	Musée de Sèvres               	parc-de-saint-cloud         	brimborion                  	metro-9/pont-de-sevres
-* 	@ 	         47364 	brimborion                  	Brimborion                    	musee-de-sevres             	meudon-sur-seine            	
-* 	@ 	         44137 	meudon-sur-seine            	Meudon-sur-Seine              	brimborion                  	les-moulineaux              	
-* 	@ 	         43765 	les-moulineaux              	Les Moulineaux                	meudon-sur-seine            	jacques-henri-lartigue      	
-* 	@ 	         43420 	jacques-henri-lartigue      	Jacques-Henri Lartigue        	les-moulineaux              	issy-val-de-seine           	
-* 	@ 	        473392 	issy-val-de-seine           	Issy-Val de Seine             	jacques-henri-lartigue      	henri-farman-porte-de-seine 	rer-c
-* 	@ 	         45358 	henri-farman-porte-de-seine 	Henri Farman (Porte de Seine) 	issy-val-de-seine           	suzanne-lenglen             	
-* 	@ 	         44917 	suzanne-lenglen             	Suzanne Lenglen               	henri-farman-porte-de-seine 	porte-d-issy                	metro-8/balard;tramway-3a/balard
-* 	@ 	         45356 	porte-d-issy                	Porte d'Issy                  	suzanne-lenglen             	porte-de-versailles         	tramway-3a/desnouettes
-* 	@ 	        473705 	porte-de-versailles         	Porte de Versailles           	porte-d-issy                	                            	metro-12;tramway-3a
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                    	displayName                 	prevStops                   	nextStops                   	lineConnections
+^ 	@ 	 1 	               	           	                            	                            	                            	                            	
+* 	@ 	 2 	         50622 	         1 	pont-de-bezons              	Pont de Bezons              	                            	parc-pierre-lagravere       	
+* 	@ 	 3 	         44678 	         0 	parc-pierre-lagravere       	Parc Pierre Lagravère       	pont-de-bezons              	victor-basch                	
+* 	@ 	 4 	         58494 	         1 	victor-basch                	Victor Basch                	parc-pierre-lagravere       	jacqueline-auriol           	
+* 	@ 	 5 	         47413 	         0 	jacqueline-auriol           	Jacqueline Auriol           	victor-basch                	charlebourg                 	
+* 	@ 	 6 	         47411 	         0 	charlebourg                 	Charlebourg                 	jacqueline-auriol           	les-fauvelles               	transilien-l/la-garenne-colombes
+* 	@ 	 7 	         43729 	         0 	les-fauvelles               	Les Fauvelles               	charlebourg                 	faubourg-de-l-arche         	
+* 	@ 	 8 	        479058 	         0 	faubourg-de-l-arche         	Faubourg de l'Arche         	les-fauvelles               	la-defense                  	
+* 	@ 	 9 	        462395 	         0 	la-defense                  	La Défense                  	faubourg-de-l-arche         	puteaux                     	rer-a;transilien-l;transilien-u;metro-1
+* 	@ 	10 	        462353 	         0 	puteaux                     	Puteaux                     	la-defense                  	belvedere                   	transilien-l;transilien-u
+* 	@ 	11 	         42315 	         0 	belvedere                   	Belvédère                   	puteaux                     	suresnes-longchamp          	
+* 	@ 	12 	         44914 	         0 	suresnes-longchamp          	Suresnes – Longchamp        	belvedere                   	les-coteaux                 	transilien-l;transilien-u/suresnes-mont-valerien
+* 	@ 	13 	         47370 	         0 	les-coteaux                 	Les Coteaux                 	suresnes-longchamp          	les-milons                  	transilien-l/val-d-or
+* 	@ 	14 	         51611 	         0 	les-milons                  	Les Milons                  	les-coteaux                 	parc-de-saint-cloud         	
+* 	@ 	15 	         44249 	         0 	parc-de-saint-cloud         	Parc de Saint-Cloud         	les-milons                  	musee-de-sevres             	transilien-l;transilien-u/saint-cloud;metro-10/boulogne-pont-de-saint-cloud
+* 	@ 	16 	         44189 	         0 	musee-de-sevres             	Musée de Sèvres             	parc-de-saint-cloud         	brimborion                  	metro-9/pont-de-sevres
+* 	@ 	17 	         47364 	         0 	brimborion                  	Brimborion                  	musee-de-sevres             	meudon-sur-seine            	
+* 	@ 	18 	         44137 	         0 	meudon-sur-seine            	Meudon-sur-Seine            	brimborion                  	les-moulineaux              	
+* 	@ 	19 	         43765 	         1 	les-moulineaux              	Les Moulineaux              	meudon-sur-seine            	jacques-henri-lartigue      	
+* 	@ 	20 	         43420 	         0 	jacques-henri-lartigue      	Jacques-Henri Lartigue      	les-moulineaux              	issy-val-de-seine           	
+* 	@ 	21 	        473392 	         0 	issy-val-de-seine           	Issy–Val de Seine           	jacques-henri-lartigue      	henri-farman-porte-de-seine 	rer-c
+* 	@ 	22 	         45358 	         0 	henri-farman-porte-de-seine 	Henri Farman Porte de Seine 	issy-val-de-seine           	suzanne-lenglen             	
+* 	@ 	23 	         44917 	         0 	suzanne-lenglen             	Suzanne Lenglen             	henri-farman-porte-de-seine 	porte-d-issy                	metro-8/balard;tramway-3a/balard
+* 	@ 	24 	         45356 	         0 	porte-d-issy                	Porte d'Issy                	suzanne-lenglen             	porte-de-versailles         	tramway-3a/desnouettes
+* 	@ 	25 	        473705 	         1 	porte-de-versailles         	Porte de Versailles         	porte-d-issy                	                            	metro-12;tramway-3a
+v 	@ 	26 	               	           	                            	                            	                            	                            	

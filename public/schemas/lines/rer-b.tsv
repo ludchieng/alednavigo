@@ -1,0 +1,58 @@
+   	  	   	@ 	#  	monitoringRefs              	isTerminus 	slugName                     	displayName                  	prevStops                      	nextStops                    	lineConnections
+^  	  	   	@ 	 1 	                            	           	                             	                             	                               	                             	
+*  	  	   	@ 	 2 	411295                      	         1 	aeroport-charles-de-gaulle-2 	Aéroport Charles-de-Gaulle 2 	                               	aeroport-charles-de-gaulle-1 	
+*  	  	   	@ 	 3 	411398                      	         0 	aeroport-charles-de-gaulle-1 	Aéroport Charles-de-Gaulle 1 	aeroport-charles-de-gaulle-2   	parc-des-expositions         	
+*  	  	   	@ 	 4 	411400                      	         0 	parc-des-expositions         	Parc des Expositions         	aeroport-charles-de-gaulle-1   	villepinte                   	
+*  	  	   	@ 	 5 	40962                       	         0 	villepinte                   	Villepinte                   	parc-des-expositions           	sevran-beaudottes            	
+*  	  	   	@ 	 6 	411411                      	         0 	sevran-beaudottes            	Sevran – Beaudottes          	villepinte                     	aulnay-sous-bois             	
+|  	  	^  	@ 	 7 	                            	           	                             	                             	                               	                             	
+|  	  	*  	@ 	 8 	411402                      	         1 	mitry-claye                  	Mitry – Claye                	                               	villeparisis-mitry-le-neuf   	transilien-k
+|  	  	*  	@ 	 9 	411403                      	         0 	villeparisis-mitry-le-neuf   	Villeparisis – Mitry-le-Neuf 	mitry-claye                    	vert-galant                  	
+|  	  	*  	@ 	10 	411412                      	         0 	vert-galant                  	Vert-Galant                  	villeparisis-mitry-le-neuf     	sevran-livry                 	
+|  	  	*  	@ 	11 	411413                      	         0 	sevran-livry                 	Sevran – Livry               	vert-galant                    	aulnay-sous-bois             	
+\o 	| 	o/ 	@ 	12 	                            	           	                             	                             	                               	                             	
+\. 	| 	./ 	@ 	13 	                            	           	                             	                             	                               	                             	
+   	| 	   	@ 	14 	                            	           	                             	                             	                               	                             	
+   	* 	   	@ 	15 	411410                      	         1 	aulnay-sous-bois             	Aulnay-sous-Bois             	sevran-beaudottes;sevran-livry 	le-blanc-mesnil              	transilien-k;tramway-4
+   	* 	   	@ 	16 	411401                      	         0 	le-blanc-mesnil              	Le Blanc-Mesnil              	aulnay-sous-bois               	drancy                       	
+   	* 	   	@ 	17 	411409                      	         0 	drancy                       	Drancy                       	le-blanc-mesnil                	le-bourget                   	
+   	* 	   	@ 	18 	411408                      	         0 	le-bourget                   	Le Bourget                   	drancy                         	la-courneuve-aubervilliers   	tramway-11
+   	* 	   	@ 	19 	40990                       	         0 	la-courneuve-aubervilliers   	La Courneuve – Aubervilliers 	le-bourget                     	la-plaine-stade-de-france    	
+   	* 	   	@ 	20 	411369                      	         1 	la-plaine-stade-de-france    	La Plaine – Stade de France  	la-courneuve-aubervilliers     	gare-du-nord                 	
+   	* 	   	@ 	21 	41071                       	         1 	gare-du-nord                 	Gare du Nord                 	la-plaine-stade-de-france      	chatelet-les-halles          	metro-4;metro-5;metro-2/la-chapelle;rer-d;rer-e/magenta;transilien-h;transilien-k
+   	* 	   	@ 	22 	473990;473989               	         0 	chatelet-les-halles          	Châtelet – Les Halles        	gare-du-nord                   	saint-michel-notre-dame      	metro-1/chatelet;metro-4/chatelet;metro-7/chatelet;metro-11/chatelet;metro-14/chatelet;metro-4/les-halles;rer-a;rer-d
+   	* 	   	@ 	23 	473916;473915               	         0 	saint-michel-notre-dame      	Saint-Michel – Notre-Dame    	chatelet-les-halles            	luxembourg                   	metro-10/cluny-la-sorbonne;rer-c
+   	* 	   	@ 	24 	473908;473907               	         0 	luxembourg                   	Luxembourg                   	saint-michel-notre-dame        	port-royal                   	
+   	* 	   	@ 	25 	473917;473918               	         0 	port-royal                   	Port-Royal                   	luxembourg                     	denfert-rochereau            	
+   	* 	   	@ 	26 	473997;473994               	         1 	denfert-rochereau            	Denfert-Rochereau            	port-royal                     	cite-universitaire           	metro-4;metro-6
+   	* 	   	@ 	27 	473995;473991               	         0 	cite-universitaire           	Cité Universitaire           	denfert-rochereau              	gentilly                     	tramway-3a
+   	* 	   	@ 	28 	473956;473957               	         0 	gentilly                     	Gentilly                     	cite-universitaire             	laplace                      	
+   	* 	   	@ 	29 	473927;473932               	         1 	laplace                      	Laplace                      	gentilly                       	arcueil-cachan               	
+   	* 	   	@ 	30 	473983;473979               	         0 	arcueil-cachan               	Arcueil – Cachan             	laplace                        	bagneux                      	
+   	* 	   	@ 	31 	473981;473986               	         0 	bagneux                      	Bagneux                      	arcueil-cachan                 	bourg-la-reine               	
+   	* 	   	@ 	32 	473970;473969;473972;473971 	         0 	bourg-la-reine               	Bourg-la-Reine               	bagneux                        	sceaux;parc-de-sceaux        	
+   	| 	   	@ 	33 	                            	           	                             	                             	                               	                             	
+/. 	| 	.\ 	@ 	34 	                            	           	                             	                             	                               	                             	
+/o 	| 	o\ 	@ 	35 	                            	           	                             	                             	                               	                             	
+*  	  	|  	@ 	36 	474018;474019               	         0 	sceaux                       	Sceaux                       	bourg-la-reine                 	fontenay-aux-roses           	
+*  	  	|  	@ 	37 	473953;473952               	         0 	fontenay-aux-roses           	Fontenay-aux-Roses           	sceaux                         	robinson                     	
+*  	  	|  	@ 	38 	474026;474024               	         1 	robinson                     	Robinson                     	fontenay-aux-roses             	                             	
+v  	  	|  	@ 	39 	                            	           	                             	                             	                               	                             	
+   	  	*  	@ 	40 	474027;474029               	         0 	parc-de-sceaux               	Parc de Sceaux               	bourg-la-reine                 	la-croix-de-berny            	
+   	  	*  	@ 	41 	473949;473947               	         0 	la-croix-de-berny            	La Croix de Berny            	parc-de-sceaux                 	antony                       	
+   	  	*  	@ 	42 	473996;473980               	         0 	antony                       	Antony                       	la-croix-de-berny              	fontaine-michalon            	
+   	  	*  	@ 	43 	473954;473955               	         0 	fontaine-michalon            	Fontaine Michalon            	antony                         	les-baconnets                	
+   	  	*  	@ 	44 	473906;473905               	         0 	les-baconnets                	Les Baconnets                	fontaine-michalon              	massy-verrieres              	
+   	  	*  	@ 	45 	471106;471007               	         0 	massy-verrieres              	Massy – Verrières            	les-baconnets                  	massy-palaiseau              	rer-c
+   	  	*  	@ 	46 	474061;474056;474058;474060 	         1 	massy-palaiseau              	Massy – Palaiseau            	massy-verrieres                	palaiseau                    	rer-c
+   	  	*  	@ 	47 	474034;474037               	         0 	palaiseau                    	Palaiseau                    	massy-palaiseau                	palaiseau-villebon           	
+   	  	*  	@ 	48 	474030;474031               	         0 	palaiseau-villebon           	Palaiseau – Villebon         	palaiseau                      	lozere                       	
+   	  	*  	@ 	49 	473931;474063               	         0 	lozere                       	Lozère                       	palaiseau-villebon             	le-guichet                   	
+   	  	*  	@ 	50 	473898;473902               	         0 	le-guichet                   	Le Guichet                   	lozere                         	orsay-ville                  	
+   	  	*  	@ 	51 	473901;473903               	         1 	orsay-ville                  	Orsay-Ville                  	le-guichet                     	bures-sur-yvette             	
+   	  	*  	@ 	52 	473975;473978               	         0 	bures-sur-yvette             	Bures-sur-Yvette             	orsay-ville                    	la-hacquiniere               	
+   	  	*  	@ 	53 	473942;473940               	         0 	la-hacquiniere               	La Hacquinière               	bures-sur-yvette               	gif-sur-yvette               	
+   	  	*  	@ 	54 	473946;473945               	         0 	gif-sur-yvette               	Gif-sur-Yvette               	la-hacquiniere                 	courcelle-sur-yvette         	
+   	  	*  	@ 	55 	473968;473966               	         0 	courcelle-sur-yvette         	Courcelle-sur-Yvette         	gif-sur-yvette                 	saint-remy-les-chevreuse     	
+   	  	*  	@ 	56 	474012;474011;474009        	         1 	saint-remy-les-chevreuse     	Saint-Rémy-lès-Chevreuse     	courcelle-sur-yvette           	                             	
+   	  	v  	@ 	57 	                            	           	                             	                             	                               	                             	

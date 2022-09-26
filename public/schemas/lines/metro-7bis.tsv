@@ -1,14 +1,18 @@
-  	  	  	@ 	#  	monitoringRefs 	slugName          	displayName       	prevStops              	nextStops              	lineConnections
-  	* 	  	@ 	 1 	463034;24681   	louis-blanc       	Louis Blanc       	                       	jaures                 	metro-7
-  	* 	  	@ 	 2 	463074;24680   	jaures            	Jaurès            	louis-blanc            	bolivar                	metro-2;metro-5
-  	* 	  	@ 	 3 	463132;24685   	bolivar           	Bolivar           	jaures                 	buttes-chaumont        	
-  	* 	  	@ 	 4 	24683;463156   	buttes-chaumont   	Buttes Chaumont   	bolivar                	botzaris               	
-  	* 	  	@ 	 5 	463134;24686   	botzaris          	Botzaris          	buttes-chaumont        	place-des-fetes;danube 	
-  	| 	  	@ 	 6 	               	                  	                  	                       	                       	
-| 	| 	| 	@ 	 7 	               	                  	                  	                       	                       	
-↓ 	  	↑ 	@ 	 8 	               	                  	                  	                       	                       	
-| 	  	* 	@ 	 9 	24687          	danube            	Danube            	botzaris               	pre-saint-gervais      	
-* 	  	| 	@ 	10 	24682          	place-des-fetes   	Place des Fêtes   	botzaris               	pre-saint-gervais      	metro-11
-↓ 	  	↑ 	@ 	11 	               	                  	                  	                       	                       	
-| 	| 	| 	@ 	12 	               	                  	                  	                       	                       	
-  	* 	  	@ 	13 	463282;24684   	pre-saint-gervais 	Pré-Saint-Gervais 	place-des-fetes;danube 	                       	tramway-3b/hopital-robert-debre
+   	  	   	@ 	#  	monitoringRefs 	isTerminus 	slugName          	displayName       	prevStops              	nextStops              	lineConnections
+   	^ 	   	@ 	 1 	               	           	                  	                  	                       	                       	
+   	* 	   	@ 	 2 	463034;24681   	         1 	louis-blanc       	Louis Blanc       	                       	jaures                 	metro-7
+   	* 	   	@ 	 3 	463074;24680   	         0 	jaures            	Jaurès            	louis-blanc            	bolivar                	metro-2;metro-5
+   	* 	   	@ 	 4 	463132;24685   	         0 	bolivar           	Bolivar           	jaures                 	buttes-chaumont        	
+   	* 	   	@ 	 5 	24683;463156   	         0 	buttes-chaumont   	Buttes Chaumont   	bolivar                	botzaris               	
+   	* 	   	@ 	 6 	463134;24686   	         0 	botzaris          	Botzaris          	buttes-chaumont        	place-des-fetes;danube 	
+   	| 	   	@ 	 7 	               	           	                  	                  	                       	                       	
+/. 	| 	.\ 	@ 	 8 	               	           	                  	                  	                       	                       	
+/o 	| 	o\ 	@ 	 9 	               	           	                  	                  	                       	                       	
+↓  	  	↑  	@ 	10 	               	           	                  	                  	                       	                       	
+|  	  	*  	@ 	11 	24687          	         0 	danube            	Danube            	botzaris               	pre-saint-gervais      	
+*  	  	|  	@ 	12 	24682          	         1 	place-des-fetes   	Place des Fêtes   	botzaris               	pre-saint-gervais      	metro-11
+↓  	  	↑  	@ 	13 	               	           	                  	                  	                       	                       	
+\o 	| 	o/ 	@ 	14 	               	           	                  	                  	                       	                       	
+\. 	| 	./ 	@ 	15 	               	           	                  	                  	                       	                       	
+   	* 	   	@ 	16 	463282;24684   	         1 	pre-saint-gervais 	Pré-Saint-Gervais 	place-des-fetes;danube 	                       	tramway-3b/hopital-robert-debre
+   	v 	   	@ 	17 	               	           	                  	                  	                       	                       	
