@@ -2,13 +2,13 @@
   <div class="tab-page-new">
     <h2>Favoris et personnalisés</h2>
     <hr />
-    <div v-for="category in lines" :key="category.name">
+    <div v-for="category in linesByCategory" :key="category.name">
       <h2>{{ category.name }}</h2>
       <hr />
       <router-link v-for="line in category.lines" :key="line.slug"
-        class="icon-line" :to="`/${$store.state.tabNumber}/${line.slug}`"
+        class="icon-line" :to="`/${$store.state.tabNumber}/${line.slugName}`"
       >
-        <img :src="`/img/lines-icons/dark/${line.slug}.svg`">
+        <img :src="`/img/lines-icons/dark/${line.slugName}.svg`">
       </router-link>
     </div>
   </div>
@@ -16,18 +16,26 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import lines, { LineCategory } from './lines'
 
 export default Vue.extend({
   name: 'TabPageNew',
-  data: (): {
-    lines: LineCategory[];
-  } => ({
-    lines,
-  }),
   methods: {
     redirectToHome () {
       this.$router.push('/1')
+    },
+  },
+  computed: {
+    linesByCategory () {
+      const res = {} as {[x: string]: any}
+      const lines = JSON.parse(localStorage.getItem('lines') as string)
+      for (const line of Object.entries(lines).filter(([k, v]) => k.trim() !== '').map(([k, v]) => v) as any[]) {
+        if (!res[line.category]) res[line.category] = []
+        res[line.category].push({ ...(delete line.category, line) })
+      }
+      return Object.entries(res).map(([category, lines]) => ({
+        name: category,
+        lines,
+      })).filter((category) => !category.name.includes('TER'))
     },
   },
 })

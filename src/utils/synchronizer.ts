@@ -1,14 +1,10 @@
 import { parseLine } from './parser'
 
 export const synchronize = async () => {
-  const res = await fetch('/schemas/lines.json')
-  if (res.status >= 400) return
-  const lines = await res.json()
-  localStorage.setItem('lines', JSON.stringify(lines))
-  for (const type of lines) {
-    for (const line of type.lines) {
-      synchronizeLine(line.slugName)
-    }
+  const lines = await synchronizeFile('/schemas/lines.json', 'lines')
+
+  for (const line of Object.values(lines) as any[]) {
+    synchronizeLine(line.slugName)
   }
   localStorage.setItem('lines.updatedAt', new Date().toISOString())
 }
@@ -20,4 +16,12 @@ export const synchronizeLine = async (line: string) => {
   const { routeMap, stops } = parseLine(tsv)
   localStorage.setItem(`lines.${line}.routeMap`, JSON.stringify(routeMap))
   localStorage.setItem(`lines.${line}.stops`, JSON.stringify(stops))
+}
+
+export const synchronizeFile = async (file: string, localKey: string) => {
+  const res = await fetch(file)
+  if (res.status >= 400) return
+  const data = await res.json()
+  localStorage.setItem(localKey, JSON.stringify(data))
+  return data
 }

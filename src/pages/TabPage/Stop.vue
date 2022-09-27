@@ -33,6 +33,8 @@
       </ul>
     </div>
 
+    <pre>{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
+
     <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
       <div
         v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i"
@@ -75,6 +77,7 @@ export default Vue.extend({
   data: () => ({
     stop: {} as StopType,
     visits: {} as { [x: string]: VisitType[] },
+    debugData: new Set(),
     syncTimer: 0,
     syncInterval: 0,
   }),
@@ -89,6 +92,8 @@ export default Vue.extend({
   },
   methods: {
     update () {
+      this.debugData = new Set()
+      this.visits = {}
       this.stop = JSON.parse(
         localStorage.getItem(
           `lines.${this.$route.params.line}.stops`,
@@ -112,21 +117,33 @@ export default Vue.extend({
           .then(data => {
             if (!data) return
             const trains = data.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit
-            // const stopName = trains[0] && trains[0].MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value
 
             this.visits = {
               ...this.visits,
               ...(trains.reduce(
-                (acc: any, visit: any) => {
+                (acc: { [x: string]: [] }, visit: any) => {
                   const dir = visit.MonitoredVehicleJourney.DirectionName
                     ? visit.MonitoredVehicleJourney.DirectionName[0].value
                     : ''
 
+                  const lineRef = visit.MonitoredVehicleJourney.LineRef.value.match(/:(C[0-9]+):/)[1]
+
+                  if (process.env.NODE_ENV === 'development') {
+                    const line = this.linesByRef[lineRef].slugName
+                    const stop = visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value
+                    this.debugData.add(`${stop} (${line})`)
+                  }
+
                   visit = {
+                    lineRef,
+                    line: this.linesByRef[lineRef] ? this.linesByRef[lineRef].slugName : '',
                     destination: visit.MonitoredVehicleJourney.DestinationName[0].value,
                     code: visit.MonitoredVehicleJourney.JourneyNote ? visit.MonitoredVehicleJourney.JourneyNote[0].value : '',
                     time: new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime) ||
                       new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
+                  }
+                  if (visit.line !== this.$route.params.line) {
+                    return acc
                   }
                   return {
                     ...acc,
@@ -140,18 +157,15 @@ export default Vue.extend({
       }
     },
   },
-  watch: {
-    '$route.params.line': {
-      handler () {
-        this.update()
-        this.visits = {}
-      },
-      deep: true,
+  computed: {
+    linesByRef () {
+      return JSON.parse(localStorage.getItem('lines') as string)
     },
-    '$route.params.stop': {
+  },
+  watch: {
+    '$route.path': {
       handler () {
         this.update()
-        this.visits = {}
       },
       deep: true,
     },
