@@ -1,15 +1,20 @@
-export const RouteMapTypes = [{
-  drawing: [''],
-  isTerminus: false,
+export const LineConnectionTypeDesc = {
+  line: '',
   slugName: '',
-  displayName: '',
-  lineConnections: [{
-    line: '',
-    slugName: '',
-  }],
-}, {
-  drawing: [''],
-}]
+}
+
+export type LineConnectionType = {
+  line: string,
+  slugName: string,
+}
+
+export type RouteMapType = {
+  drawing: string[],
+  isTerminus?: boolean,
+  slugName?: string,
+  displayName?: string,
+  lineConnections?: LineConnectionType[],
+}
 
 export type StopType = {
   monitoringRefs: string[],
@@ -17,10 +22,7 @@ export type StopType = {
   displayName: '',
   prevStops: string[],
   nextStops: string[],
-  lineConnections: [{
-    line: '',
-    slugName: '',
-  }],
+  lineConnections: LineConnectionType[],
 }
 
 export type StopsType = {
