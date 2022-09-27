@@ -11,6 +11,7 @@ export default {
   routeMap: [
     {
       drawing: ['*'],
+      isTerminus: false,
       slugName: 'gournay-sur-chevre',
       displayName: 'Gournay-sur-Chèvre',
       lineConnections: [{
@@ -23,12 +24,14 @@ export default {
     },
     {
       drawing: ['*'],
+      isTerminus: false,
       slugName: 'claquos-les-troux',
       displayName: 'Claquos – les Troux',
       lineConnections: [],
     },
     {
       drawing: ['*'],
+      isTerminus: false,
       slugName: 'castel-aux-lopez',
       displayName: 'Castel-aux-Lopez',
       lineConnections: [{
@@ -41,6 +44,7 @@ export default {
     'gournay-sur-chevre': {
       monitoringRefs: ['58876'],
       displayName: 'Gournay-sur-Chèvre',
+      isTerminus: false,
       prevStops: [],
       nextStops: ['claquos-les-troux'],
       lineConnections: [{
@@ -51,6 +55,7 @@ export default {
     'claquos-les-troux': {
       monitoringRefs: ['469'],
       displayName: 'Claquos – les Troux',
+      isTerminus: false,
       prevStops: ['gournay-sur-chèvre'],
       nextStops: ['castel-aux-lopez'],
       lineConnections: [],
@@ -58,6 +63,7 @@ export default {
     'castel-aux-lopez': {
       monitoringRefs: ['134008'],
       displayName: 'Castel-aux-Lopez',
+      isTerminus: false,
       prevStops: ['claquos-les-troux'],
       nextStops: [],
       lineConnections: [{

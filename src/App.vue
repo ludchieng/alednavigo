@@ -24,6 +24,8 @@ export default Vue.extend({
     if (!localStorage.getItem('lines.updatedAt')) {
       synchronize()
     }
+    // Ping server to wake it up
+    fetch('https://idfm-prim.herokuapp.com/')
   },
   watch: {
     '$route.params.tab': {

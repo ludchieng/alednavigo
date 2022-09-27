@@ -1,6 +1,6 @@
   	@ 	#  	monitoringRefs 	isTerminus 	slugName                     	displayName                    	prevStops                    	nextStops                    	lineConnections
 ^ 	@ 	 1 	               	           	                             	                               	                             	                             	
-* 	@ 	 2 	22101;463193   	         1 	la-defense                   	La Défense                     	                             	esplanade-de-la-defense      	rer-a;transilien-l;transilien-U;tramway-2
+* 	@ 	 2 	22101;463193   	         1 	la-defense                   	La Défense                     	                             	esplanade-de-la-defense      	tramway-2;rer-a;transilien-l;transilien-U
 * 	@ 	 3 	463170;22102   	         0 	esplanade-de-la-defense      	Esplanade de la Défense        	la-defense                   	pont-de-neuilly              	
 * 	@ 	 4 	463044;22099   	         0 	pont-de-neuilly              	Pont de Neuilly                	esplanade-de-la-defense      	les-sablons                  	
 * 	@ 	 5 	22100;463217   	         0 	les-sablons                  	Les Sablons                    	pont-de-neuilly              	porte-maillot                	
@@ -18,9 +18,9 @@
 * 	@ 	17 	463080;22091   	         0 	hotel-de-ville               	Hôtel de Ville                 	chatelet                     	saint-paul                   	metro-11
 * 	@ 	18 	22074;463307   	         0 	saint-paul                   	Saint-Paul                     	hotel-de-ville               	bastille                     	
 * 	@ 	19 	463019;22089   	         0 	bastille                     	Bastille                       	saint-paul                   	gare-de-lyon                 	metro-5;metro-8
-* 	@ 	20 	22083;463197   	         1 	gare-de-lyon                 	Gare de Lyon                   	bastille                     	reuilly-diderot              	rer-a;rer-d;transilien-r;metro-14
+* 	@ 	20 	22083;463197   	         1 	gare-de-lyon                 	Gare de Lyon                   	bastille                     	reuilly-diderot              	metro-14;rer-a;rer-d;transilien-r
 * 	@ 	21 	22076;463294   	         0 	reuilly-diderot              	Reuilly – Diderot              	gare-de-lyon                 	nation                       	metro-8
-* 	@ 	22 	22080;462943   	         0 	nation                       	Nation                         	reuilly-diderot              	porte-de-vincennes           	rer-a;metro-2;metro-6;metro-9
+* 	@ 	22 	22080;462943   	         0 	nation                       	Nation                         	reuilly-diderot              	porte-de-vincennes           	metro-2;metro-6;metro-9;rer-a
 * 	@ 	23 	22077;463012   	         0 	porte-de-vincennes           	Porte de Vincennes             	nation                       	saint-mande                  	tramway-3a;tramway-3b
 * 	@ 	24 	22103;463040   	         0 	saint-mande                  	Saint-Mandé                    	porte-de-vincennes           	berault                      	
 * 	@ 	25 	22105;463130   	         0 	berault                      	Bérault                        	saint-mande                  	chateau-de-vincennes         	

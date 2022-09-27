@@ -4,7 +4,7 @@
 *  	  	   	@ 	 3 	22232;463207        	         0 	les-agnettes                          	Les Agnettes                              	asnieres-gennevilliers-les-courtilles 	gabriel-peri               	
 *  	  	   	@ 	 4 	22234;462953        	         0 	gabriel-peri                          	Gabriel Péri                              	les-agnettes                          	mairie-de-clichy           	
 *  	  	   	@ 	 5 	22238;463086        	         0 	mairie-de-clichy                      	Mairie de Clichy                          	gabriel-peri                          	porte-de-clichy            	
-*  	  	   	@ 	 6 	22219;463278        	         0 	porte-de-clichy                       	Porte de Clichy                           	mairie-de-clichy                      	brochant                   	metro-14;rer-c;tramway-3b
+*  	  	   	@ 	 6 	22219;463278        	         0 	porte-de-clichy                       	Porte de Clichy                           	mairie-de-clichy                      	brochant                   	metro-14;tramway-3b;rer-c
 *  	  	   	@ 	 7 	22231;462978        	         0 	brochant                              	Brochant                                  	porte-de-clichy                       	la-fourche                 	
 |  	  	^  	@ 	 8 	                    	           	                                      	                                          	                                      	                           	
 |  	  	*  	@ 	 9 	22242;463302        	         1 	saint-denis-universite                	Saint-Denis – Université                  	                                      	basilique-de-saint-denis   	tramway-5/guynemer
