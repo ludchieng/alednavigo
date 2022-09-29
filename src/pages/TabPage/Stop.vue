@@ -13,24 +13,6 @@ export default Vue.extend({
   components: {
     StopTimetable,
   },
-  data: () => ({
-    syncTimer: 0,
-    syncInterval: 0,
-  }),
-  created () {
-    this.syncInterval = setInterval(() => {
-      ++this.syncTimer
-    }, 1000)
-  },
-  destroyed () {
-    clearInterval(this.syncInterval)
-  },
-  methods: {
-  },
-  computed: {
-  },
-  watch: {
-  },
 })
 </script>
 
