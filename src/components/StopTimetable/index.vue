@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { VisitType } from '@/utils/fetcher'
 import StopTimetableHeader from '@/components/StopTimetable/Header.vue'
@@ -51,9 +51,9 @@ export default Vue.extend({
     PrevNextStops,
   },
   props: {
+    stop: {} as PropType<StopType>,
   },
   data: () => ({
-    stop: {} as StopType,
     visits: {} as { [x: string]: VisitType[] },
     debugData: new Set(),
     syncTimer: 0,
@@ -72,10 +72,6 @@ export default Vue.extend({
     update () {
       this.debugData = new Set()
       this.visits = {}
-      this.stop = JSON.parse(
-        localStorage.getItem(
-          `lines.${this.$route.params.line}.stops`,
-        ) as string)[this.$route.params.stop]
       this.fetch()
       this.syncTimer = 0
     },
@@ -141,11 +137,8 @@ export default Vue.extend({
     },
   },
   watch: {
-    '$route.path': {
-      handler () {
-        this.update()
-      },
-      deep: true,
+    stop () {
+      this.update()
     },
   },
 })
