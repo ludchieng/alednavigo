@@ -17,7 +17,7 @@ import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 
 export default Vue.extend({
-  name: 'StopTimetableHeader',
+  name: 'StopHeader',
   props: {
     stop: {} as PropType<StopType>,
   },

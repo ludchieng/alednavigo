@@ -1,8 +1,5 @@
 <template>
   <div>
-    <StopTimetableHeader :stop="stop" />
-    <PrevNextStops :stop="stop" />
-
     <pre>{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
 
     <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
@@ -41,15 +38,9 @@
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { VisitType } from '@/utils/fetcher'
-import StopTimetableHeader from '@/components/StopTimetable/Header.vue'
-import PrevNextStops from '@/components/StopTimetable/PrevNextStops.vue'
 
 export default Vue.extend({
-  name: 'TabPageStop',
-  components: {
-    StopTimetableHeader,
-    PrevNextStops,
-  },
+  name: 'StopTimetable',
   props: {
     stop: {} as PropType<StopType>,
   },
