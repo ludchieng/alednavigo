@@ -11,7 +11,7 @@ import Vue from 'vue'
 import { StopType } from '@/utils/parser'
 import StopTimetable from '@/components/Stop/Timetable.vue'
 import StopHeader from '@/components/Stop/Header.vue'
-import StopPrevNextStops from '@/components/Stop/StopPrevNextStops.vue'
+import StopPrevNextStops from '@/components/Stop/PrevNextStops.vue'
 
 export default Vue.extend({
   name: 'TabPageStop',

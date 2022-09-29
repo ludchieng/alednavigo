@@ -1,8 +1,3 @@
-export const LineConnectionTypeDesc = {
-  line: '',
-  slugName: '',
-}
-
 export type LineConnectionType = {
   line: string,
   slugName: string,
