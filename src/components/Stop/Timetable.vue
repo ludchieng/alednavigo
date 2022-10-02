@@ -66,11 +66,6 @@ export default Vue.extend({
       this.fetch()
       this.syncTimer = 0
     },
-    getStop (line: string, slugName: string) {
-      return JSON.parse(
-        localStorage.getItem(`lines.${line}.stops`) as string,
-      )[slugName]
-    },
     fetch () {
       const monitoringRefs = this.stop.monitoringRefs
       for (const mref of monitoringRefs) {

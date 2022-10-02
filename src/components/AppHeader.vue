@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { synchronize } from '@/utils/synchronizer'
+import { synchronize } from '@/utils/localstore/synchronizer'
 
 export default Vue.extend({
   name: 'AppHeader',

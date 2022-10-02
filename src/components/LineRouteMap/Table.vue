@@ -31,7 +31,7 @@ export default Vue.extend({
   components: { DrawingCell, LabelCell },
   props: {
     line: String,
-    routeMap: [] as PropType<RouteMapType[]>,
+    routeMap: [] as PropType<RouteMapType>,
   },
   methods: {
     shouldBeFilledCell (cell: string) {

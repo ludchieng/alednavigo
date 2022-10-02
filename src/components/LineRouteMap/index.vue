@@ -17,7 +17,7 @@ export default Vue.extend({
     line: String,
   },
   data: () => ({
-    routeMap: [] as RouteMapType[],
+    routeMap: [] as RouteMapType,
   }),
   created () {
     this.update()
