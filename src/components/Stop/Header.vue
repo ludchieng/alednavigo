@@ -4,9 +4,9 @@
       {{ stop.displayName }}
     </h1>
     <span class="line-connections">
-      <img
+      <LineIcon
         v-for="(conn, i) in stop.lineConnections" :key="i"
-        :src="`/img/lines-icons/dark/${conn.line}.svg`"
+        :lineSlugName="conn.line" theme="dark" fadeIn
       />
     </span>
   </div>
@@ -15,9 +15,11 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
+import LineIcon from '@/components/Line/Icon.vue'
 
 export default Vue.extend({
   name: 'StopHeader',
+  components: { LineIcon },
   props: {
     stop: {} as PropType<StopType>,
   },
