@@ -4,10 +4,11 @@
       {{ stop.displayName }}
     </h1>
     <span class="line-connections">
-      <LineIcon
-        v-for="(conn, i) in stop.lineConnections" :key="i"
-        :lineSlugName="conn.line" theme="dark" fadeIn
-      />
+      <router-link v-for="(conn, i) in stop.lineConnections" :key="i"
+        :to="`/${$route.params.tab}/${conn.line}/${conn.slugName}`"
+      >
+        <LineIcon :lineSlugName="conn.line" theme="dark" fadeIn />
+      </router-link>
     </span>
   </div>
 </template>
@@ -41,7 +42,7 @@ h1 {
   display: inline-block;
 }
 
-.line-connections > img {
+.line-connections img {
   width: 2rem;
   margin: 0.4rem 0.4rem 0.4rem 0;
   vertical-align: -0.8rem;
