@@ -6,7 +6,7 @@ export const setLine = (line: string, lineDescription: Partial<LineDescriptionTy
   })
 }
 
-export const getStop = (line: string, slugName: string) => {
+export const getStopName = (line: string, slugName: string) => {
   return JSON.parse(
     localStorage.getItem(`lines.${line}.stops`) as string,
   )[slugName]

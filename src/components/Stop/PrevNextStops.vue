@@ -4,7 +4,7 @@
       <li v-for="(prevStop, i) in stop.prevStops.slice().reverse()" :key="i" class="prev-stops">
         <router-link :to="`/${$route.params.tab}/${$route.params.line}/${prevStop}`">
           <span>
-            {{ getStop($route.params.line, prevStop).displayName }}
+            {{ getStopName($route.params.line, prevStop).displayName }}
           </span>
         </router-link>
       </li>
@@ -13,7 +13,7 @@
       <li v-for="(nextStop, i) in stop.nextStops.slice().reverse()" :key="i" class="next-stops">
         <router-link :to="`/${$route.params.tab}/${$route.params.line}/${nextStop}`">
           <span>
-            {{ getStop($route.params.line, nextStop).displayName }}
+            {{ getStopName($route.params.line, nextStop).displayName }}
           </span>
         </router-link>
       </li>
@@ -24,6 +24,7 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
+import { getStopName } from '@/utils/localstore/getters-setters'
 
 export default Vue.extend({
   name: 'StopPrevNextStops',
@@ -31,11 +32,7 @@ export default Vue.extend({
     stop: {} as PropType<StopType>,
   },
   methods: {
-    getStop (line: string, slugName: string) {
-      return JSON.parse(
-        localStorage.getItem(`lines.${line}.stops`) as string,
-      )[slugName]
-    },
+    getStopName,
   },
 })
 </script>
