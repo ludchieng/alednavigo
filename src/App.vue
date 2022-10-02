@@ -22,7 +22,9 @@ export default Vue.extend({
   },
   created () {
     if (!localStorage.getItem('lines.updatedAt')) {
-      synchronize()
+      synchronize().then(() => {
+        window.location.href = '/'
+      })
     }
     // Ping server to wake it up
     fetch('https://idfm-prim.herokuapp.com/')
