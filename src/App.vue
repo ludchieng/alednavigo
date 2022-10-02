@@ -12,7 +12,7 @@ import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
 import AppHeader from '@/components/AppHeader.vue'
 import AppPageView from '@/components/AppPageView.vue'
-import { synchronize } from './utils/synchronizer'
+import { synchronize } from './utils/localstore/synchronizer'
 
 export default Vue.extend({
   name: 'App',
@@ -22,7 +22,9 @@ export default Vue.extend({
   },
   created () {
     if (!localStorage.getItem('lines.updatedAt')) {
-      synchronize()
+      synchronize().then(() => {
+        window.location.href = '/'
+      })
     }
     // Ping server to wake it up
     fetch('https://idfm-prim.herokuapp.com/')

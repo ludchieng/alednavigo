@@ -1,6 +1,6 @@
    	   	   	   	   	 	  	@ 	#  	monitoringRefs 	slugName                     	displayName                      	prevStops                    	nextStops                                      	lineConnections
    	   	^  	   	   	 	  	@ 	 1 	               	                             	                                 	                             	                                               	
-   	   	*  	   	   	 	  	@ 	 2 	         41010 	paris-est                    	Paris-Est                        	                             	verneuil-l-etang;tournan;meaux;chelles-gournay 	metro-4;metro-5;metro-7;metro-7/chateau-landon;rer-e/magenta
+   	   	*  	   	   	 	  	@ 	 2 	         41010 	paris-est                    	Paris-Est                        	                             	verneuil-l-etang;tournan;meaux;chelles-gournay 	metro-4/gare-de-l-est;metro-5/gare-de-l-est;metro-7/gare-de-l-est;metro-7/chateau-landon;rer-e/magenta
    	/. 	|  	.\ 	   	 	  	@ 	 3 	               	                             	                                 	                             	                                               	
 /o 	|  	|  	|  	o\ 	 	  	@ 	 4 	               	                             	                                 	                             	                                               	
 |  	   	|  	   	|  	 	  	@ 	 5 	               	                             	                                 	                             	                                               	

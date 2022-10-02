@@ -10,9 +10,9 @@
           <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i" :class="`tab ${$store.state.tabIndex === i ? 'tab-active' : ''}`">
             <router-link class="tab-link" :to="`/${i + 1}/${path}`">
               <span class="tab-label">
-                <img v-if="line" :src="`/img/lines-icons/${($store.state.tabIndex === i ? 'dark' : 'light')}/${line}.svg`">
+                <LineIcon :lineSlugName="line" :theme="$store.state.tabIndex === i ? 'dark' : 'light'" fadeIn />
                 <span v-if="stop" class="tab-label-text">
-                  {{ getStop(line, stop).displayName }}
+                  {{ getStopName(line, stop).displayName }}
                 </span>
               </span>
             </router-link>
@@ -31,15 +31,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { getStopName } from '@/utils/localstore/getters-setters'
+import LineIcon from '@/components/Line/Icon.vue'
 
 export default Vue.extend({
   name: 'AppNav',
+  components: { LineIcon },
   methods: {
-    getStop (line: string, slugName: string) {
-      return JSON.parse(
-        localStorage.getItem(`lines.${line}.stops`) as string,
-      )[slugName]
-    },
+    getStopName,
   },
 })
 </script>
