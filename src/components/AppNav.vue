@@ -12,7 +12,7 @@
               <span class="tab-label">
                 <img v-if="line" :src="`/img/lines-icons/${($store.state.tabIndex === i ? 'dark' : 'light')}/${line}.svg`">
                 <span v-if="stop" class="tab-label-text">
-                  {{ getStop(line, stop).displayName }}
+                  {{ getStopName(line, stop).displayName }}
                 </span>
               </span>
             </router-link>
@@ -31,15 +31,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { getStopName } from '@/utils/localstore/getters-setters'
 
 export default Vue.extend({
   name: 'AppNav',
   methods: {
-    getStop (line: string, slugName: string) {
-      return JSON.parse(
-        localStorage.getItem(`lines.${line}.stops`) as string,
-      )[slugName]
-    },
+    getStopName,
   },
 })
 </script>

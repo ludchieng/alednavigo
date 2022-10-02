@@ -1,8 +1,3 @@
-export const LineConnectionTypeDesc = {
-  line: '',
-  slugName: '',
-}
-
 export type LineConnectionType = {
   line: string,
   slugName: string,
@@ -14,6 +9,14 @@ export type RouteMapType = {
   slugName?: string,
   displayName?: string,
   lineConnections?: LineConnectionType[],
+}[]
+
+export enum RouteMapProps {
+  drawing,
+  isTerminus,
+  slugName,
+  displayName,
+  lineConnection,
 }
 
 export type StopType = {
@@ -29,7 +32,12 @@ export type StopsType = {
   [x: string]: StopType
 }
 
-export const parseLine = (tsv: string) => {
+export type LineDescriptionType = {
+  routeMap: RouteMapType,
+  stops: StopsType,
+}
+
+export const parseLine = (tsv: string): LineDescriptionType => {
   const rows = tsv.split('\n')
     // Remove empty lines
     .filter(row => !row.match(/^[\s\t]*$/))
@@ -94,11 +102,11 @@ export const parseLine = (tsv: string) => {
       {},
     )
 
-  const routeMap = [...dataAsObjects]
+  const routeMap: RouteMapType = [...dataAsObjects]
   routeMap.forEach(stop => {
     Object.keys(stop)
       .filter(key => !['drawing', 'isTerminus', 'slugName', 'displayName', 'lineConnections'].includes(key))
-      .forEach(key => delete stop[key])
+      .forEach(key => delete (stop as any)[key])
   })
   return { routeMap, stops }
 }

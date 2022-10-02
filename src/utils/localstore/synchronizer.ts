@@ -1,4 +1,5 @@
-import { parseLine } from './parser'
+import { parseLine } from '../parser'
+import { setLine } from './getters-setters'
 
 export const synchronize = async () => {
   const lines = await synchronizeFile('/schemas/lines.json', 'lines')
@@ -14,8 +15,7 @@ export const synchronizeLine = async (line: string) => {
   if (res.status >= 400) return
   const tsv = await res.text()
   const { routeMap, stops } = parseLine(tsv)
-  localStorage.setItem(`lines.${line}.routeMap`, JSON.stringify(routeMap))
-  localStorage.setItem(`lines.${line}.stops`, JSON.stringify(stops))
+  setLine(line, { routeMap, stops })
 }
 
 export const synchronizeFile = async (file: string, localKey: string) => {
