@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import LineRouteMap from '@/components/LineRouteMap/index.vue'
+import LineRouteMap from '@/components/Line/RouteMap/index.vue'
 
 export default Vue.extend({
   name: 'TabPageLine',

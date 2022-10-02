@@ -5,9 +5,9 @@
   >
     {{ stopName }}
     <div class="line-connections">
-      <img v-for="(conn, i) in lineConnections" :key="i"
-        :src="`/img/lines-icons/colors/${conn.line}.svg`"
-      >
+      <LineIcon v-for="(conn, i) in lineConnections" :key="i"
+        :lineSlugName="conn.line" theme="colors" fadeIn
+      />
     </div>
   </router-link>
 
@@ -23,11 +23,13 @@
 </template>
 
 <script lang="ts">
-import { LineConnectionType } from '@/utils/parser'
 import Vue, { PropType } from 'vue'
+import { LineConnectionType } from '@/utils/parser'
+import LineIcon from '@/components/Line/Icon.vue'
 
 export default Vue.extend({
   name: 'LineRouteMapLabelCell',
+  components: { LineIcon },
   props: {
     stopName: String,
     href: String,
@@ -47,5 +49,6 @@ export default Vue.extend({
 .line-connections > img {
   margin-top: 0.2rem;
   margin-right: 0.2rem;
+  width: 1.35rem;
 }
 </style>
