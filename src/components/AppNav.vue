@@ -84,6 +84,9 @@ export default Vue.extend({
       this.$store.commit('closeTab', { tabIndex })
       if (currentTabIndex > tabIndex) {
         this.$router.push(`/${currentTabIndex}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
+      } else {
+        const { line, stop } = this.$store.state.tabs[currentTabIndex]
+        this.$router.push(`/${currentTabIndex + 1}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
       }
     },
   },
