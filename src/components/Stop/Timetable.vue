@@ -1,8 +1,6 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div>
-    <pre>{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
-
     <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
       <div
         v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i"
@@ -79,7 +77,6 @@ export default Vue.extend({
   methods: {
     update () {
       this.debugData = new Set()
-      this.visits = {}
       this.fetch()
       this.syncTimer = 0
     },
@@ -154,6 +151,7 @@ export default Vue.extend({
   },
   watch: {
     stop () {
+      this.visits = {}
       this.update()
     },
   },
