@@ -1,3 +1,4 @@
+<!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div>
     <pre>{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
@@ -17,17 +18,32 @@
             Synchroniser
           </button>
         </div>
-        <div v-for="(train, j) in trains" :key="j" class="train">
-          <div class="train-code">
-            {{ train.code }}
+        <details v-for="(train, j) in trains" :key="j" class="row">
+          <summary class="train">
+            <div class="train-code">
+              {{ train.code }}
+            </div>
+            <div class="train-time">
+              {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
+            </div>
+            <div class="train-destination">
+              {{ train.destination }}
+            </div>
+          </summary>
+          <div class="train-details">
+            ExpectedArrivalTime    : {{ train.ExpectedArrivalTime && train.ExpectedArrivalTime.toLocaleTimeString() }}<br />
+            AimedArrivalTime       : {{ train.AimedArrivalTime && train.AimedArrivalTime.toLocaleTimeString() }}<br />
+            ExpectedDepartureTime  : {{ train.ExpectedDepartureTime && train.ExpectedDepartureTime.toLocaleTimeString() }}<br />
+            AimedDepartureTime     : {{ train.AimedDepartureTime && train.AimedDepartureTime.toLocaleTimeString() }}<br />
+            ArrivalStatus          : {{ train.ArrivalStatus }}<br />
+            DepartureStatus        : {{ train.DepartureStatus }}<br />
+            ArrivalPlatformName    : {{ train.ArrivalPlatformName && train.ArrivalPlatformName.value }}<br />
+            DatedVehicleJourneyRef : {{ train.DatedVehicleJourneyRef[1] }}<br />
+            TrainNumbers           : {{ train.TrainNumbers }}<br />
+            Order                  : {{ train.Order }}<br />
+            VehicleAtStop          : {{ train.VehicleAtStop }}<br />
           </div>
-          <div class="train-time">
-            {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
-          </div>
-          <div class="train-destination">
-            {{ train.destination }}
-          </div>
-        </div>
+        </details>
       </div>
     </div>
 
@@ -38,6 +54,7 @@
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { VisitType } from '@/utils/fetcher'
+import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
   name: 'StopTimetable',
@@ -45,7 +62,7 @@ export default Vue.extend({
     stop: {} as PropType<StopType>,
   },
   data: () => ({
-    visits: {} as { [x: string]: VisitType[] },
+    visits: {} as { [x: string]: any[] },
     debugData: new Set(),
     syncTimer: 0,
     syncInterval: 0,
@@ -101,6 +118,19 @@ export default Vue.extend({
                     code: visit.MonitoredVehicleJourney.JourneyNote ? visit.MonitoredVehicleJourney.JourneyNote[0].value : '',
                     time: new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime) ||
                       new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
+
+                    ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
+                    ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
+                    AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime),
+                    DepartureStatus: visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus && visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus,
+                    ExpectedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime),
+                    AimedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime),
+
+                    ArrivalPlatformName: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName,
+                    DatedVehicleJourneyRef: visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/),
+                    TrainNumbers: visit.MonitoredVehicleJourney.TrainNumbers && visit.MonitoredVehicleJourney.TrainNumbers.TrainNumberRef[0].value,
+                    Order: visit.MonitoredVehicleJourney.MonitoredCall.Order,
+                    VehicleAtStop: visit.MonitoredVehicleJourney.MonitoredCall.VehicleAtStop,
                   }
                   if (visit.line !== this.$route.params.line) {
                     return acc
@@ -119,7 +149,7 @@ export default Vue.extend({
   },
   computed: {
     linesByRef () {
-      return JSON.parse(localStorage.getItem('lines') as string)
+      return getLinesByRef()
     },
   },
   watch: {
@@ -131,6 +161,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+pre {
+  overflow: scroll;
+}
 .timetables {
   margin-top: 1.5rem;
 }
@@ -143,14 +176,17 @@ h2 {
   margin: 0;
 }
 
+.row {
+  margin: 0 -1rem;
+}
+
 .train {
   display: flex;
-  margin: 0 -1rem;
-  min-height: 2.5rem;
+  min-height: 2.8rem;
   align-items: center;
 }
 
-.train:nth-child(even) {
+.row:nth-child(even) {
   background-color: #ededed;
 }
 
@@ -179,7 +215,12 @@ h2 {
 }
 
 .train-destination {
-  padding: 0.5rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.5rem;
+}
+
+.train-details {
+  padding: 0.2rem 0 1rem 1rem;
+  font-family: monospace;
 }
 
 .sync {

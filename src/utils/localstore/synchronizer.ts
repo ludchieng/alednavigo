@@ -1,5 +1,10 @@
 import { parseLine } from '../parser'
-import { setLine } from './getters-setters'
+import { setLine } from './lines'
+
+export const lastUpdatedAt = () => {
+  const updatedAt = localStorage.getItem('lines.updatedAt')
+  return updatedAt ? new Date(updatedAt) : null
+}
 
 export const synchronize = async () => {
   const lines = await synchronizeFile('/schemas/lines.json', 'lines')

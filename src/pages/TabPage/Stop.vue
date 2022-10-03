@@ -12,6 +12,7 @@ import { StopType } from '@/utils/parser'
 import StopTimetable from '@/components/Stop/Timetable.vue'
 import StopHeader from '@/components/Stop/Header.vue'
 import StopPrevNextStops from '@/components/Stop/PrevNextStops.vue'
+import { getStop } from '@/utils/localstore/stops'
 
 export default Vue.extend({
   name: 'TabPageStop',
@@ -27,11 +28,9 @@ export default Vue.extend({
     this.update()
   },
   methods: {
+    getStop,
     update () {
-      this.stop = JSON.parse(
-        localStorage.getItem(
-          `lines.${this.$route.params.line}.stops`,
-        ) as string)[this.$route.params.stop]
+      this.stop = getStop(this.$route.params.line, this.$route.params.stop)
     },
   },
   watch: {
