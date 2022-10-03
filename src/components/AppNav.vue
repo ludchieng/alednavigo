@@ -80,8 +80,8 @@ export default Vue.extend({
     },
     closeTab (tabIndex: number) {
       const currentTabIndex = Number(this.$route.params.tab) - 1
-      const { line, stop } = this.$store.state.tabs[currentTabIndex]
-      this.$store.commit('closeTab', { tabIndex })
+        const { line, stop } = this.$store.state.tabs[currentTabIndex]
+        this.$store.commit('closeTab', { tabIndex })
       if (currentTabIndex > tabIndex) {
         this.$router.push(`/${currentTabIndex}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
       } else {
@@ -116,6 +116,11 @@ hr {
   padding-top: 0.2rem;
   max-height: 70vh;
   overflow-y: auto;
+}
+
+.nav-tabs-list ul {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .nav-controls {
