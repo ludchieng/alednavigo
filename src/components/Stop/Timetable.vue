@@ -132,6 +132,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+pre {
+  width: 100%;
+  overflow: scroll;
+}
 .timetables {
   margin-top: 1.5rem;
 }
