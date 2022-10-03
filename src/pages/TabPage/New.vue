@@ -6,7 +6,7 @@
       <h2>{{ category.name }}</h2>
       <hr />
       <router-link v-for="line in category.lines" :key="line.slugName"
-        class="icon-line" :to="`/${$store.state.tabNumber}/${line.slugName}`"
+        class="icon-line" :to="`/${$route.params.tab}/${line.slugName}`"
       >
         <LineIcon :lineSlugName="line.slugName" theme="dark" fadeIn />
       </router-link>

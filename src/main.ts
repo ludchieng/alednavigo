@@ -27,12 +27,17 @@ const store = new Vuex.Store({
       stop: '',
       path: '',
     }],
-    tabNumber: 1,
-    idx: 0,
   },
   mutations: {
+    // TODO use actions
     addTab (state) {
       state.tabs.push({ line: '', stop: '', path: '' })
+    },
+    closeTab (state, { tabIndex }) {
+      state.tabs = state.tabs.filter((tab, i) => i !== tabIndex)
+      if (state.tabs.length === 0) {
+        state.tabs.push({ line: '', stop: '', path: '' })
+      }
     },
     setTab (state, { idx, tab }) {
       const newTabs = [...state.tabs]
