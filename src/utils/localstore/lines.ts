@@ -6,6 +6,10 @@ export const setLine = (line: string, lineDescription: Partial<LineDescriptionTy
   })
 }
 
+export const getLineRouteMap = (lineSlugName: string) => {
+  return JSON.parse(localStorage.getItem(`lines.${lineSlugName}.routeMap`) as string)
+}
+
 export const getLinesByRef = () => {
   return JSON.parse(localStorage.getItem('lines') as string)
 }
