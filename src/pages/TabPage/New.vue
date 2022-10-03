@@ -17,6 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import LineIcon from '@/components/Line/Icon.vue'
+import { getLinesByCategory } from '@/utils/localstore/lines'
 
 export default Vue.extend({
   name: 'TabPageNew',
@@ -28,16 +29,7 @@ export default Vue.extend({
   },
   computed: {
     linesByCategory () {
-      const res = {} as {[x: string]: any}
-      const lines = JSON.parse(localStorage.getItem('lines') as string)
-      for (const line of Object.entries(lines).filter(([k, v]) => k.trim() !== '').map(([k, v]) => v) as any[]) {
-        if (!res[line.category]) res[line.category] = []
-        res[line.category].push({ ...(delete line.category, line) })
-      }
-      return Object.entries(res).map(([category, lines]) => ({
-        name: category,
-        lines,
-      })).filter((category) => !category.name.includes('TER'))
+      return getLinesByCategory()
     },
   },
 })

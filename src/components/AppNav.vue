@@ -12,7 +12,7 @@
               <span class="tab-label">
                 <LineIcon :lineSlugName="line" :theme="$store.state.tabIndex === i ? 'dark' : 'light'" fadeIn />
                 <span v-if="stop" class="tab-label-text">
-                  {{ getStopName(line, stop).displayName }}
+                  {{ getStop(line, stop).displayName }}
                 </span>
               </span>
             </router-link>
@@ -31,14 +31,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { getStopName } from '@/utils/localstore/getters-setters'
+import { getStop } from '@/utils/localstore/stops'
 import LineIcon from '@/components/Line/Icon.vue'
 
 export default Vue.extend({
   name: 'AppNav',
   components: { LineIcon },
   methods: {
-    getStopName,
+    getStop,
   },
 })
 </script>

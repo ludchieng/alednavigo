@@ -38,6 +38,7 @@
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { VisitType } from '@/utils/fetcher'
+import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
   name: 'StopTimetable',
@@ -119,7 +120,7 @@ export default Vue.extend({
   },
   computed: {
     linesByRef () {
-      return JSON.parse(localStorage.getItem('lines') as string)
+      return getLinesByRef()
     },
   },
   watch: {
