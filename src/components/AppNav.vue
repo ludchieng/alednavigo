@@ -114,6 +114,8 @@ hr {
 
 .nav-tabs-list {
   padding-top: 0.2rem;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .nav-controls {
