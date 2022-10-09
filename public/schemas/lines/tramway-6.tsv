@@ -1,0 +1,24 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName               	displayName              	prevStops              	nextStops              	lineConnections
+^ 	@ 	 1 	               	           	                       	                         	                       	                       	
+* 	@ 	 2 	2336           	         1 	chatillon-montrouge    	Châtillon – Montrouge    	                       	vauban                 	metro-13
+* 	@ 	 3 	41671;41672    	         0 	vauban                 	Vauban                   	chatillon-montrouge    	centre-de-chatillon    	
+* 	@ 	 4 	2337;41952     	         0 	centre-de-chatillon    	Centre de Châtillon      	vauban                 	parc-andre-malraux     	
+* 	@ 	 5 	41670;2338     	         0 	parc-andre-malraux     	Parc André Malraux       	centre-de-chatillon    	division-leclerc       	
+* 	@ 	 6 	41855;41856    	         0 	division-leclerc       	Division Leclerc         	parc-andre-malraux     	soleil-levant          	
+* 	@ 	 7 	41857;41858    	         0 	soleil-levant          	Soleil Levant            	division-leclerc       	hopital-beclere        	
+* 	@ 	 8 	2342;2344      	         0 	hopital-beclere        	Hôpital Béclère          	soleil-levant          	mail-de-la-plaine      	
+* 	@ 	 9 	2341;2340      	         0 	mail-de-la-plaine      	Mail de la Plaine        	hopital-beclere        	pave-blanc-parc-noveos 	
+* 	@ 	10 	2345;2339      	         0 	pave-blanc-parc-noveos 	Pavé Blanc (Parc Novéos) 	mail-de-la-plaine      	georges-pompidou       	
+* 	@ 	11 	2346;2343      	         0 	georges-pompidou       	Georges Pompidou         	pave-blanc-parc-noveos 	georges-millandy       	
+* 	@ 	12 	41673;41674    	         0 	georges-millandy       	Georges Millandy         	georges-pompidou       	meudon-la-foret        	
+* 	@ 	13 	2348;2347      	         0 	meudon-la-foret        	Meudon-la-Forêt          	georges-millandy       	velizy-2               	
+* 	@ 	14 	41851;41854    	         0 	velizy-2               	Vélizy 2                 	meudon-la-foret        	dewoitine              	
+* 	@ 	15 	2328;2335      	         0 	dewoitine              	Dewoitine                	velizy-2               	inovel-parc-nord       	
+* 	@ 	16 	2327;2333      	         0 	inovel-parc-nord       	Inovel Parc Nord         	dewoitine              	louvois                	
+* 	@ 	17 	2334;2330      	         0 	louvois                	Louvois                  	inovel-parc-nord       	mairie-de-velizy       	
+* 	@ 	18 	2332;2331      	         0 	mairie-de-velizy       	Mairie de Vélizy         	louvois                	l-onde-maison-des-arts 	
+* 	@ 	19 	2329;41852     	         0 	l-onde-maison-des-arts 	L'Onde (Maison des Arts) 	mairie-de-velizy       	robert-wagner          	
+* 	@ 	20 	41850;41853    	         0 	robert-wagner          	Robert Wagner            	l-onde-maison-des-arts 	viroflay-rive-gauche   	
+* 	@ 	21 	422037;422038  	         0 	viroflay-rive-gauche   	Viroflay–Rive Gauche     	robert-wagner          	viroflay-rive-droite   	rer-c;transilien-n
+* 	@ 	22 	422039         	         1 	viroflay-rive-droite   	Viroflay–Rive Droite     	viroflay-rive-gauche   	                       	transilien-l
+v 	@ 	23 	               	           	                       	                         	                       	                       	

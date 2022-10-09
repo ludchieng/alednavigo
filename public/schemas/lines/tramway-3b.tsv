@@ -1,0 +1,29 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                         	displayName                                                	prevStops              	nextStops                        	lineConnections
+^ 	@ 	 1 	               	           	                                 	                                                           	                       	                                 	
+* 	@ 	 2 	26534          	         1 	porte-de-vincennes               	Porte de Vincennes                                         	                       	porte-de-montreuil               	metro-1;tramway-3a
+* 	@ 	 3 	24406;24408    	         0 	porte-de-montreuil               	Porte de Montreuil                                         	porte-de-vincennes     	marie-de-miribel                 	metro-9
+* 	@ 	 4 	24405;24394    	         0 	marie-de-miribel                 	Marie de Miribel                                           	porte-de-montreuil     	porte-de-bagnolet                	
+* 	@ 	 5 	24414;24419    	         0 	porte-de-bagnolet                	Porte de Bagnolet                                          	marie-de-miribel       	severine                         	metro-3
+* 	@ 	 6 	24400;24397    	         0 	severine                         	Séverine                                                   	porte-de-bagnolet      	adrienne-bolland                 	
+* 	@ 	 7 	24421;24422    	         0 	adrienne-bolland                 	Adrienne Bolland                                           	severine               	porte-des-lilas                  	
+* 	@ 	 8 	24415;24409    	         0 	porte-des-lilas                  	Porte des Lilas                                            	adrienne-bolland       	hopital-robert-debre             	metro-3bis;metro-11
+* 	@ 	 9 	24410;24418    	         0 	hopital-robert-debre             	Hôpital Robert-Debré                                       	porte-des-lilas        	butte-du-chapeau-rouge           	metro-7bis/pre-saint-gervais
+* 	@ 	10 	24404;24416    	         0 	butte-du-chapeau-rouge           	Butte du Chapeau Rouge                                     	hopital-robert-debre   	porte-de-pantin                  	
+* 	@ 	11 	24423;24403    	         0 	porte-de-pantin                  	Porte de Pantin (Parc de la Villette)                      	butte-du-chapeau-rouge 	delphine-seyrig                  	metro-5
+* 	@ 	12 	460562;24533   	         0 	delphine-seyrig                  	Delphine Seyrig                                            	porte-de-pantin        	ella-fitzgerald                  	
+* 	@ 	13 	24398;24417    	         0 	ella-fitzgerald                  	Ella Fitzgerald (Grands Moulins de Pantin)                 	delphine-seyrig        	porte-de-la-villette             	rer-e/pantin
+* 	@ 	14 	24399;29379    	         0 	porte-de-la-villette             	Porte de la Villette (Cité des Sciences et de l'Industrie) 	ella-fitzgerald        	canal-saint-denis                	metro-7
+* 	@ 	15 	24402;24401    	         0 	canal-saint-denis                	Canal Saint-Denis                                          	porte-de-la-villette   	rosa-parks                       	
+* 	@ 	16 	24530;24531    	         0 	rosa-parks                       	Rosa-Parks                                                 	canal-saint-denis      	porte-d-aubervilliers            	rer-e
+* 	@ 	17 	24413;24407    	         0 	porte-d-aubervilliers            	Porte d'Aubervilliers                                      	rosa-parks             	colette-besson                   	
+* 	@ 	18 	24412;24420    	         0 	colette-besson                   	Colette Besson                                             	porte-d-aubervilliers  	porte-de-la-chapelle             	
+* 	@ 	19 	412987;412988  	         0 	porte-de-la-chapelle             	Porte de la Chapelle                                       	colette-besson         	diane-arbus                      	metro-12
+* 	@ 	20 	462415;462444  	         0 	diane-arbus                      	Diane Arbus (Porte des Poissonniers)                       	porte-de-la-chapelle   	porte-de-clignancourt            	
+* 	@ 	21 	462414;462431  	         0 	porte-de-clignancourt            	Porte de Clignancourt (Puces de Saint-Ouen)                	diane-arbus            	angelique-compoint               	metro-4
+* 	@ 	22 	462437;462443  	         0 	angelique-compoint               	Angélique Compoint (Porte de Montmartre)                   	porte-de-clignancourt  	porte-de-saint-ouen              	
+* 	@ 	23 	462436;462446  	         0 	porte-de-saint-ouen              	Porte de Saint-Ouen                                        	angelique-compoint     	epinettes-pouchet                	metro-13
+* 	@ 	24 	462439;462442  	         0 	epinettes-pouchet                	Épinettes – Pouchet                                        	porte-de-saint-ouen    	honore-de-balzac                 	
+* 	@ 	25 	462438;462445  	         0 	honore-de-balzac                 	Honoré de Balzac                                           	epinettes-pouchet      	porte-de-clichy                  	
+* 	@ 	26 	462441;462429  	         0 	porte-de-clichy                  	Porte de Clichy (Tribunal de Paris)                        	honore-de-balzac       	porte-d-asnieres-marguerite-long 	metro-13;metro-14;rer-c
+* 	@ 	27 	462430         	         1 	porte-d-asnieres-marguerite-long 	Porte d'Asnières – Marguerite Long                         	porte-de-clichy        	                                 	
+v 	@ 	28 	               	           	                                 	                                                           	                       	                                 	

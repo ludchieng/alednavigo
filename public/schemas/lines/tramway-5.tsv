@@ -1,0 +1,19 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName              	displayName                      	prevStops             	nextStops             	lineConnections
+^ 	@ 	 1 	               	           	                      	                                 	                      	                      	
+* 	@ 	 2 	28846          	         1 	marche-de-saint-denis 	Marché de Saint-Denis            	                      	baudelaire            	tramway-1;metro-13/basilique-de-saint-denis
+* 	@ 	 3 	28867;28866    	         0 	baudelaire            	Baudelaire                       	marche-de-saint-denis 	roger-semat           	
+* 	@ 	 4 	28862;28863    	         0 	roger-semat           	Roger Sémat                      	baudelaire            	guynemer              	
+* 	@ 	 5 	28864;28865    	         0 	guynemer              	Guynemer (Stade Auguste Delaune) 	roger-semat           	petit-pierrefitte     	metro-13/saint-denis-universite
+* 	@ 	 6 	28860;28851    	         0 	petit-pierrefitte     	Petit Pierrefitte                	guynemer              	joncherolles          	
+* 	@ 	 7 	28849;28858    	         0 	joncherolles          	Joncherolles                     	petit-pierrefitte     	suzanne-valadon       	
+* 	@ 	 8 	28857;28848    	         0 	suzanne-valadon       	Suzanne Valadon                  	joncherolles          	mairie-de-pierrefitte 	
+* 	@ 	 9 	28854;28852    	         0 	mairie-de-pierrefitte 	Mairie de Pierrefitte            	suzanne-valadon       	alcide-d-orbigny      	
+* 	@ 	10 	28856;28859    	         0 	alcide-d-orbigny      	Alcide d'Orbigny                 	mairie-de-pierrefitte 	jacques-prevert       	
+* 	@ 	11 	28861;28855    	         0 	jacques-prevert       	Jacques Prévert                  	alcide-d-orbigny      	butte-pinson          	
+* 	@ 	12 	28853;28850    	         0 	butte-pinson          	Butte Pinson (Parc Régional)     	jacques-prevert       	les-cholettes         	
+* 	@ 	13 	28874;28876    	         0 	les-cholettes         	Les Cholettes                    	butte-pinson          	les-flanades          	
+* 	@ 	14 	28872;28868    	         0 	les-flanades          	Les Flanades                     	les-cholettes         	paul-valery           	
+* 	@ 	15 	28875;28873    	         0 	paul-valery           	Paul Valéry                      	les-flanades          	locheres              	
+* 	@ 	16 	28870;28869    	         0 	locheres              	Lochères                         	paul-valery           	garges-sarcelles      	
+* 	@ 	17 	479383         	         1 	garges-sarcelles      	Garges – Sarcelles               	locheres              	                      	rer-d
+v 	@ 	18 	               	           	                      	                                 	                      	                      	

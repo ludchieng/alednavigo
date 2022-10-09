@@ -1,0 +1,16 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName           	displayName                        	prevStops          	nextStops          	lineConnections
+^ 	@ 	 1 	               	           	                   	                                   	                   	                   	
+* 	@ 	 2 	-1             	         1 	la-croix-de-berny  	La Croix de Berny (Parc de Sceaux) 	                   	la-vallee          	rer-b
+* 	@ 	 3 	-1             	         0 	la-vallee          	La Vallée                          	la-croix-de-berny  	petit-chatenay     	
+* 	@ 	 4 	-1             	         0 	petit-chatenay     	Petit-Châtenay                     	la-vallee          	theatre-la-piscine 	
+* 	@ 	 5 	-1             	         0 	theatre-la-piscine 	Théâtre La Piscine                 	petit-chatenay     	les-peintres       	
+* 	@ 	 6 	-1             	         0 	les-peintres       	Les Peintres                       	theatre-la-piscine 	cite-jardin        	
+* 	@ 	 7 	-1             	         0 	cite-jardin        	Cité-Jardin                        	les-peintres       	vallee-aux-loups   	
+* 	@ 	 8 	-1             	         0 	vallee-aux-loups   	Vallée aux Loups                   	cite-jardin        	malabry            	
+* 	@ 	 9 	-1             	         0 	malabry            	Malabry                            	vallee-aux-loups   	noveos             	
+* 	@ 	10 	-1             	         0 	noveos             	Noveos                             	malabry            	parc-des-sports    	
+* 	@ 	11 	-1             	         0 	parc-des-sports    	Parc des Sports                    	noveos             	le-hameau          	
+* 	@ 	12 	-1             	         0 	le-hameau          	Le Hameau                          	parc-des-sports    	hopital-beclere    	
+* 	@ 	13 	-1             	         0 	hopital-beclere    	Hôpital Béclère                    	le-hameau          	jardin-parisien    	tramway-6
+* 	@ 	14 	-1             	         1 	jardin-parisien    	Jardin Parisien                    	hopital-beclere    	                   	
+v 	@ 	15 	               	           	                   	                                   	                   	                   	
