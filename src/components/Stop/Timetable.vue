@@ -1,6 +1,7 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div>
+    <pre v-if="debugData.size > 0">{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
     <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
       <div
         v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i"
@@ -51,7 +52,6 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
-import { VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
@@ -160,7 +160,7 @@ export default Vue.extend({
 
 <style scoped>
 pre {
-  overflow: scroll;
+  overflow: auto;
 }
 .timetables {
   margin-top: 1.5rem;
@@ -191,13 +191,14 @@ h2 {
 .train-code {
   padding: 0.3rem 0.5rem 0.3rem 1rem;
   margin-right: 0.5rem;
-  max-width: 2.3rem;
+  max-width: 2.6rem;
   min-width: 2.3rem; /* Prevents weird shrink */
   background: #fff;
   font-size: 0.8rem;
   font-weight: 700;
   color: #555;
   border-radius: 0 0.2rem 0.2rem 0;
+  overflow-x: hidden;
 }
 
 .train-time {
@@ -219,6 +220,7 @@ h2 {
 .train-details {
   padding: 0.2rem 0 1rem 1rem;
   font-family: monospace;
+  overflow-x: auto;
 }
 
 .sync {
