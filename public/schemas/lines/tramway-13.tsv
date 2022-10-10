@@ -1,0 +1,15 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                             	displayName                            	prevStops                            	nextStops                            	lineConnections
+^ 	@ 	 1 	               	           	                                     	                                       	                                     	                                     	
+* 	@ 	 2 	481067         	         1 	saint-germain-en-laye                	Saint-Germain-en-Laye (Château)        	                                     	camp-des-loges                       	rer-a
+* 	@ 	 3 	481068;480925  	         0 	camp-des-loges                       	Camp des Loges                         	saint-germain-en-laye                	lisiere-pereire                      	
+* 	@ 	 4 	481069;480928  	         0 	lisiere-pereire                      	Lisière Pereire                        	camp-des-loges                       	fourqueux-bel-air                    	
+* 	@ 	 5 	480940;481070  	         0 	fourqueux-bel-air                    	Fourqueux – Bel Air                    	lisiere-pereire                      	mareil-marly                         	
+* 	@ 	 6 	481038;480942  	         0 	mareil-marly                         	Mareil-Marly                           	fourqueux-bel-air                    	l-etang-les-sablons                  	
+* 	@ 	 7 	481071;480930  	         0 	l-etang-les-sablons                  	L'Étang – Les Sablons                  	mareil-marly                         	saint-nom-la-breteche-foret-de-marly 	
+* 	@ 	 8 	481072;480906  	         0 	saint-nom-la-breteche-foret-de-marly 	Saint-Nom-la-Bretèche – Forêt de Marly 	l-etang-les-sablons                  	noisy-le-roi                         	transilien-l
+* 	@ 	 9 	481065;480938  	         0 	noisy-le-roi                         	Noisy-le-Roi                           	saint-nom-la-breteche-foret-de-marly 	bailly                               	
+* 	@ 	10 	480932;481073  	         0 	bailly                               	Bailly                                 	noisy-le-roi                         	allee-royale                         	
+* 	@ 	11 	481074;480934  	         0 	allee-royale                         	Allée Royale (Château de Versailles)   	bailly                               	les-portes-de-saint-cyr              	
+* 	@ 	12 	481075;480936  	         0 	les-portes-de-saint-cyr              	Les Portes de Saint-Cyr                	allee-royale                         	saint-cyr                            	
+* 	@ 	13 	480908         	         1 	saint-cyr                            	Saint-Cyr                              	les-portes-de-saint-cyr              	                                     	rer-c;transilien-n;transilien-u
+v 	@ 	14 	               	           	                                     	                                       	                                     	                                     	

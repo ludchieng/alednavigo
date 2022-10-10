@@ -1,0 +1,19 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName              	displayName           	prevStops             	nextStops             	lineConnections
+^ 	@ 	 1 	               	           	                      	                      	                      	                      	
+* 	@ 	 2 	-1             	         1 	evry-courcouronnes    	Évry-Courcouronnes    	                      	bois-briard           	rer-d/evry-courcouronnes
+* 	@ 	 3 	-1             	         0 	bois-briard           	Bois Briard           	evry-courcouronnes    	traite-de-rome        	
+* 	@ 	 4 	-1             	         0 	traite-de-rome        	Traité de Rome        	bois-briard           	bois-de-saint-eutrope 	
+* 	@ 	 5 	-1             	         0 	bois-de-saint-eutrope 	Bois de Saint-Eutrope 	traite-de-rome        	la-ferme-neuve        	
+* 	@ 	 6 	-1             	         0 	la-ferme-neuve        	La Ferme-Neuve        	bois-de-saint-eutrope 	amedee-gordini        	
+* 	@ 	 7 	-1             	         0 	amedee-gordini        	Amédée Gordini        	la-ferme-neuve        	coteaux-de-l-orge     	
+* 	@ 	 8 	-1             	         0 	coteaux-de-l-orge     	Côteaux de l'Orge     	amedee-gordini        	parc-du-chateau       	
+* 	@ 	 9 	-1             	         0 	parc-du-chateau       	Parc du Château       	coteaux-de-l-orge     	epinay-sur-orge       	
+* 	@ 	10 	-1             	         1 	epinay-sur-orge       	Épinay-sur-Orge       	parc-du-chateau       	petit-vaux            	rer-c
+* 	@ 	11 	-1             	         0 	petit-vaux            	Petit Vaux            	epinay-sur-orge       	gravigny-balizy       	
+* 	@ 	12 	-1             	         0 	gravigny-balizy       	Gravigny-Balizy       	petit-vaux            	chilly-mazarin        	
+* 	@ 	13 	-1             	         0 	chilly-mazarin        	Chilly-Mazarin        	gravigny-balizy       	longjumeau            	
+* 	@ 	14 	-1             	         0 	longjumeau            	Longjumeau            	chilly-mazarin        	champlan              	
+* 	@ 	15 	-1             	         0 	champlan              	Champlan              	longjumeau            	massy-europe          	
+* 	@ 	16 	-1             	         0 	massy-europe          	Massy-Europe          	champlan              	massy-palaiseau       	
+* 	@ 	17 	-1             	         1 	massy-palaiseau       	Massy – Palaiseau     	massy-europe          	                      	rer-b;rer-c
+v 	@ 	18 	               	           	                      	                      	                      	                      	

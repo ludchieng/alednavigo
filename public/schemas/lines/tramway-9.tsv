@@ -1,0 +1,22 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                  	displayName                                            	prevStops                 	nextStops                 	lineConnections
+^ 	@ 	 1 	               	           	                          	                                                       	                          	                          	
+* 	@ 	 2 	478980;478979  	         1 	porte-de-choisy           	Porte de Choisy                                        	                          	chateaudun-barbes         	metro-7;tramway-3a
+* 	@ 	 3 	479007;479006  	         0 	chateaudun-barbes         	Châteaudun – Barbès                                    	porte-de-choisy           	cimetiere-parisien-d-ivry 	
+* 	@ 	 4 	479005;479004  	         0 	cimetiere-parisien-d-ivry 	Cimetière Parisien d'Ivry (Place du Général de Gaulle) 	chateaudun-barbes         	la-briqueterie            	
+* 	@ 	 5 	478995;478991  	         0 	la-briqueterie            	La Briqueterie                                         	cimetiere-parisien-d-ivry 	germaine-tailleferre      	
+* 	@ 	 6 	478999;478998  	         0 	germaine-tailleferre      	Germaine Tailleferre                                   	la-briqueterie            	beethoven-concorde        	
+* 	@ 	 7 	478996;478993  	         0 	beethoven-concorde        	Beethoven – Concorde                                   	germaine-tailleferre      	musee-mac-val             	
+* 	@ 	 8 	478976;478975  	         0 	musee-mac-val             	Musée MAC-VAL                                          	beethoven-concorde        	mairie-de-vitry-sur-seine 	
+* 	@ 	 9 	478997;478977  	         0 	mairie-de-vitry-sur-seine 	Mairie de Vitry-sur-Seine                              	musee-mac-val             	camille-groult            	
+* 	@ 	10 	478992;479013  	         0 	camille-groult            	Camille Groult                                         	mairie-de-vitry-sur-seine 	constant-coquelin         	
+* 	@ 	11 	479003;479002  	         0 	constant-coquelin         	Constant Coquelin                                      	camille-groult            	watteau-rondenay          	
+* 	@ 	12 	478987;478973  	         0 	watteau-rondenay          	Watteau – Rondenay                                     	constant-coquelin         	trois-communes            	
+* 	@ 	13 	478982;478990  	         0 	trois-communes            	Trois Communes                                         	watteau-rondenay          	verdun-hoche              	
+* 	@ 	14 	478989;478988  	         0 	verdun-hoche              	Verdun – Hoche                                         	trois-communes            	rouget-de-lisle           	
+* 	@ 	15 	478978;478986  	         0 	rouget-de-lisle           	Rouget de Lisle                                        	verdun-hoche              	carle-darthe              	rer-c/choisy-le-roi
+* 	@ 	16 	479012;479010  	         0 	carle-darthe              	Carle – Darthé                                         	rouget-de-lisle           	four-peary                	
+* 	@ 	17 	479001;479000  	         0 	four-peary                	Four – Peary                                           	carle-darthe              	christophe-colomb         	
+* 	@ 	18 	479009;479008  	         0 	christophe-colomb         	Christophe Colomb                                      	four-peary                	les-saules                	
+* 	@ 	19 	478985;478983  	         0 	les-saules                	Les Saules                                             	christophe-colomb         	orly-gaston-viens         	rer-c
+* 	@ 	20 	478974;478981  	         1 	orly-gaston-viens         	Orly–Gaston Viens                                    	les-saules                	                          	
+v 	@ 	21 	               	           	                          	                                                       	                          	                          	

@@ -1,0 +1,10 @@
+  	@ 	# 	monitoringRefs 	isTerminus 	slugName                               	displayName                                	prevStops                              	nextStops                              	lineConnections
+^ 	@ 	1 	               	           	                                       	                                           	                                       	                                       	
+* 	@ 	2 	        426094 	         1 	epinay-sur-seine                       	Épinay-sur-Seine                           	                                       	epinay-villetaneuse-montmagny          	rer-c;tramway-8/epinay-sur-seine-gare
+* 	@ 	3 	        426095 	         0 	epinay-villetaneuse-montmagny          	Épinay – Villetaneuse (Montmagny)          	epinay-sur-seine                       	villetaneuse-universite                	transilien-h
+* 	@ 	4 	        426084 	         0 	villetaneuse-universite                	Villetaneuse–Université                    	epinay-villetaneuse-montmagny          	pierrefitte-stains                     	tramway-8
+* 	@ 	5 	        426088 	         0 	pierrefitte-stains                     	Pierrefitte – Stains                       	villetaneuse-universite                	stains-la-cerisaie                     	rer-d
+* 	@ 	6 	        426081 	         0 	stains-la-cerisaie                     	Stains-La Cerisaie                         	pierrefitte-stains                     	dugny-la-courneuve-parc-georges-valbon 	
+* 	@ 	7 	        426091 	         0 	dugny-la-courneuve-parc-georges-valbon 	Dugny – La Courneuve (Parc Georges Valbon) 	stains-la-cerisaie                     	le-bourget                             	
+* 	@ 	8 	        426085 	         1 	le-bourget                             	Le Bourget                                 	dugny-la-courneuve-parc-georges-valbon 	                                       	rer-b
+v 	@ 	9 	               	           	                                       	                                           	                                       	                                       	

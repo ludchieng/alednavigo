@@ -1,0 +1,21 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName               	displayName                                 	prevStops              	nextStops              	lineConnections
+^ 	@ 	 1 	               	           	                       	                                            	                       	                       	
+* 	@ 	 2 	35946          	         1 	villejuif-louis-aragon 	Villejuif – Louis Aragon                    	                       	lamartine              	metro-7
+* 	@ 	 3 	35945;460559   	         0 	lamartine              	Lamartine                                   	villejuif-louis-aragon 	domaine-cherioux       	
+* 	@ 	 4 	29896;29895    	         0 	domaine-cherioux       	Domaine Chérioux                            	lamartine              	moulin-vert            	
+* 	@ 	 5 	29905;29904    	         0 	moulin-vert            	Moulin Vert                                 	domaine-cherioux       	bretagne               	
+* 	@ 	 6 	413057;29902   	         0 	bretagne               	Bretagne                                    	moulin-vert            	auguste-perret         	
+* 	@ 	 7 	35931;29897    	         0 	auguste-perret         	Auguste Perret (Cimetière Parisien)         	bretagne               	porte-de-thiais        	
+* 	@ 	 8 	35929;35930    	         0 	porte-de-thiais        	Porte de Thiais (Marché International)      	auguste-perret         	la-belle-epine         	
+* 	@ 	 9 	35937;35941    	         0 	la-belle-epine         	La Belle Épine                              	porte-de-thiais        	place-de-la-logistique 	
+* 	@ 	10 	35936;35940    	         0 	place-de-la-logistique 	Place de la Logistique (Plateforme Sogaris) 	la-belle-epine         	porte-de-rungis        	
+* 	@ 	11 	35934;29901    	         0 	porte-de-rungis        	Porte de Rungis                             	place-de-la-logistique 	saarinen               	
+* 	@ 	12 	35939;35935    	         0 	saarinen               	Saarinen (Parc Silic Nord)                  	porte-de-rungis        	robert-schuman         	
+* 	@ 	13 	35938;35943    	         0 	robert-schuman         	Robert Schuman (Parc Silic Centre)          	saarinen               	la-fraternelle         	
+* 	@ 	14 	35942;29900    	         0 	la-fraternelle         	La Fraternelle                              	robert-schuman         	helene-boucher         	rer-c/rungis-la-fraternelle
+* 	@ 	15 	35928;29893    	         0 	helene-boucher         	Hélène Boucher (Orlytech)                   	la-fraternelle         	caroline-aigle         	
+* 	@ 	16 	29899;29898    	         0 	caroline-aigle         	Caroline Aigle (Orlyfret)                   	helene-boucher         	coeur-d-orly           	
+* 	@ 	17 	35932;460558   	         0 	coeur-d-orly           	Cœur d'Orly                                 	caroline-aigle         	aeroport-d-orly        	
+* 	@ 	18 	29894;35927    	         0 	aeroport-d-orly        	Aéroport d'Orly                             	coeur-d-orly           	porte-de-l-essonne     	
+* 	@ 	19 	35926;462937   	         1 	porte-de-l-essonne     	Porte de l'Essonne (Athis-Mons)             	aeroport-d-orly        	                       	
+v 	@ 	20 	               	           	                       	                                            	                       	                       	

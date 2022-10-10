@@ -1,0 +1,26 @@
+  	  	  	@ 	#  	monitoringRefs 	isTerminus 	slugName                     	displayName                       	prevStops                    	nextStops                    	lineConnections
+  	^ 	  	@ 	 1 	               	           	                             	                                  	                             	                             	
+  	* 	  	@ 	 2 	        479491 	         1 	bondy                        	Bondy                             	                             	la-remise-a-jorelle          	rer-e
+  	* 	  	@ 	 3 	        477290 	         0 	la-remise-a-jorelle          	La Remise à Jorelle               	bondy                        	les-coquetiers               	
+  	* 	  	@ 	 4 	         41025 	         0 	les-coquetiers               	Les Coquetiers                    	la-remise-a-jorelle          	allee-de-la-tour-rendez-vous 	
+  	* 	  	@ 	 5 	         41027 	         0 	allee-de-la-tour-rendez-vous 	Allée de la Tour – Rendez-Vous    	les-coquetiers               	les-pavillons-sous-bois      	
+  	* 	  	@ 	 6 	        411279 	         0 	les-pavillons-sous-bois      	Les Pavillons-sous-Bois           	allee-de-la-tour-rendez-vous 	gargan                       	
+  	* 	  	@ 	 7 	         41026 	         0 	gargan                       	Gargan                            	les-pavillons-sous-bois      	lycee-henri-sellier          	
+/. 	| 	.\ 	@ 	 8 
+/o 	| 	o\ 	@ 	 9 
+| 	  	* 	@ 	10 	        477292 	         0 	lycee-henri-sellier          	Lycée Henri Sellier               	gargan                       	l-abbaye                     	
+| 	  	* 	@ 	11 	         41028 	         0 	l-abbaye                     	L'Abbaye                          	lycee-henri-sellier          	freinville-sevran            	
+| 	  	* 	@ 	12 	         41029 	         0 	freinville-sevran            	Freinville – Sevran               	l-abbaye                     	rougemont-chanteloup         	
+| 	  	* 	@ 	13 	        411282 	         0 	rougemont-chanteloup         	Rougemont – Chanteloup            	freinville-sevran            	aulnay-sous-bois             	
+| 	  	* 	@ 	14 	        472147 	         1 	aulnay-sous-bois             	Aulnay-sous-Bois                  	rougemont-chanteloup         	republique-marx-dormoy       	rer-b;transilien-k
+| 	  	v  	@ 	15 
+* 	  	  	@ 	16 	        477291 	         0 	republique-marx-dormoy       	République – Marx Dormoy          	aulnay-sous-bois             	leon-blum                    	
+* 	  	  	@ 	17 	         41024 	         0 	leon-blum                    	Léon Blum (Collège Louise Michel) 	republique-marx-dormoy       	maurice-audin                	
+* 	  	  	@ 	18 	        477283 	         0 	maurice-audin                	Maurice Audin                     	leon-blum                    	clichy-sous-bois-mairie      	
+* 	  	  	@ 	19 	        477286 	         0 	clichy-sous-bois-mairie      	Clichy-sous-Bois – Mairie         	maurice-audin                	romain-rolland               	
+* 	  	  	@ 	20 	        477279 	         0 	romain-rolland               	Romain Rolland (La chapelle)      	clichy-sous-bois-mairie      	clichy-montfermeil           	
+* 	  	  	@ 	21 	        477276 	         0 	clichy-montfermeil           	Clichy – Montfermeil              	romain-rolland               	notre-dame-des-anges         	
+* 	  	  	@ 	22 	         41461 	         0 	notre-dame-des-anges         	Notre-Dame des Anges              	clichy-montfermeil           	arboretum                    	
+* 	  	  	@ 	23 	        478651 	         1 	arboretum                    	Arboretum                         	notre-dame-des-anges         	hopital-de-montfermeil       	
+* 	  	  	@ 	24 	        477289 	         1 	hopital-de-montfermeil       	Hôpital de Montfermeil            	arboretum                    	                             	
+v 	  	  	@ 	25 	               	           	                             	                                  	                             	                             	

@@ -1,0 +1,23 @@
+   	  	   	@ 	#  	monitoringRefs 	isTerminus 	slugName                   	displayName                           	prevStops                  	nextStops               	lineConnections
+   	^ 	   	@ 	 1 	               	           	                           	                                      	                           	                        	
+   	* 	   	@ 	 2 	42120          	         1 	saint-denis-porte-de-paris 	Saint-Denis – Porte de Paris          	                           	pierre-de-geyter        	metro-13
+   	* 	   	@ 	 3 	42121;42118    	         0 	pierre-de-geyter           	Pierre de Geyter                      	saint-denis-porte-de-paris 	saint-denis-gare        	
+   	* 	   	@ 	 4 	42122;42126    	         0 	saint-denis-gare           	Saint-Denis – Gare                    	pierre-de-geyter           	paul-eluard             	rer-d/saint-denis;transilien-h/saint-denis;tramway-1/gare-de-saint-denis
+   	* 	   	@ 	 5 	42119;42124    	         0 	paul-eluard                	Paul Éluard                           	saint-denis-gare           	delaunay-belleville     	
+   	* 	   	@ 	 6 	42117;42125    	         0 	delaunay-belleville        	Delaunay-Belleville                   	paul-eluard                	cesar;blumenthal        	
+/. 	| 	.\ 	@ 	 7 	               	           	                           	                                      	                           	                        	
+/o 	| 	o\ 	@ 	 8 	               	           	                           	                                      	                           	                        	
+*  	  	|  	@ 	 9 	42133;42132    	         0 	cesar                      	César                                 	delaunay-belleville        	jean-vilar              	
+*  	  	|  	@ 	10 	42131;42128    	         0 	jean-vilar                 	Jean Vilar                            	cesar                      	pablo-neruda            	
+*  	  	|  	@ 	11 	42130;42134    	         0 	pablo-neruda               	Pablo Neruda                          	jean-vilar                 	villetaneuse-universite 	
+*  	  	|  	@ 	12 	42129          	         1 	villetaneuse-universite    	Villetaneuse–Université               	pablo-neruda               	                        	tramway-11
+v  	  	|  	@ 	13 	               	           	                           	                                      	                           	                        	
+   	  	*  	@ 	14 	42105;42116    	         0 	blumenthal                 	Blumenthal                            	delaunay-belleville        	les-mobiles             	
+   	  	*  	@ 	15 	42103;42107    	         0 	les-mobiles                	Les Mobiles                           	blumenthal                 	les-beatus              	
+   	  	*  	@ 	16 	42110;42114    	         0 	les-beatus                 	Les Béatus                            	les-mobiles                	rose-bertin             	
+   	  	*  	@ 	17 	42104;42108    	         0 	rose-bertin                	Rose Bertin (Centre commercial l'Ilo) 	les-beatus                 	lacepede                	
+   	  	*  	@ 	18 	42115;42106    	         0 	lacepede                   	Lacépède                              	rose-bertin                	gilbert-bonnemaison     	
+   	  	*  	@ 	19 	42111;42113    	         0 	gilbert-bonnemaison        	Gilbert Bonnemaison                   	lacepede                   	epinay-sur-seine-gare   	
+   	  	*  	@ 	20 	42102;42112    	         0 	epinay-sur-seine-gare      	Épinay-sur-Seine–Gare                 	gilbert-bonnemaison        	epinay-orgemont         	rer-c/epinay-sur-seine;tramway-11/epinay-sur-seine
+   	  	*  	@ 	21 	42109          	         1 	epinay-orgemont            	Épinay–Orgemont                       	epinay-sur-seine-gare      	                        	
+   	  	v  	@ 	22 	               	           	                           	                                      	                           	                        	

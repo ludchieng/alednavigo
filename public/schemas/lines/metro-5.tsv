@@ -9,7 +9,7 @@
 * 	@ 	 8 	22012;462999   	         0 	laumiere                       	Laumière                           	ourcq                          	jaures                         	
 * 	@ 	 9 	21952;463095   	         0 	jaures                         	Jaurès                             	laumiere                       	stalingrad                     	metro-2;metro-7bis
 * 	@ 	10 	22001;463032   	         0 	stalingrad                     	Stalingrad                         	jaures                         	gare-du-nord                   	metro-2;metro-7
-* 	@ 	11 	463182;22007   	         0 	gare-du-nord                   	Gare du Nord                       	stalingrad                     	gare-de-l-est                  	metro-4;rer-b/paris-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
+* 	@ 	11 	463182;22007   	         0 	gare-du-nord                   	Gare du Nord                       	stalingrad                     	gare-de-l-est                  	metro-4;rer-b/gare-du-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
 * 	@ 	12 	22013;463021   	         0 	gare-de-l-est                  	Gare de l'Est                      	gare-du-nord                   	jacques-bonsergent             	metro-4;metro-7;transilien-p/paris-est
 * 	@ 	13 	22011;463191   	         0 	jacques-bonsergent             	Jacques Bonsergent                 	gare-de-l-est                  	republique                     	
 * 	@ 	14 	462961;21903   	         0 	republique                     	République                         	jacques-bonsergent             	oberkampf                      	metro-3;metro-8;metro-9;metro-11

@@ -13,7 +13,7 @@
 * 	@ 	12 	463088;22114   	         0 	pigalle                  	Pigalle                    	blanche                  	anvers                   	metro-12
 * 	@ 	13 	463120;22123   	         0 	anvers                   	Anvers                     	pigalle                  	barbes-rochechouart      	
 * 	@ 	14 	22127;463094   	         0 	barbes-rochechouart      	Barbès - Rochechouart      	anvers                   	la-chapelle              	metro-4
-* 	@ 	15 	22119;462982   	         0 	la-chapelle              	La Chapelle                	barbes-rochechouart      	stalingrad               	rer-b/paris-nord;rer-d/paris-nord;transilien-h/paris-nord;transilien-k/paris-nord;rer-e/magenta
+* 	@ 	15 	22119;462982   	         0 	la-chapelle              	La Chapelle                	barbes-rochechouart      	stalingrad               	rer-b/gare-du-nord;rer-d/paris-nord;transilien-h/paris-nord;transilien-k/paris-nord;rer-e/magenta
 * 	@ 	16 	22107;463009   	         0 	stalingrad               	Stalingrad                 	la-chapelle              	jaures                   	metro-5;metro-7
 * 	@ 	17 	462981;22118   	         1 	jaures                   	Jaurès                     	stalingrad               	colonel-fabien           	metro-5;metro-7bis
 * 	@ 	18 	462984;22120   	         0 	colonel-fabien           	Colonel Fabien             	jaures                   	belleville               	

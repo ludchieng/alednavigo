@@ -5,7 +5,7 @@
 * 	@ 	 4 	462974;22132   	         0 	marcadet-poissonniers  	Marcadet – Poissonniers  	simplon                	chateau-rouge          	metro-12
 * 	@ 	 5 	463148;22152   	         0 	chateau-rouge          	Château Rouge            	marcadet-poissonniers  	barbes-rochechouart    	
 * 	@ 	 6 	22130;463093   	         0 	barbes-rochechouart    	Barbès – Rochechouart    	chateau-rouge          	gare-du-nord           	metro-2
-* 	@ 	 7 	22149;463183   	         1 	gare-du-nord           	Gare du Nord             	barbes-rochechouart    	gare-de-l-est          	metro-5;rer-b/paris-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
+* 	@ 	 7 	22149;463183   	         1 	gare-du-nord           	Gare du Nord             	barbes-rochechouart    	gare-de-l-est          	metro-5;rer-b/gare-du-nord;rer-d/paris-nord;rer-e/magenta;transilien-h/paris-nord;transilien-k/paris-nord
 * 	@ 	 8 	22148;463022   	         0 	gare-de-l-est          	Gare de l'Est            	gare-du-nord           	chateau-d-eau          	metro-5;metro-7;transilien-p/paris-est
 * 	@ 	 9 	462979;22153   	         0 	chateau-d-eau          	Château d'Eau            	gare-de-l-est          	strasbourg-saint-denis 	
 * 	@ 	10 	463313;22134   	         0 	strasbourg-saint-denis 	Strasbourg – Saint-Denis 	chateau-d-eau          	reaumur-sebastopol     	metro-8;metro-9

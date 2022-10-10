@@ -1,0 +1,28 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName              	displayName                                            	prevStops             	nextStops             	lineConnections
+^ 	@ 	 1 	               	           	                      	                                                       	                      	                      	
+* 	@ 	 2 	24102;480964   	         1 	pont-du-garigliano    	Pont du Garigliano (Hôpital européen Georges-Pompidou) 	                      	balard                	rer-c
+* 	@ 	 3 	24108;24103    	         0 	balard                	Balard                                                 	pont-du-garigliano    	desnouettes           	metro-8;tramway-2/suzanne-lenglen
+* 	@ 	 4 	24116;24101    	         0 	desnouettes           	Desnouettes                                            	balard                	porte-de-versailles   	tramway-2/porte-d-issy
+* 	@ 	 5 	24111;24114    	         0 	porte-de-versailles   	Porte de Versailles (Parc des Expositions)             	desnouettes           	georges-brassens      	metro-12;tramway-2
+* 	@ 	 6 	24131;24113    	         0 	georges-brassens      	Georges Brassens                                       	porte-de-versailles   	brancion              	
+* 	@ 	 7 	24121;24104    	         0 	brancion              	Brancion                                               	georges-brassens      	porte-de-vanves       	
+* 	@ 	 8 	24128;24129    	         0 	porte-de-vanves       	Porte de Vanves                                        	brancion              	didot                 	metro-13
+* 	@ 	 9 	24130;24105    	         0 	didot                 	Didot                                                  	porte-de-vanves       	jean-moulin           	
+* 	@ 	10 	24109;24132    	         0 	jean-moulin           	Jean Moulin                                            	didot                 	porte-d-orleans       	
+* 	@ 	11 	24118;460547   	         0 	porte-d-orleans       	Porte d'Orléans                                        	jean-moulin           	montsouris            	metro-4
+* 	@ 	12 	24122;24119    	         0 	montsouris            	Montsouris                                             	porte-d-orleans       	cite-universitaire    	
+* 	@ 	13 	24115;24100    	         0 	cite-universitaire    	Cité Universitaire                                     	montsouris            	stade-charlety        	rer-b
+* 	@ 	14 	24112;28847    	         0 	stade-charlety        	Stade Charléty (Porte de Gentilly)                     	cite-universitaire    	poterne-des-peupliers 	
+* 	@ 	15 	24136;24127    	         0 	poterne-des-peupliers 	Poterne des Peupliers                                  	stade-charlety        	porte-d-italie        	
+* 	@ 	16 	24117;24106    	         0 	porte-d-italie        	Porte d'Italie                                         	poterne-des-peupliers 	porte-de-choisy       	metro-7
+* 	@ 	17 	24126;24120    	         0 	porte-de-choisy       	Porte de Choisy                                        	porte-d-italie        	porte-d-ivry          	metro-7;tramway-9
+* 	@ 	18 	24110;24133    	         0 	porte-d-ivry          	Porte d'Ivry                                           	porte-de-choisy       	maryse-bastie         	metro-7
+* 	@ 	19 	24141;24124    	         0 	maryse-bastie         	Maryse Bastié                                          	porte-d-ivry          	avenue-de-france      	
+* 	@ 	20 	24137;24123    	         0 	avenue-de-france      	Avenue de France                                       	maryse-bastie         	baron-le-roy          	metro-14/bibliotheque-francois-mitterrand;rer-c/bibliotheque-francois-mitterrand
+* 	@ 	21 	460561;36482   	         0 	baron-le-roy          	Baron Le Roy                                           	avenue-de-france      	porte-de-charenton    	
+* 	@ 	22 	24138;24142    	         0 	porte-de-charenton    	Porte de Charenton                                     	baron-le-roy          	porte-doree           	metro-8
+* 	@ 	23 	24135;24134    	         0 	porte-doree           	Porte Dorée                                            	porte-de-charenton    	montempoivre          	metro-8
+* 	@ 	24 	24125;40067    	         0 	montempoivre          	Montempoivre                                           	porte-doree           	alexandra-david-neel  	
+* 	@ 	25 	24107;24139    	         0 	alexandra-david-neel  	Alexandra David-Néel                                   	montempoivre          	porte-de-vincennes    	
+* 	@ 	26 	460560         	         1 	porte-de-vincennes    	Porte de Vincennes                                     	alexandra-david-neel  	                      	metro-1;tramway-3b
+v 	@ 	27 	               	           	                      	                                                       	                      	                      	

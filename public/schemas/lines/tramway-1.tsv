@@ -1,0 +1,40 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                        	displayName                                                 	prevStops                       	nextStops                       	lineConnections
+^ 	@ 	 1 	               	           	                                	                                                            	                                	                                	
+* 	@ 	 2 	477914         	         1 	asnieres-quatre-routes          	Asnières – Quatre Routes                                    	                                	les-courtilles                  	
+* 	@ 	 3 	23278;23277    	         0 	les-courtilles                  	Les Courtilles (Asnières – Gennevilliers)                   	asnieres-quatre-routes          	le-luth                         	metro-13
+* 	@ 	 4 	23279;23285    	         0 	le-luth                         	Le Luth                                                     	les-courtilles                  	le-village                      	
+* 	@ 	 5 	23288;23280    	         0 	le-village                      	Le Village                                                  	le-luth                         	timbaud                         	
+* 	@ 	 6 	23284;23283    	         0 	timbaud                         	Timbaud                                                     	le-village                      	gare-de-gennevilliers           	
+* 	@ 	 7 	23287;23281    	         0 	gare-de-gennevilliers           	Gare de Gennevilliers                                       	timbaud                         	parc-des-chanteraines           	rer-c/gennevilliers
+* 	@ 	 8 	23286;460554   	         0 	parc-des-chanteraines           	Parc des Chanteraines                                       	gare-de-gennevilliers           	chemin-des-reniers              	
+* 	@ 	 9 	23289;23293    	         0 	chemin-des-reniers              	Chemin des Reniers                                          	parc-des-chanteraines           	la-noue                         	
+* 	@ 	10 	23294;460552   	         0 	la-noue                         	La Noue                                                     	chemin-des-reniers              	mairie-de-villeneuve-la-garenne 	
+* 	@ 	11 	23290;23291    	         0 	mairie-de-villeneuve-la-garenne 	Mairie de Villeneuve-la-Garenne                             	la-noue                         	l-ile-saint-denis               	
+* 	@ 	12 	23308;23309    	         0 	l-ile-saint-denis               	L'Île-Saint-Denis                                           	mairie-de-villeneuve-la-garenne 	gare-de-saint-denis             	
+* 	@ 	13 	22635;24431    	         1 	gare-de-saint-denis             	Gare de Saint-Denis                                         	l-ile-saint-denis               	theatre-gerard-philipe          	rer-d/saint-denis;transilien-h/saint-denis;tramway-8/saint-denis-gare
+* 	@ 	14 	22269;23313    	         0 	theatre-gerard-philipe          	Théâtre Gérard-Philipe                                      	gare-de-saint-denis             	marche-de-saint-denis           	
+* 	@ 	15 	22267;22268    	         0 	marche-de-saint-denis           	Marché de Saint-Denis                                       	theatre-gerard-philipe          	basilique-de-saint-denis        	tramway-5
+* 	@ 	16 	22633;22634    	         0 	basilique-de-saint-denis        	Basilique de Saint-Denis (Hôtel de Ville)                   	marche-de-saint-denis           	cimetiere-de-saint-denis        	metro-13
+* 	@ 	17 	23312;23314    	         0 	cimetiere-de-saint-denis        	Cimetière de Saint-Denis                                    	basilique-de-saint-denis        	hopital-delafontaine            	
+* 	@ 	18 	460550;460549  	         0 	hopital-delafontaine            	Hôpital Delafontaine                                        	cimetiere-de-saint-denis        	cosmonautes                     	
+* 	@ 	19 	22632;22628    	         0 	cosmonautes                     	Cosmonautes                                                 	hopital-delafontaine            	la-courneuve-six-routes         	
+* 	@ 	20 	22630;22631    	         0 	la-courneuve-six-routes         	La Courneuve – Six Routes                                   	cosmonautes                     	hotel-de-ville-de-la-courneuve  	
+* 	@ 	21 	23301;24428    	         0 	hotel-de-ville-de-la-courneuve  	Hôtel de Ville de La Courneuve                              	la-courneuve-six-routes         	stade-geo-andre                 	
+* 	@ 	22 	23303;24429    	         0 	stade-geo-andre                 	Stade Géo André                                             	hotel-de-ville-de-la-courneuve  	danton                          	
+* 	@ 	23 	23302;24427    	         0 	danton                          	Danton                                                      	stade-geo-andre                 	la-courneuve-8-mai-1945         	
+* 	@ 	24 	22629;24426    	         0 	la-courneuve-8-mai-1945         	La Courneuve – 8 Mai 1945                                   	danton                          	maurice-lachatre                	metro-7
+* 	@ 	25 	23305;23295    	         0 	maurice-lachatre                	Maurice Lachâtre                                            	la-courneuve-8-mai-1945         	drancy-avenir                   	
+* 	@ 	26 	23306;24424    	         0 	drancy-avenir                   	Drancy–Avenir                                               	maurice-lachatre                	hopital-avicenne                	
+* 	@ 	27 	23304;23297    	         0 	hopital-avicenne                	Hôpital Avicenne                                            	drancy-avenir                   	gaston-roulaud                  	
+* 	@ 	28 	23307;22261    	         0 	gaston-roulaud                  	Gaston Roulaud                                              	hopital-avicenne                	escadrille-normandie-niemen     	
+* 	@ 	29 	22626;22627    	         0 	escadrille-normandie-niemen     	Escadrille Normandie-Niémen                                 	gaston-roulaud                  	la-ferme                        	
+* 	@ 	30 	23299;23298    	         0 	la-ferme                        	La Ferme                                                    	escadrille-normandie-niemen     	liberation                      	
+* 	@ 	31 	23296;23300    	         0 	liberation                      	Libération                                                  	la-ferme                        	hotel-de-ville-de-bobigny       	
+* 	@ 	32 	24425;37466    	         0 	hotel-de-ville-de-bobigny       	Hôtel de Ville de Bobigny (Maison de la Culture)            	liberation                      	bobigny-pablo-picasso           	
+* 	@ 	33 	22624;22625    	         1 	bobigny-pablo-picasso           	Bobigny – Pablo Picasso (Préfecture – Hôtel du Département) 	hotel-de-ville-de-bobigny       	jean-rostand                    	metro-5
+* 	@ 	34 	22259;22260    	         0 	jean-rostand                    	Jean Rostand                                                	bobigny-pablo-picasso           	auguste-delaune                 	
+* 	@ 	35 	22257;22258    	         0 	auguste-delaune                 	Auguste Delaune                                             	jean-rostand                    	pont-de-bondy                   	
+* 	@ 	36 	22264;24430    	         0 	pont-de-bondy                   	Pont de Bondy                                               	auguste-delaune                 	petit-noisy                     	
+* 	@ 	37 	23311;22263    	         0 	petit-noisy                     	Petit Noisy                                                 	pont-de-bondy                   	gare-de-noisy-le-sec            	
+* 	@ 	38 	23310          	         1 	gare-de-noisy-le-sec            	Gare de Noisy-le-Sec                                        	petit-noisy                     	                                	rer-e/noisy-le-sec
+v 	@ 	39 	               	           	                                	                                                            	                                	                                	
