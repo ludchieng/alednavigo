@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 import './registerServiceWorker'
 import App from './App.vue'
 
@@ -9,7 +10,7 @@ Vue.use(VueRouter)
 Vue.use(Vuex)
 
 const routes = [
-  { path: '/', redirect: '/1' },
+  { path: '/', component: App },
   { path: '/:tab', component: App },
   { path: '/:tab/:line', component: App },
   { path: '/:tab/:line/:stop', component: App },
@@ -49,6 +50,7 @@ const store = new Vuex.Store({
       state.tabs = newTabs
     },
   },
+  plugins: [new VuexPersistence().plugin],
 })
 
 new Vue({
