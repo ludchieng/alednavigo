@@ -191,8 +191,8 @@ h2 {
 .train-code {
   padding: 0.3rem 0.5rem 0.3rem 1rem;
   margin-right: 0.5rem;
-  max-width: 2.6rem;
-  min-width: 2.3rem; /* Prevents weird shrink */
+  max-width: 2.4rem;
+  min-width: 2.4rem; /* Prevents weird shrink */
   background: #fff;
   font-size: 0.8rem;
   font-weight: 700;

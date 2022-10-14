@@ -1,0 +1,32 @@
+   	   	  	 	  	@ 	#  	monitoringRefs 	isTerminus 	slugName                    	displayName                   	prevStops                       	nextStops                       	lineConnections
+   	   	^ 	 	  	@ 	 1 	               	           	                            	                              	                                	                                	
+   	   	* 	 	  	@ 	 2 	         41396 	         1 	paris-lyon                  	Paris–Gare-de-Lyon            	                                	melun                           	metro-1/gare-de-lyon;metro-14/gare-de-lyon;rer-a/gare-de-lyon;rer-d/paris-lyon
+   	   	| 	 	^ 	@ 	 3 	               	           	                            	                              	                                	                                	
+   	   	* 	 	* 	@ 	 4 	         41361 	         1 	melun                       	Melun                         	paris-lyon                      	bois-le-roi;livry-sur-seine     	rer-d
+   	   	* 	 	| 	@ 	 5 	         41371 	         0 	bois-le-roi                 	Bois-le-Roi                   	melun                           	fontainebleau-avon              	
+   	   	* 	 	| 	@ 	 7 	         41372 	         0 	fontainebleau-avon          	Fontainebleau – Avon          	bois-le-roi                     	thomery                         	
+   	   	* 	 	| 	@ 	 8 	         41373 	         0 	thomery                     	Thomery                       	fontainebleau-avon              	moret-veneux-les-sablons        	
+   	   	* 	 	| 	@ 	 9 	         41374 	         0 	moret-veneux-les-sablons    	Moret – Veneux-les-Sablons      	thomery                         	montigny-sur-loing;saint-mammes 	
+   	/. 	| 	 	| 	@ 	10 	               	           	                            	                              	                                	                                	
+/o 	|  	| 	 	| 	@ 	11 	               	           	                            	                              	                                	                                	
+|  	   	* 	 	| 	@ 	12 	         41375 	         0 	saint-mammes                	Saint-Mammès                  	moret-veneux-les-sablons        	montereau                       	
+|  	   	| 	 	| 	@ 	13 	               	           	                            	                              	                                	                                	
+|  	   	| 	 	* 	@ 	14 	         41377 	         0 	livry-sur-seine             	Livry-sur-Seine               	melun                           	chartrettes                     	
+|  	   	| 	 	* 	@ 	15 	         41378 	         0 	chartrettes                 	Chartrettes                   	livry-sur-seine                 	fontaine-le-port                	
+|  	   	| 	 	* 	@ 	16 	         41379 	         0 	fontaine-le-port            	Fontaine-le-Port              	chartrettes                     	hericy                          	
+|  	   	| 	 	* 	@ 	17 	         41380 	         0 	hericy                      	Héricy                        	fontaine-le-port                	vulaines-sur-seine-samoreau     	
+|  	   	| 	 	* 	@ 	18 	         41381 	         0 	vulaines-sur-seine-samoreau 	Vulaines-sur-Seine – Samoreau 	hericy                          	champagne-sur-seine             	
+|  	   	| 	 	* 	@ 	19 	         41382 	         0 	champagne-sur-seine         	Champagne-sur-Seine           	vulaines-sur-seine-samoreau     	vernou-sur-seine                	
+|  	   	| 	 	* 	@ 	20 	         41383 	         0 	vernou-sur-seine            	Vernou-sur-Seine              	champagne-sur-seine             	la-grande-paroisse              	
+|  	   	| 	 	* 	@ 	21 	         41384 	         0 	la-grande-paroisse          	La Grande-Paroisse            	vernou-sur-seine                	montereau                       	
+|  	   	* 	 	* 	@ 	22 	         41376 	         1 	montereau                   	Montereau                     	saint-mammes;la-grande-paroisse 	                                	
+|  	   	v 	 	v 	@ 	23 	               	           	                            	                              	                                	                                	
+*  	   	  	 	  	@ 	24 	         41389 	         0 	montigny-sur-loing          	Montigny-sur-Loing            	moret-veneux-les-sablons        	bourron-marlotte-grez           	
+*  	   	  	 	  	@ 	25 	         41390 	         0 	bourron-marlotte-grez       	Bourron-Marlotte – Grez       	montigny-sur-loing              	nemours-saint-pierre            	
+*  	   	  	 	  	@ 	26 	         41391 	         0 	nemours-saint-pierre        	Nemours – Saint-Pierre        	bourron-marlotte-grez           	bagneaux-sur-loing              	
+*  	   	  	 	  	@ 	27 	         41392 	         0 	bagneaux-sur-loing          	Bagneaux-sur-Loing            	nemours-saint-pierre            	souppes-chateau-landon          	
+*  	   	  	 	  	@ 	28 	         41393 	         0 	souppes-chateau-landon      	Souppes – Château-Landon      	bagneaux-sur-loing              	dordives                        	
+*  	   	  	 	  	@ 	29 	         41394 	         0 	dordives                    	Dordives                      	souppes-chateau-landon          	ferrieres-fontenay              	
+*  	   	  	 	  	@ 	30 	        411487 	         0 	ferrieres-fontenay          	Ferrières – Fontenay          	dordives                        	montargis                       	
+*  	   	  	 	  	@ 	31 	        411481 	         1 	montargis                   	Montargis                     	ferrieres-fontenay              	                                	
+v  	   	  	 	  	@ 	32 	               	           	                            	                              	                                	                                	

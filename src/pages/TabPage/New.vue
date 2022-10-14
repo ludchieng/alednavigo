@@ -20,11 +20,6 @@ import { getLinesByCategory } from '@/utils/localstore/lines'
 export default Vue.extend({
   name: 'TabPageNew',
   components: { LineIcon },
-  methods: {
-    redirectToHome () {
-      this.$router.push('/1')
-    },
-  },
   computed: {
     linesByCategory () {
       return getLinesByCategory()

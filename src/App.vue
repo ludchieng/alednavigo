@@ -32,10 +32,13 @@ export default Vue.extend({
   watch: {
     '$route.params.tab': {
       handler () {
+        if (this.$route.params.tab === 'settings') {
+          return
+        }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {
-          this.$router.push('/1')
+          this.$router.push(`/1/${this.$store.state.tabs[0].path}`)
         }
       },
       deep: true,
@@ -43,18 +46,24 @@ export default Vue.extend({
     },
     '$route.path': {
       handler () {
+        const tabNumber = Number(this.$route.params.tab)
         const line = this.$route.params.line
         const stop = this.$route.params.stop
-        this.$store.commit('setTab', {
-          idx: Number(this.$route.params.tab) - 1,
-          tab: { line, stop },
-        })
+        if (tabNumber && !isNaN(tabNumber)) {
+          this.$store.commit('setTab', {
+            idx: tabNumber - 1,
+            tab: { line, stop },
+          })
+        }
       },
       deep: true,
       immediate: true,
     },
     '$store.state.tabs': {
       handler () {
+        if (this.$route.params.tab === 'settings') {
+          return
+        }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {

@@ -27,7 +27,7 @@
       </div>
 
       <div class="nav-controls">
-        <router-link class="to-settings" to="#">
+        <router-link class="to-settings" to="/settings">
           <img class="icon-settings" src="/img/mui/more-vert.svg" />
         </router-link>
         <div class="tabs-manager">
@@ -122,6 +122,10 @@ hr {
 .nav-tabs-list ul {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.nav-tabs-list li {
+  overflow-y: hidden;
 }
 
 .nav-controls {
