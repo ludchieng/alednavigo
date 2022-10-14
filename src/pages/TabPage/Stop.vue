@@ -46,6 +46,6 @@ export default Vue.extend({
 
 <style scoped>
 .tab-page-stop {
-  padding: 0 1rem;
+  padding: 0 1rem 8rem 1rem;
 }
 </style>

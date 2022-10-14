@@ -32,6 +32,9 @@ export default Vue.extend({
   watch: {
     '$route.params.tab': {
       handler () {
+        if (this.$route.params.tab === 'settings') {
+          return
+        }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {
@@ -58,6 +61,9 @@ export default Vue.extend({
     },
     '$store.state.tabs': {
       handler () {
+        if (this.$route.params.tab === 'settings') {
+          return
+        }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {
