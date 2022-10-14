@@ -1,0 +1,13 @@
+  	@ 	#  	monitoringRefs 	isTerminus 	slugName                    	displayName                     	prevStops                   	nextStops                   	lineConnections
+^ 	@ 	 1 	               	           	                            	                                	                            	                            	
+* 	@ 	 2 	         41071 	         1 	paris-nord                  	Paris–Nord                      	                            	aulnay-sous-bois            	metro-2/la-chapelle;metro-4/gare-du-nord;metro-5/gare-du-nord;rer-b/gare-du-nord;rer-d;rer-e/magenta;transilien-h
+* 	@ 	 3 	        411410 	         0 	aulnay-sous-bois            	Aulnay-sous-Bois                	paris-nord                  	mitry-claye                 	rer-b;tramway-4
+* 	@ 	 4 	        411402 	         1 	mitry-claye                 	Mitry – Claye                   	aulnay-sous-bois            	compans                     	rer-b
+* 	@ 	 5 	         41080 	         0 	compans                     	Compans                         	mitry-claye                 	thieux-nantouillet          	
+* 	@ 	 6 	         41081 	         0 	thieux-nantouillet          	Thieux – Nantouillet            	compans                     	dammartin-juilly-saint-mard 	
+* 	@ 	 7 	         41077 	         0 	dammartin-juilly-saint-mard 	Dammartin – Juilly – Saint-Mard 	thieux-nantouillet          	le-plessis-belleville       	
+* 	@ 	 8 	        411404 	         0 	le-plessis-belleville       	Le Plessis-Belleville           	dammartin-juilly-saint-mard 	nanteuil-le-haudouin        	
+* 	@ 	 9 	        411389 	         0 	nanteuil-le-haudouin        	Nanteuil-le-Haudouin            	le-plessis-belleville       	ormoy-villers               	
+* 	@ 	10 	        411386 	         0 	ormoy-villers               	Ormoy-Villers                   	nanteuil-le-haudouin        	crepy-en-valois             	
+* 	@ 	11 	        411395 	         1 	crepy-en-valois             	Crépy-en-Valois                 	ormoy-villers               	                            	
+v 	@ 	12 	               	           	                            	                                	                            	                            	

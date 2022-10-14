@@ -18,7 +18,7 @@
 * 	@ 	17 	463080;22091   	         0 	hotel-de-ville               	Hôtel de Ville                 	chatelet                     	saint-paul                   	metro-11
 * 	@ 	18 	22074;463307   	         0 	saint-paul                   	Saint-Paul                     	hotel-de-ville               	bastille                     	
 * 	@ 	19 	463019;22089   	         0 	bastille                     	Bastille                       	saint-paul                   	gare-de-lyon                 	metro-5;metro-8
-* 	@ 	20 	22083;463197   	         1 	gare-de-lyon                 	Gare de Lyon                   	bastille                     	reuilly-diderot              	metro-14;rer-a;rer-d;transilien-r
+* 	@ 	20 	22083;463197   	         1 	gare-de-lyon                 	Gare de Lyon                   	bastille                     	reuilly-diderot              	metro-14;rer-a;rer-d/paris-lyon;transilien-r/paris-lyon
 * 	@ 	21 	22076;463294   	         0 	reuilly-diderot              	Reuilly – Diderot              	gare-de-lyon                 	nation                       	metro-8
 * 	@ 	22 	22080;462943   	         0 	nation                       	Nation                         	reuilly-diderot              	porte-de-vincennes           	metro-2;metro-6;metro-9;rer-a
 * 	@ 	23 	22077;463012   	         0 	porte-de-vincennes           	Porte de Vincennes             	nation                       	saint-mande                  	tramway-3a;tramway-3b

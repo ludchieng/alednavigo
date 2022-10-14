@@ -1,0 +1,14 @@
+	@	#	monitoringRefs	isTerminus	slugName	displayName	prevStops	nextStops	lineConnections
+^	@	1							
+*	@	2	41223	1	la-verriere	La Verrière		trappes	transilien-n
+*	@	3	41250	0	trappes	Trappes	la-verriere	saint-quentin-en-yvelines	transilien-n
+*	@	4	41251	0	saint-quentin-en-yvelines	Saint-Quentin-en-Yvelines (Montigny-le-Bretonneux)	trappes	saint-cyr	rer-c;transilien-n
+*	@	5	41222	0	saint-cyr	Saint-Cyr	saint-quentin-en-yvelines	versailles-chantiers	tramway-13;rer-c;transilien-n
+*	@	6	41207	0	versailles-chantiers	Versailles–Chantiers	saint-cyr	chaville-rive-droite	rer-c;transilien-n
+*	@	7	41176	0	chaville-rive-droite	Chaville–Rive Droite	versailles-chantiers	sevres-ville-d-avray	transilien-l
+*	@	8	41177	0	sevres-ville-d-avray	Sèvres – Ville-d'Avray	chaville-rive-droite	saint-cloud	transilien-l
+*	@	9	41178	0	saint-cloud	Saint-Cloud	sevres-ville-d-avray	suresnes-mont-valerien	tramway-2/parc-de-saint-cloud;transilien-l
+*	@	10	41180	0	suresnes-mont-valerien	Suresnes-Mont-Valérien	saint-cloud	puteaux	tramway-2/suresnes-longchamp;transilien-l
+*	@	11	41181	0	puteaux	Puteaux	suresnes-mont-valerien	la-defense	tramway-2;transilien-l
+*	@	12	40951	1	la-defense	La Défense (Grande Arche)	puteaux		metro-1;tramway-2;rer-a;transilien-l
+v	@	13							
