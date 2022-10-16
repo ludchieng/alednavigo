@@ -15,14 +15,14 @@ import { synchronize } from '@/utils/localstore/synchronizer'
 
 export default Vue.extend({
   name: 'SettingsPage',
+  data: () => ({
+    updatedAt: new Date(localStorage.getItem('lines.updatedAt') as string),
+  }),
   methods: {
     synchronize () {
-      synchronize()
-    },
-  },
-  computed: {
-    updatedAt () {
-      return new Date(localStorage.getItem('lines.updatedAt') as string)
+      synchronize().then(() => {
+        this.updatedAt = new Date(localStorage.getItem('lines.updatedAt') as string)
+      })
     },
   },
 })

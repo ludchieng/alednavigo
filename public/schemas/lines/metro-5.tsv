@@ -18,7 +18,7 @@
 * 	@ 	17 	463138;22008   	         0 	breguet-sabin                  	Bréguet – Sabin                    	richard-lenoir                 	bastille                       	
 * 	@ 	18 	22010;463018   	         0 	bastille                       	Bastille                           	breguet-sabin                  	quai-de-la-rapee               	metro-1;metro-8
 * 	@ 	19 	22004;463289   	         0 	quai-de-la-rapee               	Quai de la Rapée                   	bastille                       	gare-d-austerlitz              	
-* 	@ 	20 	21981;463023   	         1 	gare-d-austerlitz              	Gare d'Austerlitz                  	quai-de-la-rapee               	saint-marcel                   	metro-10;rer-c
+* 	@ 	20 	21981;463023   	         1 	gare-d-austerlitz              	Gare d'Austerlitz                  	quai-de-la-rapee               	saint-marcel                   	metro-10;rer-c/paris-austerlitz
 * 	@ 	21 	463097;22000   	         0 	saint-marcel                   	Saint-Marcel                       	gare-d-austerlitz              	campo-formio                   	
 * 	@ 	22 	463020;22009   	         0 	campo-formio                   	Campo-Formio                       	saint-marcel                   	place-d-italie                 	
 * 	@ 	23 	22006;463025   	         1 	place-d-italie                 	Place d'Italie                     	campo-formio                   	                               	metro-6;metro-7
