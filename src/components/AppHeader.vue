@@ -13,6 +13,12 @@
         <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
       </router-link>
     </div>
+    <div class="datetime">
+      <span class="datetime-hh">{{ datetime.hh }}</span>
+      <span class="datetime-separator">:</span>
+      <span class="datetime-mm">{{ datetime.mm }}</span>
+      <span class="datetime-ss">{{ datetime.ss }}</span>
+    </div>
   </header>
 </template>
 
@@ -22,6 +28,23 @@ import LineIcon from '@/components/Line/Icon.vue'
 export default Vue.extend({
   name: 'AppHeader',
   components: { LineIcon },
+  data: () => ({
+    clockInterval: 0,
+    datetime: {} as { hh: string, mm: string, ss: string },
+  }),
+  created () {
+    this.clockInterval = setInterval(() => {
+      const t = new Date()
+      this.datetime = {
+        hh: t.getHours().toString(),
+        mm: t.getMinutes().toString().padStart(2, '0'),
+        ss: t.getSeconds().toString().padStart(2, '0'),
+      }
+    }, 500)
+  },
+  destroyed () {
+    clearInterval(this.clockInterval)
+  },
 })
 </script>
 
@@ -55,5 +78,25 @@ header {
 .icon-line img {
   width: 2rem;
   height: 2rem;
+}
+
+.datetime {
+  padding: 0 0.5rem 0 2.5rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.datetime-separator {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.datetime-ss {
+  padding-left: 0.1rem;
+  font-size: 1rem;
+  color: #777;
 }
 </style>
