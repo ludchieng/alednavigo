@@ -9,8 +9,8 @@
       >
         <h2>{{ direction }}</h2>
         <div class="sync">
-          <span class="sync-time">
-            {{ syncTimer }}s
+          <span class="sync-time" :key="updateCounter">
+            {{ ((new Date().getTime() - updatedAt.getTime()) / 1000).toFixed(0) }}s
           </span>
           <button class="sync-btn" @click="update">
             <img class="icon-settings" src="/img/mui/update.svg" />
@@ -30,6 +30,8 @@
             </div>
           </summary>
           <div class="train-details">
+            <strong>{{ train.StopName }}</strong><br />
+            {{ train.OperatorRef }}<br />
             ExpectedArrivalTime    : {{ train.ExpectedArrivalTime && train.ExpectedArrivalTime.toLocaleTimeString() }}<br />
             AimedArrivalTime       : {{ train.AimedArrivalTime && train.AimedArrivalTime.toLocaleTimeString() }}<br />
             ExpectedDepartureTime  : {{ train.ExpectedDepartureTime && train.ExpectedDepartureTime.toLocaleTimeString() }}<br />
@@ -62,23 +64,23 @@ export default Vue.extend({
   data: () => ({
     visits: {} as { [x: string]: any[] },
     debugData: new Set(),
-    syncTimer: 0,
-    syncInterval: 0,
+    updatedAt: {} as Date,
+    updateCounter: 0,
+    updateInterval: 0,
   }),
   created () {
     this.update()
-    this.syncInterval = setInterval(() => {
-      ++this.syncTimer
+    this.updateInterval = setInterval(() => {
+      ++this.updateCounter
     }, 1000)
   },
   destroyed () {
-    clearInterval(this.syncInterval)
+    clearInterval(this.updateInterval)
   },
   methods: {
     update () {
       this.debugData = new Set()
       this.fetch()
-      this.syncTimer = 0
     },
     fetch () {
       const monitoringRefs = this.stop.monitoringRefs
@@ -118,6 +120,8 @@ export default Vue.extend({
                       new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
 
                     ItemIdentifier: visit.ItemIdentifier,
+                    OperatorRef: visit.MonitoredVehicleJourney.OperatorRef.value,
+                    StopName: visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value,
                     ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
                     ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
                     AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime),
@@ -142,6 +146,7 @@ export default Vue.extend({
                 {},
               )),
             }
+            this.updatedAt = new Date()
           })
       }
     },
