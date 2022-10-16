@@ -4,10 +4,11 @@
       {{ stop.displayName }}
     </h1>
     <span class="line-connections">
-      <router-link v-for="(conn, i) in stop.lineConnections" :key="i"
+      <router-link v-for="conn in stop.lineConnections"
+        :key="conn.line"
         :to="`/${$route.params.tab}/${conn.line}/${conn.slugName}`"
       >
-        <LineIcon :lineSlugName="conn.line" theme="dark" fadeIn />
+        <LineIcon :lineSlugName="conn.line" theme="dark" />
       </router-link>
     </span>
   </div>
