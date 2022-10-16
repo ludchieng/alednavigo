@@ -5,7 +5,7 @@
   >
     {{ stopName }}
     <div class="line-connections">
-      <LineIcon v-for="(conn, i) in lineConnections" :key="i"
+      <LineIcon v-for="conn in lineConnections" :key="conn.line"
         :lineSlugName="conn.line" theme="colors" fadeIn
       />
     </div>
@@ -15,7 +15,7 @@
     {{ stopName }}
     <div class="line-connections">
       <img
-        v-for="(conn, i) in lineConnections" :key="i"
+        v-for="conn in lineConnections" :key="conn.line"
         :src="`/img/lines-icons/colors/${conn.line}.svg`"
       >
     </div>

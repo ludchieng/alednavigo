@@ -4,7 +4,7 @@
     <div class="nav-content">
       <div v-if="showTabsList" class="nav-tabs-list">
         <ul>
-          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i"
+          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="`/${i + 1}/${path}`"
             class="tab"
             :class="{ 'tab-active': tabIndex() === i }"
           >
@@ -32,7 +32,7 @@
         </router-link>
         <div class="tabs-manager">
           <ul v-if="!showTabsList" class="tabs">
-            <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="i"
+            <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="`/${i + 1}/${path}`"
               class="tab"
               :class="{ 'tab-active': tabIndex() === i }"
             >

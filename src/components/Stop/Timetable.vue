@@ -17,7 +17,7 @@
             Synchroniser
           </button>
         </div>
-        <details v-for="(train, j) in trains" :key="j" class="row">
+        <details v-for="train in trains" :key="train.ItemIdentifier" class="row">
           <summary class="train">
             <div class="train-code">
               {{ train.code }}
@@ -83,6 +83,7 @@ export default Vue.extend({
     fetch () {
       const monitoringRefs = this.stop.monitoringRefs
       for (const mref of monitoringRefs) {
+        // TODO Cancel fetch on stop change
         fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`)
           .then(res => {
             if (res.status >= 400) return
@@ -116,6 +117,7 @@ export default Vue.extend({
                     time: new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime) ||
                       new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
 
+                    ItemIdentifier: visit.ItemIdentifier,
                     ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
                     ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
                     AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime),
