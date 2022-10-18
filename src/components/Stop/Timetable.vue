@@ -54,6 +54,7 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
+import { fetchTimetables } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
@@ -83,72 +84,12 @@ export default Vue.extend({
       this.fetch()
     },
     fetch () {
-      const monitoringRefs = this.stop.monitoringRefs
-      for (const mref of monitoringRefs) {
-        // TODO Cancel fetch on stop change
-        fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`)
-          .then(res => {
-            if (res.status >= 400) return
-            return res.json()
-          })
-          .then(data => {
-            if (!data) return
-            const trains = data.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit
-
-            this.visits = {
-              ...this.visits,
-              ...(trains.reduce(
-                (acc: { [x: string]: [] }, visit: any) => {
-                  const dir = visit.MonitoredVehicleJourney.DirectionName
-                    ? visit.MonitoredVehicleJourney.DirectionName[0].value
-                    : ''
-
-                  const lineRef = visit.MonitoredVehicleJourney.LineRef.value.match(/:(C[0-9]+):/)[1]
-
-                  if (process.env.NODE_ENV === 'development') {
-                    const line = this.linesByRef[lineRef].slugName
-                    const stop = visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value
-                    this.debugData.add(`${stop} (${line})`)
-                  }
-
-                  visit = {
-                    lineRef,
-                    line: this.linesByRef[lineRef] ? this.linesByRef[lineRef].slugName : '',
-                    destination: visit.MonitoredVehicleJourney.DestinationName[0].value,
-                    code: visit.MonitoredVehicleJourney.JourneyNote ? visit.MonitoredVehicleJourney.JourneyNote[0].value : '',
-                    time: new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime) ||
-                      new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
-
-                    ItemIdentifier: visit.ItemIdentifier,
-                    OperatorRef: visit.MonitoredVehicleJourney.OperatorRef.value,
-                    StopName: visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value,
-                    ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
-                    ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
-                    AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime),
-                    DepartureStatus: visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus && visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus,
-                    ExpectedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime),
-                    AimedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime),
-
-                    ArrivalPlatformName: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName,
-                    DatedVehicleJourneyRef: visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/),
-                    TrainNumbers: visit.MonitoredVehicleJourney.TrainNumbers && visit.MonitoredVehicleJourney.TrainNumbers.TrainNumberRef[0].value,
-                    Order: visit.MonitoredVehicleJourney.MonitoredCall.Order,
-                    VehicleAtStop: visit.MonitoredVehicleJourney.MonitoredCall.VehicleAtStop,
-                  }
-                  if (visit.line !== this.$route.params.line) {
-                    return acc
-                  }
-                  return {
-                    ...acc,
-                    [dir]: [...(acc[dir] || []), visit],
-                  }
-                },
-                {},
-              )),
-            }
-            this.updatedAt = new Date()
-          })
-      }
+      fetchTimetables(this.stop.monitoringRefs, this.$route.params.line)
+        .then(({ visits, debugData, updatedAt }: any) => {
+          this.visits = visits
+          this.debugData = debugData
+          this.updatedAt = updatedAt
+        })
     },
   },
   computed: {
