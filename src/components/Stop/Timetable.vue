@@ -63,6 +63,7 @@ export default Vue.extend({
     stop: {} as PropType<StopType>,
   },
   data: () => ({
+    fetchAbortController: new AbortController(),
     visits: {} as { [x: string]: any[] },
     debugData: new Set(),
     updatedAt: {} as Date,
@@ -84,7 +85,7 @@ export default Vue.extend({
       this.fetch()
     },
     fetch () {
-      fetchTimetables(this.stop.monitoringRefs, this.$route.params.line)
+      fetchTimetables(this.stop.monitoringRefs, this.$route.params.line, this.fetchAbortController.signal)
         .then(({ visits, debugData, updatedAt }: any) => {
           this.visits = visits
           this.debugData = debugData
@@ -100,6 +101,8 @@ export default Vue.extend({
   watch: {
     stop () {
       this.visits = {}
+      this.fetchAbortController.abort()
+      this.fetchAbortController = new AbortController()
       this.update()
     },
   },

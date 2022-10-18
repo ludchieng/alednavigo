@@ -6,7 +6,7 @@ export type VisitType = {
   destination: string,
 }
 
-export const fetchTimetables = async (mrefs: string[], line: string) => {
+export const fetchTimetables = async (mrefs: string[], line: string, abortSignal: AbortSignal) => {
   let visits = {}
   const debugData = new Set()
   let count = 0
@@ -14,7 +14,9 @@ export const fetchTimetables = async (mrefs: string[], line: string) => {
   return new Promise((resolve, reject) => {
     for (const mref of mrefs) {
       // TODO Cancel fetch on stop change
-      fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`)
+      fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`, {
+        signal: abortSignal,
+      })
         .then(res => {
           if (res.status >= 400) return
           return res.json()
