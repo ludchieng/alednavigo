@@ -5,7 +5,7 @@
     </h1>
     <span class="line-connections">
       <router-link v-for="conn in stop.lineConnections"
-        :key="conn.line"
+        :key="`${conn.line}/${conn.slugName}`"
         :to="`/${$route.params.tab}/${conn.line}/${conn.slugName}`"
       >
         <LineIcon :lineSlugName="conn.line" theme="dark" />
