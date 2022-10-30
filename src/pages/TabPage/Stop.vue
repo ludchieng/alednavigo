@@ -9,7 +9,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { StopType } from '@/utils/parser'
-import StopTimetable from '@/components/Stop/Timetable.vue'
+import StopTimetable from '@/components/Stop/Timetable/index.vue'
 import StopHeader from '@/components/Stop/Header.vue'
 import StopPrevNextStops from '@/components/Stop/PrevNextStops.vue'
 import { getStop } from '@/utils/localstore/stops'
