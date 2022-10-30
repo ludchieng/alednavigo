@@ -4,18 +4,36 @@ export type VisitType = {
   code: string,
   time: Date,
   destination: string,
+  StopName: string,
+  OperatorRef: string,
+  ItemIdentifier: string,
+  ExpectedArrivalTime: Date,
+  AimedArrivalTime: Date,
+  ExpectedDepartureTime: Date,
+  AimedDepartureTime: Date,
+  ArrivalStatus: string,
+  DepartureStatus: string,
+  ArrivalPlatformName: string,
+  DatedVehicleJourneyRef: string,
+  TrainNumbers: string,
+  Order: string,
+  VehicleAtStop: string,
 }
 
-export const fetchTimetables = async (mrefs: string[], line: string, abortSignal: AbortSignal) => {
+export const fetchTimetables = async (
+  mrefs: string[],
+  abortSignal: AbortSignal,
+  filterBylines: string[] = [],
+) => {
   let visits = {}
   const debugData = new Set()
   let count = 0
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     for (const mref of mrefs) {
       // TODO Cancel fetch on stop change
       fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`, {
-        signal: abortSignal,
+        ...(abortSignal && { signal: abortSignal }),
       })
         .then(res => {
           if (res.status >= 400) return
@@ -54,19 +72,19 @@ export const fetchTimetables = async (mrefs: string[], line: string, abortSignal
                   OperatorRef: visit.MonitoredVehicleJourney.OperatorRef.value,
                   StopName: visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value,
                   ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
-                  ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
-                  AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime),
+                  ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime).toLocaleTimeString(),
+                  AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime).toLocaleTimeString(),
                   DepartureStatus: visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus && visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus,
-                  ExpectedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime),
-                  AimedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime),
+                  ExpectedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime).toLocaleTimeString(),
+                  AimedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime).toLocaleTimeString(),
 
-                  ArrivalPlatformName: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName,
-                  DatedVehicleJourneyRef: visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/),
+                  ArrivalPlatformName: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName.value,
+                  DatedVehicleJourneyRef: visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/) && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/)[1],
                   TrainNumbers: visit.MonitoredVehicleJourney.TrainNumbers && visit.MonitoredVehicleJourney.TrainNumbers.TrainNumberRef[0].value,
                   Order: visit.MonitoredVehicleJourney.MonitoredCall.Order,
                   VehicleAtStop: visit.MonitoredVehicleJourney.MonitoredCall.VehicleAtStop,
                 }
-                if (visit.line !== line) {
+                if (filterBylines.length > 0 && !filterBylines.includes(visit.line)) {
                   return acc
                 }
                 return {
@@ -78,7 +96,11 @@ export const fetchTimetables = async (mrefs: string[], line: string, abortSignal
             )),
           }
           if (count === mrefs.length) {
-            resolve({ visits, updatedAt: new Date(), debugData })
+            resolve({
+              visits: Object.entries(visits).sort((a, b) => (a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0))),
+              updatedAt: new Date(),
+              debugData,
+            })
           }
         })
     }

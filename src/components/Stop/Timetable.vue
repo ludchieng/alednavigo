@@ -4,7 +4,7 @@
     <pre v-if="debugData.size > 0">{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
     <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
       <div
-        v-for="([direction, trains], i) in Object.entries(visits).sort((a, b) => (a[0]<b[0]?-1:(a[0]>b[0]?1:0)))" :key="i"
+        v-for="[direction, trains] in visits" :key="direction"
         class="timetables"
       >
         <h2>{{ direction }}</h2>
@@ -32,14 +32,14 @@
           <div class="train-details">
             <strong>{{ train.StopName }}</strong><br />
             {{ train.OperatorRef }}<br />
-            ExpectedArrivalTime    : {{ train.ExpectedArrivalTime && train.ExpectedArrivalTime.toLocaleTimeString() }}<br />
-            AimedArrivalTime       : {{ train.AimedArrivalTime && train.AimedArrivalTime.toLocaleTimeString() }}<br />
-            ExpectedDepartureTime  : {{ train.ExpectedDepartureTime && train.ExpectedDepartureTime.toLocaleTimeString() }}<br />
-            AimedDepartureTime     : {{ train.AimedDepartureTime && train.AimedDepartureTime.toLocaleTimeString() }}<br />
+            ExpectedArrivalTime    : {{ train.ExpectedArrivalTime }}<br />
+            AimedArrivalTime       : {{ train.AimedArrivalTime }}<br />
+            ExpectedDepartureTime  : {{ train.ExpectedDepartureTime }}<br />
+            AimedDepartureTime     : {{ train.AimedDepartureTime }}<br />
             ArrivalStatus          : {{ train.ArrivalStatus }}<br />
             DepartureStatus        : {{ train.DepartureStatus }}<br />
-            ArrivalPlatformName    : {{ train.ArrivalPlatformName && train.ArrivalPlatformName.value }}<br />
-            DatedVehicleJourneyRef : {{ train.DatedVehicleJourneyRef[1] }}<br />
+            ArrivalPlatformName    : {{ train.ArrivalPlatformName }}<br />
+            DatedVehicleJourneyRef : {{ train.DatedVehicleJourneyRef }}<br />
             TrainNumbers           : {{ train.TrainNumbers }}<br />
             Order                  : {{ train.Order }}<br />
             VehicleAtStop          : {{ train.VehicleAtStop }}<br />
@@ -54,7 +54,7 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
-import { fetchTimetables } from '@/utils/fetcher'
+import { fetchTimetables, VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
@@ -64,7 +64,7 @@ export default Vue.extend({
   },
   data: () => ({
     fetchAbortController: new AbortController(),
-    visits: {} as { [x: string]: any[] },
+    visits: [] as [string, VisitType[]][],
     debugData: new Set(),
     updatedAt: {} as Date,
     updateCounter: 0,
@@ -85,7 +85,7 @@ export default Vue.extend({
       this.fetch()
     },
     fetch () {
-      fetchTimetables(this.stop.monitoringRefs, this.$route.params.line, this.fetchAbortController.signal)
+      fetchTimetables(this.stop.monitoringRefs, this.fetchAbortController.signal, [this.$route.params.line])
         .then(({ visits, debugData, updatedAt }: any) => {
           this.visits = visits
           this.debugData = debugData
@@ -100,7 +100,7 @@ export default Vue.extend({
   },
   watch: {
     stop () {
-      this.visits = {}
+      this.visits = []
       this.fetchAbortController.abort()
       this.fetchAbortController = new AbortController()
       this.update()
