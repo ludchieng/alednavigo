@@ -1,10 +1,9 @@
-<!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div>
     <pre v-if="debugData.size > 0">{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
-    <div :class="Object.entries(visits).length ? 'fade-show' : 'hide'">
+    <div :class="Object.entries(visitsByDirections).length ? 'fade-show' : 'hide'">
       <div
-        v-for="[direction, trains] in visits" :key="direction"
+        v-for="[direction, visits] in visitsByDirections" :key="direction"
         class="timetables"
       >
         <h2>{{ direction }}</h2>
@@ -17,49 +16,30 @@
             Synchroniser
           </button>
         </div>
-        <details v-for="train in trains" :key="train.id" class="row">
-          <summary class="train">
-            <div class="train-code">
-              {{ train.journeyCode }}
-            </div>
-            <div class="train-time">
-              {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
-            </div>
-            <div class="train-destination">
-              {{ train.destination }}
-            </div>
-          </summary>
-          <div class="train-details">
-            line            : {{ train.line }}<br />
-            trainNumber     : {{ train.trainNumber }}<br />
-            arrivalTime     : {{ train.arrivalTime }}<br />
-            departureTime   : {{ train.departureTime }}<br />
-            arrivalStatus   : {{ train.arrivalStatus }}<br />
-            departureStatus : {{ train.departureStatus }}<br />
-            plateform       : {{ train.plateform }}<br />
-            nonStopPassage  : {{ train.nonStopPassage   }}<br />
-          </div>
-        </details>
+        <TrainVisits :visits="visits" />
       </div>
     </div>
-
   </div>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import TrainVisits from '@/components/Stop/Timetable/Visits.vue'
 import { StopType } from '@/utils/parser'
 import { fetchTimetables, VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
   name: 'StopTimetable',
+  components: {
+    TrainVisits,
+  },
   props: {
     stop: {} as PropType<StopType>,
   },
   data: () => ({
     fetchAbortController: new AbortController(),
-    visits: [] as [string, VisitType[]][],
+    visitsByDirections: [] as [string, VisitType[]][],
     debugData: new Set(),
     updatedAt: {} as Date,
     updateCounter: 0,
@@ -82,7 +62,7 @@ export default Vue.extend({
     fetch () {
       fetchTimetables(this.stop.monitoringRefs, this.fetchAbortController.signal, [this.$route.params.line])
         .then(({ visits, debugData, updatedAt }: any) => {
-          this.visits = visits
+          this.visitsByDirections = visits
           this.debugData = debugData
           this.updatedAt = updatedAt
         })
@@ -95,7 +75,7 @@ export default Vue.extend({
   },
   watch: {
     stop () {
-      this.visits = []
+      this.visitsByDirections = []
       this.fetchAbortController.abort()
       this.fetchAbortController = new AbortController()
       this.update()
@@ -118,55 +98,6 @@ pre {
 
 h2 {
   margin: 0;
-}
-
-.row {
-  margin: 0 -1rem;
-}
-
-.train {
-  display: flex;
-  min-height: 2.8rem;
-  align-items: center;
-}
-
-.row:nth-child(even) {
-  background-color: #ededed;
-}
-
-.train-code {
-  padding: 0.3rem 0.5rem 0.3rem 1rem;
-  margin-right: 0.5rem;
-  max-width: 2.4rem;
-  min-width: 2.4rem; /* Prevents weird shrink */
-  background: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #555;
-  border-radius: 0 0.2rem 0.2rem 0;
-  overflow-x: hidden;
-}
-
-.train-time {
-  background-color: #202b3b;
-  color: #ffc700;
-  font-size: 1.2rem;
-  font-weight: 600;
-  min-width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 0.3rem;
-  line-height: 2.2rem;
-  text-align: center;
-}
-
-.train-destination {
-  padding: 0.4rem 0.4rem 0.4rem 0.5rem;
-}
-
-.train-details {
-  padding: 0.2rem 0 1rem 1rem;
-  font-family: monospace;
-  overflow-x: auto;
 }
 
 .sync {
