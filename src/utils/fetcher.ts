@@ -4,6 +4,7 @@ export type VisitType = {
   id: string,
   lineRef: string,
   line: string,
+  operator: string,
 
   destination: string,
 
@@ -18,6 +19,7 @@ export type VisitType = {
   departureTime: Date,
   departureStatus: string,
   nonStopPassage: boolean,
+  passageTime?: Date,
 }
 
 export const fetchTimetables = async (
@@ -100,12 +102,12 @@ const formatData = (visit: any) => {
     journeyCode: mvj?.JourneyNote?.[0]?.value,
     trainNumber: mvj?.TrainNumbers?.TrainNumberRef?.[0]?.value,
 
-    time: new Date(mvjmc?.ExpectedDepartureTime) || new Date(mvjmc?.AimedDepartureTime),
+    time: new Date(mvjmc?.ExpectedDepartureTime),
 
     plateform: mvjmc?.ArrivalPlatformName?.value,
-    arrivalTime: mvjmc?.ExpectedArrivalTime && new Date(mvjmc.ExpectedArrivalTime)?.toLocaleTimeString(),
+    arrivalTime: mvjmc?.ExpectedArrivalTime && new Date(mvjmc.ExpectedArrivalTime),
     arrivalStatus: mvjmc?.ArrivalStatus,
-    departureTime: mvjmc?.ExpectedDepartureTime && new Date(mvjmc.ExpectedDepartureTime)?.toLocaleTimeString(),
+    departureTime: mvjmc?.ExpectedDepartureTime && new Date(mvjmc.ExpectedDepartureTime),
     departureStatus: mvjmc?.DepartureStatus,
     nonStopPassage: false,
 
@@ -119,9 +121,11 @@ const formatDataSNCF = (visit: any) => {
   const mvjmc = mvj?.MonitoredCall
   const trainNumber = mvj?.FramedVehicleJourneyRef?.DatedVehicleJourneyRef?.match(/::(.*)_(:?.*):/)?.[1]
   const nonStopPassage = new Date(mvjmc?.ExpectedArrivalTime).valueOf() - new Date(mvjmc?.ExpectedDepartureTime).valueOf() === 0
+  const passageTime = mvjmc?.ExpectedDepartureTime && new Date(mvjmc.ExpectedDepartureTime)
   return {
+    operator: 'SNCF',
     ...(trainNumber && { trainNumber }),
-    ...(nonStopPassage && { nonStopPassage }),
+    ...(nonStopPassage && passageTime && { nonStopPassage, passageTime }),
   }
 }
 
@@ -129,6 +133,7 @@ const formatDataRATP = (visit: any) => {
   const mvj = visit?.MonitoredVehicleJourney
   const trainNumber = mvj?.FramedVehicleJourneyRef?.DatedVehicleJourneyRef?.match(/::RATP\.(.*):/)?.[1]
   return {
+    operator: 'RATP',
     ...(trainNumber && { trainNumber }),
   }
 }
