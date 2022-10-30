@@ -17,10 +17,10 @@
             Synchroniser
           </button>
         </div>
-        <details v-for="train in trains" :key="train.ItemIdentifier" class="row">
+        <details v-for="train in trains" :key="train.id" class="row">
           <summary class="train">
             <div class="train-code">
-              {{ train.code }}
+              {{ train.journeyCode }}
             </div>
             <div class="train-time">
               {{ ((train.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
@@ -30,19 +30,14 @@
             </div>
           </summary>
           <div class="train-details">
-            <strong>{{ train.StopName }}</strong><br />
-            {{ train.OperatorRef }}<br />
-            ExpectedArrivalTime    : {{ train.ExpectedArrivalTime }}<br />
-            AimedArrivalTime       : {{ train.AimedArrivalTime }}<br />
-            ExpectedDepartureTime  : {{ train.ExpectedDepartureTime }}<br />
-            AimedDepartureTime     : {{ train.AimedDepartureTime }}<br />
-            ArrivalStatus          : {{ train.ArrivalStatus }}<br />
-            DepartureStatus        : {{ train.DepartureStatus }}<br />
-            ArrivalPlatformName    : {{ train.ArrivalPlatformName }}<br />
-            DatedVehicleJourneyRef : {{ train.DatedVehicleJourneyRef }}<br />
-            TrainNumbers           : {{ train.TrainNumbers }}<br />
-            Order                  : {{ train.Order }}<br />
-            VehicleAtStop          : {{ train.VehicleAtStop }}<br />
+            line            : {{ train.line }}<br />
+            trainNumber     : {{ train.trainNumber }}<br />
+            arrivalTime     : {{ train.arrivalTime }}<br />
+            departureTime   : {{ train.departureTime }}<br />
+            arrivalStatus   : {{ train.arrivalStatus }}<br />
+            departureStatus : {{ train.departureStatus }}<br />
+            plateform       : {{ train.plateform }}<br />
+            nonStopPassage  : {{ train.nonStopPassage   }}<br />
           </div>
         </details>
       </div>

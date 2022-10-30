@@ -1,23 +1,23 @@
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export type VisitType = {
-  code: string,
-  time: Date,
+  id: string,
+  lineRef: string,
+  line: string,
+
   destination: string,
-  StopName: string,
-  OperatorRef: string,
-  ItemIdentifier: string,
-  ExpectedArrivalTime: Date,
-  AimedArrivalTime: Date,
-  ExpectedDepartureTime: Date,
-  AimedDepartureTime: Date,
-  ArrivalStatus: string,
-  DepartureStatus: string,
-  ArrivalPlatformName: string,
-  DatedVehicleJourneyRef: string,
-  TrainNumbers: string,
-  Order: string,
-  VehicleAtStop: string,
+
+  journeyCode: string,
+  trainNumber: string,
+
+  time: Date,
+
+  plateform: string,
+  arrivalTime: Date,
+  arrivalStatus: string,
+  departureTime: Date,
+  departureStatus: string,
+  nonStopPassage: boolean,
 }
 
 export const fetchTimetables = async (
@@ -60,30 +60,8 @@ export const fetchTimetables = async (
                   debugData.add(`${stop} (${line})`)
                 }
 
-                visit = {
-                  lineRef,
-                  line: getLinesByRef()[lineRef] ? getLinesByRef()[lineRef].slugName : '',
-                  destination: visit.MonitoredVehicleJourney.DestinationName[0].value,
-                  code: visit.MonitoredVehicleJourney.JourneyNote ? visit.MonitoredVehicleJourney.JourneyNote[0].value : '',
-                  time: new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime) ||
-                    new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTime),
+                visit = formatData(visit)
 
-                  ItemIdentifier: visit.ItemIdentifier,
-                  OperatorRef: visit.MonitoredVehicleJourney.OperatorRef.value,
-                  StopName: visit.MonitoredVehicleJourney.MonitoredCall.StopPointName[0].value,
-                  ArrivalStatus: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalStatus,
-                  ExpectedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime).toLocaleTimeString(),
-                  AimedArrivalTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedArrivalTimeTime).toLocaleTimeString(),
-                  DepartureStatus: visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus && visit.MonitoredVehicleJourney.MonitoredCall.DepartureStatus,
-                  ExpectedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime).toLocaleTimeString(),
-                  AimedDepartureTime: visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime && new Date(visit.MonitoredVehicleJourney.MonitoredCall.AimedDepartureTimeTime).toLocaleTimeString(),
-
-                  ArrivalPlatformName: visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName && visit.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName.value,
-                  DatedVehicleJourneyRef: visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/) && visit.MonitoredVehicleJourney.FramedVehicleJourneyRef.DatedVehicleJourneyRef.match(/::(.*):/)[1],
-                  TrainNumbers: visit.MonitoredVehicleJourney.TrainNumbers && visit.MonitoredVehicleJourney.TrainNumbers.TrainNumberRef[0].value,
-                  Order: visit.MonitoredVehicleJourney.MonitoredCall.Order,
-                  VehicleAtStop: visit.MonitoredVehicleJourney.MonitoredCall.VehicleAtStop,
-                }
                 if (filterBylines.length > 0 && !filterBylines.includes(visit.line)) {
                   return acc
                 }
@@ -105,4 +83,52 @@ export const fetchTimetables = async (
         })
     }
   })
+}
+
+const formatData = (visit: any) => {
+  const mvj = visit?.MonitoredVehicleJourney
+  const mvjmc = mvj?.MonitoredCall
+  const lineRef = mvj?.LineRef?.value?.match(/:(C[0-9]+):/)?.[1]
+
+  return {
+    id: visit?.ItemIdentifier,
+    lineRef,
+    line: getLinesByRef()?.[lineRef]?.slugName,
+
+    destination: mvj?.DestinationName?.[0]?.value,
+
+    journeyCode: mvj?.JourneyNote?.[0]?.value,
+    trainNumber: mvj?.TrainNumbers?.TrainNumberRef?.[0]?.value,
+
+    time: new Date(mvjmc?.ExpectedDepartureTime) || new Date(mvjmc?.AimedDepartureTime),
+
+    plateform: mvjmc?.ArrivalPlatformName?.value,
+    arrivalTime: mvjmc?.ExpectedArrivalTime && new Date(mvjmc.ExpectedArrivalTime)?.toLocaleTimeString(),
+    arrivalStatus: mvjmc?.ArrivalStatus,
+    departureTime: mvjmc?.ExpectedDepartureTime && new Date(mvjmc.ExpectedDepartureTime)?.toLocaleTimeString(),
+    departureStatus: mvjmc?.DepartureStatus,
+    nonStopPassage: false,
+
+    ...(mvj?.OperatorRef?.value?.indexOf('SNCF') !== -1 && formatDataSNCF(visit)),
+    ...(mvj?.OperatorRef?.value?.indexOf('RATP') !== -1 && formatDataRATP(visit)),
+  }
+}
+
+const formatDataSNCF = (visit: any) => {
+  const mvj = visit?.MonitoredVehicleJourney
+  const mvjmc = mvj?.MonitoredCall
+  const trainNumber = mvj?.FramedVehicleJourneyRef?.DatedVehicleJourneyRef?.match(/::(.*)_(:?.*):/)?.[1]
+  const nonStopPassage = new Date(mvjmc?.ExpectedArrivalTime).valueOf() - new Date(mvjmc?.ExpectedDepartureTime).valueOf() === 0
+  return {
+    ...(trainNumber && { trainNumber }),
+    ...(nonStopPassage && { nonStopPassage }),
+  }
+}
+
+const formatDataRATP = (visit: any) => {
+  const mvj = visit?.MonitoredVehicleJourney
+  const trainNumber = mvj?.FramedVehicleJourneyRef?.DatedVehicleJourneyRef?.match(/::RATP\.(.*):/)?.[1]
+  return {
+    ...(trainNumber && { trainNumber }),
+  }
 }
