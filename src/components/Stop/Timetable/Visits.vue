@@ -29,12 +29,7 @@
         <div class="visit-details-times">
           <div v-if="visit.arrivalTime">
             <div class="visit-details-label">Arrivée</div>
-            <div>
-              <span class="datetime-hh">{{ visit.arrivalTime?.getHours().toString() }}</span>
-              <span class="datetime-separator">:</span>
-              <span class="datetime-mm">{{ visit.arrivalTime?.getMinutes().toString().padStart(2, '0') }}</span>
-              <span class="datetime-ss">{{ visit.arrivalTime?.getSeconds().toString().padStart(2, '0') }}</span>
-            </div>
+            <TimeClock :datetime="toDateTime(visit.arrivalTime)" />
             <div v-if="visit.arrivalStatus !== 'onTime'" class="visit-details-status">{{ visit.arrivalStatus }}</div>
           </div>
           <div>
@@ -43,12 +38,7 @@
           </div>
           <div v-if="visit.departureTime">
             <div class="visit-details-label">Départ</div>
-            <div>
-              <span class="datetime-hh">{{ visit.departureTime?.getHours().toString() }}</span>
-              <span class="datetime-separator">:</span>
-              <span class="datetime-mm">{{ visit.departureTime?.getMinutes().toString().padStart(2, '0') }}</span>
-              <span class="datetime-ss">{{ visit.departureTime?.getSeconds().toString().padStart(2, '0') }}</span>
-            </div>
+            <TimeClock :datetime="toDateTime(visit.departureTime)" />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
         </div>
@@ -72,12 +62,7 @@
         <div class="visit-details-times">
           <div>
             <div class="visit-details-label">Passage sans arrêt</div>
-            <div v-if="visit?.passageTime">
-              <span class="datetime-hh datetime-shrouded">{{ visit.passageTime?.getHours().toString() }}</span>
-              <span class="datetime-separator">:</span>
-              <span class="datetime-mm datetime-shrouded">{{ visit.passageTime?.getMinutes().toString().padStart(2, '0') }}</span>
-              <span class="datetime-ss">{{ visit.passageTime?.getSeconds().toString().padStart(2, '0') }}</span>
-            </div>
+            <TimeClock v-if="visit?.passageTime" :datetime="toDateTime(visit.passageTime)" textGray />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
           <div>
@@ -106,19 +91,13 @@
           <div v-if="visit.departureTime" class="visit-details-label">
             Départ
             <span class="visit-details-train-value">
-              <span class="datetime-hh">{{ visit.departureTime?.getHours().toString() }}</span>
-              <span class="datetime-separator">:</span>
-              <span class="datetime-mm">{{ visit.departureTime?.getMinutes().toString().padStart(2, '0') }}</span>
-              <span class="datetime-ss">{{ visit.departureTime?.getSeconds().toString().padStart(2, '0') }}</span>
+              <TimeClock :datetime="toDateTime(visit.departureTime)" />
             </span>
           </div>
           <div v-else class="visit-details-label">
             Arrivée
             <span class="visit-details-train-value">
-              <span class="datetime-hh">{{ visit.arrivalTime?.getHours().toString() }}</span>
-              <span class="datetime-separator">:</span>
-              <span class="datetime-mm">{{ visit.arrivalTime?.getMinutes().toString().padStart(2, '0') }}</span>
-              <span class="datetime-ss">{{ visit.arrivalTime?.getSeconds().toString().padStart(2, '0') }}</span>
+              <TimeClock :datetime="toDateTime(visit.arrivalTime)" />
             </span>
           </div>
           <div v-if="visit.trainNumber" class="visit-details-label">
@@ -136,9 +115,14 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { VisitType } from '@/utils/fetcher'
+import { toDateTime } from '@/utils/datetime'
+import TimeClock from '@/components/TimeClock.vue'
 
 export default Vue.extend({
   name: 'StopTimetableVisits',
+  components: {
+    TimeClock,
+  },
   props: {
     visits: {} as PropType<VisitType[]>,
   },
@@ -153,6 +137,11 @@ export default Vue.extend({
   },
   destroyed () {
     clearInterval(this.updateInterval)
+  },
+  methods: {
+    toDateTime (date: Date) {
+      return toDateTime(date)
+    },
   },
 })
 </script>
@@ -250,24 +239,8 @@ export default Vue.extend({
   color: #3f3f3f;
 }
 
-.datetime-shrouded {
-  color: #777;
-}
-
-.datetime-hh,
-.datetime-mm {
+.datetime {
   font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.datetime-separator {
-  color: #999;
-  font-size: 1.05rem;
-}
-
-.datetime-ss {
-  padding-left: 0.1rem;
-  color: #777;
 }
 
 </style>
