@@ -13,11 +13,10 @@
         <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
       </router-link>
     </div>
-    <div class="datetime">
-      <span class="datetime-hh">{{ datetime.hh }}</span>
-      <span class="datetime-separator">:</span>
-      <span class="datetime-mm">{{ datetime.mm }}</span>
-      <span class="datetime-ss">{{ datetime.ss }}</span>
+    <div class="clock">
+      <div>
+        <TimeClock :datetime="datetime" />
+      </div>
     </div>
   </header>
 </template>
@@ -25,12 +24,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import LineIcon from '@/components/Line/Icon.vue'
+import TimeClock from '@/components/TimeClock.vue'
+import { DateTime } from '@/utils/datetime'
 export default Vue.extend({
   name: 'AppHeader',
-  components: { LineIcon },
+  components: { LineIcon, TimeClock },
   data: () => ({
     clockInterval: 0,
-    datetime: {} as { hh: string, mm: string, ss: string },
+    datetime: {} as DateTime,
   }),
   created () {
     this.clockInterval = setInterval(() => {
@@ -80,23 +81,17 @@ header {
   height: 2rem;
 }
 
-.datetime {
-  padding: 0 0.5rem 0 2.5rem;
+.clock {
+  display: flex;
+  justify-content: end;
+  padding: 0 1rem 0 2.5rem;
+  font-size: 1.3rem;
+}
+
+.clock > div {
+  transform: translateX(0.75rem);
+  min-width: 6.5rem;
   text-align: center;
   line-height: 2rem;
-  font-size: 1.3rem;
-  color: #444;
-  font-weight: 600;
-}
-
-.datetime-separator {
-  color: #999;
-  font-size: 1.2rem;
-}
-
-.datetime-ss {
-  padding-left: 0.1rem;
-  font-size: 1rem;
-  color: #777;
 }
 </style>
