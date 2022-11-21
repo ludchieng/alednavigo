@@ -13,10 +13,11 @@
         </div>
         <div v-else-if="visit.nonStopPassage || !visit.departureTime"
           class="visit-time visit-time-shrouded"
+          :key="`0-${updateCounter}`"
         >
           {{ ((visit.arrivalTime.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
         </div>
-        <div v-else class="visit-time">
+        <div v-else class="visit-time" :key="`1-${updateCounter}`">
           {{ ((visit.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
         </div>
         <div class="visit-destination">
@@ -140,6 +141,18 @@ export default Vue.extend({
   name: 'StopTimetableVisits',
   props: {
     visits: {} as PropType<VisitType[]>,
+  },
+  data: () => ({
+    updateCounter: 0,
+    updateInterval: 0,
+  }),
+  created () {
+    this.updateInterval = setInterval(() => {
+      ++this.updateCounter
+    }, 5000)
+  },
+  destroyed () {
+    clearInterval(this.updateInterval)
   },
 })
 </script>
