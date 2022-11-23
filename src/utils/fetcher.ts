@@ -34,7 +34,7 @@ export const fetchTimetables = async (
   return new Promise((resolve) => {
     for (const mref of mrefs) {
       // TODO Cancel fetch on stop change
-      fetch(`https://idfm-prim.herokuapp.com/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`, {
+      fetch(`${process.env.VUE_APP_API_URL}/stop-monitoring?MonitoringRef=STIF:StopPoint:Q:${mref}:`, {
         ...(abortSignal && { signal: abortSignal }),
       })
         .then(res => {
