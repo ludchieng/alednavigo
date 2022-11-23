@@ -27,7 +27,7 @@ export default Vue.extend({
       })
     }
     // Ping server to wake it up
-    fetch('https://idfm-prim.herokuapp.com/')
+    fetch(process.env.VUE_APP_API_URL)
   },
   watch: {
     '$route.params.tab': {
