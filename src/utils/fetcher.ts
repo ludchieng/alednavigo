@@ -50,7 +50,7 @@ export const fetchTimetables = async (
             ...visits,
             ...(trains.reduce(
               (acc: { [x: string]: [] }, visit: any) => {
-                const dir = visit.MonitoredVehicleJourney.DirectionName
+                const dir = (visit.MonitoredVehicleJourney.DirectionName && visit.MonitoredVehicleJourney.DirectionName.length > 0)
                   ? visit.MonitoredVehicleJourney.DirectionName[0].value
                   : ''
 
