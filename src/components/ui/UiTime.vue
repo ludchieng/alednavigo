@@ -1,12 +1,12 @@
 <template>
     <span
-      v-if="datetime.hh && datetime.mm && datetime.ss"
+      v-if="time.hh && time.mm && time.ss"
       class="datetime"
     >
-      <span :class="{ 'text-gray': textGray }">{{ datetime.hh }}</span>
+      <span :class="{ 'text-gray': textGray }">{{ time.hh }}</span>
       <span class="separator">:</span>
-      <span :class="{ 'text-gray': textGray }">{{ datetime.mm }}</span>
-      <span class="seconds">{{ datetime.ss }}</span>
+      <span :class="{ 'text-gray': textGray }">{{ time.mm }}</span>
+      <span class="seconds">{{ time.ss }}</span>
     </span>
 </template>
 
@@ -16,7 +16,7 @@ import Vue, { PropType } from 'vue'
 export default Vue.extend({
   name: 'UiTime',
   props: {
-    datetime: {} as PropType<Time>,
+    time: {} as PropType<Time>,
     textGray: Boolean,
   },
 })

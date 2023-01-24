@@ -24,6 +24,7 @@ export default Vue.extend({
 <style scoped>
 .schedules-details-row {
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .label {

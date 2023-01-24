@@ -16,7 +16,7 @@
             Synchroniser
           </button>
         </div>
-        <TrainVisits :visits="visits" />
+        <StopSchedulesVisits :visits="visits" />
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import TrainVisits from '@/components/Stop/StopSchedulesVisits.vue'
+import StopSchedulesVisits from '@/components/Stop/StopSchedulesVisits.vue'
 import { StopType } from '@/utils/parser'
 import { fetchTimetables, VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
@@ -32,7 +32,7 @@ import { getLinesByRef } from '@/utils/localstore/lines'
 export default Vue.extend({
   name: 'StopSchedules',
   components: {
-    TrainVisits,
+    StopSchedulesVisits,
   },
   props: {
     stop: {} as PropType<StopType>,

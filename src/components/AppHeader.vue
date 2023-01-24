@@ -19,7 +19,7 @@
     </div>
     <div class="clock">
       <div>
-        <DesignTime :datetime="datetime" />
+        <DesignTime :time="time" />
       </div>
     </div>
   </header>
@@ -38,12 +38,12 @@ export default Vue.extend({
   },
   data: () => ({
     clockInterval: 0,
-    datetime: {} as Time,
+    time: {} as Time,
   }),
   created () {
     this.clockInterval = setInterval(() => {
       const t = new Date()
-      this.datetime = {
+      this.time = {
         hh: t.getHours().toString(),
         mm: t.getMinutes().toString().padStart(2, '0'),
         ss: t.getSeconds().toString().padStart(2, '0'),
