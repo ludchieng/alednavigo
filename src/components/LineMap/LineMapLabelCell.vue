@@ -11,15 +11,17 @@
     </div>
   </router-link>
 
-  <span v-else class="label-text">
+  <div v-else class="label-text">
     {{ stopName }}
     <div class="line-connections">
       <img
-        v-for="conn in lineConnections" :key="`${conn.line}/${conn.slugName}`"
+        v-for="conn in lineConnections"
+        :key="`${conn.line}/${conn.slugName}`"
         :src="`/img/lines-icons/colors/${conn.line}.svg`"
+        :alt="`${conn.slugName} ${conn.line}`"
       >
     </div>
-  </span>
+  </div>
 </template>
 
 <script lang="ts">

@@ -2,8 +2,7 @@
   <img
     v-if="lineSlugName"
     :src="`/img/lines-icons/${theme}/${lineSlugName}.svg`"
-    :class="{ 'fade-in': fadeIn, 'hide': fadeIn }"
-    @load="onLoad"
+    :class="{ 'fade-in': fadeIn }"
   />
 </template>
 
@@ -20,19 +19,10 @@ export default Vue.extend({
     },
     theme: String,
   },
-  methods: {
-    onLoad (e: any) {
-      if (this.fadeIn) e.target.className = e.target.className.replace('hide', '')
-    },
-  },
 })
 </script>
 
 <style scoped>
-.hide-fade {
-  opacity: 0;
-}
-
 .fade-in {
   opacity: 1;
   animation: fadeIn 600ms ease;

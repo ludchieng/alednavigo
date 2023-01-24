@@ -33,8 +33,8 @@
             <div v-if="visit.arrivalStatus !== 'onTime'" class="visit-details-status">{{ visit.arrivalStatus }}</div>
           </div>
           <div>
-            <div v-if="visit.plateform" class="visit-details-label">Voie</div>
-            <div>{{ visit.plateform }}</div>
+            <div v-if="visit.platform" class="visit-details-label">Voie</div>
+            <div>{{ visit.platform }}</div>
           </div>
           <div v-if="visit.departureTime">
             <div class="visit-details-label">Départ</div>
@@ -66,8 +66,8 @@
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
           <div>
-            <div v-if="visit.plateform" class="visit-details-label">Voie</div>
-            <div>{{ visit.plateform }}</div>
+            <div v-if="visit.platform" class="visit-details-label">Voie</div>
+            <div>{{ visit.platform }}</div>
           </div>
         </div>
         <div class="visit-details-train">

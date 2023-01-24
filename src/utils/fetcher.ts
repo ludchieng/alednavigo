@@ -13,7 +13,7 @@ export type VisitType = {
 
   time: Date,
 
-  plateform: string,
+  platform: string,
   arrivalTime: Date,
   arrivalStatus: string,
   departureTime: Date,

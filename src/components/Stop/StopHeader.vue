@@ -36,7 +36,7 @@ export default Vue.extend({
 h1 {
   font-size: 1.5rem;
   display: inline-block;
-  margin: 0.5rem 1rem 0rem 0;
+  margin: 0.5rem 1rem 0 0;
 }
 
 .line-connections {
