@@ -4,7 +4,7 @@
       v-for="category in linesByCategory"
       :key="category.name"
     >
-      <DesignTitle>{{ category.name }}</DesignTitle>
+      <DesignContentTitle>{{ category.name }}</DesignContentTitle>
       <router-link
         v-for="line in category.lines"
         :key="line.slugName"
@@ -26,13 +26,13 @@
 import Vue from 'vue'
 import LineIcon from '@/components/LineIcon.vue'
 import { getLinesByCategory } from '@/utils/localstore/lines'
-import DesignTitle from '@/components/design/DesignTitle.vue'
+import DesignContentTitle from '@/components/design/DesignContentTitle.vue'
 
 export default Vue.extend({
   name: 'TimetablesHubPage',
   components: {
     LineIcon,
-    DesignTitle,
+    DesignContentTitle,
   },
   computed: {
     linesByCategory () {

@@ -1,12 +1,10 @@
 <template>
-  <div class="title">
-    <h1>
-      {{ stop.displayName }}
-    </h1>
-    <span class="line-connections">
-      <router-link v-for="conn in stop.lineConnections"
-        :key="`${conn.line}/${conn.slugName}`"
-        :to="`/timetables/${$route.params.tab}/${conn.line}/${conn.slugName}`"
+  <DesignPageTitle :text="stop.displayName">
+    <div class="line-connections">
+      <router-link
+        v-for="conn in stop.lineConnections"
+       :key="`${conn.line}/${conn.slugName}`"
+       :to="`/timetables/${$route.params.tab}/${conn.line}/${conn.slugName}`"
       >
         <LineIcon
           :lineSlugName="conn.line"
@@ -14,18 +12,22 @@
           size="md"
         />
       </router-link>
-    </span>
-  </div>
+    </div>
+  </DesignPageTitle>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import LineIcon from '@/components/LineIcon.vue'
+import DesignPageTitle from '@/components/design/DesignPageTitle.vue'
 
 export default Vue.extend({
   name: 'StopHeader',
-  components: { LineIcon },
+  components: {
+    LineIcon,
+    DesignPageTitle,
+  },
   props: {
     stop: {} as PropType<StopType>,
   },
@@ -33,16 +35,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.title {
-  min-height: 2.8rem;
-}
-
-h1 {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin: 0.5rem 1rem 0 0;
-}
-
 .line-connections {
   display: inline-block;
 }
