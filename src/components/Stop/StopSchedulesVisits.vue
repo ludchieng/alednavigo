@@ -9,26 +9,10 @@
         <div class="visit-code">
           {{ visit.journeyCode }}
         </div>
-        <div
-          v-if="visit.departureStatus === 'cancelled' || visit.arrivalStatus === 'cancelled'"
-          class="visit-time visit-time-cancelled"
-        >
-          &times;
-        </div>
-        <div
-          v-else-if="visit.nonStopPassage || !visit.departureTime"
-          :key="`0-${updateCounter}`"
-          class="visit-time visit-time-shrouded"
-        >
-          {{ ((visit.arrivalTime.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
-        </div>
-        <div
-          v-else
-          :key="`1-${updateCounter}`"
-          class="visit-time"
-        >
-          {{ ((visit.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
-        </div>
+        <StopSchedulesVisitTime
+          :key="updateCounter"
+          :visit="visit"
+        />
         <div class="visit-destination">
           {{ visit.destination }}
         </div>
@@ -97,10 +81,12 @@ import UiSchedulesDetailsRow from '@/components/ui/Schedules/UiSchedulesDetailsR
 import StopSchedulesDetailsTimes from '@/components/Stop/StopSchedulesDetailsTimes.vue'
 import StopSchedulesDetailsTimesNonStopPassage from '@/components/Stop/StopSchedulesDetailsTimesNonStopPassage.vue'
 import { VisitType } from '@/utils/fetcher'
+import StopSchedulesVisitTime from '@/components/Stop/StopSchedulesVisitTime.vue'
 
 export default Vue.extend({
   name: 'StopSchedulesVisits',
   components: {
+    StopSchedulesVisitTime,
     UiSchedulesDetailsRow,
     StopSchedulesDetailsTimes,
     StopSchedulesDetailsTimesNonStopPassage,
@@ -150,32 +136,6 @@ export default Vue.extend({
   color: #555;
   border-radius: 0 0.2rem 0.2rem 0;
   overflow-x: hidden;
-}
-
-.visit-time {
-  background-color: #202b3b;
-  color: #ffc700;
-  font-size: 1.2rem;
-  font-weight: 600;
-  min-width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 0.3rem;
-  line-height: 2.2rem;
-  text-align: center;
-}
-
-.visit-time-shrouded {
-  background-color: #C2C2C2;
-  color: #444;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.visit-time-cancelled {
-  background-color: #E59999;
-  color: #a03434;
-  font-size: 1.5rem;
-  font-weight: 500;
 }
 
 .visit-destination {
