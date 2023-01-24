@@ -1,28 +1,28 @@
   	@ 	#  	monitoringRefs 	isTerminus 	slugName                     	displayName                    	prevStops                    	nextStops                    	lineConnections
-^ 	@ 	 1 	               	           	                             	                               	                             	                             	
-* 	@ 	 2 	22101;463193   	         1 	la-defense                   	La Défense                     	                             	esplanade-de-la-defense      	tramway-2;rer-a;transilien-l;transilien-U
-* 	@ 	 3 	463170;22102   	         0 	esplanade-de-la-defense      	Esplanade de la Défense        	la-defense                   	pont-de-neuilly              	
-* 	@ 	 4 	463044;22099   	         0 	pont-de-neuilly              	Pont de Neuilly                	esplanade-de-la-defense      	les-sablons                  	
-* 	@ 	 5 	22100;463217   	         0 	les-sablons                  	Les Sablons                    	pont-de-neuilly              	porte-maillot                	
+^ 	@ 	 1
+* 	@ 	 2 	22101;463193   	         1 	la-defense                   	La Défense                     	                             	esplanade-de-la-defense      	tramway-2;rer-a;transilien-l;transilien-u
+* 	@ 	 3 	463170;22102   	         0 	esplanade-de-la-defense      	Esplanade de la Défense        	la-defense                   	pont-de-neuilly
+* 	@ 	 4 	463044;22099   	         0 	pont-de-neuilly              	Pont de Neuilly                	esplanade-de-la-defense      	les-sablons
+* 	@ 	 5 	22100;463217   	         0 	les-sablons                  	Les Sablons                    	pont-de-neuilly              	porte-maillot
 * 	@ 	 6 	463257;22078   	         1 	porte-maillot                	Porte Maillot                  	les-sablons                  	argentine                    	rer-c/neuilly-porte-maillot
-* 	@ 	 7 	463121;22088   	         0 	argentine                    	Argentine                      	porte-maillot                	charles-de-gaulle-etoile     	
+* 	@ 	 7 	463121;22088   	         0 	argentine                    	Argentine                      	porte-maillot                	charles-de-gaulle-etoile
 * 	@ 	 8 	22086;463013   	         0 	charles-de-gaulle-etoile     	Charles de Gaulle – Étoile     	argentine                    	george-v                     	metro-2;metro-6;rer-a
-* 	@ 	 9 	22084;463185   	         0 	george-v                     	George V                       	charles-de-gaulle-etoile     	franklin-d-roosevelt         	
+* 	@ 	 9 	22084;463185   	         0 	george-v                     	George V                       	charles-de-gaulle-etoile     	franklin-d-roosevelt
 * 	@ 	10 	22082;463181   	         0 	franklin-d-roosevelt         	Franklin D. Roosevelt          	george-v                     	champs-elysees-clemenceau    	metro-9
 * 	@ 	11 	22090;463010   	         0 	champs-elysees-clemenceau    	Champs-Élysées – Clemenceau    	franklin-d-roosevelt         	concorde                     	metro-13
 * 	@ 	12 	22085;463150   	         0 	concorde                     	Concorde                       	champs-elysees-clemenceau    	tuileries                    	metro-8;metro-12
-* 	@ 	13 	463041;22075   	         0 	tuileries                    	Tuileries                      	concorde                     	palais-royal-musee-du-louvre 	
+* 	@ 	13 	463041;22075   	         0 	tuileries                    	Tuileries                      	concorde                     	palais-royal-musee-du-louvre
 * 	@ 	14 	22079;463227   	         0 	palais-royal-musee-du-louvre 	Palais-Royal – Musée du Louvre 	tuileries                    	louvre-rivoli                	metro-7
-* 	@ 	15 	22081;463218   	         0 	louvre-rivoli                	Louvre – Rivoli                	palais-royal-musee-du-louvre 	chatelet                     	
+* 	@ 	15 	22081;463218   	         0 	louvre-rivoli                	Louvre – Rivoli                	palais-royal-musee-du-louvre 	chatelet
 * 	@ 	16 	22087;463160   	         0 	chatelet                     	Châtelet                       	louvre-rivoli                	hotel-de-ville               	metro-4;metro-7;metro-11;metro-14;rer-a/chatelet-les-halles;rer-b/chatelet-les-halles;rer-d/chatelet-les-halles
 * 	@ 	17 	463080;22091   	         0 	hotel-de-ville               	Hôtel de Ville                 	chatelet                     	saint-paul                   	metro-11
-* 	@ 	18 	22074;463307   	         0 	saint-paul                   	Saint-Paul                     	hotel-de-ville               	bastille                     	
+* 	@ 	18 	22074;463307   	         0 	saint-paul                   	Saint-Paul                     	hotel-de-ville               	bastille
 * 	@ 	19 	463019;22089   	         0 	bastille                     	Bastille                       	saint-paul                   	gare-de-lyon                 	metro-5;metro-8
 * 	@ 	20 	22083;463197   	         1 	gare-de-lyon                 	Gare de Lyon                   	bastille                     	reuilly-diderot              	metro-14;rer-a;rer-d/paris-lyon;transilien-r/paris-lyon
 * 	@ 	21 	22076;463294   	         0 	reuilly-diderot              	Reuilly – Diderot              	gare-de-lyon                 	nation                       	metro-8
 * 	@ 	22 	22080;462943   	         0 	nation                       	Nation                         	reuilly-diderot              	porte-de-vincennes           	metro-2;metro-6;metro-9;rer-a
 * 	@ 	23 	22077;463012   	         0 	porte-de-vincennes           	Porte de Vincennes             	nation                       	saint-mande                  	tramway-3a;tramway-3b
-* 	@ 	24 	22103;463040   	         0 	saint-mande                  	Saint-Mandé                    	porte-de-vincennes           	berault                      	
-* 	@ 	25 	22105;463130   	         0 	berault                      	Bérault                        	saint-mande                  	chateau-de-vincennes         	
+* 	@ 	24 	22103;463040   	         0 	saint-mande                  	Saint-Mandé                    	porte-de-vincennes           	berault
+* 	@ 	25 	22105;463130   	         0 	berault                      	Bérault                        	saint-mande                  	chateau-de-vincennes
 * 	@ 	26 	22104;463149   	         1 	chateau-de-vincennes         	Château de Vincennes           	berault                      	                             	rer-a/vincennes
-v 	@ 	27 	               	           	                             	                               	                             	                             	
+v 	@ 	27
