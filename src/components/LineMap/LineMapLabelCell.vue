@@ -6,7 +6,7 @@
     {{ stopName }}
     <div class="line-connections">
       <LineIcon v-for="conn in lineConnections" :key="`${conn.line}/${conn.slugName}`"
-        :lineSlugName="conn.line" theme="colors" fadeIn
+        :lineSlugName="conn.line" color="colors" fadeIn
       />
     </div>
   </router-link>

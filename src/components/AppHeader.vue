@@ -5,7 +5,7 @@
         class="icon-line"
         :to="`/timetables/${ $route.params.tab }/${ $route.params.line }`"
       >
-      <LineIcon :lineSlugName="$route.params.line" theme="colors" />
+      <LineIcon :lineSlugName="$route.params.line" color="colors" />
       </router-link>
     </div>
     <div>

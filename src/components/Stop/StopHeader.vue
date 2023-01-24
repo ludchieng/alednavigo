@@ -8,7 +8,7 @@
         :key="`${conn.line}/${conn.slugName}`"
         :to="`/timetables/${$route.params.tab}/${conn.line}/${conn.slugName}`"
       >
-        <LineIcon :lineSlugName="conn.line" theme="dark" />
+        <LineIcon :lineSlugName="conn.line" color="dark" />
       </router-link>
     </span>
   </div>

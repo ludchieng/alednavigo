@@ -6,7 +6,7 @@
       <router-link v-for="line in category.lines" :key="line.slugName"
         class="icon-line" :to="`/timetables/${$route.params.tab}/${line.slugName}`"
       >
-        <LineIcon :lineSlugName="line.slugName" theme="dark" fadeIn />
+        <LineIcon :lineSlugName="line.slugName" color="dark" fadeIn />
       </router-link>
     </div>
   </div>

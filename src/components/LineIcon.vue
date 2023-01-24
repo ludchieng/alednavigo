@@ -1,39 +1,30 @@
 <template>
-  <img
+  <DesignIcon
     v-if="lineSlugName"
-    :src="`/img/lines-icons/${theme}/${lineSlugName}.svg`"
-    :class="{ 'fade-in': fadeIn }"
+    :src="`/img/lines-icons/${color}/${lineSlugName}.svg`"
+    :alt="`${lineSlugName}`"
   />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import DesignIcon from '@/components/design/DesignIcon.vue'
 
 export default Vue.extend({
   name: 'LineIcon',
+  components: {
+    DesignIcon,
+  },
   props: {
     lineSlugName: String,
     fadeIn: {
       type: Boolean,
       default: false,
     },
-    theme: String,
+    color: String,
   },
 })
 </script>
 
 <style scoped>
-.fade-in {
-  opacity: 1;
-  animation: fadeIn 600ms ease;
-}
-
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
 </style>

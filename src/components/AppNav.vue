@@ -10,7 +10,7 @@
           >
             <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
               <span class="tab-label">
-                <LineIcon :lineSlugName="line" :theme="tabIndex() === i ? 'dark' : 'light'" />
+                <LineIcon :lineSlugName="line" :color="tabIndex() === i ? 'dark' : 'light'" />
                 <span v-if="stop" class="tab-label-text">
                   {{ getStop(line, stop).displayName }}
                 </span>
@@ -38,7 +38,7 @@
             >
               <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
                 <span class="tab-label">
-                  <LineIcon :lineSlugName="line" :theme="tabIndex() === i ? 'dark' : 'light'" />
+                  <LineIcon :lineSlugName="line" :color="tabIndex() === i ? 'dark' : 'light'" />
                   <span v-if="stop" class="tab-label-text">
                     {{ getStop(line, stop).displayName }}
                   </span>
