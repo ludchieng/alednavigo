@@ -9,7 +9,7 @@
       </router-link>
     </div>
     <div>
-      <router-link class="logo" :to="`/timetables/${ $route.params.tab }`">
+      <router-link class="logo" :to="`/timetables/${ $route.params.tab || '' }`">
         <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
       </router-link>
     </div>
