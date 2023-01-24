@@ -1,33 +1,27 @@
 <template>
-  <div class="prev-next-stops">
-    <ul>
-      <li v-for="(prevStop, i) in stop.prevStops.slice().reverse()" :key="i" class="prev-stops">
-        <router-link :to="`/timetables/${$route.params.tab}/${$route.params.line}/${prevStop}`">
-          <span>
-            {{ getStop($route.params.line, prevStop).displayName }}
-          </span>
-        </router-link>
-      </li>
-    </ul>
-    <ul>
-      <li v-for="(nextStop, i) in stop.nextStops.slice().reverse()" :key="i" class="next-stops">
-        <router-link :to="`/timetables/${$route.params.tab}/${$route.params.line}/${nextStop}`">
-          <span>
-            {{ getStop($route.params.line, nextStop).displayName }}
-          </span>
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <DesignPrevNext
+    :prevItems="stop.prevStops.slice().reverse().map(prevStop => ({
+      label: getStop($route.params.line, prevStop).displayName,
+      link: `/timetables/${$route.params.tab}/${$route.params.line}/${prevStop}`,
+    }))"
+    :nextItems="stop.nextStops.slice().reverse().map(nextStop => ({
+      label: getStop($route.params.line, nextStop).displayName,
+      link: `/timetables/${$route.params.tab}/${$route.params.line}/${nextStop}`,
+    }))"
+  />
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { getStop } from '@/utils/localstore/stops'
+import DesignPrevNext from '@/components/design/DesignPrevNext.vue'
 
 export default Vue.extend({
   name: 'StopPrevNextStops',
+  components: {
+    DesignPrevNext,
+  },
   props: {
     stop: {} as PropType<StopType>,
   },
@@ -38,39 +32,4 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.prev-next-stops {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.prev-next-stops ul {
-  width: 49%;
-}
-
-.prev-next-stops li a {
-  display: flex;
-  padding: 0.8rem 0;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  background-color: #dfdfdf;
-  border-radius: 0.4rem;
-  text-align: center;
-}
-.prev-next-stops a span {
-  display: inline-block;
-  width: 100%;
-  padding: 0.1rem 0.3rem 0 0.3rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.prev-stops a::before {
-  content: '〈';
-}
-.next-stops a::after {
-  content: '〉';
-}
 </style>
