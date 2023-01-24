@@ -4,6 +4,7 @@
     :src="`/img/lines-icons/${color}/${lineSlugName}.svg`"
     :alt="`${lineSlugName}`"
     :size="size"
+    :fadeIn="fadeIn"
   />
 </template>
 

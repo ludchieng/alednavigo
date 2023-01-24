@@ -31,6 +31,11 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+img {
+  /* Prevents alt text to display on image load */
+  color: transparent;
+}
+
 .size-sm {
   width: 1.35rem;
   height: 1.35rem;
