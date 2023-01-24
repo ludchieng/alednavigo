@@ -17,10 +17,3 @@ registerRoute(
     cacheName: 'img-mui',
   }),
 )
-
-registerRoute(
-  ({ url }) => url.pathname.startsWith('/schemas/'),
-  new CacheFirst({
-    cacheName: 'schemas',
-  }),
-)
