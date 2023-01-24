@@ -29,7 +29,7 @@
         <div class="visit-details-times">
           <div v-if="visit.arrivalTime">
             <div class="visit-details-label">Arrivée</div>
-            <DesignTime :datetime="toDateTime(visit.arrivalTime)" />
+            <UiTime :datetime="toDateTime(visit.arrivalTime)" />
             <div v-if="visit.arrivalStatus !== 'onTime'" class="visit-details-status">{{ visit.arrivalStatus }}</div>
           </div>
           <div>
@@ -38,23 +38,21 @@
           </div>
           <div v-if="visit.departureTime">
             <div class="visit-details-label">Départ</div>
-            <DesignTime :datetime="toDateTime(visit.departureTime)" />
+            <UiTime :datetime="toDateTime(visit.departureTime)" />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
         </div>
         <div class="visit-details-train">
-          <div v-if="visit.journeyCode" class="visit-details-label">
-            Mission
-            <span class="visit-details-train-value">
-              {{ visit.journeyCode }}
-            </span>
-          </div>
-          <div v-if="visit.trainNumber" class="visit-details-label">
-            Train no.
-            <span class="visit-details-train-value">
-              {{ visit.trainNumber }}
-            </span>
-          </div>
+          <UiSchedulesDetailsRow
+            v-if="visit.journeyCode"
+            label="Mission"
+            :value="visit.journeyCode"
+          />
+          <UiSchedulesDetailsRow
+            v-if="visit.trainNumber"
+            label="Train no."
+            :value="visit.trainNumber"
+          />
         </div>
       </div>
 
@@ -62,7 +60,7 @@
         <div class="visit-details-times">
           <div>
             <div class="visit-details-label">Passage sans arrêt</div>
-            <DesignTime v-if="visit?.passageTime" :datetime="toDateTime(visit.passageTime)" textGray />
+            <UiTime v-if="visit?.passageTime" :datetime="toDateTime(visit.passageTime)" textGray />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
           <div>
@@ -71,18 +69,16 @@
           </div>
         </div>
         <div class="visit-details-train">
-          <div v-if="visit.journeyCode" class="visit-details-label">
-            Mission
-            <span class="visit-details-train-value">
-              {{ visit.journeyCode }}
-            </span>
-          </div>
-          <div v-if="visit.trainNumber" class="visit-details-label">
-            Train no.
-            <span class="visit-details-train-value">
-              {{ visit.trainNumber }}
-            </span>
-          </div>
+          <UiSchedulesDetailsRow
+            v-if="visit.journeyCode"
+            label="Mission"
+            :value="visit.journeyCode"
+          />
+          <UiSchedulesDetailsRow
+            v-if="visit.trainNumber"
+            label="Train no."
+            :value="visit.trainNumber"
+          />
         </div>
       </div>
 
@@ -91,21 +87,25 @@
           <div v-if="visit.departureTime" class="visit-details-label">
             Départ
             <span class="visit-details-train-value">
-              <DesignTime :datetime="toDateTime(visit.departureTime)" />
+              <UiTime :datetime="toDateTime(visit.departureTime)" />
             </span>
           </div>
           <div v-else class="visit-details-label">
             Arrivée
             <span class="visit-details-train-value">
-              <DesignTime :datetime="toDateTime(visit.arrivalTime)" />
+              <UiTime :datetime="toDateTime(visit.arrivalTime)" />
             </span>
           </div>
-          <div v-if="visit.trainNumber" class="visit-details-label">
-            Mission
-            <span class="visit-details-train-value">
-              {{ visit.trainNumber }}
-            </span>
-          </div>
+          <UiSchedulesDetailsRow
+            v-if="visit.journeyCode"
+            label="Mission"
+            :value="visit.journeyCode"
+          />
+          <UiSchedulesDetailsRow
+            v-if="visit.trainNumber"
+            label="Train no."
+            :value="visit.trainNumber"
+          />
         </div>
       </div>
     </details>
@@ -116,12 +116,14 @@
 import Vue, { PropType } from 'vue'
 import { VisitType } from '@/utils/fetcher'
 import { toTime } from '@/utils/time'
-import DesignTime from '@/components/ui/UiTime.vue'
+import UiTime from '@/components/ui/UiTime.vue'
+import UiSchedulesDetailsRow from '@/components/ui/Schedules/UiSchedulesDetailsRow.vue'
 
 export default Vue.extend({
   name: 'StopSchedulesVisits',
   components: {
-    DesignTime,
+    UiTime,
+    UiSchedulesDetailsRow,
   },
   props: {
     visits: {} as PropType<VisitType[]>,
@@ -211,11 +213,6 @@ export default Vue.extend({
   color: #3f3f3f;
 }
 
-.visit-details-label {
-  color: #777;
-  font-size: 0.9rem;
-}
-
 .visit-details-times {
   display: flex;
   max-width: 20rem;
@@ -231,16 +228,6 @@ export default Vue.extend({
 
 .visit-details-train {
   line-height: 1.5;
-}
-
-.visit-details-train-value {
-  margin-left: 0.25rem;
-  font-weight: 600;
-  color: #3f3f3f;
-}
-
-.datetime {
-  font-size: 1.1rem;
 }
 
 </style>
