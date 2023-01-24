@@ -26,8 +26,6 @@ export default Vue.extend({
         window.location.href = '/'
       })
     }
-    // Ping server to wake it up
-    fetch(process.env.VUE_APP_API_URL)
   },
   watch: {
     '$route.params.tab': {
