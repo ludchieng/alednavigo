@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-page-stop">
+  <div class="page">
     <StopHeader :stop="stop" />
     <StopPrevNextStops :stop="stop" />
     <StopTimetable :stop="stop" />
@@ -15,7 +15,7 @@ import StopPrevNextStops from '@/components/Stop/StopPrevNextStops.vue'
 import { getStop } from '@/utils/localstore/stops'
 
 export default Vue.extend({
-  name: 'TimetablesStop',
+  name: 'TimetablesStopPage',
   components: {
     StopTimetable,
     StopHeader,
@@ -45,7 +45,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.tab-page-stop {
+.page {
   padding: 0 1rem 8rem 1rem;
 }
 </style>

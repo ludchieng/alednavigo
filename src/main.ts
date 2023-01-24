@@ -4,8 +4,10 @@ import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
 import './registerServiceWorker'
 import App from './App.vue'
-import TimetablesPage from '@/pages/TimetablesPage.vue'
 import SettingsPage from '@/pages/SettingsPage.vue'
+import TimetablesHubPage from '@/pages/TimetablesHubPage.vue'
+import TimetablesLinePage from '@/pages/TimetablesLinePage.vue'
+import TimetablesStopPage from '@/pages/TimetablesStopPage.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -14,10 +16,9 @@ Vue.use(Vuex)
 const routes = [
   { path: '/', component: App },
   { path: '/settings', component: SettingsPage },
-  { path: '/timetables/', component: TimetablesPage },
-  { path: '/timetables/:tab', component: TimetablesPage },
-  { path: '/timetables/:tab/:line', component: TimetablesPage },
-  { path: '/timetables/:tab/:line/:stop', component: TimetablesPage },
+  { path: '/timetables/:tab', component: TimetablesHubPage },
+  { path: '/timetables/:tab/:line', component: TimetablesLinePage },
+  { path: '/timetables/:tab/:line/:stop', component: TimetablesStopPage },
 ]
 
 const router = new VueRouter({

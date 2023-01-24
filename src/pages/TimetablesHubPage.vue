@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-page-new">
+  <div class="page">
     <div
       v-for="category in linesByCategory"
       :key="category.name"
@@ -29,7 +29,7 @@ import { getLinesByCategory } from '@/utils/localstore/lines'
 import DesignTitle from '@/components/design/DesignTitle.vue'
 
 export default Vue.extend({
-  name: 'TimetablesHome',
+  name: 'TimetablesHubPage',
   components: {
     LineIcon,
     DesignTitle,
@@ -43,7 +43,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.tab-page-new {
+.page {
   padding: 1rem;
 }
 
