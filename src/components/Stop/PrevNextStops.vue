@@ -2,7 +2,7 @@
   <div class="prev-next-stops">
     <ul>
       <li v-for="(prevStop, i) in stop.prevStops.slice().reverse()" :key="i" class="prev-stops">
-        <router-link :to="`/${$route.params.tab}/${$route.params.line}/${prevStop}`">
+        <router-link :to="`/timetables/${$route.params.tab}/${$route.params.line}/${prevStop}`">
           <span>
             {{ getStop($route.params.line, prevStop).displayName }}
           </span>
@@ -11,7 +11,7 @@
     </ul>
     <ul>
       <li v-for="(nextStop, i) in stop.nextStops.slice().reverse()" :key="i" class="next-stops">
-        <router-link :to="`/${$route.params.tab}/${$route.params.line}/${nextStop}`">
+        <router-link :to="`/timetables/${$route.params.tab}/${$route.params.line}/${nextStop}`">
           <span>
             {{ getStop($route.params.line, nextStop).displayName }}
           </span>

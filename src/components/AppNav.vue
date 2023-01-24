@@ -8,7 +8,7 @@
             class="tab"
             :class="{ 'tab-active': tabIndex() === i }"
           >
-            <router-link class="tab-link" :to="`/${i + 1}/${path}`">
+            <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
               <span class="tab-label">
                 <LineIcon :lineSlugName="line" :theme="tabIndex() === i ? 'dark' : 'light'" />
                 <span v-if="stop" class="tab-label-text">
@@ -36,7 +36,7 @@
               class="tab"
               :class="{ 'tab-active': tabIndex() === i }"
             >
-              <router-link class="tab-link" :to="`/${i + 1}/${path}`">
+              <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
                 <span class="tab-label">
                   <LineIcon :lineSlugName="line" :theme="tabIndex() === i ? 'dark' : 'light'" />
                   <span v-if="stop" class="tab-label-text">
@@ -76,18 +76,18 @@ export default Vue.extend({
     },
     addTab () {
       this.$store.commit('addTab')
-      this.$router.push(`/${this.$store.state.tabs.length}`)
+      this.$router.push(`/timetables/${this.$store.state.tabs.length}`)
     },
     closeTab (tabIndex: number) {
       const currentTabIndex = Number(this.$route.params.tab) - 1
       if (currentTabIndex > tabIndex) {
         const { line, stop } = this.$store.state.tabs[currentTabIndex]
         this.$store.commit('closeTab', { tabIndex })
-        this.$router.push(`/${currentTabIndex}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
+        this.$router.push(`/timetables/${currentTabIndex}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
       } else {
         this.$store.commit('closeTab', { tabIndex })
         const { line, stop } = this.$store.state.tabs[currentTabIndex]
-        this.$router.push(`/${currentTabIndex + 1}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
+        this.$router.push(`/timetables/${currentTabIndex + 1}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
       }
     },
   },

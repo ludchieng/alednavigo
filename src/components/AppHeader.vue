@@ -3,13 +3,13 @@
     <div>
       <router-link v-if="$route.params.line"
         class="icon-line"
-        :to="`/${ $route.params.tab }/${ $route.params.line }`"
+        :to="`/timetables/${ $route.params.tab }/${ $route.params.line }`"
       >
       <LineIcon :lineSlugName="$route.params.line" theme="colors" />
       </router-link>
     </div>
     <div>
-      <router-link class="logo" :to="`/${ $route.params.tab }`">
+      <router-link class="logo" :to="`/timetables/${ $route.params.tab }`">
         <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
       </router-link>
     </div>

@@ -30,13 +30,13 @@ export default Vue.extend({
   watch: {
     '$route.params.tab': {
       handler () {
-        if (this.$route.params.tab === 'settings') {
+        if (this.$route.path === '/settings') {
           return
         }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {
-          this.$router.push(`/1/${this.$store.state.tabs[0].path}`)
+          this.$router.push(`/timetables/1/${this.$store.state.tabs[0].path}`)
         }
       },
       deep: true,
@@ -59,7 +59,7 @@ export default Vue.extend({
     },
     '$store.state.tabs': {
       handler () {
-        if (this.$route.params.tab === 'settings') {
+        if (this.$route.path === '/settings') {
           return
         }
         const tabNumber = Number(this.$route.params.tab)
@@ -67,7 +67,7 @@ export default Vue.extend({
         if (!isValidTabNumber) {
           const newTabNumber = Math.min(this.$store.state.tabs.length, Math.max(1, Number(this.$route.params.tab)))
           const { line, stop } = this.$store.state.tabs[newTabNumber - 1]
-          this.$router.push(`/${newTabNumber}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
+          this.$router.push(`/timetables/${newTabNumber}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
         }
       },
       deep: true,

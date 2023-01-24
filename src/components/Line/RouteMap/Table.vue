@@ -12,7 +12,7 @@
       >
         <LabelCell
           :stopName="row.displayName"
-          :href="`/${$route.params.tab}/${line}/${row.slugName}`"
+          :href="`/timetables/${$route.params.tab}/${line}/${row.slugName}`"
           :lineConnections="row.lineConnections"
         />
       </td>
