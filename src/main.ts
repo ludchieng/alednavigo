@@ -4,6 +4,10 @@ import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
 import './registerServiceWorker'
 import App from './App.vue'
+import SettingsPage from '@/pages/SettingsPage.vue'
+import TimetablesHubPage from '@/pages/TimetablesHubPage.vue'
+import TimetablesLinePage from '@/pages/TimetablesLinePage.vue'
+import TimetablesStopPage from '@/pages/TimetablesStopPage.vue'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -11,13 +15,15 @@ Vue.use(Vuex)
 
 const routes = [
   { path: '/', component: App },
-  { path: '/:tab', component: App },
-  { path: '/:tab/:line', component: App },
-  { path: '/:tab/:line/:stop', component: App },
-  { path: '/about', component: App },
+  { path: '/settings', component: SettingsPage },
+  { path: '/timetables/:tab', component: TimetablesHubPage },
+  { path: '/timetables/:tab/:line', component: TimetablesLinePage },
+  { path: '/timetables/:tab/:line/:stop', component: TimetablesStopPage },
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: '/app',
   routes,
 })
 
@@ -56,5 +62,5 @@ const store = new Vuex.Store({
 new Vue({
   router,
   store,
-  template: '<router-view class="view"></router-view>',
+  render: h => h(App),
 }).$mount('#app')

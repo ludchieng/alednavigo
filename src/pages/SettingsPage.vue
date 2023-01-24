@@ -3,7 +3,12 @@
     <h1>Paramètres</h1>
     <fieldset>
       <legend>Schéma de lignes</legend>
-      <button class="btn-synchronize" @click="synchronize">Mettre à jour</button>
+      <button
+        class="btn-synchronize"
+        @click="synchronize"
+      >
+        Mettre à jour
+      </button>
       <p>Dernière mise à jour : {{ updatedAt.toLocaleString() }}</p>
     </fieldset>
   </div>

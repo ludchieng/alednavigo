@@ -1,34 +1,45 @@
 <template>
-  <router-link v-if="href"
+  <router-link
+    v-if="href"
     class="label-text"
     :to="href"
   >
     {{ stopName }}
     <div class="line-connections">
-      <LineIcon v-for="conn in lineConnections" :key="`${conn.line}/${conn.slugName}`"
-        :lineSlugName="conn.line" theme="colors" fadeIn
+      <LineIcon
+        v-for="conn in lineConnections"
+        :key="`${conn.line}/${conn.slugName}`"
+        :line-slug-name="conn.line"
+        color="colors"
+        size="sm"
+        fade-in
       />
     </div>
   </router-link>
 
-  <span v-else class="label-text">
+  <div
+    v-else
+    class="label-text"
+  >
     {{ stopName }}
     <div class="line-connections">
       <img
-        v-for="conn in lineConnections" :key="`${conn.line}/${conn.slugName}`"
+        v-for="conn in lineConnections"
+        :key="`${conn.line}/${conn.slugName}`"
         :src="`/img/lines-icons/colors/${conn.line}.svg`"
+        :alt="`${conn.slugName} ${conn.line}`"
       >
     </div>
-  </span>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { LineConnectionType } from '@/utils/parser'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
-  name: 'LineRouteMapLabelCell',
+  name: 'LineMapLabelCell',
   components: { LineIcon },
   props: {
     stopName: String,
@@ -49,6 +60,5 @@ export default Vue.extend({
 .line-connections > img {
   margin-top: 0.2rem;
   margin-right: 0.2rem;
-  width: 1.35rem;
 }
 </style>

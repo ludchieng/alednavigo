@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader />
-    <AppPageView />
+    <AppView />
   </div>
 </template>
 
@@ -10,35 +9,24 @@ import Vue from 'vue'
 import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
 import '@fontsource/inter/latin-700.css'
-import AppHeader from '@/components/AppHeader.vue'
-import AppPageView from '@/components/AppPageView.vue'
+import AppView from '@/components/AppView.vue'
 import { lastUpdatedAt, synchronize } from './utils/localstore/synchronizer'
 
 export default Vue.extend({
   name: 'App',
   components: {
-    AppHeader,
-    AppPageView,
-  },
-  created () {
-    if (!lastUpdatedAt()) {
-      synchronize().then(() => {
-        window.location.href = '/'
-      })
-    }
-    // Ping server to wake it up
-    fetch(process.env.VUE_APP_API_URL)
+    AppView,
   },
   watch: {
     '$route.params.tab': {
       handler () {
-        if (this.$route.params.tab === 'settings') {
+        if (this.$route.path === '/settings') {
           return
         }
         const tabNumber = Number(this.$route.params.tab)
         const isValidTabNumber = tabNumber >= 1 && tabNumber <= this.$store.state.tabs.length
         if (!isValidTabNumber) {
-          this.$router.push(`/1/${this.$store.state.tabs[0].path}`)
+          this.$router.push(`/timetables/1/${this.$store.state.tabs[0].path}`)
         }
       },
       deep: true,
@@ -61,7 +49,7 @@ export default Vue.extend({
     },
     '$store.state.tabs': {
       handler () {
-        if (this.$route.params.tab === 'settings') {
+        if (this.$route.path === '/settings') {
           return
         }
         const tabNumber = Number(this.$route.params.tab)
@@ -69,12 +57,19 @@ export default Vue.extend({
         if (!isValidTabNumber) {
           const newTabNumber = Math.min(this.$store.state.tabs.length, Math.max(1, Number(this.$route.params.tab)))
           const { line, stop } = this.$store.state.tabs[newTabNumber - 1]
-          this.$router.push(`/${newTabNumber}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
+          this.$router.push(`/timetables/${newTabNumber}${line ? `/${line}` : ''}${stop ? `/${stop}` : ''}`)
         }
       },
       deep: true,
       immediate: true,
     },
+  },
+  created () {
+    if (!lastUpdatedAt()) {
+      synchronize().then(() => {
+        window.location.href = '/'
+      })
+    }
   },
 })
 </script>

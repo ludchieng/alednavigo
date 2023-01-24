@@ -1,21 +1,21 @@
 <template>
-  <div class="tab-page-line">
-    <LineRouteMap :line="$route.params.line"/>
+  <div class="page">
+    <LineRouteMap :line="$route.params.line" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import LineRouteMap from '@/components/Line/RouteMap/index.vue'
+import LineRouteMap from '@/components/LineMap/LineMap.vue'
 
 export default Vue.extend({
-  name: 'TabPageLine',
+  name: 'TimetablesLinePage',
   components: { LineRouteMap },
 })
 </script>
 
 <style scoped>
-.tab-page-line {
+.page {
   padding: 10rem 1rem 4rem 1rem;
 }
 </style>

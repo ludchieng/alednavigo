@@ -1,21 +1,32 @@
 <template>
   <header>
     <div>
-      <router-link v-if="$route.params.line"
+      <router-link
+        v-if="$route.params.line"
         class="icon-line"
-        :to="`/${ $route.params.tab }/${ $route.params.line }`"
+        :to="`/timetables/${ $route.params.tab }/${ $route.params.line }`"
       >
-      <LineIcon :lineSlugName="$route.params.line" theme="colors" />
+        <LineIcon
+          :line-slug-name="$route.params.line"
+          color="colors"
+          size="md"
+        />
       </router-link>
     </div>
     <div>
-      <router-link class="logo" :to="`/${ $route.params.tab }`">
-        <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
+      <router-link
+        class="logo"
+        :to="`/timetables/${ $route.params.tab || '' }`"
+      >
+        <img
+          alt="Logo Alednavigo"
+          src="@/assets/icon-light.png"
+        >
       </router-link>
     </div>
     <div class="clock">
       <div>
-        <TimeClock :datetime="datetime" />
+        <UiClock :time="time" />
       </div>
     </div>
   </header>
@@ -23,20 +34,23 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import LineIcon from '@/components/Line/Icon.vue'
-import TimeClock from '@/components/TimeClock.vue'
-import { DateTime } from '@/utils/datetime'
+import LineIcon from '@/components/LineIcon.vue'
+import UiClock from '@/components/ui/UiClock.vue'
+import { Time } from '@/utils/time'
 export default Vue.extend({
   name: 'AppHeader',
-  components: { LineIcon, TimeClock },
+  components: {
+    LineIcon,
+    UiClock,
+  },
   data: () => ({
     clockInterval: 0,
-    datetime: {} as DateTime,
+    time: {} as Time,
   }),
   created () {
     this.clockInterval = setInterval(() => {
       const t = new Date()
-      this.datetime = {
+      this.time = {
         hh: t.getHours().toString(),
         mm: t.getMinutes().toString().padStart(2, '0'),
         ss: t.getSeconds().toString().padStart(2, '0'),
@@ -74,11 +88,6 @@ header {
 .icon-line {
   display: inline-block;
   margin-left: 0.5rem;
-}
-
-.icon-line img {
-  width: 2rem;
-  height: 2rem;
 }
 
 .clock {

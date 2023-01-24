@@ -3,20 +3,30 @@
     <pre v-if="debugData.size > 0">{{ Array.from(debugData).reduce((acc, line) => acc + `\n${line}`, '') }}</pre>
     <div :class="Object.entries(visitsByDirections).length ? 'fade-show' : 'hide'">
       <div
-        v-for="[direction, visits] in visitsByDirections" :key="direction"
+        v-for="[direction, visits] in visitsByDirections"
+        :key="direction"
         class="timetables"
       >
         <h2>{{ direction }}</h2>
         <div class="sync">
-          <span class="sync-time" :key="updateCounter">
+          <span
+            :key="updateCounter"
+            class="sync-time"
+          >
             {{ ((new Date().getTime() - updatedAt.getTime()) / 1000).toFixed(0) }}s
           </span>
-          <button class="sync-btn" @click="update">
-            <img class="icon-settings" src="/img/mui/update.svg" />
+          <button
+            class="sync-btn"
+            @click="update"
+          >
+            <img
+              class="icon-settings"
+              src="/img/mui/update.svg"
+            >
             Synchroniser
           </button>
         </div>
-        <TrainVisits :visits="visits" />
+        <StopSchedulesVisits :visits="visits" />
       </div>
     </div>
   </div>
@@ -24,15 +34,15 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import TrainVisits from '@/components/Stop/Timetable/Visits.vue'
+import StopSchedulesVisits from '@/components/Stop/StopSchedulesVisits.vue'
 import { StopType } from '@/utils/parser'
 import { fetchTimetables, VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
-  name: 'StopTimetable',
+  name: 'StopSchedules',
   components: {
-    TrainVisits,
+    StopSchedulesVisits,
   },
   props: {
     stop: {} as PropType<StopType>,
@@ -45,6 +55,19 @@ export default Vue.extend({
     updateCounter: 0,
     updateInterval: 0,
   }),
+  computed: {
+    linesByRef () {
+      return getLinesByRef()
+    },
+  },
+  watch: {
+    stop () {
+      this.visitsByDirections = []
+      this.fetchAbortController.abort()
+      this.fetchAbortController = new AbortController()
+      this.update()
+    },
+  },
   created () {
     this.update()
     this.updateInterval = setInterval(() => {
@@ -66,19 +89,6 @@ export default Vue.extend({
           this.debugData = debugData
           this.updatedAt = updatedAt
         })
-    },
-  },
-  computed: {
-    linesByRef () {
-      return getLinesByRef()
-    },
-  },
-  watch: {
-    stop () {
-      this.visitsByDirections = []
-      this.fetchAbortController.abort()
-      this.fetchAbortController = new AbortController()
-      this.update()
     },
   },
 })

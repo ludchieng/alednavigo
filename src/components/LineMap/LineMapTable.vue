@@ -1,19 +1,29 @@
 <template>
   <table>
-    <tr v-for="(row, i) in routeMap" :key="i">
-      <td v-for="(cell, j) in row.drawing" :key="j"
+    <tr
+      v-for="(row, i) in routeMap"
+      :key="i"
+    >
+      <td
+        v-for="(cell, j) in row.drawing"
+        :key="j"
         :class="{ filled: shouldBeFilledCell(cell) }"
       >
-        <DrawingCell :content="cell" :isLargeCircle="row.isTerminus || false" />
+        <DrawingCell
+          :content="cell"
+          :is-large-circle="row.isTerminus || false"
+        />
       </td>
 
-      <td v-if="row.slugName"
-        class="label" :class="{ 'label-terminus': row.isTerminus }"
+      <td
+        v-if="row.slugName"
+        class="label"
+        :class="{ 'label-terminus': row.isTerminus }"
       >
         <LabelCell
-          :stopName="row.displayName"
-          :href="`/${$route.params.tab}/${line}/${row.slugName}`"
-          :lineConnections="row.lineConnections"
+          :stop-name="row.displayName"
+          :href="`/timetables/${$route.params.tab}/${line}/${row.slugName}`"
+          :line-connections="row.lineConnections"
         />
       </td>
     </tr>
@@ -23,11 +33,11 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { RouteMapType } from '@/utils/parser'
-import DrawingCell from './DrawingCell.vue'
-import LabelCell from './LabelCell.vue'
+import DrawingCell from './LineMapDrawingCell.vue'
+import LabelCell from './LineMapLabelCell.vue'
 
 export default Vue.extend({
-  name: 'LineRouteMapTable',
+  name: 'LineMapTable',
   components: { DrawingCell, LabelCell },
   props: {
     line: String,
