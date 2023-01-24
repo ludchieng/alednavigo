@@ -8,11 +8,11 @@ export const lastUpdatedAt = () => {
 
 export const synchronize = async () => {
   const lines = await synchronizeFile('/schemas/lines.json', 'lines')
-
-  for (const line of Object.values(lines) as any[]) {
-    synchronizeLine(line.slugName)
-  }
-  localStorage.setItem('lines.updatedAt', new Date().toISOString())
+  return Promise.all(
+    Object.values(lines).map((line: any) => synchronizeLine(line.slugName)),
+  ).then(() => {
+    localStorage.setItem('lines.updatedAt', new Date().toISOString())
+  })
 }
 
 export const synchronizeLine = async (line: string) => {
