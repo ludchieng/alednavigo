@@ -19,7 +19,7 @@
     </div>
     <div class="clock">
       <div>
-        <TimeClock :datetime="datetime" />
+        <DesignTime :datetime="datetime" />
       </div>
     </div>
   </header>
@@ -28,14 +28,17 @@
 <script lang="ts">
 import Vue from 'vue'
 import LineIcon from '@/components/LineIcon.vue'
-import TimeClock from '@/components/TimeClock.vue'
-import { DateTime } from '@/utils/datetime'
+import DesignTime from '@/components/design/DesignTime.vue'
+import { Time } from '@/utils/time'
 export default Vue.extend({
   name: 'AppHeader',
-  components: { LineIcon, TimeClock },
+  components: {
+    LineIcon,
+    DesignTime,
+  },
   data: () => ({
     clockInterval: 0,
-    datetime: {} as DateTime,
+    datetime: {} as Time,
   }),
   created () {
     this.clockInterval = setInterval(() => {

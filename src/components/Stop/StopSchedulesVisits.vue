@@ -29,7 +29,7 @@
         <div class="visit-details-times">
           <div v-if="visit.arrivalTime">
             <div class="visit-details-label">Arrivée</div>
-            <TimeClock :datetime="toDateTime(visit.arrivalTime)" />
+            <DesignTime :datetime="toDateTime(visit.arrivalTime)" />
             <div v-if="visit.arrivalStatus !== 'onTime'" class="visit-details-status">{{ visit.arrivalStatus }}</div>
           </div>
           <div>
@@ -38,7 +38,7 @@
           </div>
           <div v-if="visit.departureTime">
             <div class="visit-details-label">Départ</div>
-            <TimeClock :datetime="toDateTime(visit.departureTime)" />
+            <DesignTime :datetime="toDateTime(visit.departureTime)" />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
         </div>
@@ -62,7 +62,7 @@
         <div class="visit-details-times">
           <div>
             <div class="visit-details-label">Passage sans arrêt</div>
-            <TimeClock v-if="visit?.passageTime" :datetime="toDateTime(visit.passageTime)" textGray />
+            <DesignTime v-if="visit?.passageTime" :datetime="toDateTime(visit.passageTime)" textGray />
             <div v-if="visit.departureStatus !== 'onTime'" class="visit-details-status">{{ visit.departureStatus }}</div>
           </div>
           <div>
@@ -91,13 +91,13 @@
           <div v-if="visit.departureTime" class="visit-details-label">
             Départ
             <span class="visit-details-train-value">
-              <TimeClock :datetime="toDateTime(visit.departureTime)" />
+              <DesignTime :datetime="toDateTime(visit.departureTime)" />
             </span>
           </div>
           <div v-else class="visit-details-label">
             Arrivée
             <span class="visit-details-train-value">
-              <TimeClock :datetime="toDateTime(visit.arrivalTime)" />
+              <DesignTime :datetime="toDateTime(visit.arrivalTime)" />
             </span>
           </div>
           <div v-if="visit.trainNumber" class="visit-details-label">
@@ -115,13 +115,13 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { VisitType } from '@/utils/fetcher'
-import { toDateTime } from '@/utils/datetime'
-import TimeClock from '@/components/TimeClock.vue'
+import { toTime } from '@/utils/time'
+import DesignTime from '@/components/design/DesignTime.vue'
 
 export default Vue.extend({
   name: 'StopSchedulesVisits',
   components: {
-    TimeClock,
+    DesignTime,
   },
   props: {
     visits: {} as PropType<VisitType[]>,
@@ -140,7 +140,7 @@ export default Vue.extend({
   },
   methods: {
     toDateTime (date: Date) {
-      return toDateTime(date)
+      return toTime(date)
     },
   },
 })

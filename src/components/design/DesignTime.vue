@@ -11,12 +11,12 @@
 </template>
 
 <script lang="ts">
-import { DateTime } from '@/utils/datetime'
+import { Time } from '@/utils/time'
 import Vue, { PropType } from 'vue'
 export default Vue.extend({
-  name: 'TimeClock',
+  name: 'DesignTime',
   props: {
-    datetime: {} as PropType<DateTime>,
+    datetime: {} as PropType<Time>,
     textGray: Boolean,
   },
 })

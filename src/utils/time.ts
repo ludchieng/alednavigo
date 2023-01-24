@@ -1,10 +1,10 @@
-export type DateTime = {
+export type Time = {
   hh: string,
   mm: string,
   ss: string
 }
 
-export const toDateTime = (date: Date) => {
+export const toTime = (date: Date) => {
   return {
     hh: date.getHours().toString(),
     mm: date.getMinutes().toString().padStart(2, '0'),
