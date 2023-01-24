@@ -1,7 +1,7 @@
 <template>
   <LineMapTable
     :line="line"
-    :routeMap="routeMap"
+    :route-map="routeMap"
   />
 </template>
 
@@ -20,17 +20,17 @@ export default Vue.extend({
   data: () => ({
     routeMap: [] as RouteMapType,
   }),
+  watch: {
+    line () {
+      this.update()
+    },
+  },
   created () {
     this.update()
   },
   methods: {
     update () {
       this.routeMap = getLineRouteMap(this.line)
-    },
-  },
-  watch: {
-    line () {
-      this.update()
     },
   },
 })

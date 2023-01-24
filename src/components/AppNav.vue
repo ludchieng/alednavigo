@@ -2,25 +2,37 @@
   <nav>
     <hr>
     <div class="nav-content">
-      <div v-if="showTabsList" class="nav-tabs-list">
+      <div
+        v-if="showTabsList"
+        class="nav-tabs-list"
+      >
         <ul>
-          <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="`/${i + 1}/${path}`"
+          <li
+            v-for="({ line, stop, path }, i) in $store.state.tabs"
+            :key="`/${i + 1}/${path}`"
             class="tab"
             :class="{ 'tab-active': tabIndex() === i }"
           >
-            <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
+            <router-link
+              class="tab-link"
+              :to="`/timetables/${i + 1}/${path}`"
+            >
               <span class="tab-label">
                 <LineIcon
-                  :lineSlugName="line"
+                  :line-slug-name="line"
                   :color="tabIndex() === i ? 'dark' : 'light'"
                   size="sm"
                 />
-                <span v-if="stop" class="tab-label-text">
+                <span
+                  v-if="stop"
+                  class="tab-label-text"
+                >
                   {{ getStop(line, stop).displayName }}
                 </span>
               </span>
             </router-link>
-            <button v-if="$store.state.tabs.length > 1"
+            <button
+              v-if="$store.state.tabs.length > 1"
               class="close-tab"
               @click="closeTab(i)"
             >
@@ -31,23 +43,40 @@
       </div>
 
       <div class="nav-controls">
-        <router-link class="to-settings" to="/settings">
-          <img class="icon-settings" src="/img/mui/more-vert.svg" />
+        <router-link
+          class="to-settings"
+          to="/settings"
+        >
+          <img
+            class="icon-settings"
+            src="/img/mui/more-vert.svg"
+          >
         </router-link>
         <div class="tabs-manager">
-          <ul v-if="!showTabsList" class="tabs">
-            <li v-for="({ line, stop, path }, i) in $store.state.tabs" :key="`/${i + 1}/${path}`"
+          <ul
+            v-if="!showTabsList"
+            class="tabs"
+          >
+            <li
+              v-for="({ line, stop, path }, i) in $store.state.tabs"
+              :key="`/${i + 1}/${path}`"
               class="tab"
               :class="{ 'tab-active': tabIndex() === i }"
             >
-              <router-link class="tab-link" :to="`/timetables/${i + 1}/${path}`">
+              <router-link
+                class="tab-link"
+                :to="`/timetables/${i + 1}/${path}`"
+              >
                 <span class="tab-label">
                   <LineIcon
-                    :lineSlugName="line"
+                    :line-slug-name="line"
                     :color="tabIndex() === i ? 'dark' : 'light'"
                     size="sm"
                   />
-                  <span v-if="stop" class="tab-label-text">
+                  <span
+                    v-if="stop"
+                    class="tab-label-text"
+                  >
                     {{ getStop(line, stop).displayName }}
                   </span>
                 </span>
@@ -55,11 +84,20 @@
             </li>
           </ul>
         </div>
-        <button class="add-tab" @click="addTab()">
+        <button
+          class="add-tab"
+          @click="addTab()"
+        >
           +
         </button>
-        <button class="btn-toggle-tabs-list" @click="showTabsList = !showTabsList">
-          <img class="icon-tabs-list" src="/img/mui/reorder.svg" />
+        <button
+          class="btn-toggle-tabs-list"
+          @click="showTabsList = !showTabsList"
+        >
+          <img
+            class="icon-tabs-list"
+            src="/img/mui/reorder.svg"
+          >
         </button>
       </div>
     </div>

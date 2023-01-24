@@ -1,10 +1,10 @@
 <template>
   <DesignPrevNext
-    :prevItems="stop.prevStops.slice().reverse().map(prevStop => ({
+    :prev-items="stop.prevStops.slice().reverse().map(prevStop => ({
       label: getStop($route.params.line, prevStop).displayName,
       link: `/timetables/${$route.params.tab}/${$route.params.line}/${prevStop}`,
     }))"
-    :nextItems="stop.nextStops.slice().reverse().map(nextStop => ({
+    :next-items="stop.nextStops.slice().reverse().map(nextStop => ({
       label: getStop($route.params.line, nextStop).displayName,
       link: `/timetables/${$route.params.tab}/${$route.params.line}/${nextStop}`,
     }))"

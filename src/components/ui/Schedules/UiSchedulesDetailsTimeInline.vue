@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="label">{{ label }}</div>
+    <div class="label">
+      {{ label }}
+    </div>
     <div class="value">
       <UiTime :time="time" />
     </div>

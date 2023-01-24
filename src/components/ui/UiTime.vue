@@ -1,13 +1,13 @@
 <template>
-    <span
-      v-if="time.hh && time.mm && time.ss"
-      class="datetime"
-    >
-      <span :class="{ 'text-gray': textGray }">{{ time.hh }}</span>
-      <span class="separator">:</span>
-      <span :class="{ 'text-gray': textGray }">{{ time.mm }}</span>
-      <span class="seconds">{{ time.ss }}</span>
-    </span>
+  <span
+    v-if="time.hh && time.mm && time.ss"
+    class="datetime"
+  >
+    <span :class="{ 'text-gray': textGray }">{{ time.hh }}</span>
+    <span class="separator">:</span>
+    <span :class="{ 'text-gray': textGray }">{{ time.mm }}</span>
+    <span class="seconds">{{ time.ss }}</span>
+  </span>
 </template>
 
 <script lang="ts">

@@ -17,13 +17,6 @@ export default Vue.extend({
   components: {
     AppView,
   },
-  created () {
-    if (!lastUpdatedAt()) {
-      synchronize().then(() => {
-        window.location.href = '/'
-      })
-    }
-  },
   watch: {
     '$route.params.tab': {
       handler () {
@@ -70,6 +63,13 @@ export default Vue.extend({
       deep: true,
       immediate: true,
     },
+  },
+  created () {
+    if (!lastUpdatedAt()) {
+      synchronize().then(() => {
+        window.location.href = '/'
+      })
+    }
   },
 })
 </script>

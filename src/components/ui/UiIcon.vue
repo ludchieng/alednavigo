@@ -8,7 +8,7 @@
     }"
     :src="src"
     :alt="alt"
-  />
+  >
 </template>
 
 <script lang="ts">

@@ -24,6 +24,14 @@ export default Vue.extend({
   data: () => ({
     stop: {} as StopType,
   }),
+  watch: {
+    '$route.path': {
+      handler () {
+        this.update()
+      },
+      deep: true,
+    },
+  },
   created () {
     this.update()
   },
@@ -31,14 +39,6 @@ export default Vue.extend({
     getStop,
     update () {
       this.stop = getStop(this.$route.params.line, this.$route.params.stop)
-    },
-  },
-  watch: {
-    '$route.path': {
-      handler () {
-        this.update()
-      },
-      deep: true,
     },
   },
 })

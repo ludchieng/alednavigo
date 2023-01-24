@@ -1,8 +1,18 @@
 <template>
   <div class="schedules-details-time-wrapped">
-    <div class="label">{{ label }}</div>
-    <UiTime :time="time" :textGray="isTimeTextGray" />
-    <div v-if="sublabel" class="sublabel">{{ sublabel }}</div>
+    <div class="label">
+      {{ label }}
+    </div>
+    <UiTime
+      :time="time"
+      :text-gray="isTimeTextGray"
+    />
+    <div
+      v-if="sublabel"
+      class="sublabel"
+    >
+      {{ sublabel }}
+    </div>
   </div>
 </template>
 

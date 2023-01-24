@@ -6,11 +6,13 @@
         label="Passage sans arrêt"
         :time="toTime(visit.departureTime)"
         :sublabel="visit.departureStatus !== 'onTime' ? visit.departureStatus : null"
-        isTimeTextGray
+        is-time-text-gray
       />
     </div>
     <div>
-      <div v-if="visit.platform">Voie</div>
+      <div v-if="visit.platform">
+        Voie
+      </div>
       <div>{{ visit.platform }}</div>
     </div>
   </div>

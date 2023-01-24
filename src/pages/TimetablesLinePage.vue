@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <LineRouteMap :line="$route.params.line"/>
+    <LineRouteMap :line="$route.params.line" />
   </div>
 </template>
 

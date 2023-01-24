@@ -10,7 +10,9 @@
       :sublabel="visit.arrivalStatus !== 'onTime' ? visit.arrivalStatus : null"
     />
     <div>
-      <div v-if="visit.platform">Voie</div>
+      <div v-if="visit.platform">
+        Voie
+      </div>
       <div>{{ visit.platform }}</div>
     </div>
     <UiSchedulesDetailsTimeWrapped

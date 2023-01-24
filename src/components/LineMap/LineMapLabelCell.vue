@@ -1,5 +1,6 @@
 <template>
-  <router-link v-if="href"
+  <router-link
+    v-if="href"
     class="label-text"
     :to="href"
   >
@@ -8,15 +9,18 @@
       <LineIcon
         v-for="conn in lineConnections"
         :key="`${conn.line}/${conn.slugName}`"
-        :lineSlugName="conn.line"
+        :line-slug-name="conn.line"
         color="colors"
         size="sm"
-        fadeIn
+        fade-in
       />
     </div>
   </router-link>
 
-  <div v-else class="label-text">
+  <div
+    v-else
+    class="label-text"
+  >
     {{ stopName }}
     <div class="line-connections">
       <img

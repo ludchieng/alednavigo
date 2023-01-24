@@ -1,22 +1,32 @@
 <template>
   <div>
-    <details v-for="visit in visits" :key="visit.id" class="row">
+    <details
+      v-for="visit in visits"
+      :key="visit.id"
+      class="row"
+    >
       <summary class="visit">
         <div class="visit-code">
           {{ visit.journeyCode }}
         </div>
-        <div v-if="visit.departureStatus === 'cancelled' || visit.arrivalStatus === 'cancelled'"
+        <div
+          v-if="visit.departureStatus === 'cancelled' || visit.arrivalStatus === 'cancelled'"
           class="visit-time visit-time-cancelled"
         >
           &times;
         </div>
-        <div v-else-if="visit.nonStopPassage || !visit.departureTime"
-          class="visit-time visit-time-shrouded"
+        <div
+          v-else-if="visit.nonStopPassage || !visit.departureTime"
           :key="`0-${updateCounter}`"
+          class="visit-time visit-time-shrouded"
         >
           {{ ((visit.arrivalTime.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
         </div>
-        <div v-else class="visit-time" :key="`1-${updateCounter}`">
+        <div
+          v-else
+          :key="`1-${updateCounter}`"
+          class="visit-time"
+        >
           {{ ((visit.time.valueOf() - Date.now()) / 1000 / 60).toFixed(0) }}
         </div>
         <div class="visit-destination">
@@ -24,7 +34,10 @@
         </div>
       </summary>
 
-      <div v-if="visit.operator === 'SNCF' && !visit.nonStopPassage" class="visit-details">
+      <div
+        v-if="visit.operator === 'SNCF' && !visit.nonStopPassage"
+        class="visit-details"
+      >
         <StopSchedulesDetailsTimes :visit="visit" />
         <UiSchedulesDetailsRow
           v-if="visit.journeyCode"
@@ -38,7 +51,10 @@
         />
       </div>
 
-      <div v-else-if="visit.operator === 'SNCF' && visit.nonStopPassage" class="visit-details">
+      <div
+        v-else-if="visit.operator === 'SNCF' && visit.nonStopPassage"
+        class="visit-details"
+      >
         <StopSchedulesDetailsTimesNonStopPassage :visit="visit" />
         <UiSchedulesDetailsRow
           v-if="visit.journeyCode"
@@ -52,10 +68,13 @@
         />
       </div>
 
-      <div v-else class="visit-details">
+      <div
+        v-else
+        class="visit-details"
+      >
         <StopSchedulesDetailsTimes
           :visit="visit"
-          isInline
+          is-inline
         />
         <UiSchedulesDetailsRow
           v-if="visit.journeyCode"

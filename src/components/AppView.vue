@@ -2,8 +2,7 @@
   <div>
     <AppHeader />
     <div class="tab">
-      <router-view>
-      </router-view>
+      <router-view />
     </div>
     <AppNav />
   </div>

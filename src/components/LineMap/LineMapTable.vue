@@ -1,19 +1,29 @@
 <template>
   <table>
-    <tr v-for="(row, i) in routeMap" :key="i">
-      <td v-for="(cell, j) in row.drawing" :key="j"
+    <tr
+      v-for="(row, i) in routeMap"
+      :key="i"
+    >
+      <td
+        v-for="(cell, j) in row.drawing"
+        :key="j"
         :class="{ filled: shouldBeFilledCell(cell) }"
       >
-        <DrawingCell :content="cell" :isLargeCircle="row.isTerminus || false" />
+        <DrawingCell
+          :content="cell"
+          :is-large-circle="row.isTerminus || false"
+        />
       </td>
 
-      <td v-if="row.slugName"
-        class="label" :class="{ 'label-terminus': row.isTerminus }"
+      <td
+        v-if="row.slugName"
+        class="label"
+        :class="{ 'label-terminus': row.isTerminus }"
       >
         <LabelCell
-          :stopName="row.displayName"
+          :stop-name="row.displayName"
           :href="`/timetables/${$route.params.tab}/${line}/${row.slugName}`"
-          :lineConnections="row.lineConnections"
+          :line-connections="row.lineConnections"
         />
       </td>
     </tr>

@@ -3,11 +3,11 @@
     <div class="line-connections">
       <router-link
         v-for="conn in stop.lineConnections"
-       :key="`${conn.line}/${conn.slugName}`"
-       :to="`/timetables/${$route.params.tab}/${conn.line}/${conn.slugName}`"
+        :key="`${conn.line}/${conn.slugName}`"
+        :to="`/timetables/${$route.params.tab}/${conn.line}/${conn.slugName}`"
       >
         <LineIcon
-          :lineSlugName="conn.line"
+          :line-slug-name="conn.line"
           color="dark"
           size="md"
         />

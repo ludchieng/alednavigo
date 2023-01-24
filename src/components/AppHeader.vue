@@ -1,20 +1,27 @@
 <template>
   <header>
     <div>
-      <router-link v-if="$route.params.line"
+      <router-link
+        v-if="$route.params.line"
         class="icon-line"
         :to="`/timetables/${ $route.params.tab }/${ $route.params.line }`"
       >
-      <LineIcon
-        :lineSlugName="$route.params.line"
-        color="colors"
-        size="md"
-      />
+        <LineIcon
+          :line-slug-name="$route.params.line"
+          color="colors"
+          size="md"
+        />
       </router-link>
     </div>
     <div>
-      <router-link class="logo" :to="`/timetables/${ $route.params.tab || '' }`">
-        <img alt="Logo Alednavigo" src="@/assets/icon-light.png" />
+      <router-link
+        class="logo"
+        :to="`/timetables/${ $route.params.tab || '' }`"
+      >
+        <img
+          alt="Logo Alednavigo"
+          src="@/assets/icon-light.png"
+        >
       </router-link>
     </div>
     <div class="clock">
