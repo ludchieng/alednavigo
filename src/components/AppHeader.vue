@@ -5,7 +5,11 @@
         class="icon-line"
         :to="`/timetables/${ $route.params.tab }/${ $route.params.line }`"
       >
-      <LineIcon :lineSlugName="$route.params.line" color="colors" />
+      <LineIcon
+        :lineSlugName="$route.params.line"
+        color="colors"
+        size="md"
+      />
       </router-link>
     </div>
     <div>
@@ -74,11 +78,6 @@ header {
 .icon-line {
   display: inline-block;
   margin-left: 0.5rem;
-}
-
-.icon-line img {
-  width: 2rem;
-  height: 2rem;
 }
 
 .clock {

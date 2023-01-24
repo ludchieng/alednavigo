@@ -6,7 +6,12 @@
       <router-link v-for="line in category.lines" :key="line.slugName"
         class="icon-line" :to="`/timetables/${$route.params.tab}/${line.slugName}`"
       >
-        <LineIcon :lineSlugName="line.slugName" color="dark" fadeIn />
+        <LineIcon
+          :lineSlugName="line.slugName"
+          color="dark"
+          size="lg"
+          fadeIn
+        />
       </router-link>
     </div>
   </div>
@@ -49,10 +54,5 @@ hr {
 .icon-line {
   display: inline-block;
   margin: 1rem 1rem 0 0;
-}
-
-.icon-line img {
-  width: 3.5rem;
-  height: 3.5rem;
 }
 </style>

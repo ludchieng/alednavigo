@@ -3,12 +3,15 @@
     v-if="lineSlugName"
     :src="`/img/lines-icons/${color}/${lineSlugName}.svg`"
     :alt="`${lineSlugName}`"
+    :size="size"
   />
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import DesignIcon from '@/components/design/DesignIcon.vue'
+import Vue, { PropType } from 'vue'
+import DesignIcon, { DesignIconSize } from '@/components/design/DesignIcon.vue'
+
+export type LineIconColor = 'colors' | 'light' | 'dark'
 
 export default Vue.extend({
   name: 'LineIcon',
@@ -21,7 +24,8 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
-    color: String,
+    color: String as PropType<LineIconColor>,
+    size: String as PropType<DesignIconSize>,
   },
 })
 </script>

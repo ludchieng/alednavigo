@@ -5,8 +5,13 @@
   >
     {{ stopName }}
     <div class="line-connections">
-      <LineIcon v-for="conn in lineConnections" :key="`${conn.line}/${conn.slugName}`"
-        :lineSlugName="conn.line" color="colors" fadeIn
+      <LineIcon
+        v-for="conn in lineConnections"
+        :key="`${conn.line}/${conn.slugName}`"
+        :lineSlugName="conn.line"
+        color="colors"
+        size="sm"
+        fadeIn
       />
     </div>
   </router-link>
@@ -51,6 +56,5 @@ export default Vue.extend({
 .line-connections > img {
   margin-top: 0.2rem;
   margin-right: 0.2rem;
-  width: 1.35rem;
 }
 </style>
