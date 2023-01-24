@@ -15,7 +15,7 @@
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import { getStop } from '@/utils/localstore/stops'
-import DesignPrevNext from '@/components/design/DesignPrevNext.vue'
+import DesignPrevNext from '@/components/ui/UiPrevNext.vue'
 
 export default Vue.extend({
   name: 'StopPrevNextStops',

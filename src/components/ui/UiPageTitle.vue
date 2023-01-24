@@ -11,7 +11,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'DesignContentTitle',
+  name: 'UiContentTitle',
   props: {
     text: String,
   },

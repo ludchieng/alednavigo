@@ -28,7 +28,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import LineIcon from '@/components/LineIcon.vue'
-import DesignTime from '@/components/design/DesignTime.vue'
+import DesignTime from '@/components/ui/UiTime.vue'
 import { Time } from '@/utils/time'
 export default Vue.extend({
   name: 'AppHeader',

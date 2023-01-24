@@ -26,7 +26,7 @@
 import Vue from 'vue'
 import LineIcon from '@/components/LineIcon.vue'
 import { getLinesByCategory } from '@/utils/localstore/lines'
-import DesignContentTitle from '@/components/design/DesignContentTitle.vue'
+import DesignContentTitle from '@/components/ui/UiContentTitle.vue'
 
 export default Vue.extend({
   name: 'TimetablesHubPage',

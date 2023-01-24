@@ -14,14 +14,14 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 
-export type DesignIconSize = 'sm' | 'md' | 'lg'
+export type UiIconSize = 'sm' | 'md' | 'lg'
 
 export default Vue.extend({
-  name: 'DesignIcon',
+  name: 'UiIcon',
   props: {
     src: String,
     alt: String,
-    size: String as PropType<DesignIconSize>,
+    size: String as PropType<UiIconSize>,
     fadeIn: {
       type: Boolean,
       default: false,

@@ -116,7 +116,7 @@
 import Vue, { PropType } from 'vue'
 import { VisitType } from '@/utils/fetcher'
 import { toTime } from '@/utils/time'
-import DesignTime from '@/components/design/DesignTime.vue'
+import DesignTime from '@/components/ui/UiTime.vue'
 
 export default Vue.extend({
   name: 'StopSchedulesVisits',

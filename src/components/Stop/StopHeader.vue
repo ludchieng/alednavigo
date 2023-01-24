@@ -20,7 +20,7 @@
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
 import LineIcon from '@/components/LineIcon.vue'
-import DesignPageTitle from '@/components/design/DesignPageTitle.vue'
+import DesignPageTitle from '@/components/ui/UiPageTitle.vue'
 
 export default Vue.extend({
   name: 'StopHeader',

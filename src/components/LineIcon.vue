@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import DesignIcon, { DesignIconSize } from '@/components/design/DesignIcon.vue'
+import DesignIcon, { DesignIconSize } from '@/components/ui/UiIcon.vue'
 
 export type LineIconColor = 'colors' | 'light' | 'dark'
 

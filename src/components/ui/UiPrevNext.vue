@@ -38,7 +38,7 @@ export type PrevNextItem = {
 }
 
 export default Vue.extend({
-  name: 'DesignPrevNext',
+  name: 'UiPrevNext',
   props: {
     prevItems: [] as PropType<PrevNextItem[]>,
     nextItems: [] as PropType<PrevNextItem[]>,

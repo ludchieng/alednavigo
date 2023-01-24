@@ -14,7 +14,7 @@
 import { Time } from '@/utils/time'
 import Vue, { PropType } from 'vue'
 export default Vue.extend({
-  name: 'DesignTime',
+  name: 'UiTime',
   props: {
     datetime: {} as PropType<Time>,
     textGray: Boolean,
