@@ -53,7 +53,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'LineRouteMapDrawingCell',
+  name: 'LineMapDrawingCell',
   props: {
     content: String,
     isLargeCircle: {

@@ -9,13 +9,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import { StopType } from '@/utils/parser'
-import StopTimetable from '@/components/Stop/Timetable/index.vue'
-import StopHeader from '@/components/Stop/Header.vue'
-import StopPrevNextStops from '@/components/Stop/PrevNextStops.vue'
+import StopTimetable from '@/components/Stop/StopSchedules.vue'
+import StopHeader from '@/components/Stop/StopHeader.vue'
+import StopPrevNextStops from '@/components/Stop/StopPrevNextStops.vue'
 import { getStop } from '@/utils/localstore/stops'
 
 export default Vue.extend({
-  name: 'TabPageStop',
+  name: 'TimetablesStop',
   components: {
     StopTimetable,
     StopHeader,

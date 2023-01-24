@@ -61,7 +61,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { getStop } from '@/utils/localstore/stops'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
   name: 'AppNav',

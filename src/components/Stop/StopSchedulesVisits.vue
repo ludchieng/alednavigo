@@ -119,7 +119,7 @@ import { toDateTime } from '@/utils/datetime'
 import TimeClock from '@/components/TimeClock.vue'
 
 export default Vue.extend({
-  name: 'StopTimetableVisits',
+  name: 'StopSchedulesVisits',
   components: {
     TimeClock,
   },

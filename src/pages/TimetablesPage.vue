@@ -8,12 +8,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import TabPageNew from '@/pages/TabPage/New.vue'
-import TabPageLine from '@/pages/TabPage/Line.vue'
-import TabPageStop from '@/pages/TabPage/Stop.vue'
+import TabPageNew from '@/components/Timetables/TimetablesHome.vue'
+import TabPageLine from '@/components/Timetables/TimetablesLine.vue'
+import TabPageStop from '@/components/Timetables/TimetablesStop.vue'
 
 export default Vue.extend({
-  name: 'TabPage',
+  name: 'TimetablesPage',
   components: {
     TabPageNew,
     TabPageLine,

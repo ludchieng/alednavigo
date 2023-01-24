@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AppHeader />
     <div class="tab">
       <router-view>
       </router-view>
@@ -11,10 +12,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import AppNav from '@/components/AppNav.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default Vue.extend({
-  name: 'AppPageView',
+  name: 'AppView',
   components: {
+    AppHeader,
     AppNav,
   },
 })

@@ -23,11 +23,11 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { RouteMapType } from '@/utils/parser'
-import DrawingCell from './DrawingCell.vue'
-import LabelCell from './LabelCell.vue'
+import DrawingCell from './LineMapDrawingCell.vue'
+import LabelCell from './LineMapLabelCell.vue'
 
 export default Vue.extend({
-  name: 'LineRouteMapTable',
+  name: 'LineMapTable',
   components: { DrawingCell, LabelCell },
   props: {
     line: String,

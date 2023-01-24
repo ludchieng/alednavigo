@@ -25,10 +25,10 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { LineConnectionType } from '@/utils/parser'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
-  name: 'LineRouteMapLabelCell',
+  name: 'LineMapLabelCell',
   components: { LineIcon },
   props: {
     stopName: String,

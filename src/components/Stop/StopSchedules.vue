@@ -24,13 +24,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import TrainVisits from '@/components/Stop/Timetable/Visits.vue'
+import TrainVisits from '@/components/Stop/StopSchedulesVisits.vue'
 import { StopType } from '@/utils/parser'
 import { fetchTimetables, VisitType } from '@/utils/fetcher'
 import { getLinesByRef } from '@/utils/localstore/lines'
 
 export default Vue.extend({
-  name: 'StopTimetable',
+  name: 'StopSchedules',
   components: {
     TrainVisits,
   },

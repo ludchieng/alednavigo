@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 import TimeClock from '@/components/TimeClock.vue'
 import { DateTime } from '@/utils/datetime'
 export default Vue.extend({

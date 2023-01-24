@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
 import './registerServiceWorker'
 import App from './App.vue'
-import TabPage from '@/pages/TabPage/index.vue'
+import TimetablesPage from '@/pages/TimetablesPage.vue'
 import SettingsPage from '@/pages/SettingsPage.vue'
 
 Vue.config.productionTip = false
@@ -14,10 +14,10 @@ Vue.use(Vuex)
 const routes = [
   { path: '/', component: App },
   { path: '/settings', component: SettingsPage },
-  { path: '/timetables/', component: TabPage },
-  { path: '/timetables/:tab', component: TabPage },
-  { path: '/timetables/:tab/:line', component: TabPage },
-  { path: '/timetables/:tab/:line/:stop', component: TabPage },
+  { path: '/timetables/', component: TimetablesPage },
+  { path: '/timetables/:tab', component: TimetablesPage },
+  { path: '/timetables/:tab/:line', component: TimetablesPage },
+  { path: '/timetables/:tab/:line/:stop', component: TimetablesPage },
 ]
 
 const router = new VueRouter({

@@ -6,10 +6,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import LineRouteMap from '@/components/Line/RouteMap/index.vue'
+import LineRouteMap from '@/components/LineMap/LineMap.vue'
 
 export default Vue.extend({
-  name: 'TabPageLine',
+  name: 'TimetablesLine',
   components: { LineRouteMap },
 })
 </script>

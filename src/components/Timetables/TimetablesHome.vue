@@ -14,11 +14,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 import { getLinesByCategory } from '@/utils/localstore/lines'
 
 export default Vue.extend({
-  name: 'TabPageNew',
+  name: 'TimetablesHome',
   components: { LineIcon },
   computed: {
     linesByCategory () {

@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 import { StopType } from '@/utils/parser'
-import LineIcon from '@/components/Line/Icon.vue'
+import LineIcon from '@/components/LineIcon.vue'
 
 export default Vue.extend({
   name: 'StopHeader',
