@@ -3,7 +3,7 @@
     <div class="label">
       {{ label }}
     </div>
-    <UiTime
+    <UiClock
       :time="time"
       :text-gray="isTimeTextGray"
     />
@@ -18,13 +18,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import UiTime from '@/components/ui/UiTime.vue'
+import UiClock from '@/components/ui/UiClock.vue'
 import { Time, toTime } from '@/utils/time'
 
 export default Vue.extend({
   name: 'UiSchedulesDetailsTimeWrapped',
   components: {
-    UiTime,
+    UiClock,
   },
   props: {
     label: String,

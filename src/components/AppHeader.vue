@@ -26,7 +26,7 @@
     </div>
     <div class="clock">
       <div>
-        <DesignTime :time="time" />
+        <UiClock :time="time" />
       </div>
     </div>
   </header>
@@ -35,13 +35,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import LineIcon from '@/components/LineIcon.vue'
-import DesignTime from '@/components/ui/UiTime.vue'
+import UiClock from '@/components/ui/UiClock.vue'
 import { Time } from '@/utils/time'
 export default Vue.extend({
   name: 'AppHeader',
   components: {
     LineIcon,
-    DesignTime,
+    UiClock,
   },
   data: () => ({
     clockInterval: 0,
