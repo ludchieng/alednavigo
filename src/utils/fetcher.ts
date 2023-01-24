@@ -104,7 +104,7 @@ const formatData = (visit: any) => {
 
     time: new Date(mvjmc?.ExpectedDepartureTime),
 
-    plateform: mvjmc?.ArrivalPlatformName?.value,
+    platform: mvjmc?.ArrivalPlatformName?.value,
     arrivalTime: mvjmc?.ExpectedArrivalTime && new Date(mvjmc.ExpectedArrivalTime),
     arrivalStatus: mvjmc?.ArrivalStatus,
     departureTime: mvjmc?.ExpectedDepartureTime && new Date(mvjmc.ExpectedDepartureTime),
