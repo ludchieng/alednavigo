@@ -35,29 +35,32 @@ export default {
 <style scoped>
 
 .visit-time {
-  background-color: #202b3b;
-  color: #ffc700;
-  font-size: 1.2rem;
-  font-weight: 600;
-  min-width: 2.2rem;
-  height: 2.2rem;
+  background-color: #3B4D5F;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  min-width: 2.125rem;
+  height: 1.875rem;
   border-radius: 0.3rem;
-  line-height: 2.2rem;
+  line-height: 1.875rem;
   text-align: center;
+  text-shadow: 0 0 4px #001E3D;
 }
 
 .visit-time-shaded {
-  background-color: #C2C2C2;
-  color: #444;
-  font-weight: 500;
+  background-color: #AAAAAA;
+  color: #ffffff;
+  font-weight: 400;
   font-size: 1rem;
+  text-shadow: none;
 }
 
 .visit-time-alert {
-  background-color: #E59999;
-  color: #a03434;
+  background-color: #FDCBCB;
+  color: #D93333;
   font-size: 1.5rem;
   font-weight: 500;
+  text-shadow: none;
 }
 
 </style>
