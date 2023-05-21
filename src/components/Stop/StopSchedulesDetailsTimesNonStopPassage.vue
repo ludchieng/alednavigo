@@ -10,10 +10,15 @@
       />
     </div>
     <div>
-      <div v-if="visit.platform" class="way-label">
+      <div
+        v-if="visit.platform"
+        class="way-label"
+      >
         Voie
       </div>
-      <div class="way-value">{{ visit.platform }}</div>
+      <div class="way-value">
+        {{ visit.platform }}
+      </div>
     </div>
   </div>
 </template>

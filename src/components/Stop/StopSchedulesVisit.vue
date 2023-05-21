@@ -1,6 +1,6 @@
 <template>
   <details
-    class="row"
+    :class="`row row-${variant}`"
   >
     <summary class="visit-summary">
       <div class="visit-code">
@@ -9,6 +9,7 @@
       <StopSchedulesVisitTime
         :key="updateCounter"
         :visit="visit"
+        :variant="variant"
       />
       <div class="visit-destination">
         {{ visit.destination }}
@@ -75,6 +76,8 @@ import StopSchedulesDetailsTimes from '@/components/Stop/StopSchedulesDetailsTim
 import StopSchedulesDetailsTimesNonStopPassage from '@/components/Stop/StopSchedulesDetailsTimesNonStopPassage.vue'
 import StopSchedulesVisitTime from '@/components/Stop/StopSchedulesVisitTime.vue'
 import UiSchedulesDetailsRow from '@/components/ui/Schedules/UiSchedulesDetailsRow.vue'
+import { PropType } from 'vue'
+import { VisitType } from '@/utils/fetcher'
 
 export default {
   name: 'StopSchedulesVisit',
@@ -85,8 +88,26 @@ export default {
     UiSchedulesDetailsRow,
   },
   props: {
-    updateCounter: {},
-    visit: {},
+    updateCounter: Number,
+    visit: {
+      type: Object as PropType<VisitType>,
+      required: true,
+    },
+  },
+  computed: {
+    variant () {
+      if (!this.visit) {
+        return 'normal'
+      }
+      if (this.visit.departureStatus === 'cancelled' || this.visit.arrivalStatus === 'cancelled') {
+        return 'alert'
+      }
+      if (this.visit.nonStopPassage || !this.visit.departureTime) {
+        return 'shaded'
+      } else {
+        return 'normal'
+      }
+    },
   },
 }
 </script>
@@ -95,6 +116,17 @@ export default {
 .row {
     margin: 0 -1rem 0.25rem -1rem;
     border-bottom: 1px solid #E6E6E6;
+}
+
+.row-alert .visit-destination,
+.row-shaded .visit-destination {
+  text-decoration: line-through;
+  color: #AAAAAA;
+}
+
+.row-alert .visit-code,
+.row-shaded .visit-code {
+  color: #AAAAAA;
 }
 
 .visit-summary {
