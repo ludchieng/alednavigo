@@ -28,7 +28,7 @@ export default Vue.extend({
   },
   props: {
     label: String,
-    time: {} as PropType<Time>,
+    time: Object as PropType<Time>,
     isTimeTextGray: {
       type: Boolean,
       default: false,

@@ -53,7 +53,7 @@ export default Vue.extend({
     UiSchedulesDetailsTimeInline,
   },
   props: {
-    visit: {} as PropType<VisitType>,
+    visit: Object as PropType<VisitType>,
     isInline: {
       type: Boolean,
       default: false,

@@ -14,7 +14,7 @@ export default Vue.extend({
   components: { UiSchedulesTime },
   props: {
     visit: {
-      type: {} as PropType<VisitType>,
+      type: Object as PropType<VisitType>,
       required: true,
     },
   },

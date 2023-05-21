@@ -23,7 +23,7 @@ export default Vue.extend({
     DesignPrevNext,
   },
   props: {
-    stop: {} as PropType<StopType>,
+    stop: Object as PropType<StopType>,
   },
   methods: {
     getStop,

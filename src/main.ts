@@ -64,5 +64,3 @@ new Vue({
   store,
   render: h => h(App),
 }).$mount('#app')
-
-console.log('VUE_APP_API_URL ', process.env.VUE_APP_API_URL)

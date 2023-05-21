@@ -22,7 +22,7 @@ export default Vue.extend({
     StopPrevNextStops,
   },
   data: () => ({
-    stop: {} as StopType,
+    stop: Object as StopType,
   }),
   watch: {
     '$route.path': {

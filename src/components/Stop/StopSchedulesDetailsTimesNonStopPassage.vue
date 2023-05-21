@@ -30,7 +30,7 @@ export default Vue.extend({
     UiSchedulesDetailsTimeWrapped,
   },
   props: {
-    visit: {} as PropType<VisitType>,
+    visit: Object as PropType<VisitType>,
   },
   methods: {
     toTime,

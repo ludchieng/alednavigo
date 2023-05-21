@@ -92,7 +92,9 @@ export default Vue.extend({
     StopSchedulesDetailsTimesNonStopPassage,
   },
   props: {
-    visits: {} as PropType<VisitType[]>,
+    visits: {
+      type: Array as PropType<VisitType[]>,
+    },
   },
   data: () => ({
     updateCounter: 0,
