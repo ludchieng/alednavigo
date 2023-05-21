@@ -46,6 +46,10 @@ export default Vue.extend({
   margin-bottom: 0.5rem;
 }
 
+.label {
+  font-size: 0.875rem;
+}
+
 .sublabel {
   font-style: italic;
   color: #515151;

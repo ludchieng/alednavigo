@@ -114,25 +114,20 @@ export default Vue.extend({
 <style scoped>
 
 .row {
-  margin: 0 -1rem;
+  margin: 0 -1rem 0.25rem -1rem;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .visit {
   display: flex;
-  min-height: 2.8rem;
+  margin-bottom: 0.25rem;
   align-items: center;
 }
 
-.row:nth-child(even) {
-  background-color: #ededed;
-}
-
 .visit-code {
-  padding: 0.3rem 0.5rem 0.3rem 1rem;
-  margin-right: 0.5rem;
-  max-width: 2.4rem;
-  min-width: 2.4rem; /* Prevents weird shrink */
-  background: #fff;
+  margin: 0 0.2rem 0 0.75rem;
+  max-width: 2.85rem;
+  min-width: 2.85rem; /* Prevents weird shrink */
   font-size: 0.8rem;
   font-weight: 700;
   color: #555;
@@ -141,13 +136,13 @@ export default Vue.extend({
 }
 
 .visit-destination {
-  padding: 0.4rem 0.4rem 0.4rem 0.5rem;
+  padding: 0 0.4rem 0 0.5rem;
 }
 
 .visit-details {
-  padding: 0.2rem 0 1rem 1rem;
+  padding: 0.2rem 0 0.75rem 3.75rem;
   overflow-x: auto;
-  color: #3f3f3f;
+  color: #777777;
 }
 
 </style>

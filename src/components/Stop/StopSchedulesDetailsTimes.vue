@@ -10,10 +10,10 @@
       :sublabel="visit.arrivalStatus !== 'onTime' ? visit.arrivalStatus : null"
     />
     <div>
-      <div v-if="visit.platform">
+      <div v-if="visit.platform" class="way-label">
         Voie
       </div>
-      <div>{{ visit.platform }}</div>
+      <div class="way-value">{{ visit.platform }}</div>
     </div>
     <UiSchedulesDetailsTimeWrapped
       v-if="visit.departureTime"
@@ -71,5 +71,16 @@ export default Vue.extend({
   max-width: 20rem;
   margin-right: 1rem;
   justify-content: space-between;
+  font-size: 1.0625rem;
+}
+
+.way-label {
+  font-size: 0.875rem;
+}
+
+.way-value {
+  text-align: center;
+  font-weight: 600;
+  color: #222;
 }
 </style>
