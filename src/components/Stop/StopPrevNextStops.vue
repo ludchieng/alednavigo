@@ -65,7 +65,7 @@ export default Vue.extend({
 .hint {
   display: block;
   padding: 0.3rem 0 0.5rem 0;
-  margin: 0 auto;
+  width: 100%;
   color: #4B4B4B;
   font-size: 0.75rem;
   font-family: unset;
