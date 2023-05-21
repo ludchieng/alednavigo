@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <StopHeader :stop="stop" />
-    <StopPrevNextStops :stop="stop" />
     <StopTimetable :stop="stop" />
+    <StopPrevNextStops :stop="stop" />
   </div>
 </template>
 

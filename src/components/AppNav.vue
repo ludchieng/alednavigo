@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <hr>
+    <UiHr />
     <div class="nav-content">
       <div
         v-if="showTabsList"
@@ -108,10 +108,11 @@
 import Vue from 'vue'
 import { getStop } from '@/utils/localstore/stops'
 import LineIcon from '@/components/LineIcon.vue'
+import UiHr from '@/components/ui/UiHr.vue'
 
 export default Vue.extend({
   name: 'AppNav',
-  components: { LineIcon },
+  components: { UiHr, LineIcon },
   data: () => ({
     showTabsList: false,
   }),
@@ -148,15 +149,6 @@ nav {
   min-height: 3.5rem;
   background-color: #2f2f2f;
   color: #ffffff;
-}
-
-hr {
-  position: relative;
-  top: 0;
-  margin: 0 0 0 0;
-  height: 0.3rem;
-  background-color: #ffffff;
-  border: 0;
 }
 
 .nav-tabs-list {
