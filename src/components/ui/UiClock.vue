@@ -24,19 +24,20 @@ export default Vue.extend({
 
 <style scoped>
 .datetime {
-  color: #444;
+  color: #222;
   font-weight: 600;
+  font-size: 1.0625em;
 }
 
 .separator {
-  color: #999;
+  color: #838383;
   font-size: 0.9em;
 }
 
 .seconds {
   padding-left: 0.1rem;
-  font-size: 0.75em;
-  color: #777;
+  font-size: 0.875em;
+  color: #838383;
 }
 
 .text-gray {

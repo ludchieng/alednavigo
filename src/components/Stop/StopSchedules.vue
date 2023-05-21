@@ -45,13 +45,13 @@ export default Vue.extend({
     StopSchedulesVisits,
   },
   props: {
-    stop: {} as PropType<StopType>,
+    stop: Object as PropType<StopType>,
   },
   data: () => ({
     fetchAbortController: new AbortController(),
     visitsByDirections: [] as [string, VisitType[]][],
     debugData: new Set(),
-    updatedAt: {} as Date,
+    updatedAt: Object as Date,
     updateCounter: 0,
     updateInterval: 0,
   }),

@@ -49,7 +49,7 @@ export default Vue.extend({
 <style scoped>
 .prev-next {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -65,9 +65,10 @@ export default Vue.extend({
   padding: 0.8rem 0;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
-  background-color: #dfdfdf;
+  background-color: #ffffff;
   border-radius: 0.4rem;
   text-align: center;
+  box-shadow: 0 0 0.3rem #0000001a;
 }
 
 .prev a::before {

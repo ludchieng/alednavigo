@@ -45,7 +45,7 @@ export default Vue.extend({
   },
   data: () => ({
     clockInterval: 0,
-    time: {} as Time,
+    time: Object as Time,
   }),
   created () {
     this.clockInterval = setInterval(() => {

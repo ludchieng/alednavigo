@@ -15,7 +15,7 @@ export const getLinesByRef = () => {
 }
 
 export const getLinesByCategory = () => {
-  const res = {} as { [x: string]: any }
+  const res = Object as { [x: string]: any }
   const lines = Object.entries(getLinesByRef())
     .filter(([k, v]) => k.trim() !== '')
     .map(([k, v]) => v) as any[]

@@ -4,6 +4,8 @@ import { CacheFirst } from 'workbox-strategies'
 
 precacheAndRoute(self.__WB_MANIFEST || [])
 
+self.addEventListener('install', () => self.skipWaiting())
+
 registerRoute(
   ({ url }) => url.pathname.startsWith('/img/lines-icons/'),
   new CacheFirst({

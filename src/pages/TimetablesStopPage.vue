@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <StopHeader :stop="stop" />
-    <StopPrevNextStops :stop="stop" />
     <StopTimetable :stop="stop" />
+    <StopPrevNextStops :stop="stop" />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default Vue.extend({
     StopPrevNextStops,
   },
   data: () => ({
-    stop: {} as StopType,
+    stop: Object as StopType,
   }),
   watch: {
     '$route.path': {
