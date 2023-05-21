@@ -28,10 +28,12 @@ export default Vue.extend({
 }
 
 .label {
+  font-size: 0.875rem;
   color: #777;
 }
 
 .value {
+  font-size: 0.9375rem;
   margin-left: 0.25rem;
   font-weight: 600;
   color: #3f3f3f;

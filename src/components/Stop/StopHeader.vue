@@ -29,7 +29,7 @@ export default Vue.extend({
     DesignPageTitle,
   },
   props: {
-    stop: {} as PropType<StopType>,
+    stop: Object as PropType<StopType>,
   },
 })
 </script>

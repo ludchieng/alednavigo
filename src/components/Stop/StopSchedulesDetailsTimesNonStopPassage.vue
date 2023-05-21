@@ -10,10 +10,15 @@
       />
     </div>
     <div>
-      <div v-if="visit.platform">
+      <div
+        v-if="visit.platform"
+        class="way-label"
+      >
         Voie
       </div>
-      <div>{{ visit.platform }}</div>
+      <div class="way-value">
+        {{ visit.platform }}
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +35,7 @@ export default Vue.extend({
     UiSchedulesDetailsTimeWrapped,
   },
   props: {
-    visit: {} as PropType<VisitType>,
+    visit: Object as PropType<VisitType>,
   },
   methods: {
     toTime,
@@ -44,5 +49,14 @@ export default Vue.extend({
   max-width: 20rem;
   margin: 0 1rem 0.5rem 0;
   justify-content: space-between;
+  font-size: 1.0625rem;
+}
+
+.way-label {
+  font-size: 0.875rem;
+}
+
+.way-value {
+  text-align: center;
 }
 </style>

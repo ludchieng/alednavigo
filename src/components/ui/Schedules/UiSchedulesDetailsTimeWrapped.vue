@@ -28,7 +28,7 @@ export default Vue.extend({
   },
   props: {
     label: String,
-    time: {} as PropType<Time>,
+    time: Object as PropType<Time>,
     isTimeTextGray: {
       type: Boolean,
       default: false,
@@ -44,6 +44,10 @@ export default Vue.extend({
 <style scoped>
 .schedules-details-time-wrapped {
   margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
 }
 
 .sublabel {
