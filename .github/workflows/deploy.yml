@@ -38,7 +38,7 @@ jobs:
 
       - run: yarn build
 
-      - uses: a7ul/tar-action@v1.1.0
+      - uses: a7ul/tar-action@master
         with:
           command: c
           cwd: "./"
