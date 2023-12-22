@@ -12,7 +12,7 @@
 
 <style>
   .app-header {
-    padding: 0.625rem;
+    padding: 0.625rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

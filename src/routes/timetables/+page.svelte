@@ -1,32 +1,66 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import type { PageData } from './$types';
 
-  export let data: PageData;
+	export let data: PageData;
 </script>
 
-<h1 class="sr-only">Alednavigo</h1>
+<main>
+	<h1 class="sr-only">Alednavigo</h1>
 
-<section>
-  <h2>Recherche</h2>
-</section>
+	<ul class="lines-sections">
+		{#each data.lineSections as lineSection}
+			<li>
+				<section>
+					<h2>{lineSection.title}</h2>
+					<hr />
+					<ul class="lines">
+						{#each lineSection.lines as line}
+							<li>
+								<a href={`/timetables/${line.slug}`}>
+									<img src={`/img/lines-icons/dark/${line.slug}.svg`} alt="" />
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</section>
+			</li>
+		{/each}
+	</ul>
+</main>
 
-<section>
-  <h2>Favoris</h2>
-</section>
+<style>
+	main {
+		padding: 6rem 1rem 0 1rem;
+	}
 
-{#each data.lineSections as lineSection}
-<section>
-  <h2>{lineSection.title}</h2>
-  <ul>
-    {#each lineSection.lines as line}
-    <li>
-        <a href={`/timetables/${line.slug}`}>
-          <img src={`/img/lines-icons/dark/${line.slug}.svg`} alt="">
-        </a>
-    </li>
-    {/each}
-  </ul>
-</section>
-{/each}
+	h2 {
+		font-size: 1.125rem;
+		margin: 0 0 0.125rem 0;
+	}
 
-<a href="/timetables/metro-7/opera">(7) Opéra</a>
+	hr {
+		margin: 0 0 1.125rem 0;
+		height: 2px;
+		max-width: 15rem;
+		background-color: #2f2f2f;
+		border: 0;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	ul.lines {
+		margin-bottom: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.lines li img {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+</style>
