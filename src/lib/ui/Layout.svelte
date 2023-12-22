@@ -21,7 +21,7 @@
 	}
 
 	main {
-		overflow-y: scroll;
+		overflow-y: auto;
 		height: 100%;
 	}
 </style>
