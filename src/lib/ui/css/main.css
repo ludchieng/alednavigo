@@ -25,3 +25,14 @@ input[type="email"], input[type="date"], input[type="number"], input[type="passw
 input[type="tel"], input[type="text"], input[type="url"] {
   box-sizing: border-box;
 }
+
+.sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
