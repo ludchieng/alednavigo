@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import LineMapLabel from './LineMapLabel.svelte';
+  import LineMapDrawing from './LineMapDrawing.svelte';
+
   import type { PageData } from './$types';
 
   export let data: PageData;
@@ -9,79 +11,19 @@
   <table>
     {#each data.lineMap as row}
       <tr>
-        {#each row.drawing as cell}
-          <td class:filled={cell !== ''}>
-            {#if cell === '*'}
-              <svg class="drawing-stop" viewBox="0 0 16 16">
-                <circle cx="8" cy="8" r={row.isTerminus ? 6 : 4} />
-              </svg>
-            {:else if cell === '^'}
-              <svg class="drawing-path" viewBox="0 0 16 16">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,0 Z" />
-                <path d="M0,8 a8,-8 0 0,1 8,-8 L0,0 Z" />
-              </svg>
-            {:else if cell === 'v'}
-              <svg class="drawing-path" viewBox="0 0 16 16">
-                <path d="M0,8 a8,8 0 0,0 8,8 L0,16 Z" />
-                <path d="M8,16 a8,-8 0 0,0 8,-8 L16,16 Z" />
-              </svg>
-            {:else if cell === 'o\\'}
-              <svg class="drawing-path" viewBox="0 0 16 16">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,0 Z" />
-              </svg>
-            {:else if cell === 'o/'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(90)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,0 Z" />
-              </svg>
-            {:else if cell === '\\o'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(180)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,0 Z" />
-              </svg>
-            {:else if cell === '/o'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(270)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,0 Z" />
-              </svg>
-            {:else if cell === '\\.'}
-              <svg class="drawing-path" viewBox="0 0 16 16">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,16 L0,16 L0 0 Z" />
-              </svg>
-            {:else if cell === '/.'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(90)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,16 L0,16 L0 0 Z" />
-              </svg>
-            {:else if cell === '.\\'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(180)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,16 L0,16 L0 0 Z" />
-              </svg>
-            {:else if cell === './'}
-              <svg class="drawing-path" viewBox="0 0 16 16" transform="rotate(270)">
-                <path d="M8,0 a8,8 0 0,1 8,8 L16,16 L0,16 L0 0 Z" />
-              </svg>
-            {/if}
-            {#if ['↑', '↓'].includes(cell)}
-              <span>{cell}</span>
-            {/if}
+        {#each row.drawing as content}
+          <td class:filled={content !== ''}>
+            <LineMapDrawing {content} isTerminus={row.isStop && row.isTerminus} />
           </td>
         {/each}
-        {#if row.slugName}
+        {#if row.isStop}
           <td class="label">
-            <a
-              class="label-text"
-              class:label-terminus={row.isTerminus}
-              href="/timetables/{$page.params.line}/{row.slugName}"
-            >
-              {row.displayName}
-              {#if row.lineConnections}
-                <div class="line-connections">
-                  {#each row.lineConnections as connection}
-                    <img
-                      src="/img/lines-icons/colors/{connection.line}.svg"
-                      alt={connection.line}
-                    />
-                  {/each}
-                </div>
-              {/if}
-            </a>
+            <LineMapLabel
+              displayName={row.displayName}
+              href={row.href}
+              isTerminus={row.isTerminus}
+              lineConnections={row.lineConnections}
+            />
           </td>
         {/if}
       </tr>
@@ -126,45 +68,10 @@
     vertical-align: top;
   }
 
-  .drawing-stop {
-    display: block;
-    z-index: 0;
-    position: absolute;
-    transform: translate(-0.25rem, 0.5rem);
-    width: 1.5rem;
-    fill: #fff;
-    stroke: #2f2f2f;
-    stroke-width: 2.5px;
-  }
-
-  .drawing-path {
-    display: block;
-    fill: #fff;
-  }
-
   .label {
     padding: 0.2rem 0;
     flex-shrink: 1;
     flex-grow: 1;
     width: auto;
-  }
-
-  .label-terminus {
-    font-weight: 700;
-    color: #000;
-  }
-
-  .label-text {
-    display: inline-block;
-    padding: 0.4rem 0 0.4rem 1rem;
-    min-width: 70%;
-    margin-right: 0.75rem;
-    text-decoration: inherit;
-    color: inherit;
-  }
-
-  .line-connections > img {
-    margin-top: 0.2rem;
-    margin-right: 0.2rem;
   }
 </style>
