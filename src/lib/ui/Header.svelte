@@ -22,7 +22,7 @@
   .app-header .right {
     flex: 1;
   }
-  
+
   .app-header .right {
     display: flex;
     justify-content: end;

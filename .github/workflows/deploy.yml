@@ -2,7 +2,7 @@ name: Build & Deploy
 
 on:
   push:
-    branches: [ "svelte" ]
+    branches: ['svelte']
 
 jobs:
   build-and-deploy:
@@ -35,7 +35,7 @@ jobs:
       - uses: a7ul/tar-action@master
         with:
           command: c
-          cwd: "./"
+          cwd: './'
           files: |
             build/
             package.json

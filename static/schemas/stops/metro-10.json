@@ -6,9 +6,7 @@
     "displayName": "Boulogne – Pont de Saint-Cloud",
     "prevStops": [],
     "nextStops": ["boulogne-jean-jaures"],
-    "lineConnections": [
-      { "line": "tramway-2", "slugName": "parc-de-saint-cloud" }
-    ]
+    "lineConnections": [{ "line": "tramway-2", "slugName": "parc-de-saint-cloud" }]
   },
   "boulogne-jean-jaures": {
     "#": "3",
@@ -35,9 +33,7 @@
     "displayName": "Michel-Ange – Molitor",
     "prevStops": ["boulogne-jean-jaures"],
     "nextStops": ["chardon-lagache"],
-    "lineConnections": [
-      { "line": "metro-9", "slugName": "michel-ange-molitor" }
-    ]
+    "lineConnections": [{ "line": "metro-9", "slugName": "michel-ange-molitor" }]
   },
   "michel-ange-auteuil": {
     "#": "10",
@@ -46,9 +42,7 @@
     "displayName": "Michel-Ange – Auteuil",
     "prevStops": ["porte-d-auteuil"],
     "nextStops": ["eglise-d-auteuil"],
-    "lineConnections": [
-      { "line": "metro-9", "slugName": "michel-ange-auteuil" }
-    ]
+    "lineConnections": [{ "line": "metro-9", "slugName": "michel-ange-auteuil" }]
   },
   "chardon-lagache": {
     "#": "11",

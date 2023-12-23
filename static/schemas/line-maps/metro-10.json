@@ -5,9 +5,7 @@
     "isTerminus": true,
     "slugName": "boulogne-pont-de-saint-cloud",
     "displayName": "Boulogne – Pont de Saint-Cloud",
-    "lineConnections": [
-      { "line": "tramway-2", "slugName": "parc-de-saint-cloud" }
-    ]
+    "lineConnections": [{ "line": "tramway-2", "slugName": "parc-de-saint-cloud" }]
   },
   {
     "drawing": ["", "*", ""],
@@ -32,18 +30,14 @@
     "isTerminus": false,
     "slugName": "michel-ange-molitor",
     "displayName": "Michel-Ange – Molitor",
-    "lineConnections": [
-      { "line": "metro-9", "slugName": "michel-ange-molitor" }
-    ]
+    "lineConnections": [{ "line": "metro-9", "slugName": "michel-ange-molitor" }]
   },
   {
     "drawing": ["|", "", "*"],
     "isTerminus": false,
     "slugName": "michel-ange-auteuil",
     "displayName": "Michel-Ange – Auteuil",
-    "lineConnections": [
-      { "line": "metro-9", "slugName": "michel-ange-auteuil" }
-    ]
+    "lineConnections": [{ "line": "metro-9", "slugName": "michel-ange-auteuil" }]
   },
   {
     "drawing": ["*", "", "|"],
