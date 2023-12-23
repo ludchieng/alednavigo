@@ -3,7 +3,12 @@ import type { Lines } from '../../../static/schemas/lines';
 import { groupBy } from '$lib/utils/groupBy';
 
 const LINES_SECTIONS = ['Métros', 'RER', 'Transilien', 'Tramways'];
-const LINES_SECTIONS_ORDER = { Métros: 0, RER: 1, Transilien: 2, Tramways: 3 };
+const LINES_SECTIONS_ORDER: Record<string, number> = {
+  Métros: 0,
+  RER: 1,
+  Transilien: 2,
+  Tramways: 3,
+};
 
 export const load: PageLoad = async ({ fetch }) => {
   const linesSectionsData: Lines = await (await fetch('/schemas/lines.json')).json();
@@ -17,7 +22,7 @@ export const load: PageLoad = async ({ fetch }) => {
       lines: lines
         .filter((line) => line.show)
         .sort((a, b) => {
-          return a.index > b.index;
+          return a.index - b.index;
         })
         .map((line) => ({
           label: line.label,
@@ -25,7 +30,10 @@ export const load: PageLoad = async ({ fetch }) => {
         })),
     }))
     .sort((a, b) => {
-      return LINES_SECTIONS_ORDER[a.title] > LINES_SECTIONS_ORDER[b.title];
+      if (LINES_SECTIONS_ORDER[a.title] && LINES_SECTIONS_ORDER[b.title]) {
+        return LINES_SECTIONS_ORDER[a.title] - LINES_SECTIONS_ORDER[b.title];
+      }
+      return 0;
     });
 
   return {
