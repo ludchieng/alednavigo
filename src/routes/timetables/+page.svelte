@@ -4,32 +4,28 @@
 	export let data: PageData;
 </script>
 
-<main>
+<div class="wrapper">
 	<h1 class="sr-only">Alednavigo</h1>
 
-	<ul class="lines-sections">
-		{#each data.lineSections as lineSection}
-			<li>
-				<section>
-					<h2>{lineSection.title}</h2>
-					<hr />
-					<ul class="lines">
-						{#each lineSection.lines as line}
-							<li>
-								<a href={`/timetables/${line.slug}`}>
-									<img src={`/img/lines-icons/dark/${line.slug}.svg`} alt="" />
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</section>
-			</li>
-		{/each}
-	</ul>
-</main>
+	{#each data.lineSections as lineSection}
+		<section>
+			<h2>{lineSection.title}</h2>
+			<div class="separator" />
+			<ul class="lines" aria-label={lineSection.title}>
+				{#each lineSection.lines as line}
+					<li>
+						<a href={`/timetables/${line.slug}`}>
+							<img src={`/img/lines-icons/dark/${line.slug}.svg`} alt={line.label} />
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/each}
+</div>
 
 <style>
-	main {
+	.wrapper {
 		padding: 6rem 1rem 0 1rem;
 	}
 
@@ -38,7 +34,7 @@
 		margin: 0 0 0.125rem 0;
 	}
 
-	hr {
+	.separator {
 		margin: 0 0 1.125rem 0;
 		height: 2px;
 		max-width: 15rem;
