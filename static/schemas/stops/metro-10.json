@@ -1,0 +1,224 @@
+{
+  "boulogne-pont-de-saint-cloud": {
+    "#": "2",
+    "monitoringRefs": ["21989", "463136"],
+    "isTerminus": true,
+    "displayName": "Boulogne – Pont de Saint-Cloud",
+    "prevStops": [],
+    "nextStops": ["boulogne-jean-jaures"],
+    "lineConnections": [
+      { "line": "tramway-2", "slugName": "parc-de-saint-cloud" }
+    ]
+  },
+  "boulogne-jean-jaures": {
+    "#": "3",
+    "monitoringRefs": ["21988", "463137"],
+    "isTerminus": false,
+    "displayName": "Boulogne – Jean Jaurès",
+    "prevStops": ["boulogne-pont-de-saint-cloud"],
+    "nextStops": ["michel-ange-molitor", "porte-d-auteuil"],
+    "lineConnections": []
+  },
+  "porte-d-auteuil": {
+    "#": "8",
+    "monitoringRefs": ["21974"],
+    "isTerminus": true,
+    "displayName": "Porte d'Auteuil",
+    "prevStops": ["boulogne-jean-jaures"],
+    "nextStops": ["michel-ange-auteuil"],
+    "lineConnections": []
+  },
+  "michel-ange-molitor": {
+    "#": "9",
+    "monitoringRefs": ["21904"],
+    "isTerminus": false,
+    "displayName": "Michel-Ange – Molitor",
+    "prevStops": ["boulogne-jean-jaures"],
+    "nextStops": ["chardon-lagache"],
+    "lineConnections": [
+      { "line": "metro-9", "slugName": "michel-ange-molitor" }
+    ]
+  },
+  "michel-ange-auteuil": {
+    "#": "10",
+    "monitoringRefs": ["21907"],
+    "isTerminus": false,
+    "displayName": "Michel-Ange – Auteuil",
+    "prevStops": ["porte-d-auteuil"],
+    "nextStops": ["eglise-d-auteuil"],
+    "lineConnections": [
+      { "line": "metro-9", "slugName": "michel-ange-auteuil" }
+    ]
+  },
+  "chardon-lagache": {
+    "#": "11",
+    "monitoringRefs": ["21985"],
+    "isTerminus": false,
+    "displayName": "Chardon-Lagache",
+    "prevStops": ["michel-ange-molitor"],
+    "nextStops": ["mirabeau"],
+    "lineConnections": []
+  },
+  "eglise-d-auteuil": {
+    "#": "12",
+    "monitoringRefs": ["21971"],
+    "isTerminus": false,
+    "displayName": "Église d'Auteuil",
+    "prevStops": ["michel-ange-auteuil"],
+    "nextStops": ["javel-andre-citroen"],
+    "lineConnections": []
+  },
+  "mirabeau": {
+    "#": "13",
+    "monitoringRefs": ["21982"],
+    "isTerminus": false,
+    "displayName": "Mirabeau",
+    "prevStops": ["chardon-lagache"],
+    "nextStops": ["javel-andre-citroen"],
+    "lineConnections": []
+  },
+  "javel-andre-citroen": {
+    "#": "18",
+    "monitoringRefs": ["21972", "462958"],
+    "isTerminus": false,
+    "displayName": "Javel – André Citroën",
+    "prevStops": ["mirabeau", "eglise-d-auteuil"],
+    "nextStops": ["charles-michels"],
+    "lineConnections": [{ "line": "rer-c", "slugName": "javel" }]
+  },
+  "charles-michels": {
+    "#": "19",
+    "monitoringRefs": ["463076", "21986"],
+    "isTerminus": false,
+    "displayName": "Charles Michels",
+    "prevStops": ["javel-andre-citroen"],
+    "nextStops": ["avenue-emile-zola"],
+    "lineConnections": []
+  },
+  "avenue-emile-zola": {
+    "#": "20",
+    "monitoringRefs": ["463124", "21987"],
+    "isTerminus": false,
+    "displayName": "Avenue Émile-Zola",
+    "prevStops": ["charles-michels"],
+    "nextStops": ["la-motte-picquet-grenelle"],
+    "lineConnections": []
+  },
+  "la-motte-picquet-grenelle": {
+    "#": "21",
+    "monitoringRefs": ["21969", "463202"],
+    "isTerminus": false,
+    "displayName": "La Motte-Picquet – Grenelle",
+    "prevStops": ["avenue-emile-zola"],
+    "nextStops": ["segur"],
+    "lineConnections": [
+      { "line": "metro-6", "slugName": "la-motte-picquet-grenelle" },
+      { "line": "metro-8", "slugName": "la-motte-picquet-grenelle" }
+    ]
+  },
+  "segur": {
+    "#": "22",
+    "monitoringRefs": ["21979", "463315"],
+    "isTerminus": false,
+    "displayName": "Ségur",
+    "prevStops": ["la-motte-picquet-grenelle"],
+    "nextStops": ["duroc"],
+    "lineConnections": []
+  },
+  "duroc": {
+    "#": "23",
+    "monitoringRefs": ["21970", "463084"],
+    "isTerminus": false,
+    "displayName": "Duroc",
+    "prevStops": ["segur"],
+    "nextStops": ["vaneau"],
+    "lineConnections": [{ "line": "metro-13", "slugName": "duroc" }]
+  },
+  "vaneau": {
+    "#": "24",
+    "monitoringRefs": ["462959", "21977"],
+    "isTerminus": false,
+    "displayName": "Vaneau",
+    "prevStops": ["duroc"],
+    "nextStops": ["sevres-babylone"],
+    "lineConnections": []
+  },
+  "sevres-babylone": {
+    "#": "25",
+    "monitoringRefs": ["462967", "21976"],
+    "isTerminus": false,
+    "displayName": "Sèvres – Babylone",
+    "prevStops": ["vaneau"],
+    "nextStops": ["mabillon"],
+    "lineConnections": [{ "line": "metro-12", "slugName": "sevres-babylone" }]
+  },
+  "mabillon": {
+    "#": "26",
+    "monitoringRefs": ["462994", "21973"],
+    "isTerminus": false,
+    "displayName": "Mabillon",
+    "prevStops": ["sevres-babylone"],
+    "nextStops": ["odeon"],
+    "lineConnections": []
+  },
+  "odeon": {
+    "#": "27",
+    "monitoringRefs": ["462998", "21978"],
+    "isTerminus": false,
+    "displayName": "Odéon",
+    "prevStops": ["mabillon"],
+    "nextStops": ["cluny-la-sorbonne"],
+    "lineConnections": [{ "line": "metro-4", "slugName": "odeon" }]
+  },
+  "cluny-la-sorbonne": {
+    "#": "28",
+    "monitoringRefs": ["21983", "462944"],
+    "isTerminus": false,
+    "displayName": "Cluny – La Sorbonne",
+    "prevStops": ["odeon"],
+    "nextStops": ["maubert-mutualite"],
+    "lineConnections": [
+      { "line": "rer-b", "slugName": "saint-michel-notre-dame" },
+      { "line": "rer-c", "slugName": "saint-michel-notre-dame" }
+    ]
+  },
+  "maubert-mutualite": {
+    "#": "29",
+    "monitoringRefs": ["463237", "21975"],
+    "isTerminus": false,
+    "displayName": "Maubert – Mutualité",
+    "prevStops": ["cluny-la-sorbonne"],
+    "nextStops": ["cardinal-lemoine"],
+    "lineConnections": []
+  },
+  "cardinal-lemoine": {
+    "#": "30",
+    "monitoringRefs": ["463141", "21984"],
+    "isTerminus": false,
+    "displayName": "Cardinal Lemoine",
+    "prevStops": ["maubert-mutualite"],
+    "nextStops": ["jussieu"],
+    "lineConnections": []
+  },
+  "jussieu": {
+    "#": "31",
+    "monitoringRefs": ["463077", "21968"],
+    "isTerminus": false,
+    "displayName": "Jussieu",
+    "prevStops": ["cardinal-lemoine"],
+    "nextStops": ["gare-d-austerlitz"],
+    "lineConnections": [{ "line": "metro-7", "slugName": "jussieu" }]
+  },
+  "gare-d-austerlitz": {
+    "#": "32",
+    "monitoringRefs": ["21967", "463024"],
+    "isTerminus": true,
+    "displayName": "Gare d'Austerlitz",
+    "prevStops": ["jussieu"],
+    "nextStops": [],
+    "lineConnections": [
+      { "line": "metro-5", "slugName": "gare-d-austerlitz" },
+      { "line": "rer-c", "slugName": "paris-austerlitz" }
+    ]
+  }
+}

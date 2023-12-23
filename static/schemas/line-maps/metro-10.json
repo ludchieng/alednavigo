@@ -1,0 +1,188 @@
+[
+  { "drawing": ["", "^", ""] },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": true,
+    "slugName": "boulogne-pont-de-saint-cloud",
+    "displayName": "Boulogne – Pont de Saint-Cloud",
+    "lineConnections": [
+      { "line": "tramway-2", "slugName": "parc-de-saint-cloud" }
+    ]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "boulogne-jean-jaures",
+    "displayName": "Boulogne – Jean Jaurès",
+    "lineConnections": []
+  },
+  { "drawing": ["", "|", ""] },
+  { "drawing": ["/.", "|", ".\\"] },
+  { "drawing": ["/o", "|", "o\\"] },
+  { "drawing": ["↓", "", "↑"] },
+  {
+    "drawing": ["|", "", "*"],
+    "isTerminus": true,
+    "slugName": "porte-d-auteuil",
+    "displayName": "Porte d'Auteuil",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["*", "", "|"],
+    "isTerminus": false,
+    "slugName": "michel-ange-molitor",
+    "displayName": "Michel-Ange – Molitor",
+    "lineConnections": [
+      { "line": "metro-9", "slugName": "michel-ange-molitor" }
+    ]
+  },
+  {
+    "drawing": ["|", "", "*"],
+    "isTerminus": false,
+    "slugName": "michel-ange-auteuil",
+    "displayName": "Michel-Ange – Auteuil",
+    "lineConnections": [
+      { "line": "metro-9", "slugName": "michel-ange-auteuil" }
+    ]
+  },
+  {
+    "drawing": ["*", "", "|"],
+    "isTerminus": false,
+    "slugName": "chardon-lagache",
+    "displayName": "Chardon-Lagache",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["|", "", "*"],
+    "isTerminus": false,
+    "slugName": "eglise-d-auteuil",
+    "displayName": "Église d'Auteuil",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["*", "", "|"],
+    "isTerminus": false,
+    "slugName": "mirabeau",
+    "displayName": "Mirabeau",
+    "lineConnections": []
+  },
+  { "drawing": ["↓", "", "↑"] },
+  { "drawing": ["\\o", "|", "o/"] },
+  { "drawing": ["\\.", "|", "./"] },
+  { "drawing": ["", "|", ""] },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "javel-andre-citroen",
+    "displayName": "Javel – André Citroën",
+    "lineConnections": [{ "line": "rer-c", "slugName": "javel" }]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "charles-michels",
+    "displayName": "Charles Michels",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "avenue-emile-zola",
+    "displayName": "Avenue Émile-Zola",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "la-motte-picquet-grenelle",
+    "displayName": "La Motte-Picquet – Grenelle",
+    "lineConnections": [
+      { "line": "metro-6", "slugName": "la-motte-picquet-grenelle" },
+      { "line": "metro-8", "slugName": "la-motte-picquet-grenelle" }
+    ]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "segur",
+    "displayName": "Ségur",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "duroc",
+    "displayName": "Duroc",
+    "lineConnections": [{ "line": "metro-13", "slugName": "duroc" }]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "vaneau",
+    "displayName": "Vaneau",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "sevres-babylone",
+    "displayName": "Sèvres – Babylone",
+    "lineConnections": [{ "line": "metro-12", "slugName": "sevres-babylone" }]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "mabillon",
+    "displayName": "Mabillon",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "odeon",
+    "displayName": "Odéon",
+    "lineConnections": [{ "line": "metro-4", "slugName": "odeon" }]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "cluny-la-sorbonne",
+    "displayName": "Cluny – La Sorbonne",
+    "lineConnections": [
+      { "line": "rer-b", "slugName": "saint-michel-notre-dame" },
+      { "line": "rer-c", "slugName": "saint-michel-notre-dame" }
+    ]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "maubert-mutualite",
+    "displayName": "Maubert – Mutualité",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "cardinal-lemoine",
+    "displayName": "Cardinal Lemoine",
+    "lineConnections": []
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": false,
+    "slugName": "jussieu",
+    "displayName": "Jussieu",
+    "lineConnections": [{ "line": "metro-7", "slugName": "jussieu" }]
+  },
+  {
+    "drawing": ["", "*", ""],
+    "isTerminus": true,
+    "slugName": "gare-d-austerlitz",
+    "displayName": "Gare d'Austerlitz",
+    "lineConnections": [
+      { "line": "metro-5", "slugName": "gare-d-austerlitz" },
+      { "line": "rer-c", "slugName": "paris-austerlitz" }
+    ]
+  },
+  { "drawing": ["", "v", ""] }
+]
